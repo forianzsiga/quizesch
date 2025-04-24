@@ -15,8 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let dataDirectory = '/data/';
 
-    if (window.location.hostname == "github") {
+    if (window.location.hostname.includes("github.io")) {
         dataDirectory = "/quizesch/" + dataDirectory;
+        console.log("github pages detected");
     }
 
     const listQuizzesEndpoint = 'quiz-manifest.json';
