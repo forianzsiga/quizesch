@@ -211,3 +211,67 @@ button:hover:not(:disabled) {
     color: #CCC;         /* Grey color */
     text-align: right;   /* Align text to the right */
 }
+
+/* --- Quiz List Styling --- */
+#quiz-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#quiz-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    padding: 0;
+    margin: 30px 0 0 0;
+    width: 100%;
+    max-width: 700px;
+    list-style: none;
+}
+
+.quiz-card {
+    background: #f9f9ff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 28px 18px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+    border: 1.5px solid #e0e0e0;
+    position: relative;
+}
+.quiz-card:hover {
+    box-shadow: 0 6px 18px rgba(0,123,255,0.13);
+    transform: translateY(-3px) scale(1.03);
+    border-color: #007bff;
+}
+.quiz-card .quiz-icon {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+.quiz-card .quiz-title {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #222;
+    margin-bottom: 4px;
+    text-align: center;
+}
+.quiz-card .quiz-filename {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#quiz-list li {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}

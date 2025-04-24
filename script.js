@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let questions = [];
     let currentQuestionIndex = 0;
     let userAnswers = [];
+    let evaluatedQuestions = [];
     let score = 0;
 
     // Start by fetching the list of available quizzes from the manifest
@@ -59,38 +60,81 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Display the List of Available Quizzes ---
     function displayQuizList() {
-        quizListElement.innerHTML = ''; // Clear loading/error message
+        quizListElement.innerHTML = '';
         if (!availableQuizzes || availableQuizzes.length === 0) {
             quizListElement.innerHTML = '<li>No quizzes available.</li>';
-            quizContainer.style.display = 'none'; // Hide quiz area
-            quizListContainer.style.display = 'block'; // Show list area
+            quizContainer.style.display = 'none';
+            quizListContainer.style.display = 'block';
             return;
         }
 
-        availableQuizzes.forEach(fileName => {
+        // Sort the quiz files in alphabetical descending order
+        const sortedQuizzes = [...availableQuizzes].sort((a, b) => b.localeCompare(a));
+
+        sortedQuizzes.forEach(fileName => {
             const listItem = document.createElement('li');
             const link = document.createElement('a');
             link.href = '#';
-            link.textContent = fileName.replace('.json', ''); // Cleaner display name
-            link.dataset.fileName = fileName; // Store the actual filename
-            link.addEventListener('click', handleQuizSelection); // Add click listener
+            link.dataset.fileName = fileName;
+            link.addEventListener('click', handleQuizSelection);
+
+            // Card content
+            const card = document.createElement('div');
+            card.className = 'quiz-card';
+
+            // Icon (emoji for now)
+            const icon = document.createElement('div');
+            icon.className = 'quiz-icon';
+            icon.textContent = '📚';
+            card.appendChild(icon);
+
+            // Title (prettified from filename)
+            const title = document.createElement('div');
+            title.className = 'quiz-title';
+            // Prettify: remove .json, replace _/pzh/zh/ppzh with spaces, capitalize
+            let pretty = fileName.replace('.json','').replace(/_/g,' ');
+            pretty = pretty.replace(/\b(zh|pzh|ppzh)\b/gi, m => m.toUpperCase());
+            pretty = pretty.replace(/\b(\d{4})\b/g, '($1)');
+            pretty = pretty.replace(/\b([a-z])/g, c => c.toUpperCase());
+            title.textContent = pretty;
+            card.appendChild(title);
+
+            // Filename (small)
+            const fname = document.createElement('div');
+            fname.className = 'quiz-filename';
+            fname.textContent = fileName;
+            card.appendChild(fname);
+
+            link.appendChild(card);
             listItem.appendChild(link);
             quizListElement.appendChild(listItem);
         });
 
-        quizContainer.style.display = 'none'; // Hide quiz area initially
-        quizListContainer.style.display = 'block'; // Show quiz list
-        // Ensure navigation controls are hidden when only list is shown
+        quizContainer.style.display = 'none';
+        quizListContainer.style.display = 'block';
         document.getElementById('navigation-controls').style.display = 'none';
     }
 
     // --- Handle Clicking a Quiz from the List ---
     function handleQuizSelection(event) {
         event.preventDefault();
-        const selectedFileName = event.target.dataset.fileName; // Get filename from data attribute
-        // Construct the FULL path to the quiz file
-        const filePath = `${dataDirectory}${selectedFileName}`; // e.g., "/data/zh_2024.json"
-        fetchQuiz(filePath); // Call fetchQuiz with the correct, full path
+        // Find the closest element with data-fileName (could be <a> or a child)
+        let target = event.target;
+        while (target && !target.dataset.fileName && target !== document) {
+            target = target.parentElement;
+        }
+        if (!target || !target.dataset.fileName) {
+            alert('Could not determine quiz file.');
+            return;
+        }
+        const selectedFileName = target.dataset.fileName;
+        // Set global before fetchQuiz so it's always available
+        window.currentQuizFile = selectedFileName;
+        // Normalize dataDirectory to avoid double slashes
+        let normalizedDataDirectory = dataDirectory.replace(/\/+$/, '');
+        const filePath = `${normalizedDataDirectory}/${selectedFileName}`;
+        console.log('Fetching quiz file:', filePath);
+        fetchQuiz(filePath);
     }
 
     // --- Fetch Data for a Specific Quiz ---
@@ -123,6 +167,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Reset shuffle button text if needed
                 shuffleToggleBtn.textContent = 'Shuffle Questions';
 
+                // --- Try to load state ---
+                // Extract the filename from the filepath to use for state loading
+                const quizFileName = filePath.split('/').pop();
+                const loaded = loadQuizState(quizFileName, data);
+                if (loaded) {
+                    questions = data;
+                    originalQuestionsOrder = [...data];
+                    userAnswers = loaded.userAnswers;
+                    currentQuestionIndex =
+                        typeof loaded.currentQuestionIndex === 'number' &&
+                        loaded.currentQuestionIndex >= 0 &&
+                        loaded.currentQuestionIndex < data.length
+                        ? loaded.currentQuestionIndex
+                        : 0;
+                    score = 0;
+                } else {
+                    questions = data;
+                    originalQuestionsOrder = [...data];
+                    userAnswers = new Array(questions.length).fill(null);
+                    currentQuestionIndex = 0;
+                    score = 0;
+                    clearQuizState();
+                }
+                displayQuestion(currentQuestionIndex);
+                updateButtonStates();
+                updateProgressPanel();
+                clearEvaluationStyles();
+                evaluateBtn.disabled = false;
+                shuffleToggleBtn.textContent = 'Shuffle Questions';
+                onQuizStateChange();
             })
             .catch(error => {
                 console.error('Error loading quiz data:', error);
@@ -278,6 +352,10 @@ document.addEventListener('DOMContentLoaded', () => {
         questionContainer.innerHTML = html;
         addInputListeners(index);
         evaluateBtn.disabled = false; // Re-enable evaluation for the new question
+
+        // --- update progress panel on question display ---
+        updateProgressPanel();
+        onQuizStateChange();
     }
 
     // --- Update Draggable Visibility ---
@@ -362,6 +440,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } else { // Radio
              userAnswers[index] = selectedOptions.length ? [selectedOptions[0].value] : []; // Store as array for consistency
         }
+
+        // --- update state on answer save ---
+        onQuizStateChange();
     }
 
     function saveFillBlanksAnswer(index) {
@@ -379,6 +460,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 userAnswers[index][identifier] = input.value.trim();
              }
          });
+
+         // --- update state on answer save ---
+         onQuizStateChange();
     }
 
      function saveDragDropAnswer(index) {
@@ -401,6 +485,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         userAnswers[index] = currentAnswers; // Overwrite previous state for this question index
         updateDraggableVisibility(index);
+
+        // --- update state on answer save ---
+        onQuizStateChange();
     }
 
 
@@ -466,6 +553,9 @@ document.addEventListener('DOMContentLoaded', () => {
         evaluateBtn.disabled = false;
 
         // Note: This no longer resets the global 'score' variable.
+
+        // --- update state on reset ---
+        onQuizStateChange();
     });
 
 
@@ -494,13 +584,21 @@ document.addEventListener('DOMContentLoaded', () => {
         updateButtonStates();
         clearEvaluationStyles();
         evaluateBtn.disabled = false;
+
+        // --- update state on shuffle ---
+        onQuizStateChange();
     });
 
     // --- Evaluation Logic ---
     evaluateBtn.addEventListener('click', () => {
          if (!questions || questions.length === 0) return; // Don't evaluate if no quiz loaded
         evaluateCurrentQuestion();
+        evaluatedQuestions[currentQuestionIndex] = true; // Mark as evaluated
         evaluateBtn.disabled = true; // Disable after evaluating once
+
+        // --- update progress panel on evaluation ---
+        updateProgressPanel();
+        onQuizStateChange();
     });
 
     function clearEvaluationStyles() {
@@ -688,10 +786,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                 break;
                             }
                             const identifier = blankInfo.identifier;
-                            const correctAnswerFB = blankInfo.answer || ""; // Default to empty string
+                            const correctAnswer = blankInfo.answer || ""; // Default to empty string
                             const userAnswerFB = userAnswer[identifier] || ""; // Default to empty string
 
-                            if (userAnswerFB.toLowerCase() !== correctAnswerFB.toLowerCase()) {
+                            if (userAnswerFB.toLowerCase() !== correctAnswer.toLowerCase()) {
                                 isCorrect = false; // Found an incorrect blank
                                 break;
                             }
@@ -747,6 +845,9 @@ document.addEventListener('DOMContentLoaded', () => {
         resultContainer.style.display = 'block';
         const totalQuestions = (questions && questions.length) ? questions.length : 0;
         scoreElement.textContent = `${score} out of ${totalQuestions}`;
+
+        // --- update progress panel on results display ---
+        updateProgressPanel();
     }
 
 
@@ -885,5 +986,133 @@ document.addEventListener('DOMContentLoaded', () => {
          updateDraggableVisibility(questionIndex); // Hide draggables corresponding to populated targets
     }
 
+
+    // --- Persistent State Management ---
+    const STORAGE_KEY = 'quizesch_state_v1';
+    function saveQuizState() {
+        if (!questions || questions.length === 0) return;
+        const quizFile = window.currentQuizFile || null;
+        const state = {
+            quizFile,
+            questionsLength: questions.length,
+            currentQuestionIndex,
+            userAnswers,
+            evaluatedQuestions, // Save evaluated state
+            timestamp: Date.now(),
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+    function loadQuizState(quizFile, quizData) {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+        try {
+            const state = JSON.parse(raw);
+            if (state.quizFile === quizFile && state.questionsLength === quizData.length) {
+                if (Array.isArray(state.evaluatedQuestions) && state.evaluatedQuestions.length === quizData.length) {
+                    evaluatedQuestions = state.evaluatedQuestions;
+                } else {
+                    evaluatedQuestions = new Array(quizData.length).fill(false);
+                }
+                return state;
+            }
+        } catch (e) { /* ignore */ }
+        return null;
+    }
+    function clearQuizState() {
+        localStorage.removeItem(STORAGE_KEY);
+        evaluatedQuestions = [];
+    }
+
+    // --- Progress Panel ---
+    function updateProgressPanel() {
+        const panel = document.getElementById('progress-panel');
+        if (!questions || questions.length === 0) {
+            panel.style.display = 'none';
+            return;
+        }
+        panel.style.display = 'block';
+        let html = '<h3 style="margin-top:0;">Progress</h3><ul style="padding-left:0;list-style:none;">';
+        questions.forEach((q, idx) => {
+            let dot = '<span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#bbb;margin-right:8px;vertical-align:middle;"></span>';
+            let status = 'not-evaluated';
+            if (evaluatedQuestions[idx]) {
+                if (userAnswers[idx] !== null && userAnswers[idx] !== undefined) {
+                    if (isQuestionCorrect(q, userAnswers[idx])) {
+                        dot = '<span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#27ae60;margin-right:8px;vertical-align:middle;"></span>';
+                        status = 'correct';
+                    } else {
+                        dot = '<span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#e74c3c;margin-right:8px;vertical-align:middle;"></span>';
+                        status = 'incorrect';
+                    }
+                }
+            }
+            html += `<li style="margin-bottom:6px;cursor:pointer;${currentQuestionIndex===idx?'font-weight:bold;':''}" data-idx="${idx}" title="Go to question ${idx+1}">${dot}Question ${idx+1}</li>`;
+        });
+        html += '</ul>';
+        panel.innerHTML = html;
+        // Add click listeners for navigation
+        panel.querySelectorAll('li[data-idx]').forEach(li => {
+            li.onclick = () => {
+                const idx = parseInt(li.getAttribute('data-idx'));
+                if (!isNaN(idx)) {
+                    currentQuestionIndex = idx;
+                    displayQuestion(currentQuestionIndex);
+                    updateButtonStates();
+                    updateProgressPanel();
+                }
+            };
+        });
+    
+        panel.style.backgroundColor = '#fff';
+        panel.style.borderRadius = '8px';
+        panel.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+        panel.style.padding = '16px';
+        panel.style.top = '10px';
+        panel.style.margin = '16px';
+    }
+    function isQuestionCorrect(question, userAnswer) {
+        // --- logic copied from calculateScore, but for a single question ---
+        if (userAnswer === null || userAnswer === undefined) return false;
+        switch (question.question_type) {
+            case 'multi_choice':
+                const correctAnswerMC = Array.isArray(question.answer) ? question.answer : [];
+                const userAnswerMC = Array.isArray(userAnswer) ? userAnswer : [];
+                if (userAnswerMC.length !== correctAnswerMC.length) return false;
+                if (userAnswerMC.length === 0) return true;
+                const sortedUser = [...userAnswerMC].sort();
+                const sortedCorrect = [...correctAnswerMC].sort();
+                return JSON.stringify(sortedUser) === JSON.stringify(sortedCorrect);
+            case 'fill_the_blanks':
+                const blanks = Array.isArray(question.blank) ? question.blank : (question.blank ? [question.blank] : []);
+                if (blanks.length === 0) return true;
+                if (typeof userAnswer !== 'object' || userAnswer === null) return false;
+                for (const blankInfo of blanks) {
+                    if (!blankInfo || !blankInfo.identifier) return false;
+                    const identifier = blankInfo.identifier;
+                    const correctAnswerFB = blankInfo.answer || "";
+                    const userAnswerFB = userAnswer[identifier] || "";
+                    if (userAnswerFB.toLowerCase() !== correctAnswerFB.toLowerCase()) return false;
+                }
+                return true;
+            case 'drag_n_drop':
+                const correctDropMapping = (question._correctDropMapping && typeof question._correctDropMapping === 'object') ? question._correctDropMapping : {};
+                const targetIds = Object.keys(correctDropMapping);
+                if (targetIds.length === 0) return true;
+                if (typeof userAnswer !== 'object' || userAnswer === null) return false;
+                if (Object.keys(userAnswer).length !== targetIds.length) return false;
+                for(const targetId of targetIds) {
+                    const correctChoiceId = correctDropMapping[targetId];
+                    if (!userAnswer[targetId] || userAnswer[targetId] !== correctChoiceId) return false;
+                }
+                return true;
+            default: return false;
+        }
+    }
+
+    // --- update save state on relevant actions ---
+    function onQuizStateChange() {
+        saveQuizState();
+        updateProgressPanel();
+    }
 
 }); // End DOMContentLoaded
