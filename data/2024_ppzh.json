@@ -1,0 +1,322 @@
+[
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mik lehetnek a céljai VLAN-ok (virtuális helyi hálózat) alkalmazásának?",
+    "options": {
+      "a": "Csökkentsük a legközelebbi router terhelését",
+      "b": "Az alhálózatok elkülönítésével növeljük a biztonságot",
+      "c": "Olcsóbb Ethernet kapcsolókat (switch-eket) alkalmazhassunk",
+      "d": "A kialakított virtuális hálózatok külön menedzselhetőek legyenek",
+      "e": "Jobb legyen a jel/zaj viszony",
+      "f": "Az Ethernet broadcast csomagok ne jussanak át egyik VLAN-ból a másikba"
+    },
+    "answer": [
+      "b",
+      "d",
+      "f"
+    ]
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "A 192.168.77.88/24 hálózathoz tartozóan a legmagasabb kiosztható IP címet kapja. Adja meg a router IP címét, a gépeknek kiosztható IP címek tartományát és a broadcast címet!\n\nIgazítsa el az alábbi címeket:\nHálózati cím: 192.168.77.0\nMaszk: [blank1]\nBroadcast címe: [blank2]\nRouter címe: [blank3]\nA számítógépnek: 192.168.77.88\nKiosztható címek száma: [blank4]\nElső számítógépcím: [blank5]\nUtolsó számítógépcím: [blank6]\nAdja meg a számítógépnek kiosztható IP címek számát is!\n\nAz alábbi csomagokhoz a következő MAC címek tartoznak: 192.168.77.88: 02:35:52:05:0F:00, 192.168.77.89: 02:35:52:05:0F:01, 192.168.77.1: 00:0c:29:2d:cc:81\nAz A nem ismeri megismerte az ARP protokoll működését. Hogyan alakulnak az ARP Request üzenet mezőinek értékei, ha a kérést küldő gép MAC címe 02:35:52:05, IP címe 192.168.77.88, és a 192.168.77.89 IP címhez tartozó MAC címet szeretné kideríteni, ami az 02:35:52:05:0F:01?\nAz ARP Request üzenet Opscode mezőjének értéke: 1 az ARP további mezői:\nSource MAC address: 02:35:52:05:0F:00\nSource IP address: 192.168.77.88\nTarget MAC address: [blank7]\nTarget IP address: [blank8]",
+    "blank": [
+      {
+        "identifier": "blank1",
+        "answer": "255.255.255.0"
+      },
+      {
+        "identifier": "blank2",
+        "answer": "192.168.77.255"
+      },
+      {
+        "identifier": "blank3",
+        "answer": "192.168.77.1"
+      },
+      {
+        "identifier": "blank4",
+        "answer": "254"
+      },
+      {
+        "identifier": "blank5",
+        "answer": "192.168.77.1"
+      },
+      {
+        "identifier": "blank6",
+        "answer": "192.168.77.254"
+      },
+      {
+        "identifier": "blank7",
+        "answer": "00:00:00:00:00:00"
+      },
+      {
+        "identifier": "blank8",
+        "answer": "192.168.77.89"
+      }
+    ]
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "vezérlő"
+      },
+      {
+        "identifier": "field2",
+        "label": "adat"
+      },
+      {
+        "identifier": "field3",
+        "label": "aktív"
+      },
+      {
+        "identifier": "field4",
+        "label": "passzív"
+      },
+      {
+        "identifier": "field5",
+        "label": "lyukasztás"
+      }
+    ],
+    "text": "Húzza be a megfelelő kifejezéseket, hogy a mondat teljes legyen!\n\nEgy TCP kapcsolatfelépítés során a(z) [field1] kapcsolat mindvégig fennáll, míg a(z) [field2] kapcsolat csak függ vagy kényszerítve jön létre. Ha az utóbbi képhezet a szervert kezdeményezi a kliens felé, akkor azt [field3] módnak, ellenkező esetben [field4] módnak nevezzük. Ha a kliens NAT mögött van, akkor használható a(z) [field5] módszer."
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Az \"M\" és \"R\" legyen kapcsolatfenntartást jelző, \"S\" szegment adatokat elkülönítő TCP PDU, jelen a sorszám tartomány szerint 7000, a hasznos adattartalom 1250 byte.\nA maximális szegmensméret TCP PDU jelen az ACK szám 4200.\nMekkora sértett adatmennyiséget kapott \"B\" az \"A\" csomóponttól, amennyiben az \"A\" csomópont 1500 byte-nyi küldhető még küldött meg a pufferből nagyobb megszorításig?\n(Csak egy számot írjon válaszként.)\n\nVálasz: [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "1460"
+    }
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Működik feltétlenül az állapotkapcsolat, réteg feladatának egy részét. Mit valósít meg ezek közül az Ethernet?",
+    "options": {
+      "a": "Hálózat réteghez illeszkedő",
+      "b": "Különböző fizikai rétegbeli protokollok kezelése",
+      "c": "Keretezés",
+      "d": "Hibafelismerés biztosítása a keretre",
+      "e": "Meghatározott pont-pont közötti adatátvitel"
+    },
+    "answer": [
+      "b",
+      "c",
+      "d",
+      "e"
+    ]
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Egy PCM elven alapuló A/D-D/A átalakító rendszerben egy olyan jelet digitalizálunk, melynek legnagyobb frekvenciája 10 kHz. 10 kHz mintavételezésére van szükségünk, ezért feltételesen visszaállítható mintavételezést szeretnénk, és 1024 kvantálási szintet. Egyetlen analóg jelünk van (tehát párhuzamosításról szó sincs) ez mennyi jel lenne? Legalább mekkora lesz az adatsebesség? (Bit-ben adja meg a választ, ne kb/s, ne MB/s, stb. mértékegységben.)\nCsak egyetlen egész számra várunk, nem kell a „bit” a végére. Az eredményül számnál kérünk kérjük, nem betűvel. Ha a szám nagyobb szernek, akkor is csak a számjegyeket írja le, ne használjon ezreseket elválasztó szóközöket, vesszőt vagy pontot.\n\nVálasz: [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "200000"
+    }
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi igaz a CSMA/CD közeghozzáférési eljárásra?",
+    "options": {
+      "a": "A keret átadásának ideje K*T/2 időtől, ahol K egy véletlenszerűen sorsolt szám",
+      "b": "A keret küldése előtt meg kell bizonyosodni arról, hogy a csatornán nincs az adott pillanatban adás",
+      "c": "Ütközés előtt meg kell bizonyosodni arról, hogy a csatornán nincs az adott pillanatban adás",
+      "d": "Osztott közegen nem használható",
+      "e": "Ütközés esetén egy előre beállított idő elteltével lehet újra próbálkozni",
+      "f": "Az adó észreveszi az ütközést és megszakítja az adását"
+    },
+    "answer": [
+      "b",
+      "f"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mekkora adatsebesség érhető el telefonvonalhoz telepített sodort érpárú kábel egy érpárján 5.7 km távolságra?",
+    "options": {
+      "a": "5-10 Mb/s",
+      "b": "5-10 Gb/s",
+      "c": "5-10 kb/s",
+      "d": "5-10 GHz",
+      "e": "5-10 kHz",
+      "f": "5-10 MHz"
+    },
+    "answer": [
+      "a"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Telefonhálózatokban melyek a zárt számozású rendszer jellemzői?",
+    "options": {
+      "a": "Több telefonszám kiadható így",
+      "b": "Egy földrajzi körzeten belül rövidebb lehet a tárcsázott szám",
+      "c": "Mindig kell tárcsázni a belföldi rendeltetési számot",
+      "d": "Mindig kell tárcsázni a belföldi előtétet (pl. vagy: nálunk 36)"
+    },
+    "answer": [
+      "a",
+      "c"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az alábbiak közül mi tartozik a POP3 és az IMAP4 protokollokban?",
+    "options": {
+      "a": "Tranzakciós változatok",
+      "b": "Állapotmentesek a szerverrel a levelet.",
+      "c": "UDP szállítási protokollt használnak.",
+      "d": "Parancsvezéreltek.",
+      "e": "Levelek letöltésére valók."
+    },
+    "answer": [
+      "d",
+      "e"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az alábbiak közül melyik állítás(ok) igaz(ak) NAT (Network Address Translation) útválasztó használata esetén?",
+    "options": {
+      "a": "A magánhálózatban lévő eszközök címe anélkül változtatható, hogy arról a külvilágot értesíteni kellene",
+      "b": "Egyetlen, vagy nagyon kevés publikus IP-címmel megoldható a teljes magánhálózat címzése.",
+      "c": "Több létező közé ezek sem helyes.",
+      "d": "Minden alkalmazási rétegbeli protokoll változtatás nélkül használható.",
+      "e": "A magánhálózati eszközök egyszerűen és közvetlenül megcímezhetik a külvilág felől.",
+      "f": "Az IP-címek alapján az állomás nevét adja meg.",
+      "g": "Anélkül változtatható internetszolgáltató, hogy a magánhálózatban az IP-címeket meg kellene változtatni."
+    },
+    "answer": [
+      "a",
+      "b",
+      "g"
+    ]
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "A Bellman-Ford algoritmus alkalmazása során egy adott csoportban a hálózat A csomópontja a következő állapotvektort tartja nyílván:\nB,1 | C,2 | D,3 | E,4 | F,1\nMegérkezik B-től a következő állapotvektor:\nA,1 | C,3 | D,2 | E,4 | G,2\nMely bejegyzés(eke)t/bejegyzés(eke)t bővíti ill. módosítja A az állapottáblában?\nA válaszban az állapotvektor elemeit nagyságrendtől és számtól álló párként adja meg a két tagot VESSZŐVEL elválasztva (a fentieknek megfelelően). Amennyiben a helyes válaszban több állapotvektor elemét is meg kell adni, azokat PONTOS VESSZŐVEL válassza el! SZÓKÖZÖKET NE használjon!\n\nVálasz: [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "G,1"
+    }
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Egy névfeloldási kérés honnan kerülhet kiszolgálásra az alábbiak közül?",
+    "options": {
+      "a": "A hálózat bármely DNS klienstől.",
+      "b": "A másodlagos DNS szervertől.",
+      "c": "A helyi hosts fájlból.",
+      "d": "Az elsődleges DNS szervertől.",
+      "e": "A többi válasz közül egyik sem helyes.",
+      "f": "A helyi hosts fájlból.",
+      "g": "Az ARP szervertől"
+    },
+    "answer": [
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "Osztálymentes"
+      },
+	  {
+        "identifier": "field2",
+        "label": "Broadcast"
+      },
+	  {
+        "identifier": "field3",
+        "label": "Multicast"
+      },
+	  {
+        "identifier": "field4",
+        "label": "Kapcsolat"
+      },
+	  {
+        "identifier": "field5",
+        "label": "Osztály alapú"
+      }
+    ],
+    "text": "Az [field1] címzés lényege, hogy a hálózatcím és a gépcím határát az ún. hálózati maszk segítségével lehet megadni."
+  },
+   {
+    "question_type": "multi_choice",
+    "question_title": "Mekkora egységekben változhat az IP PDU fejrészének a mérete?",
+    "options": {
+      "A": "A többi válasz közül egyik sem helyes.",
+      "B": "Oktettekben",
+      "C": "32 bites szavakban.",
+      "D": "Fél-bajtokban.",
+      "E": "Bájtokban."
+    },
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az alábbiak közül mely állítás igaz egy PDU beágyazódására?",
+    "options": {
+      "A": "Csak fejlécet (trailer) kap.",
+      "B": "Csak fejet (header) kap.",
+      "C": "Mindig kap fejet (header), de farkat (trailer) csak opcionálisan.",
+      "D": "Mindig kap fejet (header) és farkat (trailer).",
+      "E": "Sem fejet (header), sem farkat (trailer) nem kap."
+    },
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Adja meg annak az autonóm rendszernek a típusát, amelyre a következő állítások igazok:\n• egyinel több autonóm rendszerrel van összekötve\n• tranzitforgalom lebonyolítására alkalmas\n• nem enged átmenő forgalmat más autonóm rendszerek között\n\nVálasz: [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "multihomed"
+    }
+  },
+   {
+    "question_type": "fill_the_blanks",
+    "text": "A ping parancs segítségével megtudhatjuk a(z) [field1] értékét, tehát a teljes oda-vissza út idejét, illetve a(z) [field2] értékét, amiből egy számítógépnek az útvonalszakaszok számában mért távolságára következtethetünk.",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "RTT"
+      },
+      {
+        "identifier": "field2",
+        "answer": "TTL"
+      }
+    ]
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Bontsa fel a 172.16.128.0/18 hálózatot 16 azonos méretű hálózatra. Adja meg az első kettőt és az utolsó kettőt.\nAdja meg az új maszkot: 20 + [blank1] (22), majd a hálózatokat maszk nélkül:\nelső hálózat: 172.16.[blank2].0\nmásodik hálózat: 172.16.[blank3].0\n...\nutolsó előtti hálózat: 172.16.[blank4].0\nutolsó hálózat: 172.16.[blank5].0",
+    "blank": [
+      {
+        "identifier": "blank1",
+        "answer": "22"
+      },
+      {
+        "identifier": "blank2",
+        "answer": "128"
+      },
+      {
+        "identifier": "blank3",
+        "answer": "132"
+      },
+      {
+        "identifier": "blank4",
+        "answer": "188"
+      },
+      {
+        "identifier": "blank5",
+        "answer": "192"
+      }
+    ]
+  }
+]

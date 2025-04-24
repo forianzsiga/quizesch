@@ -1,0 +1,160 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#quiz-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+#question-container {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+label {
+    display: block; /* Make labels stack */
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.input-wrapper {
+    display: inline-block;
+    vertical-align: middle; /* Adjust as needed: baseline, bottom, top */
+    margin: 0 2px; /* Optional: Add tiny space around the wrapper */
+}
+
+.input-wrapper input[type="text"] {
+    width: 120px;          /* Give it a fixed width appropriate for blanks */
+    display: inline-block; /* Ensure it flows inline */
+    vertical-align: middle;/* Align input within the wrapper/text */
+    margin: 0;             /* Remove vertical margins */
+    padding: 4px 6px;      /* Optionally reduce padding slightly */
+    /* Override any problematic inherited styles if necessary */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.input-wrapper .feedback-correct {
+    color: green;
+}
+.input-wrapper .feedback-incorrect {
+    color: red;
+}
+.input-wrapper .feedback-missed {
+    color: orange; /* Or another color for missed */
+}
+
+.input-wrapper input.evaluation-correct {
+    border: 1px solid green;
+    background-color: #e0ffe0;
+}
+.input-wrapper input.evaluation-incorrect {
+    border: 1px solid red;
+    background-color: #ffe0e0;
+}
+.input-wrapper input.evaluation-missed {
+    border: 1px solid orange; /* Or another color for missed */
+    background-color: #fff8e0;
+}
+
+.input-wrapper .inline-feedback {
+    display: block; /* Make feedback appear below the input */
+    font-size: 0.8em;
+    margin-top: 2px;
+    min-height: 1em; /* Prevent layout shifts when text appears */
+}
+
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+#feedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+/* Basic Drag and Drop Styling */
+.drop-target {
+    display: inline-block;
+    border: 1px dashed #ccc;
+    padding: 5px 10px;
+    margin: 0 5px;
+    min-width: 80px; /* Give some space */
+    min-height: 20px;
+    text-align: center;
+    vertical-align: middle; /* Align with text */
+    background-color: #eee;
+}
+
+.draggable {
+    display: inline-block;
+    border: 1px solid #aaa;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: grab;
+    background-color: #f9f9f9;
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
+
+#drag-options {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.highlight-drop {
+    background-color: #e0ffe0; /* Highlight when hovering over drop target */
+}

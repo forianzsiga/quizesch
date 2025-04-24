@@ -1,0 +1,108 @@
+DESCRIPTION START
+generate a json based on this specification and the attached doc! make sure to use escapes correctly for quotes! (\") DO NOT use „
+IMPORTANT: the attached tests are already solved ones that has markings that might be wrong/correct. Ignore them! USE your thinking tokens to solve the actual questions
+DESCRIPTION END
+
+LAYOUT START
+[all]
+
+question_type=<multi_choice/drag_n_drop/fill_the_blanks/unknown>
+
+
+
+[multi_choice]
+question_title=<string>
+options
+	<char>=<string>
+	<char>=<string>
+	...
+	char>=<string>
+answer
+	<char>
+	<char>
+	...
+	<char>
+
+[drag_n_drop]
+choices
+	choice
+		identifier=<string> // eg. field1
+		label=<string>
+text=<string> // this text has custom delimiters. eg. Az arp protokoll segitsegevel [field1] valosithatunk meg, tehat...
+
+[fill_the_blanks]
+text=<string> // this text has custom delimiters. eg. Az arp protokoll segitsegevel [field1] valosithatunk meg, tehat... OR Egy 1200 byte-os IPv4 csomagot továbbítunk egy hálózaton. A csomag útvonalán található linkek hálózati rétegbeli MTU-ja rendre 1500, 1400, 1100, 1350, 1500 byte. Hány byte-tal több érkezik a célállomáshoz, ha a hálózati rétegbeli forgalmat tekintjük, amennyiben minimális méretű IPv4-es fejléccel számolhatunk? (Csak a számot adja meg!) Valasz: [field1]
+blank
+	identifier=<string> // eg. blank1
+	answer=<string>
+LAYOUT END
+
+
+
+EXAMPLE START
+[
+  {
+    "question_type": "multi_choice",
+    "question_title": "A ping parancs milyen ICMP üzeneteket használ?",
+    "options": {
+      "a": "offer",
+      "b": "discover",
+      "c": "echo reply",
+      "d": "echo response",
+      "e": "echo request"
+    },
+    "answer": [
+      "c",
+      "e"
+    ]
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "cimfeloldast"
+      },
+      {
+        "identifier": "field2",
+        "label": "statikus"
+      },
+	  {
+        "identifier": "field3",
+        "label": "dinamikus"
+      }
+    ],
+    "text": "Az ARP protokoll segítségével [field1] címfeloldást valósíthatunk meg, tehát az IPv4 címet MAC címre képezzük le. A megfelelő IP-cím - MAC-cím párok az ARP cache tábla [field2] (manuálisan felvett bejegyzések) és [field3] (feloldás eredménye) bejegyzéseiben tárolódnak."
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Egy 1200 byte-os IPv4 csomagot továbbítunk egy hálózaton. A csomag útvonalán található linkek hálózati rétegbeli MTU-ja rendre 1500, 1400, 1100, 1350, 1500 byte. Hány byte-tal több érkezik a célállomáshoz, ha a hálózati rétegbeli forgalmat tekintjük, amennyiben minimális méretű IPv4-es fejléccel számolhatunk? (Csak a számot adja meg!) Valasz: [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "20"
+    }
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Az AIMD algoritmus a kezdeti értéket fix érték [field1] hozzáadásával növelheti, illetve 1-nél kisebb számmal történő [field2] csökkentheti szükség szerint. Ennek megfelelően a [field3] lineáris, míg a [field4] exponenciális.",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "növekedés"
+      },
+      {
+        "identifier": "field2",
+        "answer": "csökkenés"
+      },
+      {
+        "identifier": "field3",
+        "answer": "növekedés"
+      },
+      {
+        "identifier": "field4",
+        "answer": "csökkenés"
+      }
+    ]
+  }
+]
+EXAMPLE END

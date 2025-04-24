@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>Quiz</h1>
+        <div id="question-container">
+            </div>
+        <div id="navigation-controls">
+             <button id="prev-btn" disabled>Previous</button>
+             <button id="evaluate-btn">Evaluate Question</button>
+             <button id="next-btn">Next</button>
+             <button id="submit-btn" style="display: none;">Submit Quiz</button>
+			 <button id="reset-btn">Clear</button>
+			 <button id="shuffle-toggle-btn">Shuffle Questions</button> </div>
+
+        </div>
+        <div id="result-container" style="display: none;">
+            <h2>Your Score:</h2>
+            <p id="score"></p>
+        </div>
+		<div id="quiz-list-container">
+			<h2>Available Quizzes</h2>
+			<ul id="quiz-list"></ul>
+		</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

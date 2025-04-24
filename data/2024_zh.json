@@ -1,0 +1,330 @@
+[
+  {
+    "question_type": "multi_choice",
+    "question_title": "A ping parancs milyen ICMP üzeneteket használ?",
+    "options": {
+      "a": "offer",
+      "b": "discover",
+      "c": "echo reply",
+      "d": "echo response",
+      "e": "echo request"
+    },
+    "answer": [
+      "c",
+      "e"
+    ]
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "dinamikus címfeloldást"
+      },
+      {
+        "identifier": "field2",
+        "label": "statikus"
+      },
+      {
+        "identifier": "field3",
+        "label": "dinamikus"
+      }
+    ],
+    "text": "Az ARP protokoll segítségével [field1] valósíthatunk meg, tehát az IPv4 címet MAC címre képezzük le. A megfelelő IP-cím - MAC-cím párok az ARP cache tábla [field2] (manuálisan felvett bejegyzések) és [field3] (feloldás eredménye) bejegyzéseiben tárolódnak."
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Egy 1200 byte-os IPv4 csomagot továbbítunk egy hálózaton. A csomag útvonalán található linkek hálózati rétegbeli MTU-ja rendre 1500, 1400, 1100, 1350, 1500 byte. Hány byte-tal több érkezik a célállomáshoz, ha a hálózati rétegbeli forgalmat tekintjük, amennyiben minimális méretű IPv4-es fejléccel számolhatunk? (Csak a számot adja meg!) Valasz: [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "20"
+    }
+  },
+    {
+    "question_type": "fill_the_blanks",
+    "text": "Egy 1200 byte-os IPv4 csomagot továbbítunk egy hálózaton. A csomag útvonalán található linkek hálózati rétegbeli MTU-ja rendre 1500, 1400, 1100, 1350, 1500 byte. Hány byte-tal több érkezik a célállomáshoz, ha a hálózati rétegbeli forgalmat tekintjük, amennyiben minimális méretű IPv4-es fejléccel számolhatunk? (Csak a számot adja meg!) Valasz: [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "20"
+    }
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "névfeloldás"
+      },
+      {
+        "identifier": "field2",
+        "label": "IP-cím"
+      },
+      {
+        "identifier": "field3",
+        "label": "szimbolikus név"
+      }
+    ],
+    "text": "A reverse mapping a(z) [field1] ellentéte, vagyis célja a(z) [field2] hez tartozó [field3] felderítése."
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mit kell tartalmaznia egy protokoll helyes specifikációjának?",
+    "options": {
+      "A": "A protokollüzenetek és részeinek értelmezését.",
+      "B": "Az átviteli csatorna aktuális állapotát.",
+      "C": "A protokollüzenetek és részeinek formátumát.",
+      "D": "Az ISO OSI referenciamodellt.",
+      "E": "A TCP/IP referenciamodellt.",
+      "F": "Milyen protokollüzenet hatására mi történjen."
+    },
+    "answer": [
+      "C",
+      "A",
+      "F"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi a szerepe, jelentősége a multicast routingnak, és melyek a jellemzői?",
+    "options": {
+      "A": "Lehetővé teszi ugyanannak a csomagnak több címzetthez való hatékony eljuttatását.",
+      "B": "A többi válasz közül egyik sem helyes.",
+      "C": "A címzettek azonosítására nem a csoporttagok egyedi címeinek listáját használja, hanem egy csoportcímet.",
+      "D": "A címzetteket az egyedi címeik alapján, azok ügyes tömörítésével azonosítja.",
+      "E": "Lehetővé teszi jellemzően egy címzetthez több különböző csomag hatékony eljuttatását."
+    },
+    "answer": [
+      "A",
+      "C"
+    ]
+  },
+    {
+    "question_type": "fill_the_blanks",
+    "text": "Az AIMD algoritmus a kezdeti értéket fix érték [field1] hozzáadásával növelheti, illetve 1-nél kisebb számmal történő [field2] csökkentheti szükség szerint. Ennek megfelelően a [field3] lineáris, míg a [field4] exponenciális.",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "hozzáadásával"
+      },
+      {
+        "identifier": "field2",
+        "answer": "szorzással"
+      },
+      {
+        "identifier": "field3",
+        "answer": "növekedés"
+      },
+      {
+        "identifier": "field4",
+        "answer": "csökkenés"
+      }
+    ]
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Bontsa fel a $172.16.0.0/18$ hálózatot 16 azonos méretű hálózatra. Adja meg az első kettőt és az utolsó kettőt. Adja meg az új maszkot: [field1] , majd a hálózatokat maszk nélkül: első hálózat: 172.16. [field2].0 második hálózat: 172.16. [field3].0 utolsó előtti hálózat: 172.16. [field4].0 utolsó hálózat: 172.16. [field5].0",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "22"
+      },
+      {
+        "identifier": "field2",
+        "answer": "0"
+      },
+      {
+        "identifier": "field3",
+        "answer": "4"
+      },
+      {
+        "identifier": "field4",
+        "answer": "60"
+      },
+      {
+        "identifier": "field5",
+        "answer": "64"
+      }
+    ]
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Az \"A\" és \"B\" végpont közötti kommunikáció során \"A\" végpont utolsóként elküldött TCP PDU-jában a sorszám (sequence number) 8150, a hasznos adatrész 1200 byte. \"B\" válaszként küldött TCP PDU-jában az ACK-szám 8100. Mekkora vételi ablakméretet közölt \"B\" az \"A\" végponttal, amennyiben az \"A\" csomópont 950 byte-nyi adatot küldhet még a következő nyugta megérkezéséig? Csak egy számot írjon válaszként. [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "2200"
+    }
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "forgalomszabályozás"
+      },
+      {
+        "identifier": "field2",
+        "label": "torlódásvezérlés"
+      }
+    ],
+    "text": "TCP-nél a(z) [field1] célja, hogy a küldő állomás annyi adatot küldjön, amennyit a fogadó fél fel tud dolgozni. A(z) [field2] célja pedig annak elkerülése, hogy valamely közbenső hálózati eszköz (router, link) túlterhelése miatt a hálózat teljesítőképessége radikálisan csökkenjen."
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "FTP"
+      },
+      {
+        "identifier": "field2",
+        "label": "20-as"
+      },
+      {
+        "identifier": "field3",
+        "label": "státusz"
+      },
+      {
+        "identifier": "field4",
+        "label": "POP3"
+      },
+      {
+        "identifier": "field5",
+        "label": "a session teljes ideje"
+      }
+    ],
+    "text": "A(z) [field1] protokoll a [field2] portot használja adatkapcsolat felépítéséhez, vezérléshez a 21-es portot. Egy HTTP válasz [field3], fejrész, és adat részből áll. Egy korlátozott funkcionalitású, de gyakran használt kliens/szerver alapú levelezőprotokoll a(z) [field4]. Az FTP vezérlő kapcsolat időtartama: [field5]"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "2"
+      },
+      {
+        "identifier": "field2",
+        "label": "dc:8c:37:6a:ae:81"
+      },
+      {
+        "identifier": "field3",
+        "label": "152.66.77.89"
+      },
+      {
+        "identifier": "field4",
+        "label": "1c:6f:65:cc:52:05"
+      },
+      {
+        "identifier": "field5",
+        "label": "152.66.77.88"
+      }
+    ],
+    "text": "Az 1. mérésen megismerte az ARP protokoll működését. Hogyan alakulnak az ARP Reply üzenet mezőinek értékei, ha a kérést küldő gép MAC címe 1c:6f:65:cc:52:05, IP-címe 152.66.77.88, és a 152.66.77.89 IP-címhez tartozó MAC címet szeretné kideríteni, ami dc:8c:37:6a:ae:81. Az ARP Reply üzenet Opcode mezőjének értéke [field1] , az ARP további mezői: Sender MAC address: [field2] Sender IP address: [field3] Target MAC address: [field4] Target IP address: [field5]"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "USER"
+      },
+      {
+        "identifier": "field2",
+        "label": "PASS"
+      },
+      {
+        "identifier": "field3",
+        "label": "RETR"
+      }
+    ],
+    "text": "A 2. mérésen megismerte a POP3 protokoll működését. Tegyük fel, hogy a POP3 protokoll segítségével kezeli a postafiókját, a felhasználóneve jancsi, a jelszava 123456. A POP3 szerverhez való csatlakozás után autentikálja magát, majd töltse le a 3-as számú levelét. [field1] jancsi [field2] 123456 [field3] 3"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik állítás(ok) igaz(ak) az analóg és digitális jelekkel kapcsolatban?",
+    "options": {
+      "a": "Van olyan digitális jel, amely több mint kétféle lehetséges értéket vehet felv",
+      "b": "Minden digitális jel négyszög alakú",
+      "c": "Minden négyszög alakú jel digitális",
+      "d": "Minden analóg jel végtelen sok lehetséges értéket vehet fel✓"
+    },
+    "answer": [
+      "d",
+      "a"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Egy Ethernet kapcsoló (switch) ...",
+    "options": {
+      "a": "Minden keretet mindig minden portján továbbít",
+      "b": "Minden keretet mindig minden portján továbbít, kivéve azt a portot, amelyiken bejött",
+      "c": "Képes megtanulni, melyik portján milyen IP című eszköz van",
+      "d": "Képes megtanulni, melyik portján milyen MAC című eszköz van, és ezután a neki címzett kereteket csak neki küldi"
+    },
+    "answer": [
+      "d"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Egyetlen optikai szálon mekkora a legnagyobb elérhető adatátviteli sebesség?",
+    "options": {
+      "a": "több tíz $Mb/s$",
+      "b": "több ezer $Tb/s$",
+      "c": "több tíz $Gb/s$",
+      "d": "több tíz $Tb/s$"
+    },
+    "answer": [
+      "d"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Telefonhálózatokban alkalmazott PCM kódolással kapcsolatban mely állítás(ok) igaz(ak)?",
+    "options": {
+      "a": "Létezik annyi kvantálási szint, aminél már tökéletesen visszaállítható a sávszűrt jel. X",
+      "b": "Létezik olyan mintavételi gyakoriság, aminél már tökéletesen visszaállítható a sávszűrt jel (ha a mintákat tökéletesen visszük át).",
+      "c": "A kvantálási szintek nincsenek egyforma távolságra egymástól.",
+      "d": "A $D/A$ átalakítás a sávszűrő inverz karakterisztikájával történik. X"
+    },
+    "answer": [
+      "b",
+      "c"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "A telefonszámokról",
+    "options": {
+      "a": "A belföldi rendeltetési szám tárcsázása elhagyható zárt számozási rendszerben, egy (földrajzi) körzeten belül X",
+      "b": "Ma Magyarországon a mobiltelefon-hálózatban nyílt számozási rendszert használnak",
+      "c": "Két telefonszám esetén nem lehet az egyik a másik folytatása",
+      "d": "Ma Magyarországon a vezetékes telefonhálózatban nyílt számozási rendszert használnak"
+    },
+    "answer": [
+      "d",
+      "c"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Cat5e UTP kábelen max. 100 méter távolságra mekkora a legnagyobb érhető adatátviteli sebesség Ethernetet használva?",
+    "options": {
+      "a": "10 $Kb/s",
+      "b": "10~Mb/s",
+      "c": "100~Mb/s?",
+      "d": "1~Gb/s"
+    },
+    "answer": [
+      "d"
+    ]
+  },
+    {
+    "question_type": "fill_the_blanks",
+    "text": "Az 1. mérés 8. feladatában TCP kapcsolatot számolt meg. Ha azokat a TCP szegmenseket számolta meg, amelyekben a SYN flag be volt állítva, és az eredmény 16 lett, akkor hány kapcsolatot használt a letöltés? Használt kapcsolatok száma: [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "16"
+    }
+  }
+]
