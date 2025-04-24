@@ -12,7 +12,8 @@
     },
     "answer": [
       "c"
-    ]
+    ],
+    "ID": 1
   },
   {
     "question_type": "multi_choice",
@@ -27,7 +28,8 @@
     },
     "answer": [
       "b"
-    ]
+    ],
+    "ID": 2
   },
   {
     "question_type": "multi_choice",
@@ -42,7 +44,8 @@
     },
     "answer": [
       "e"
-    ]
+    ],
+    "ID": 3
   },
   {
     "question_type": "multi_choice",
@@ -57,22 +60,24 @@
     },
     "answer": [
       "e"
-    ]
+    ],
+    "ID": 4
   },
   {
     "question_type": "multi_choice",
     "question_title": "A nagy késletetés zavaró a beszédátvitelben. Melyik állítás igaz egyirányú, szájtól fülig tartó késleltetésre?",
     "options": {
-      "a": "150 ms (millisec.) alatt a legtöbb felhasználó számára még nem zavaró a késleltetés",
-      "b": "500 ms alatt a legtöbb felhasználó számára még nem zavaró a késleltetés",
-      "c": "A felhasználók több mint felét zavarja a 500 mikroszekundumos késleltetés",
-      "d": "A felhasználók több mint felét zavarja az 500 nanoszekundumos késleltetés",
-      "e": "1,5-2 s alatt a legtöbb felhasználó számára még nem zavaró a késleltetés",
+      "a": "150 ms (millisec.) alatt a legtöbb felhasználó számára még nem zavaró a késletetés",
+      "b": "500 ms alatt a legtöbb felhasználó számára még nem zavaró a késletetés",
+      "c": "A felhasználók több mint felét zavarja a 500 mikroszekundumos késletetés",
+      "d": "A felhasználók több mint felét zavarja az 500 nanoszekundumos késletetés",
+      "e": "1,5-2 s alatt a legtöbb felhasználó számára még nem zavaró a késletetés",
       "f": "Több mint 5 percet késni illetlenség, még egy hanghullámnak is."
     },
     "answer": [
       "a"
-    ]
+    ],
+    "ID": 5
   },
   {
     "question_type": "multi_choice",
@@ -87,7 +92,8 @@
     },
     "answer": [
       "b"
-    ]
+    ],
+    "ID": 6
   },
   {
     "question_type": "multi_choice",
@@ -102,7 +108,8 @@
     },
     "answer": [
       "c"
-    ]
+    ],
+    "ID": 7
   },
   {
     "question_type": "multi_choice",
@@ -112,12 +119,13 @@
       "b": "nem lehet két diszkrét állapota",
       "c": "csak két diszkrét állapota lehet",
       "d": "nem lehet négyszögjel",
-      "e": "lehet szinuszos jel, melynek amplitudója időnként változik",
+      "e": "lehet szinuszos jel, melynek amplitúdója időnként változik",
       "f": "minden esetben amplitúdómodulált jel"
     },
     "answer": [
       "e"
-    ]
+    ],
+    "ID": 8
   },
   {
     "question_type": "multi_choice",
@@ -132,7 +140,8 @@
     },
     "answer": [
       "c"
-    ]
+    ],
+    "ID": 9
   },
   {
     "question_type": "multi_choice",
@@ -147,7 +156,8 @@
     },
     "answer": [
       "b"
-    ]
+    ],
+    "ID": 10
   },
   {
     "question_type": "multi_choice",
@@ -155,14 +165,15 @@
     "options": {
       "a": "A beamforming technika hasonló ahhoz, mintha egy lámpát folyamatosan ki-be kapcsolgatnánk",
       "b": "LTE-ben csak áramkörkapcsolt gerinchálózat van",
-      "c": "A koronavirus terjedését az 5G hálózatok elősegítik, amely a Föld sarkoknál való enyhe lapultságából következik",
+      "c": "A koronavírus terjedését az 5G hálózatok elősegítik, amely a Föld sarkoknál való enyhe lapultságából következik",
       "d": "Az LTE önmagában csak internetszolgáltatást biztosít, hangszolgáltatást nem",
       "e": "LTE-ben továbbra is van csomagkapcsolt és áramkörkapcsolt gerinchálózat",
       "f": "LTE-ben csak puha hívásátadás létezik"
     },
     "answer": [
       "d"
-    ]
+    ],
+    "ID": 11
   },
   {
     "question_type": "multi_choice",
@@ -172,27 +183,29 @@
       "b": "a nagyobb cellák hátránya, hogy egy adott területen kevesebben beszélhetnek egyszerre",
       "c": "a jellemző cellaátmérő ma Magyarországon 50-60 km",
       "d": "a kisebb cellák megvalósításához kevesebb bázisállomás kell, ezért olcsóbb így a rendszer",
-      "e": "a 2 GHz körüli frekvenciatartományban kevésbé csillapodnak a rádiohullámok, mint 500 MHz körül, ezért könnyebb vele országos lefedést elérni",
+      "e": "a 2 GHz körüli frekvenciatartományban kevésbé csillapodnak a rádióhullámok, mint 500 MHz körül, ezért könnyebb vele országos lefedést eléírni",
       "f": "a nagyobb cellák hátránya, hogy bennük átlagosan kevesebbet fogyaszt a mobilkészülék"
     },
     "answer": [
       "b"
-    ]
+    ],
+    "ID": 12
   },
   {
     "question_type": "multi_choice",
     "question_title": "Melyik állítás igaz az IPTV-ben alkalmazott médiafolyamokra?",
     "options": {
       "a": "egy HD videostream sávszélességigénye nagyságrendileg 2 Gb/s",
-      "b": "SD felbontásban nincsen színinformáció, így leginkább a korai fekete-fehér filmek és egyes ir művészfilmek továbbítására alkalmas",
+      "b": "SD felbontásban nincsen színinformáció, így leginkább a korai fekete-fehér filmek és egyes ír művészfilmek továbbítására alkalmas",
       "c": "egy HD videostream sávszélességigénye nagyságrendileg 80 Mb/s",
-      "d": "az SD (Standard Definition vagy 2K) képfelbontás kb. 2 megapixel (1920x1080 pixel)",
+      "d": "az SD (Standard Definition vagy 2K) képfelbontás kb. 2 megapixel (1920 x 1080 pixel)",
       "e": "SD minőségben nincsen hang, csak némafilmek továbbíthatóak így",
       "f": "egy SD videostream sávszélességigénye nagyságrendileg 2 Mb/s"
     },
     "answer": [
       "f"
-    ]
+    ],
+    "ID": 13
   },
   {
     "question_type": "multi_choice",
@@ -207,26 +220,28 @@
     },
     "answer": [
       "b"
-    ]
+    ],
+    "ID": 14
   },
   {
     "question_type": "multi_choice",
     "question_title": "Melyik állítás igaz az UMTS teljesítményszabályozásra?",
     "options": {
       "a": "A Node B vezérli a mobil eszközök teljesítményszabályozását (a vett teljesítmény alapján utasítva azokat)",
-      "b": "Az alkalmazott keverő köd teljesen ortogonális, ezért az egyik mobil eszköz jele a másik jelét picit zavarja, és ezt a zavarást szeretnénk alacsony szinten tartani",
+      "b": "Az alkalmazott keverő kód teljesen ortogonális, ezért az egyik mobil eszköz jele a másik jelét picit zavarja, és ezt a zavarást szeretnénk alacsony szinten tartani",
       "c": "GSM-ben is van ilyen, és másodpercenként ugyanannyiszor történik a teljesítmény állítása, mint UMTS-ben",
       "d": "Teljesítményszabályozás nélkül több hifi rendszer begerjedne (főleg Ausztráliában)",
       "e": "Másodpercenként 150-szer történik",
-      "f": "Celja, hogy minden mobil jele kb. egyforma teljesítménnyel érkezzen a mobiltelefonokhoz"
+      "f": "Célja, hogy minden mobil jele kb. egyforma teljesítménnyel érkezzen a mobiltelefonokhoz"
     },
     "answer": [
       "a"
-    ]
+    ],
+    "ID": 15
   },
   {
     "question_type": "multi_choice",
-    "question_title": "GSM 900 esetén a használt frekvenciák: mobil adó: 890-915 MHz, bázisállomás: 935-960 MHz. Ha őt szolgáltató van egy adott országban, melyek egyformán részesülnek ezen rádiós frekvenciatartományokból, akkor egy szolgáltató egy cellájában egyszerre átlagosan hányan beszélgethetnek? Egy vivő 200 kHz széles, és 10 különböző frekvenciájú cellát használnak a szolgáltatók a cellás elv szerint (azaz nem 7-et).",
+    "question_title": "GSM 900 esetén a használt frekvenciák: mobil adó: 890-915 MHz, bázisállomás: 935-960 MHz. Ha öt szolgáltató van egy adott országban, melyek egyformán részesülnek ezen rádiós frekvenciatartományokból, akkor egy szolgáltató egy cellájában egyszerre átlagosan hányan beszélgethetnek? Egy vivő 200 kHz széles, és 10 különböző frekvenciájú cellát használnak a szolgáltatók a cellás elv szerint (azaz nem 7-et).",
     "options": {
       "a": "25 alatt",
       "b": "25-40 között",
@@ -237,7 +252,8 @@
     },
     "answer": [
       "a"
-    ]
+    ],
+    "ID": 16
   },
   {
     "question_type": "multi_choice",
@@ -252,7 +268,8 @@
     },
     "answer": [
       "c"
-    ]
+    ],
+    "ID": 17
   },
   {
     "question_type": "multi_choice",
@@ -267,7 +284,8 @@
     },
     "answer": [
       "b"
-    ]
+    ],
+    "ID": 18
   },
   {
     "question_type": "multi_choice",
@@ -282,11 +300,12 @@
     },
     "answer": [
       "e"
-    ]
+    ],
+    "ID": 19
   },
   {
     "question_type": "multi_choice",
-    "question_title": "A klasszikus telefonhálózatokban átvitt beszédsávra melyik állítas igaz?",
+    "question_title": "A klasszikus telefonhálózatokban átvitt beszédsávra melyik állítás igaz?",
     "options": {
       "a": "a teljes látható fényt magában foglalja",
       "b": "sávszélessége védősávokkal 4 Hz",
@@ -297,6 +316,103 @@
     },
     "answer": [
       "c"
-    ]
+    ],
+    "ID": 20
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "A beszédkodekeknek mennyi a jellemző adatsebessége?",
+    "options": {
+      "a": "20 kHz",
+      "b": "jellemzően 1 és 100 kilobit/sec között",
+      "c": "300-3100 Hz",
+      "d": "másodpercenként 50-70 kiloherz (kHz)",
+      "e": "2,4 -- 64 Mb/s",
+      "f": "0,125 -- 80 ms"
+    },
+    "answer": [
+      "b"
+    ],
+    "ID": 21
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "A GSM hálózatokra melyik állítás igaz?",
+    "options": {
+      "a": "beszélgetés közben a végberendezés sugárzási teljesítménye állandó: fix 2 W (2 watt)",
+      "b": "analóg rendszerek voltak",
+      "c": "egy vivőben 8 időrés van, így egyszerre időosztásos és frekvenciaosztásos a közeghozzáférése",
+      "d": "beszélgetés közben a végberendezés sugárzási teljesítménye állandó: fix 2 mW (2 milliwatt)",
+      "e": "GSM900 esetében egy időben 900 fél beszélhet",
+      "f": "88 mérföld/óra felett korlátozott időutazási lehetőséget is nyújtottak az USA egyes részein"
+    },
+    "answer": [
+      "c"
+    ],
+    "ID": 22
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "UMTS csatornázási kódolásnál egy 5 MHz széles vivőben a chipsebesség 3,84 Mc/s. Mennyi egy csatorna sebessége, ha egyszerre 4 csatornán lehet kommunikálni e vivőn belül?",
+    "options": {
+      "a": "80-120 kb/s között",
+      "b": "800-1200 kb/s között",
+      "c": "1200-8000 kb/s között",
+      "d": "120-800 kb/s között",
+      "e": "8000 kb/s felett",
+      "f": "80 kb/s alatt"
+    },
+    "answer": [
+      "b"
+    ],
+    "ID": 23
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "3G mobilhálózatokban CDMA esetén melyik állítás igaz?",
+    "options": {
+      "a": "a csatornázási kódoláskor a szórókódok hossza minden esetben 38400 chip",
+      "b": "a csatornázási kódoláskor a szórókódok hossza lehet 38400 chip",
+      "c": "a csatornázási kódolás megalkotásakor figyelembe vették a kvantumfizika, a relativitáselmélet és a modern parapszichológia legújabb eredményeit is",
+      "d": "a csatornázási kódolásban a kiterjesztési faktor mindig kisebb, mint a szórókód chip-ekben megadott hossza",
+      "e": "Az (1, -1) és az (1, 1) nem lehetnek együtt szórókódok.",
+      "f": "a csatornázási kódolásban a tökéletes ortogonalitáshoz szinkronizáció szükséges"
+    },
+    "answer": [
+      "f"
+    ],
+    "ID": 24
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik állítás igaz a zárt számozási rendszerre?",
+    "options": {
+      "a": "jobb minőségű beszédátvitel valósítható meg általa",
+      "b": "nem minden esetben prefix számok",
+      "c": "soha nem hosszabb a hívott szám, mint a nyílt rendszerben",
+      "d": "nem mindig kell a belföldi rendeltetési számot tárcsázni",
+      "e": "nem egyértelmű, honnan hogyan kell tárcsázni",
+      "f": "hazánkban ilyen a mobil számmező"
+    },
+    "answer": [
+      "f"
+    ],
+    "ID": 25
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az újgenerációs hálózatok (Next Generation Networks, NGN)-re melyik állítás igaz?",
+    "options": {
+      "a": "csak analóg mobiltelefonokon használták",
+      "b": "még az IP világ előtt született, a koncepció a csomagkapcsolással nehezen összeegyeztethető",
+      "c": "az 5G mobilhálózatokkal együtt fogják majd bevezetni",
+      "d": "a vezetékes telefonhálózat továbbfejlesztése, ezért csak hagyományos telefonkészülékkel használható",
+      "e": "kizárólag VoIP-ra való, Triple Play-re alkalmatlan",
+      "f": "a televíziószolgáltatást is IP alapon lehet rajta megvalósítani"
+    },
+    "answer": [
+      "f"
+    ],
+    "ID": 26
   }
 ]

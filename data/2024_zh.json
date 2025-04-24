@@ -12,14 +12,15 @@
     "answer": [
       "c",
       "e"
-    ]
+    ],
+    "ID": 1
   },
   {
     "question_type": "drag_n_drop",
     "choices": [
       {
         "identifier": "field1",
-        "label": "dinamikus címfeloldást"
+        "label": "címfeloldást"
       },
       {
         "identifier": "field2",
@@ -28,9 +29,22 @@
       {
         "identifier": "field3",
         "label": "dinamikus"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "hálózati címfordítást"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "névfeloldást"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "port forwardingot"
       }
     ],
-    "text": "Az ARP protokoll segítségével [field1] valósíthatunk meg, tehát az IPv4 címet MAC címre képezzük le. A megfelelő IP-cím - MAC-cím párok az ARP cache tábla [field2] (manuálisan felvett bejegyzések) és [field3] (feloldás eredménye) bejegyzéseiben tárolódnak."
+    "text": "Az ARP protokoll segítségével [field1] valósíthatunk meg, tehát az IPv4 címet MAC címre képezzük le. A megfelelő IP-cím - MAC-cím párok az ARP cache tábla [field2] (manuálisan felvett bejegyzések) és [field3] (feloldás eredménye) bejegyzéseiben tárolódnak.",
+    "ID": 2
   },
   {
     "question_type": "fill_the_blanks",
@@ -38,7 +52,8 @@
     "blank": {
       "identifier": "field1",
       "answer": "20"
-    }
+    },
+    "ID": 3
   },
   {
     "question_type": "drag_n_drop",
@@ -54,9 +69,121 @@
       {
         "identifier": "field3",
         "label": "szimbolikus név"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "hálózati címfordítás"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "címfordítás"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "portszám"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "MAC-cím"
       }
     ],
-    "text": "A reverse mapping a(z) [field1] ellentéte, vagyis célja a(z) [field2] hez tartozó [field3] felderítése."
+    "text": "A reverse mapping a(z) [field1] ellentéte, vagyis célja a(z) [field2] hez tartozó [field3] felderítése.",
+    "ID": 4
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "forrás"
+      },
+      {
+        "identifier": "field2",
+        "label": "Path MTU Discovery"
+      },
+      {
+        "identifier": "field3",
+        "label": "Options"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "címzett"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "közbeeső csomópontok"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "Header Checksum"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "TTL"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "Version"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "DHCP"
+      },
+      {
+        "identifier": "distractor7",
+        "label": "célhálózat"
+      },
+      {
+        "identifier": "distractor8",
+        "label": "Hop Limit"
+      },
+      {
+        "identifier": "distractor9",
+        "label": "RARP"
+      },
+      {
+        "identifier": "distractor10",
+        "label": "ARP hirdetmény"
+      },
+      {
+        "identifier": "distractor11",
+        "label": "Type of Service"
+      },
+      {
+        "identifier": "distractor12",
+        "label": "Total Length"
+      },
+      {
+        "identifier": "distractor13",
+        "label": "Internet Header Length"
+      },
+      {
+        "identifier": "distractor14",
+        "label": "Protocol"
+      },
+      {
+        "identifier": "distractor15",
+        "label": "Payload Length"
+      },
+      {
+        "identifier": "distractor16",
+        "label": "Network Address Translation"
+      },
+      {
+        "identifier": "distractor17",
+        "label": "Traffic Class"
+      },
+      {
+        "identifier": "distractor18",
+        "label": "rendeltetési hely"
+      },
+      {
+        "identifier": "distractor19",
+        "label": "ARP próba"
+      }
+    ],
+    "text": "IPv4-ben és IPv6-ban is van tördelés, de míg IPv4-ben a közbeeső csomópontok is tördelhetnek, addig IPv6-ban csak a(z) [field1]. Előtte használhat [field2] eljárást, hogy felfedezze a csomagméretre vonatkozó szűk keresztmetszeteket a hálózaton. IPv6-ban a tördelésre vonatkozó mezők a fejléc [field3] részében találhatóak.",
+    "ID": 5
   },
   {
     "question_type": "multi_choice",
@@ -73,7 +200,8 @@
       "C",
       "A",
       "F"
-    ]
+    ],
+    "ID": 6
   },
   {
     "question_type": "multi_choice",
@@ -88,9 +216,10 @@
     "answer": [
       "A",
       "C"
-    ]
+    ],
+    "ID": 7
   },
-    {
+  {
     "question_type": "drag_n_drop",
     "text": "Az AIMD algoritmus a kezdeti értéket fix érték [field1] növelheti, illetve 1-nél kisebb számmal történő [field2] szükség szerint. Ennek megfelelően a [field3] lineáris, míg a [field4] exponenciális.",
     "choices": [
@@ -109,8 +238,21 @@
       {
         "identifier": "field4",
         "label": "csökkenés"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "kivonással"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "hatványra emelésével"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "osztással"
       }
-    ]
+    ],
+    "ID": 8
   },
   {
     "question_type": "fill_the_blanks",
@@ -136,7 +278,8 @@
         "identifier": "field5",
         "answer": "64"
       }
-    ]
+    ],
+    "ID": 9
   },
   {
     "question_type": "fill_the_blanks",
@@ -144,7 +287,8 @@
     "blank": {
       "identifier": "field1",
       "answer": "2200"
-    }
+    },
+    "ID": 10
   },
   {
     "question_type": "drag_n_drop",
@@ -158,7 +302,8 @@
         "label": "torlódásvezérlés"
       }
     ],
-    "text": "TCP-nél a(z) [field1] célja, hogy a küldő állomás annyi adatot küldjön, amennyit a fogadó fél fel tud dolgozni. A(z) [field2] célja pedig annak elkerülése, hogy valamely közbenső hálózati eszköz (router, link) túlterhelése miatt a hálózat teljesítőképessége radikálisan csökkenjen."
+    "text": "TCP-nél a(z) [field1] célja, hogy a küldő állomás annyi adatot küldjön, amennyit a fogadó fél fel tud dolgozni. A(z) [field2] célja pedig annak elkerülése, hogy valamely közbenső hálózati eszköz (router, link) túlterhelése miatt a hálózat teljesítőképessége radikálisan csökkenjen.",
+    "ID": 11
   },
   {
     "question_type": "drag_n_drop",
@@ -182,9 +327,46 @@
       {
         "identifier": "field5",
         "label": "a session teljes ideje"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "MAC"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "egy parancs vagy adatátvitel"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "opcode"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "POP4"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "bejelentkezési fázis"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "SSH"
+      },
+      {
+        "identifier": "distractor7",
+        "label": "preamble"
+      },
+      {
+        "identifier": "distractor8",
+        "label": "HTTP"
+      },
+      {
+        "identifier": "distractor9",
+        "label": "IMAT4"
       }
     ],
-    "text": "A(z) [field1] protokoll a [field2] portot használja adatkapcsolat felépítéséhez, vezérléshez a 21-es portot. Egy HTTP válasz [field3], fejrész, és adat részből áll. Egy korlátozott funkcionalitású, de gyakran használt kliens/szerver alapú levelezőprotokoll a(z) [field4]. Az FTP vezérlő kapcsolat időtartama: [field5]"
+    "text": "A(z) [field1] protokoll a [field2] portot használja adatkapcsolat felépítéséhez, vezérléshez a 21-es portot. Egy HTTP válasz [field3], fejrész, és adat részből áll. Egy korlátozott funkcionalitású, de gyakran használt kliens/szerver alapú levelezőprotokoll a(z) [field4]. Az FTP vezérlő kapcsolat időtartama: [field5]",
+    "ID": 12
   },
   {
     "question_type": "drag_n_drop",
@@ -208,9 +390,30 @@
       {
         "identifier": "field5",
         "label": "152.66.77.88"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "00:00:00:00:00:00"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "0.0.0.0"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "255.255.255.255"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "1"
       }
     ],
-    "text": "Az 1. mérésen megismerte az ARP protokoll működését. Hogyan alakulnak az ARP Reply üzenet mezőinek értékei, ha a kérést küldő gép MAC címe 1c:6f:65:cc:52:05, IP-címe 152.66.77.88, és a 152.66.77.89 IP-címhez tartozó MAC címet szeretné kideríteni, ami dc:8c:37:6a:ae:81. Az ARP Reply üzenet Opcode mezőjének értéke [field1] , az ARP további mezői: Sender MAC address: [field2] Sender IP address: [field3] Target MAC address: [field4] Target IP address: [field5]"
+    "text": "Az 1. mérésen megismerte az ARP protokoll működését. Hogyan alakulnak az ARP Reply üzenet mezőinek értékei, ha a kérést küldő gép MAC címe 1c:6f:65:cc:52:05, IP-címe 152.66.77.88, és a 152.66.77.89 IP-címhez tartozó MAC címet szeretné kideríteni, ami dc:8c:37:6a:ae:81. Az ARP Reply üzenet Opcode mezőjének értéke [field1] , az ARP további mezői: Sender MAC address: [field2] Sender IP address: [field3] Target MAC address: [field4] Target IP address: [field5]",
+    "ID": 13
   },
   {
     "question_type": "drag_n_drop",
@@ -221,14 +424,59 @@
       },
       {
         "identifier": "field2",
-        "label": "PASS"
+        "label": "jancsi"
       },
       {
         "identifier": "field3",
+        "label": "PASS"
+      },
+      {
+        "identifier": "field4",
+        "label": "123456"
+      },
+      {
+        "identifier": "field5",
         "label": "RETR"
+      },
+      {
+        "identifier": "field6",
+        "label": "3"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "PUT"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "PASSWORD"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "LOGIN"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "PWD"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "FETCH"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "DELE"
+      },
+      {
+        "identifier": "distractor7",
+        "label": "GET"
+      },     
+      {
+        "identifier": "distractor8",
+        "label": "QUIT"
       }
     ],
-    "text": "A 2. mérésen megismerte a POP3 protokoll működését. Tegyük fel, hogy a POP3 protokoll segítségével kezeli a postafiókját, a felhasználóneve jancsi, a jelszava 123456. A POP3 szerverhez való csatlakozás után autentikálja magát, majd töltse le a 3-as számú levelét. [field1] jancsi [field2] 123456 [field3] 3"
+    "text": "A 2. mérésen megismerte a POP3 protokoll működését. Tegyük fel, hogy a POP3 protokoll segítségével kezeli a postafiókját, a felhasználóneve jancsi, a jelszava 123456. A POP3 szerverhez való csatlakozás után autentikálja magát, majd töltse le a 3-as számú levelét. [field1] [field2] [field3] [field4] [field5] [field6] [field7]",
+    "ID": 14
   },
   {
     "question_type": "multi_choice",
@@ -242,7 +490,8 @@
     "answer": [
       "d",
       "a"
-    ]
+    ],
+    "ID": 15
   },
   {
     "question_type": "multi_choice",
@@ -255,7 +504,8 @@
     },
     "answer": [
       "d"
-    ]
+    ],
+    "ID": 16
   },
   {
     "question_type": "multi_choice",
@@ -268,7 +518,8 @@
     },
     "answer": [
       "d"
-    ]
+    ],
+    "ID": 17
   },
   {
     "question_type": "multi_choice",
@@ -282,7 +533,8 @@
     "answer": [
       "b",
       "c"
-    ]
+    ],
+    "ID": 18
   },
   {
     "question_type": "multi_choice",
@@ -296,7 +548,8 @@
     "answer": [
       "d",
       "c"
-    ]
+    ],
+    "ID": 19
   },
   {
     "question_type": "multi_choice",
@@ -309,14 +562,16 @@
     },
     "answer": [
       "d"
-    ]
+    ],
+    "ID": 20
   },
-    {
+  {
     "question_type": "fill_the_blanks",
     "text": "Az 1. mérés 8. feladatában TCP kapcsolatot számolt meg. Ha azokat a TCP szegmenseket számolta meg, amelyekben a SYN flag be volt állítva, és az eredmény 16 lett, akkor hány kapcsolatot használt a letöltés? Használt kapcsolatok száma: [field1]",
     "blank": {
       "identifier": "field1",
       "answer": "16"
-    }
+    },
+    "ID": 21
   }
 ]

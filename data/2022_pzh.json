@@ -1,7 +1,7 @@
 [
   {
     "question_type": "multi_choice",
-    "question_title": "1. Az alábbiak közül melyik belföldi rendeltetési szám?",
+    "question_title": "Az alábbiak közül melyik belföldi rendeltetési szám?",
     "options": {
       "A": "A hálózatkijelölő szám",
       "B": "A segélyhívó számok",
@@ -10,12 +10,13 @@
       "E": "A belföldi előtét (06)"
     },
     "answer": [
-      "E"
-    ]
+      "D"
+    ],
+    "ID": 1
   },
   {
     "question_type": "multi_choice",
-    "question_title": "2. Melyik állítás igaz PCM-re?",
+    "question_title": "Melyik állítás igaz PCM-re?",
     "options": {
       "A": "A kvantálás annyi szintre történik, hogy ott nincs információvesztés",
       "B": "A mintavételezés annyi szintre történik, hogy ott nincs információvesztés",
@@ -25,11 +26,12 @@
     },
     "answer": [
       "E"
-    ]
+    ],
+    "ID": 2
   },
   {
     "question_type": "multi_choice",
-    "question_title": "3. Melyik igaz a keverő kódolásra?",
+    "question_title": "Melyik igaz a keverő kódolásra?",
     "options": {
       "A": "A forráson belüli adatfolyamok elkülönítésére szolgál",
       "B": "Nem tökéletes az ortogonalitása",
@@ -39,11 +41,12 @@
     },
     "answer": [
       "B"
-    ]
+    ],
+    "ID": 3
   },
   {
     "question_type": "multi_choice",
-    "question_title": "4. Az alábbiak közül melyik egy multicast routing protokoll?",
+    "question_title": "Az alábbiak közül melyik egy multicast routing protokoll?",
     "options": {
       "A": "PIM",
       "B": "RIP",
@@ -53,11 +56,12 @@
     },
     "answer": [
       "A"
-    ]
+    ],
+    "ID": 4
   },
   {
     "question_type": "multi_choice",
-    "question_title": "5. Hogyan nem lehet átvinni digitális jelet?",
+    "question_title": "Hogyan nem lehet átvinni digitális jelet?",
     "options": {
       "A": "Négyszög alakú, pontosabban szögletes jellel, melyben a 0-nak és 1-nek egy-egy feszültségszint felel meg",
       "B": "Tisztán szinuszos jellel, melynek paraméterei időben nem változnak",
@@ -67,11 +71,12 @@
     },
     "answer": [
       "B"
-    ]
+    ],
+    "ID": 5
   },
   {
     "question_type": "multi_choice",
-    "question_title": "6. Melyik a beszédkódolók helyes sorrendje a bitsebességük szerint?",
+    "question_title": "Melyik a beszédkódolók helyes sorrendje a bitsebességük szerint?",
     "options": {
       "A": "GSM EFR < GSM HR < GSM FR < PCM",
       "B": "PCM < GSM HR = GSM FR < GSM EFR",
@@ -80,12 +85,13 @@
       "E": "GSM HR < GSM EFR = GSM FR < PCM"
     },
     "answer": [
-      "E"
-    ]
+      "D"
+    ],
+    "ID": 6
   },
   {
     "question_type": "multi_choice",
-    "question_title": "7. GSM-ben hogyan biztosítják, hogy egy helyen egy időben több telefonon is lehessen telefonálni?",
+    "question_title": "GSM-ben hogyan biztosítják, hogy egy helyen egy időben több telefonon is lehessen telefonálni?",
     "options": {
       "A": "TDMA és FDMA kombinációjával",
       "B": "CSMA-CD-vel",
@@ -95,11 +101,12 @@
     },
     "answer": [
       "A"
-    ]
+    ],
+    "ID": 7
   },
   {
     "question_type": "multi_choice",
-    "question_title": "8. Mekkora egy 5G femtocella?",
+    "question_title": "Mekkora egy 5G femtocella?",
     "options": {
       "A": "Párszáz méter",
       "B": "Egy-két km",
@@ -109,11 +116,12 @@
     },
     "answer": [
       "E"
-    ]
+    ],
+    "ID": 8
   },
-    {
+  {
     "question_type": "multi_choice",
-    "question_title": "9. Hagyományos telefonhálózatokban mi szolgált a központok összekötésére?",
+    "question_title": "Hagyományos telefonhálózatokban mi szolgált a központok összekötésére?",
     "options": {
       "A": "A végberendezések",
       "B": "A trönkök",
@@ -123,11 +131,12 @@
     },
     "answer": [
       "B"
-    ]
+    ],
+    "ID": 9
   },
   {
     "question_type": "multi_choice",
-    "question_title": "10. Melyik eszköz valósít meg IGMP snoopingot (hallgatózást)?",
+    "question_title": "Melyik eszköz valósít meg IGMP snoopingot (hallgatózást)?",
     "options": {
       "A": "Az összes multicast router egy IPTV hálózatban",
       "B": "A végberendezéshez közeli Ethernet kapcsoló (switch)",
@@ -137,11 +146,12 @@
     },
     "answer": [
       "B"
-    ]
+    ],
+    "ID": 10
   },
-    {
+  {
     "question_type": "multi_choice",
-    "question_title": "11. Telefonhálózaton hagyományosan (nem „HD hang\" esetén) milyen széles sávot viszünk át (védősávok nélkül)?",
+    "question_title": "Telefonhálózaton hagyományosan (nem „HD hang” esetén) milyen széles sávot viszünk át (védősávok nélkül)?",
     "options": {
       "A": "20 kHz",
       "B": "6-7 kHz",
@@ -151,13 +161,14 @@
     },
     "answer": [
       "D"
-    ]
+    ],
+    "ID": 11
   },
   {
     "question_type": "multi_choice",
-    "question_title": "12. Melyik állítás nem igaz az AMR-WB (G.722.2) kódolóra",
+    "question_title": "Melyik állítás nem igaz az AMR-WB (G.722.2) kódolóra",
     "options": {
-      "A": "Marketingneve „HD-Hang\"",
+      "A": "Marketingneve „HD-Hang”",
       "B": "Az átvitt hangtartomány sávjának teteje 16 kHz",
       "C": "A neve Adaptive Multirate - Wideband, azaz adaptív többsebességű, szélessávú kódolót jelent",
       "D": "A mintavételezés itt is nagyjából az átvitt legnagyobb frekvencia duplájával történik",
@@ -165,38 +176,7 @@
     },
     "answer": [
       "B"
-    ]
-  },
-  {
-    "question_type": "fill_the_blanks",
-    "text": "13. Egy kódosztásos rendszerben (pl. UMTS csatornázási kód) egyszerre két adó (A és B) van jelen. Az A adó szórókódja (1, 1, 0, 0), a B-é pedig (1, 0, 1, 0). Az A adó az (1, 1) a B a (0, 1) üzenetet szeretné elküldeni. Mi az A adó által kiküldendő jel? [field1]",
-    "blank": {
-      "identifier": "field1",
-      "answer": "(1, 1, 0, 0, 1, 1, 0, 0)"
-    }
-  },
-  {
-    "question_type": "fill_the_blanks",
-    "text": "14. Tegyük fel, hogy egy VoIP átvitel esetén hagyományos PCM kodeket használunk, és az átvitel során egy csomagban a fejlécek összesen 40 bájtot (bájtot, nem bitet) foglalnak el. Az átvitel során az overhead (=a fejléc hossza/a teljes csomag (=fejléc+hasznos teher) hossza) 33,3%. Mekkora késleltetést okoz az átvitelben az, hogy meg kell várni, amíg megtelik egy csomag hasznos teher része? (Tippek: 1: Mekkora a PCM kodek bitsebessége? 2: Ne keverje a bitet a bájttal!) [field1] ms",
-    "blank": {
-      "identifier": "field1",
-      "answer": "10"
-    }
-  },
-    {
-    "question_type": "fill_the_blanks",
-    "text": "15. Hány éves idén a BME? [field1]",
-    "blank": {
-      "identifier": "field1",
-      "answer": "240"
-    }
-  },
-  {
-    "question_type": "fill_the_blanks",
-    "text": "16. Egy 20 km x 20 km területű, négyzet alaprajzú város átlagos népsűrűsége 2000 fő/km². Egy szolgáltató mobilhálózattal szeretné lefedni a várost. A mobilhálózatról nem tudjuk, hogy konkrétan milyen fajta (pl. GSM vagy más), de azt igen, hogy a szolgáltató rendelkezésre álló teljes frekvenciatartománynak a jobb kihasználása céljából a cellás elvet alkalmazza. A szolgáltató rendelkezésére álló teljes frekvenciatartományban egyszerre 800 fő beszélgethetne, ha nem osztanák fel. Mivel a szolgáltató arra készül, hogy egyszerre a lakosság 3%-a beszélhet maximum, cellákra osztja a várost, amihez 10 különböző típusú cellát használ (tehet nem 7-et, mint ahogy a méhsejt alakú iskolapéldán látható) azért, hogy a szomszédos cellák között ne legyen interferencia. Összesen hány cellára lesz szüksége? [field1]",
-    "blank": {
-      "identifier": "field1",
-      "answer": "300"
-    }
+    ],
+    "ID": 12
   }
 ]

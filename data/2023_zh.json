@@ -1,7 +1,7 @@
 [
   {
     "question_type": "multi_choice",
-    "question_title": "1. Melyik állítás igaz a telefonszámokra, mint kódokra?",
+    "question_title": "Melyik állítás igaz a telefonszámokra, mint kódokra?",
     "options": {
       "A": "A telefonszámok sosem prefix kódok, azaz egy szám lehet egy másik prefixe",
       "B": "A telefonszámok sosem prefix kódok, azaz egy szám nem lehet egy másik prefixe",
@@ -10,12 +10,13 @@
       "E": "A telefonszámok mindig prefix kódok, azaz egy szám lehet egy másik prefixe"
     },
     "answer": [
-      "D"
-    ]
+      "B"
+    ],
+    "ID": 1
   },
   {
     "question_type": "multi_choice",
-    "question_title": "2. Melyik állítás igaz a telefonszámokra?",
+    "question_title": "Melyik állítás igaz a telefonszámokra?",
     "options": {
       "A": "Szolgáltatáskijelölő szám lehet belföldi rendeltetési szám",
       "B": "Az országhívószám 2 számjegy",
@@ -25,11 +26,12 @@
     },
     "answer": [
       "D"
-    ]
+    ],
+    "ID": 2
   },
   {
     "question_type": "multi_choice",
-    "question_title": "3. IP multicastra melyik igaz?",
+    "question_title": "IP multicastra melyik igaz?",
     "options": {
       "A": "A 192.168.224.63 egy tipikus D osztályú IP cím",
       "B": "A PIM a csoporttagság jelzéséért felelős protokoll",
@@ -39,25 +41,27 @@
     },
     "answer": [
       "E"
-    ]
+    ],
+    "ID": 3
   },
   {
     "question_type": "multi_choice",
-    "question_title": "4. Melyik állítás igaz a telefonszámokról?",
+    "question_title": "Melyik állítás igaz a telefonszámokról?",
     "options": {
-      "A": "+36-1-025-5684 nem egy lehetséges magyar telefonszám, de a +36-20-025-5684 egy lehetséges magyar telefonszám",
+      "A": "A +36-1-025-5684 nem egy lehetséges magyar telefonszám, de a +36-20-025-5684 egy lehetséges magyar telefonszám",
       "B": "A +36-1-025-5684 egy lehetséges magyar telefonszám, de a +36-20-025-5684 nem egy lehetséges magyar telefonszám",
       "C": "A +36-1-025-5684 egy lehetséges magyar telefonszám, továbbá a +36-20-025-5684 is egy lehetséges magyar telefonszám",
       "D": "A +36-1-025-5684 csak 2010 januárjáig volt egy lehetséges magyar telefonszám",
       "E": "A +36-1-025-5684 nem egy lehetséges magyar telefonszám, és a +36-20-025-5684 sem egy lehetséges magyar telefonszám"
     },
     "answer": [
-      "E"
-    ]
+      "C"
+    ],
+    "ID": 4
   },
   {
     "question_type": "multi_choice",
-    "question_title": "5. Telefonhálózatokban használt PCM során",
+    "question_title": "Telefonhálózatokban használt PCM során",
     "options": {
       "A": "256 kvantálási szint van",
       "B": "8000 kvantálási szint van",
@@ -66,12 +70,13 @@
       "E": "8 kvantálási szint van"
     },
     "answer": [
-      "A"
-    ]
+      "B"
+    ],
+    "ID": 5
   },
   {
     "question_type": "multi_choice",
-    "question_title": "6. Hangkódolók esetén melyik igaz?",
+    "question_title": "Hangkódolók esetén melyik igaz?",
     "options": {
       "A": "A kódolási késleltetés nem lehet több egy ezredmásodpercnél",
       "B": "Az átlátszóság növelhető hibajavító kódolással",
@@ -81,11 +86,12 @@
     },
     "answer": [
       "C"
-    ]
+    ],
+    "ID": 6
   },
-    {
+  {
     "question_type": "multi_choice",
-    "question_title": "7. Milyen szolgáltatás nyújtható NGN segítségével?",
+    "question_title": "Milyen szolgáltatás nyújtható NGN segítségével?",
     "options": {
       "A": "DWDM = Dense Wavelength Division Multiplexing, sűrű hullámhosszosztású nyalábolás",
       "B": "Felhasználói végberendezés",
@@ -95,11 +101,12 @@
     },
     "answer": [
       "C"
-    ]
+    ],
+    "ID": 7
   },
   {
     "question_type": "multi_choice",
-    "question_title": "8. E mobil hálózatokban jelent meg először a csomagkapcsolt adatátvitel",
+    "question_title": "E mobil hálózatokban jelent meg először a csomagkapcsolt adatátvitel",
     "options": {
       "A": "1G",
       "B": "5G",
@@ -109,11 +116,12 @@
     },
     "answer": [
       "D"
-    ]
+    ],
+    "ID": 8
   },
   {
     "question_type": "multi_choice",
-    "question_title": "9. IP/Internet-TV: melyik állítás igaz?",
+    "question_title": "IP/Internet-TV: melyik állítás igaz?",
     "options": {
       "A": "Internet TV nem lehet globális elérhetőségű",
       "B": "Az Internet TV menedzselt hálózatot használ",
@@ -123,11 +131,12 @@
     },
     "answer": [
       "C"
-    ]
+    ],
+    "ID": 9
   },
-    {
+  {
     "question_type": "multi_choice",
-    "question_title": "10. Melyik állítás igaz a beszédsávról?",
+    "question_title": "Melyik állítás igaz a beszédsávról?",
     "options": {
       "A": "Klasszikusan egy 4 kHz széles sávot viszünk át a beszédből, és ehhez jön még a védősáv",
       "B": "Klasszikusan egy 64 kHz széles sávot viszünk át a beszédből, ami egy kompromisszumos megoldás",
@@ -137,11 +146,12 @@
     },
     "answer": [
       "D"
-    ]
+    ],
+    "ID": 10
   },
   {
     "question_type": "multi_choice",
-    "question_title": "11. Egy PCM átalakítás során általában véve, ha kétszer több bitre kvantálunk, akkor",
+    "question_title": "Egy PCM átalakítás során általában véve, ha kétszer több bitre kvantálunk, akkor",
     "options": {
       "A": "2-szer annyi kvantálási szintünk lesz",
       "B": "Nem lehet ez alapján megmondani, mennyivel több kvantálási szintünk lesz",
@@ -150,12 +160,13 @@
       "E": "256-tal több kvantálási szintünk lesz"
     },
     "answer": [
-      "A"
-    ]
+      "B"
+    ],
+    "ID": 11
   },
-    {
+  {
     "question_type": "multi_choice",
-    "question_title": "12. IPTV MPEG2-TS-re melyik igaz?",
+    "question_title": "IPTV MPEG2-TS-re melyik igaz?",
     "options": {
       "A": "Egy TS csomagban több PES csomag lehet",
       "B": "Egy IP csomagban több TS csomag lehet",
@@ -164,12 +175,13 @@
       "E": "Egy PES csomagban több TS csomag lehet"
     },
     "answer": [
-      "B"
-    ]
+      "A"
+    ],
+    "ID": 12
   },
   {
     "question_type": "multi_choice",
-    "question_title": "13. Egy jel maximális frekvenciája 10 kHz. Melyik állítás igaz rá?",
+    "question_title": "Egy jel maximális frekvenciája 10 kHz. Melyik állítás igaz rá?",
     "options": {
       "A": "5000-20000 szintre kvantálva a jel tökéletesen visszaállítható",
       "B": "Másodpercenként 5000 mintát véve és utána megfelelően kvantálva a jel tökéletesen visszaállítható",
@@ -179,19 +191,12 @@
     },
     "answer": [
       "E"
-    ]
-  },
-  {
-    "question_type": "fill_the_blanks",
-    "text": "14. GSM 1800 esetén hány beszédcsatornán (= vivők száma * időrések száma) osztoznak a szolgáltatók? Valasz: [field1]",
-    "blank": {
-      "identifier": "field1",
-      "answer": "2992"
-    }
+    ],
+    "ID": 13
   },
   {
     "question_type": "multi_choice",
-    "question_title": "15. Mikor alapították a BME-n a Villamosmérnöki Kart?",
+    "question_title": "Mikor alapították a BME-n a Villamosmérnöki Kart?",
     "options": {
       "A": "1961-1970 között",
       "B": "1941-1950 között",
@@ -200,23 +205,8 @@
       "E": "1971 után"
     },
     "answer": [
-      "B"
-    ]
-  },
-  {
-    "question_type": "fill_the_blanks",
-    "text": "16. Egyetlen beszélgetést tekintve egy másodperc alatt hány beszédet tartalmazó IP csomagot küldünk ki egy irányba? Valasz: [field1]",
-    "blank": {
-      "identifier": "field1",
-      "answer": "50"
-    }
-  },
-   {
-    "question_type": "fill_the_blanks",
-    "text": "17. Az előző kérdés folytatása: A fent leírt kapcsolaton egyszerre hány gyermek tud telefonálni? (Azaz: mivel a környék összes kisgyereke nálunk telefonál: hány kisgyerek van a környéken? :) ) Valasz: [field1]",
-    "blank": {
-      "identifier": "field1",
-      "answer": "10"
-    }
+      "D"
+    ],
+    "ID": 15
   }
 ]

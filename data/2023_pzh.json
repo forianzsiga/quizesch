@@ -3,226 +3,225 @@
     "question_type": "multi_choice",
     "question_title": "Melyik állítás igaz?",
     "options": {
-      "a": "A vokóderek bitsebessége nagyobb, mint a hullámforma-kódolóké",
-      "b": "A hibrid kódolók bitsebessége nagyobb, mint a hullámforma-kódolóké",
-      "c": "A vokóderek MOS-a nagyobb, mint a hibrid kódolóké",
-      "d": "A hullámforma-kódolók bitsebessége nagyobb, mint a vokódoreké",
-      "e": "A vokóderek MOS-a nagyobb, mint a hullámforma-kódolóké"
+      "A": "A vokóderek bitsebessége nagyobb, mint a hullámforma-kódolóké",
+      "B": "A hibrid kódolók bitsebessége nagyobb, mint a hullámforma-kódolóké",
+      "C": "A vokóderek MOS-a nagyobb, mint a hibrid kódolóké",
+      "D": "A hullámforma-kódolók bitsebessége nagyobb, mint a vokódoreké",
+      "E": "A vokóderek MOS-a nagyobb, mint a hullámforma-kódolóké"
     },
     "answer": [
-      "d"
-    ]
+      "D"
+    ],
+    "ID": 1
   },
   {
     "question_type": "multi_choice",
-    "question_title": "A +36-20-555-6789 telefonszámban a \"20\" micsoda?",
+    "question_title": "A +36-20-555-6789 telefonszámban a „20” micsoda?",
     "options": {
-      "a": "csak körzetszám",
-      "b": "csak hálózatkijelölő szám",
-      "c": "csak belföldi rendeltetési szám",
-      "d": "belföldi rendeltetési szám és hálózatkijelölő szám is",
-      "e": "belföldi rendeltetési szám és körzetszám is"
+      "A": "csak körzetszám",
+      "B": "csak hálózatkijelölő szám",
+      "C": "csak belföldi rendeltetési szám",
+      "D": "belföldi rendeltetési szám és hálózatkijelölő szám is",
+      "E": "belföldi rendeltetési szám és körzetszám is"
     },
     "answer": [
-      "b"
-    ]
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik állítás igaz?",
-    "options": {
-      "a": "Kodekeben a nagyobb kódolási késleltetés gyakran kisebb bitsebességet eredményez",
-      "b": "Egy kodek tipikus kódolási késleltetése 0,125-80 ns",
-      "c": "Egy kodek tipikus kódolási késleltetése 0,125-80 kb/s",
-      "d": "Egy kodek tipikus kódolási késleltetése 0,125 – 80 µs",
-      "e": "Egy kodek tipikus kódolási késleltetése 0,125 - 80 Mb/s"
-    },
-    "answer": [
-      "a"
-    ]
+      "D"
+    ],
+    "ID": 2
   },
   {
     "question_type": "multi_choice",
     "question_title": "Melyik állítás igaz?",
     "options": {
-      "a": "Egy PES csomagot mindig egy TS csomagba rakunk be.",
-      "b": "Egy TS csomagba nem kerülhet több PES csomag.",
-      "c": "Egy IP csomagban mindig egy PES csomag van.",
-      "d": "Egy IP csomagban mindig egy TS csomag van.",
-      "e": "Egy PES csomagba egy IP csomag kerül."
+      "A": "Kodekeben a nagyobb kódolási késleltetés gyakran kisebb bitsebességet eredményez",
+      "B": "Egy kodek tipikus kódolási késleltetése 0,125 – 80 ns",
+      "C": "Egy kodek tipikus kódolási késleltetése 0,125 – 80 kb/s",
+      "D": "Egy kodek tipikus kódolási késleltetése 0,125 – 80 µs",
+      "E": "Egy kodek tipikus kódolási késleltetése 0,125 – 80 Mb/s"
     },
     "answer": [
-      "b"
-    ]
+      "B"
+    ],
+    "ID": 3
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik állítás igaz?",
+    "options": {
+      "A": "Egy PES csomagot mindig egy TS csomagba rakunk be.",
+      "B": "Egy TS csomagba nem kerülhet több PES csomag.",
+      "C": "Egy IP csomagban mindig egy PES csomag van.",
+      "D": "Egy IP csomagban mindig egy TS csomag van.",
+      "E": "Egy PES csomagba egy IP csomag kerül."
+    },
+    "answer": [
+      "B"
+    ],
+    "ID": 4
   },
   {
     "question_type": "multi_choice",
     "question_title": "Hányadik generációs mobiltelefon-rendszer az UMTS?",
     "options": {
-      "a": "2G",
-      "b": "1G",
-      "c": "5G",
-      "d": "4G",
-      "e": "3G"
+      "A": "2G",
+      "B": "1G",
+      "C": "5G",
+      "D": "4G",
+      "E": "3G"
     },
     "answer": [
-      "e"
-    ]
+      "E"
+    ],
+    "ID": 5
   },
   {
     "question_type": "multi_choice",
     "question_title": "Melyik mobiltelefongeneráció közeghozzáférésében van/volt üzemszerű interferencia, azaz a kommunikáció során egymáshoz közel lévő telefonok azonos frekvencián, azonos időben adnak/adtak és ez nem okoz(ott) gondot?",
     "options": {
-      "a": "2G",
-      "b": "egyik sem",
-      "c": "0G",
-      "d": "3G",
-      "e": "1G"
+      "A": "2G",
+      "B": "egyik sem",
+      "C": "0G",
+      "D": "3G",
+      "E": "1G"
     },
     "answer": [
-      "d"
-    ]
+      "B"
+    ],
+    "ID": 6
   },
   {
     "question_type": "multi_choice",
     "question_title": "Melyik állítás igaz?",
     "options": {
-      "a": "Digitális jel mindig kétállapotú",
-      "b": "Digitális jel mindig négyszögjel",
-      "c": "Minden fizikai közegen megjelenő jel valójában digitális",
-      "d": "Akkor tekintünk digitálisnak egy jelet, ha azt vizsgáljuk, hogy véges sok állapot közül melyikhez áll a legközelebb",
-      "e": "Analóg jel nem lehet négyszögjel"
+      "A": "Digitális jel mindig kétállapotú",
+      "B": "Digitális jel mindig négyszögjel",
+      "C": "Minden fizikai közegen megjelenő jel valójában digitális",
+      "D": "Akkor tekintünk digitálisnak egy jelet, ha azt vizsgáljuk, hogy véges sok állapot közül melyikhez áll a legközelebb",
+      "E": "Analóg jel nem lehet négyszögjel"
     },
     "answer": [
-      "d"
-    ]
+      "D"
+    ],
+    "ID": 7
   },
   {
     "question_type": "multi_choice",
     "question_title": "Az emberi beszéd általában nem tartalmaz nagyobb frekvenciás hangokat mint",
     "options": {
-      "a": "7 kHz",
-      "b": "4 kHz",
-      "c": "3,1 kHz",
-      "d": "20 kHz",
-      "e": "13,4 KHz"
+      "A": "7 kHz",
+      "B": "4 kHz",
+      "C": "3,1 kHz",
+      "D": "20 kHz",
+      "E": "3,4 KHz"
     },
     "answer": [
-      "a"
-    ]
+      "E"
+    ],
+    "ID": 8
   },
   {
     "question_type": "multi_choice",
     "question_title": "Egy MPEG-2 Transport Streamben egy TV műsor egy adott nyelvű hangcsatornája az egy",
     "options": {
-      "a": "Program",
-      "b": "Program Map Table (PMT)",
-      "c": "Elemi folyam (Elementary stream)",
-      "d": "Program Association Table (PAT)",
-      "e": "MPEG-2 Transport Stream"
+      "A": "Program",
+      "B": "Program Map Table (PMT)",
+      "C": "Elemi folyam (Elementary stream)",
+      "D": "Program Association Table (PAT)",
+      "E": "MPEG-2 Transport Stream"
     },
     "answer": [
-      "c"
-    ]
+      "C"
+    ],
+    "ID": 9
   },
   {
     "question_type": "multi_choice",
     "question_title": "Az IGMP snooping egy",
     "options": {
-      "a": "IPTV-ben használt jogosultságellenőrző funkció",
-      "b": "csoporttagság kezelésére szolgáló protokoll",
-      "c": "multicast routing protokoll",
-      "d": "unicast routing protokoll",
-      "e": "csoporttagság számontartására szolgáló funkció"
+      "A": "IPTV-ben használt jogosultságellenőrző funkció",
+      "B": "csoporttagság kezelésére szolgáló protokoll",
+      "C": "multicast routing protokoll",
+      "D": "unicast routing protokoll",
+      "E": "csoporttagság számontartására szolgáló funkció"
     },
     "answer": [
-      "e"
-    ]
+      "E"
+    ],
+    "ID": 10
   },
   {
     "question_type": "multi_choice",
     "question_title": "VoIP esetében melyik protokoll hordozza azt az információt (közvetlenül, nem közvetve), hogy milyen beszédkodeket használjanak a felek?",
     "options": {
-      "a": "UDP",
-      "b": "SIP",
-      "c": "RTP",
-      "d": "URI",
-      "e": "SDP"
+      "A": "UDP",
+      "B": "SIP",
+      "C": "RTP",
+      "D": "URI",
+      "E": "SDP"
     },
     "answer": [
-      "e"
-    ]
+      "B"
+    ],
+    "ID": 11
   },
   {
     "question_type": "multi_choice",
-    "question_title": "Az alábbiak közül melyikkel érhető el a legnagyobb adatátviteli sebesség?",
+    "question_title": "Az alábbiak közül melyikkel érhető el a legnagyobb adatávtieli sebesség?",
     "options": {
-      "a": "GSM (az eredeti)",
-      "b": "UMTS (az eredeti)",
-      "c": "EDGE",
-      "d": "HSDPA",
-      "e": "HSPA+"
+      "A": "GSM (az eredeti)",
+      "B": "HSPA+",
+      "C": "UMTS (az eredeti)",
+      "D": "EDGE",
+      "E": "HSDPA"
     },
     "answer": [
-      "e"
-    ]
+      "B"
+    ],
+    "ID": 12
   },
   {
     "question_type": "multi_choice",
-    "question_title": "Melyik állítás igaz?",
+    "question_title": "Melyik állitás igaz?",
     "options": {
-      "a": "A trönk egyféle hozzáférési hálózat NGN-ben",
-      "b": "Trönkökön nyalábolt beszédátvitelt valósítottak meg",
-      "c": "A helyi hurok egyféle gerinchálózat NGN-ben",
-      "d": "A kábelTV-hálózat egyféle gerinchálózat NGN-ben",
-      "e": "A helyi hurok a telefonközpontok közötti átviteli utat jelentette régebben"
+      "A": "A trönk egyféle hozzáférési hálózat NGN-ben",
+      "B": "Trönkökön nyalábolt beszédátvitelt valósítottak meg",
+      "C": "A helyi hurok egyféle gerinchálózat NGN-ben",
+      "D": "A kábelTV-hálózat egyféle gerinchálózat NGN-ben",
+      "E": "A helyi hurok a telefonközpontok közötti átviteli utat jelentette régebben"
     },
     "answer": [
-      "b"
-    ]
+      "B"
+    ],
+    "ID": 13
   },
   {
     "question_type": "multi_choice",
     "question_title": "Melyik a legkisebb cellaméret 4G-ben?",
     "options": {
-      "a": "A pikocella",
-      "b": "A mikrocella",
-      "c": "A MIMO-cella",
-      "d": "A makrocella",
-      "e": "A femtocella"
+      "A": "A pikocella",
+      "B": "A mikrocella",
+      "C": "A MIMO-cella",
+      "D": "A makrocella",
+      "E": "A femtocella"
     },
     "answer": [
-      "e"
-    ]
+      "B"
+    ],
+    "ID": 14
   },
   {
     "question_type": "multi_choice",
     "question_title": "Hány kar van a Műegyetemen?",
     "options": {
-      "a": "5",
-      "b": "6",
-      "c": "7",
-      "d": "8",
-      "e": "9"
+      "A": "5",
+      "B": "6",
+      "C": "7",
+      "D": "8",
+      "E": "9"
     },
     "answer": [
-      "d"
-    ]
-  },
-  {
-    "question_type": "fill_the_blanks",
-    "text": "Egyetlen beszélgetést tekintve egy másodperc alatt hány beszédet tartalmazó IP csomagot küldünk ki egy irányba? [field1]",
-    "blank": {
-      "identifier": "field1",
-      "answer": "50"
-    }
-  },
-  {
-    "question_type": "fill_the_blanks",
-    "text": "Az előző kérdés folytatása: A fent leírt kapcsolaton egyszerre hány gyermek tud telefonálni? (Azaz: mivel a környék összes kisgyereke nálunk telefonál: hány kisgyerek van a környéken? :) ) [field1]",
-    "blank": {
-      "identifier": "field1",
-      "answer": "10"
-    }
+      "D"
+    ],
+    "ID": 15
   }
 ]
