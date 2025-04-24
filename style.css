@@ -55,6 +55,39 @@ label {
     margin-bottom: 0;
 }
 
+li.evaluation-correct {
+    background-color: #e0ffe0; /* Light green background */
+    padding: 3px 6px;         /* Add some padding */
+    margin-bottom: 4px;       /* Adjust spacing */
+    border-radius: 4px;
+    border-left: 3px solid green; /* Add a distinct left border */
+}
+
+li.evaluation-incorrect {
+    background-color: #ffe0e0; /* Light red background */
+    padding: 3px 6px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    border-left: 3px solid red;
+}
+/* Optional: Strike-through incorrect choice text */
+li.evaluation-incorrect label {
+   /* text-decoration: line-through; */ /* Uncomment if you want strike-through */
+}
+
+
+li.evaluation-missed {
+    background-color: #fff8e0; /* Light orange/yellow background */
+    padding: 3px 6px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    border-left: 3px solid orange;
+}
+/* Optional: Make missed correct answer bold */
+li.evaluation-missed label {
+   /* font-weight: bold; */ /* Uncomment if you want to bold the text */
+}
+
 .input-wrapper .feedback-correct {
     color: green;
 }
@@ -157,4 +190,24 @@ button:hover:not(:disabled) {
 
 .highlight-drop {
     background-color: #e0ffe0; /* Highlight when hovering over drop target */
+}
+
+#quiz-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 600px;
+    position: relative; /* Needed for absolute positioning of children */
+    padding-bottom: 45px; /* Add padding to prevent overlap with the notice */
+}
+
+#attribution-notice {
+    position: absolute;  /* Position relative to #quiz-container */
+    bottom: 10px;        /* Distance from the bottom edge */
+    right: 15px;         /* Distance from the right edge */
+    font-size: 0.75em;   /* Smaller font size */
+    color: #CCC;         /* Grey color */
+    text-align: right;   /* Align text to the right */
 }

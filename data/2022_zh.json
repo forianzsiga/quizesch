@@ -1,0 +1,208 @@
+[
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik funkcionalitás nincs meg az IP TV fejállomásban?",
+    "options": {
+      "a": "IGMP csomagok küldése és fogadása",
+      "b": "Műsorfolyamok összegyűjtése különböző forrásokból",
+      "c": "Hozzáférés-szabályozás és DRM (kb. digitális jogvédelem) megvalósítása",
+      "d": "IP/UDP/RTP/MPEG-2 TS/ES beágyazás",
+      "e": "Médiafolyam újrakódolása"
+    },
+    "answer": [
+      "a"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "A telefonhálózatokban alkalmazott PCM kódolásra melyik állítás igaz?",
+    "options": {
+      "a": "Másodpercenként 8000 szintre kvantálunk",
+      "b": "Egy mintát 256 biten kódolunk",
+      "c": "A kvantálás során torzul a jel",
+      "d": "Csak beszédjel átvitelére alkalmas",
+      "e": "A mintavételezés frekvenciája 3400 Hz"
+    },
+    "answer": [
+      "b"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik igaz az LTE-re az alábbiak közül?",
+    "options": {
+      "a": "Önmagában csak internetszolgáltatást biztosít, hangszolgáltatást nem",
+      "b": "Az 5G technológiai elnevezése",
+      "c": "Minden verziójában egy eszköz egy antennát használ",
+      "d": "Jobban véd a covidtól, mint a Sinopharm...",
+      "e": "Legalább 1 Gb/s sebességet biztosít minden felhasználónak"
+    },
+    "answer": [
+      "a"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "UMTS hálózatokban egy 5 MHz-es csatornában egyszerre négyen visznek át adatot. Mekkora az egyes adatcsatornák bitsebessége? (A chipsebesség 3,84 Mchip/s)",
+    "options": {
+      "a": "60 kb/s",
+      "b": "3840 kb/s",
+      "c": "80 kb/s",
+      "d": "Kb. 5 Mb/s",
+      "e": "960 kb/s"
+    },
+    "answer": [
+      "e"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik az a jellemző, amelyik megmondja, hogy beszédhangon kívül más hang is jól kódolható-e az adott kodekkel?",
+    "options": {
+      "a": "Átlátszóság",
+      "b": "Hibridség (azaz hibriditás)",
+      "c": "Robosztusság",
+      "d": "Adaptivitás",
+      "e": "Tandemezhetőség"
+    },
+    "answer": [
+      "a"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi az emberi beszédjel spektrumának (frekvenciatartományának) felső határa?",
+    "options": {
+      "a": "Kb. 20.000 kHz",
+      "b": "6-7000 Hz",
+      "c": "20.000 Hz",
+      "d": "Kb. 3400 Hz",
+      "e": "Kb. 20 Hz"
+    },
+    "answer": [
+      "d"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mobilhálózatokban mik a nagyobb cellák előnyei a kisebbekkel szemben?",
+    "options": {
+      "a": "Olcsóbb velük egy terület lefedése",
+      "b": "Jobban kímélik a telefonok akkumulátorát",
+      "c": "Jobb beszédminőség érhető így el",
+      "d": "Nagyobb adatsebesség érhető így el",
+      "e": "Többen beszélhetnek így egyszerre"
+    },
+    "answer": [
+      "a"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik állítás igaz NGN-re?",
+    "options": {
+      "a": "Az IPTV egy lehetséges alkalmazás NGN-ben, melyet egy (vagy több) szerver szolgáltat",
+      "b": "A hozzáférési hálózat nem lehet mobil",
+      "c": "A hozzáférési hálózat mindig mobil",
+      "d": "Az IP az csak egy szolgáltatás a felhasználók felé, a gerinchálózatban nem használják",
+      "e": "Az NGN egy hollywoodi filmstúdió"
+    },
+    "answer": [
+      "a"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi jellemző egy MPEG-2 TS csomagra?",
+    "options": {
+      "a": "Mindig a programok (csatornák) azonosítóit hordozza",
+      "b": "Egy TS csomag több Packetized Elementary Stream (PES) csomagot is tartalmazhat",
+      "c": "Több, jellemzően 7 IP csomag egyben",
+      "d": "Kicsi: kevesebb, mint 200 byte",
+      "e": "Nagy: több kB hosszú"
+    },
+    "answer": [
+      "d"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Milyen számozási rendszert alkalmaznak Magyarországon a távbeszélő hálózatokban?",
+    "options": {
+      "a": "Belföldi rendeltetési számozást",
+      "b": "Zárt számozást",
+      "c": "Nyílt számozást",
+      "d": "Mobilban zárt, vezetékesben nyílt számozást",
+      "e": "Mobilban nyílt, vezetékesben zárt számozást"
+    },
+    "answer": [
+      "b"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "VoIP hálózatokban melyik protokollt használjuk a hívások lebontására?",
+    "options": {
+      "a": "IP",
+      "b": "AMR-WB",
+      "c": "RTP",
+      "d": "RIP",
+      "e": "SIP"
+    },
+    "answer": [
+      "e"
+    ]
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik állítás igaz a digitális jelekre?",
+    "options": {
+      "a": "Akkor digitális, ha frekvenciabillentyűzést alkalmazunk",
+      "b": "Nem lehet szinuszos jel",
+      "c": "Mindig négyszögjel",
+      "d": "Nem lehet négyszögjel",
+      "e": "Lehet szinuszos jel"
+    },
+    "answer": [
+      "e"
+    ]
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Audio CD lemezeken a zenét PCM kódolással tárolják, de más paraméterekkel, mint a telefonhálózatoknál szokásos. A mintavételezés olyan gyakorisággal történik, hogy a tárolható hang frekvenciájának felső határa 22.050 Hz legyen. Egyetlen minta kvantálásához kétszer annyi bitet használnak, mint a telefonhálózatokban alkalmazott PCM esetében. Végül pedig 2 csatornát tárolnak (sztereó), amelyek egymástól teljesen függetlenek lehetnek. A kérdés azonban most nem pusztán a CD bitsebessége, hanem az, hogy ha egy zenét 140 kb/s bitsebességű mp3 fájlban tárolunk (ami egyébként már egész tűrhető zenei minőséget jelent), akkor körülbelül hányad részére tömörítettük a zenét a CD PCM-hez képest? [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "16"
+    }
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Hány százalék lesz az overhead (a fejléc hossza a teljes csomag hossza), ha VoIP átvitel esetén PCM kodeket használunk (a telefóniában szokásos paraméterekkel), és 10 ms-onként küldünk ki egy csomagot? [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "40"
+    }
+  },
+    {
+    "question_type": "multi_choice",
+    "question_title": "Mikor alapították a BME első, közvetlen elődintézményét?",
+    "options": {
+      "a": "1782",
+      "b": "1972",
+      "c": "1872",
+      "d": "1982",
+      "e": "1672"
+    },
+    "answer": [
+      "a"
+    ]
+  },
+    {
+    "question_type": "fill_the_blanks",
+    "text": "Egy 20 km x 20 km területű, négyzet alaprajzú város átlagos népsűrűsége 2000 fő/km². Egy szolgáltató mobilhálózattal szeretné lefedni a várost. A mobilhálózatról nem tudjuk, hogy konkrétan milyen fajta (pl. GSM vagy más), de azt igen, hogy a szolgáltató rendelkezésre álló teljes frekvenciatartománynak a jobb kihasználása céljából a cellás elvet alkalmazza. A szolgáltató rendelkezésére álló teljes frekvenciatartományban egyszerre 800 fő beszélgethetne, ha nem osztanák fel. Mivel a szolgáltató arra készül, hogy egyszerre a lakosság 3%-a beszélhet maximum, cellákra osztja a várost, amihez 10 különböző típusú cellát használ (tehet nem 7-et, mint ahogy a méhsejt alakú iskolapéldán látható) azért, hogy a szomszédos cellák között ne legyen interferencia. Összesen hány cellára lesz szüksége? [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "30"
+    }
+  }
+]
