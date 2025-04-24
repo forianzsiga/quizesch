@@ -13,7 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const quizListContainer = document.getElementById('quiz-list-container');
     const quizListElement = document.getElementById('quiz-list');
 
-    const dataDirectory = '/data/';
+    let dataDirectory = '/data/';
+
+    if (window.location.hostname == "github") {
+        dataDirectory = "/quizesch/" + dataDirectory;
+    }
+
     const listQuizzesEndpoint = 'quiz-manifest.json';
     let availableQuizzes = [];
 
