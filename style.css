@@ -70,11 +70,6 @@ li.evaluation-incorrect {
     border-radius: 4px;
     border-left: 3px solid red;
 }
-/* Optional: Strike-through incorrect choice text */
-li.evaluation-incorrect label {
-   /* text-decoration: line-through; */ /* Uncomment if you want strike-through */
-}
-
 
 li.evaluation-missed {
     background-color: #fff8e0; /* Light orange/yellow background */
@@ -82,10 +77,6 @@ li.evaluation-missed {
     margin-bottom: 4px;
     border-radius: 4px;
     border-left: 3px solid orange;
-}
-/* Optional: Make missed correct answer bold */
-li.evaluation-missed label {
-   /* font-weight: bold; */ /* Uncomment if you want to bold the text */
 }
 
 .input-wrapper .feedback-correct {
@@ -290,7 +281,6 @@ button:hover:not(:disabled) {
   cursor: help;
   user-select: none;
 }
-
 .supervised-indicator {
   display: inline-block;
   background: #eaffea;
@@ -305,7 +295,6 @@ button:hover:not(:disabled) {
   cursor: help;
   user-select: none;
 }
-
 .llm-indicator {
   display: inline-block;
   background: #eaf3ff;
@@ -320,3 +309,8 @@ button:hover:not(:disabled) {
   cursor: help;
   user-select: none;
 }
+#quiz-list a, #quiz-list a *, #quiz-list a::after, #quiz-list a::before, #quiz-list a *::after, #quiz-list a *::before {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
