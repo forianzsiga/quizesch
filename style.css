@@ -305,3 +305,18 @@ button:hover:not(:disabled) {
   cursor: help;
   user-select: none;
 }
+
+.llm-indicator {
+  display: inline-block;
+  background: #eaf3ff;
+  color: #1761a6;
+  border-radius: 16px;
+  padding: 2px 10px 2px 8px;
+  font-size: 0.95em;
+  margin-left: 12px;
+  vertical-align: middle;
+  border: 1px solid #8ec6ff;
+  font-weight: 500;
+  cursor: help;
+  user-select: none;
+}

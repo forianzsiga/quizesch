@@ -1,0 +1,252 @@
+[
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik protokollok működnek a Szállítási rétegben (Transport Layer) a TCP/IP modell szerint?",
+    "options": {
+      "a": "IP",
+      "b": "HTTP",
+      "c": "TCP",
+      "d": "Ethernet",
+      "e": "UDP"
+    },
+    "answer": [
+      "c",
+      "e"
+    ],
+    "ID": 1,
+    "supervised": "generated"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Adott a 192.168.10.130/24 IP cím és alhálózati maszk. Mi a hálózati cím? [field1] Mi az adott hálózat broadcast címe? [field2] Hány kiosztható hosztcím van ebben a hálózatban (a hálózati és broadcast címeket nem számítva)? [field3]",
+    "blank": [
+        {
+            "identifier": "field1",
+            "answer": "192.168.10.0"
+        },
+        {
+            "identifier": "field2",
+            "answer": "192.168.10.255"
+        },
+        {
+            "identifier": "field3",
+            "answer": "254"
+        }
+    ],
+    "ID": 2,
+    "supervised": "generated"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "összeköttetés-alapú"
+      },
+      {
+        "identifier": "field2",
+        "label": "megbízható"
+      },
+      {
+        "identifier": "field3",
+        "label": "összeköttetés-mentes"
+      },
+      {
+        "identifier": "field4",
+        "label": "megbízhatatlan"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "gyors"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "lassú"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "portszámokkal dolgozik"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "IP címekkel dolgozik"
+      }
+    ],
+    "text": "A TCP protokoll [field1] és [field2]. Ezzel szemben az UDP protokoll [field3] és [field4].",
+    "ID": 3,
+    "supervised": "generated"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik állítás(ok) igaz(ak) az Ethernet MAC címekre?",
+    "options": {
+      "A": "32 bitesek.",
+      "B": "48 bitesek.",
+      "C": "Az adatkapcsolati rétegben használatosak.",
+      "D": "A hálózati rétegben használatosak.",
+      "E": "Globálisan egyediek (elvileg)."
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "ID": 4,
+    "supervised": "generated"
+  },
+    {
+    "question_type": "multi_choice",
+    "question_title": "Melyik állítás igaz a Link State (LS) útválasztó algoritmusokra?",
+    "options": {
+      "a": "Csak a közvetlen szomszédoktól kapott távolságvektor információt használják.",
+      "b": "Minden csomópont ismeri (vagy megpróbálja megismerni) a teljes hálózati topológiát és a linkek költségeit.",
+      "c": "Tipikusan lassabb konvergencia jellemzi őket, mint a Distance Vector algoritmusokat.",
+      "d": "Hajlamosak a \"count-to-infinity\" (végtelening számolás) problémájára."
+    },
+    "answer": [
+      "b"
+    ],
+    "ID": 5,
+    "supervised": "generated"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "gyökér (root)"
+      },
+      {
+        "identifier": "field2",
+        "label": "Top-Level Domain (TLD)"
+      },
+      {
+        "identifier": "field3",
+        "label": "autoritatív"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "helyi"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "kliens"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "SMTP"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "DHCP"
+      }
+    ],
+    "text": "A DNS névfeloldás iteratív folyamata során a kliens (vagy a helyi DNS szerver proxyként eljárva) először jellemzően a(z) [field1] szervert kérdezi. Ha az nem tudja a választ, de tudja, ki az illetékes a legfelső szintű tartományra (pl. .hu, .com), akkor a(z) [field2] szervert kell megkérdezni. Végül a(z) [field3] névszerver (amely az adott domainért felelős) adja meg a konkrét IP címet.",
+    "ID": 6,
+    "supervised": "generated"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik HTTP metódus használatos jellemzően egy weboldal tartalmának lekérésére a szervertől?",
+    "options": {
+      "a": "GET",
+      "b": "POST",
+      "c": "HEAD",
+      "d": "PUT",
+      "e": "DELETE"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 7,
+    "supervised": "generated"
+  },
+   {
+    "question_type": "fill_the_blanks",
+    "text": "Egy kommunikációs csatorna sávszélessége 4 kHz, a jel/zaj viszony (S/N) pedig 1000 (ami kb. 30 dB teljesítményviszonyt jelent). Mekkora a csatorna elméleti maximális kapacitása Shannon-Hartley tétele szerint? (kbps-ben, egészre kerekítve, csak a számot adja meg!) Válasz: [field1]",
+    "blank": {
+      "identifier": "field1",
+      "answer": "40"
+    },
+    "ID": 8,
+    "supervised": "generated"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mire szolgál az ARP (Address Resolution Protocol)?",
+    "options": {
+      "a": "Egy adott IP címhez tartozó MAC cím felderítésére ugyanazon a helyi hálózaton.",
+      "b": "Egy adott MAC címhez tartozó IP cím felderítésére.",
+      "c": "Egy szimbolikus hosztnév (pl. www.bme.hu) IP címre való feloldására.",
+      "d": "Egy IP címhez tartozó szimbolikus hosztnév felderítésére."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 9,
+    "supervised": "generated"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "A TCP torlódásvezérlés során melyik mechanizmus felelős a kapcsolat kezdeti sávszélességének gyors (exponenciális) növeléséért az első csomagvesztésig vagy egy küszöbértékig?",
+    "options": {
+      "a": "Slow Start",
+      "b": "Congestion Avoidance (AIMD)",
+      "c": "Fast Recovery",
+      "d": "Fast Retransmit"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 10,
+    "supervised": "generated"
+  },
+    {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "RTT (Round Trip Time)"
+      },
+      {
+        "identifier": "field2",
+        "label": "MSS (Maximum Segment Size)"
+      },
+      {
+        "identifier": "field3",
+        "label": "egyenlően"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "IP cím"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "portszám"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "CongWin"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "RcvWin"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "arányosan"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "véletlenszerűen"
+      },
+      {
+        "identifier": "distractor7",
+        "label": "prioritás szerint"
+      }
+    ],
+    "text": "Ideális esetben, ha két TCP kapcsolat verseng ugyanazon a szűk keresztmetszetű linken, és a(z) [field1] valamint a(z) [field2] megegyezik számukra, akkor a link sávszélességén várhatóan [field3] osztoznak az AIMD algoritmus miatt.",
+    "ID": 11,
+    "supervised": "generated"
+  }
+]
