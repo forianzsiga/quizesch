@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (supervised) {
             indicatorHtml = `<span class="supervised-indicator" title="This question was reviewed and approved by a human">✔ supervised</span>`;
         } else if (unsupervised) {
-            indicatorHtml = `<span class=\"unsupervised-indicator\" title=\"This question was generated from an LLM. The question was not yet supervised by a human\">❗ unsupervised</span>`;
+            indicatorHtml = `<span class=\"unsupervised-indicator\" title=\"The question is from a set which was interpreted by an LLM. The question was not yet supervised by a human\">unsupervised</span>`;
         }
         let html = `<h3>Question ${index + 1} of ${questions.length}${indicatorHtml}</h3>`;
 
