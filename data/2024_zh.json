@@ -13,7 +13,8 @@
       "c",
       "e"
     ],
-    "ID": 1
+    "ID": 1,
+    "supervised": "yes"
   },
   {
     "question_type": "drag_n_drop",
@@ -44,7 +45,8 @@
       }
     ],
     "text": "Az ARP protokoll segítségével [field1] valósíthatunk meg, tehát az IPv4 címet MAC címre képezzük le. A megfelelő IP-cím - MAC-cím párok az ARP cache tábla [field2] (manuálisan felvett bejegyzések) és [field3] (feloldás eredménye) bejegyzéseiben tárolódnak.",
-    "ID": 2
+    "ID": 2,
+    "supervised": "yes"
   },
   {
     "question_type": "fill_the_blanks",
@@ -53,7 +55,8 @@
       "identifier": "field1",
       "answer": "20"
     },
-    "ID": 3
+    "ID": 3,
+    "supervised": "yes"
   },
   {
     "question_type": "drag_n_drop",
@@ -88,7 +91,8 @@
       }
     ],
     "text": "A reverse mapping a(z) [field1] ellentéte, vagyis célja a(z) [field2] hez tartozó [field3] felderítése.",
-    "ID": 4
+    "ID": 4,
+    "supervised": "yes"
   },
   {
     "question_type": "drag_n_drop",
@@ -183,7 +187,8 @@
       }
     ],
     "text": "IPv4-ben és IPv6-ban is van tördelés, de míg IPv4-ben a közbeeső csomópontok is tördelhetnek, addig IPv6-ban csak a(z) [field1]. Előtte használhat [field2] eljárást, hogy felfedezze a csomagméretre vonatkozó szűk keresztmetszeteket a hálózaton. IPv6-ban a tördelésre vonatkozó mezők a fejléc [field3] részében találhatóak.",
-    "ID": 5
+    "ID": 5,
+    "supervised": "yes"
   },
   {
     "question_type": "multi_choice",
@@ -201,7 +206,8 @@
       "A",
       "F"
     ],
-    "ID": 6
+    "ID": 6,
+    "supervised": "yes"
   },
   {
     "question_type": "multi_choice",
@@ -217,7 +223,8 @@
       "A",
       "C"
     ],
-    "ID": 7
+    "ID": 7,
+    "supervised": "yes"
   },
   {
     "question_type": "drag_n_drop",
@@ -252,7 +259,8 @@
         "label": "osztással"
       }
     ],
-    "ID": 8
+    "ID": 8,
+    "supervised": "yes"
   },
   {
     "question_type": "fill_the_blanks",
@@ -279,7 +287,8 @@
         "answer": "64"
       }
     ],
-    "ID": 9
+    "ID": 9,
+    "supervised": "yes"
   },
   {
     "question_type": "fill_the_blanks",
@@ -288,7 +297,8 @@
       "identifier": "field1",
       "answer": "2200"
     },
-    "ID": 10
+    "ID": 10,
+    "supervised": "yes"
   },
   {
     "question_type": "drag_n_drop",
@@ -363,7 +373,8 @@
   }
 ],
     "text": "TCP-nél a(z) [field1] célja, hogy a küldő állomás annyi adatot küldjön, amennyit a fogadó fél fel tud dolgozni. A(z) [field2] célja pedig annak elkerülése, hogy valamely közbenső hálózati eszköz (router, link) túlterhelése miatt a hálózat teljesítőképessége radikálisan csökkenjen.",
-    "ID": 11
+    "ID": 11,
+    "supervised": "yes"
   },
   {
     "question_type": "drag_n_drop",
@@ -426,7 +437,8 @@
       }
     ],
     "text": "A(z) [field1] protokoll a [field2] portot használja adatkapcsolat felépítéséhez, vezérléshez a 21-es portot. Egy HTTP válasz [field3], fejrész, és adat részből áll. Egy korlátozott funkcionalitású, de gyakran használt kliens/szerver alapú levelezőprotokoll a(z) [field4]. Az FTP vezérlő kapcsolat időtartama: [field5]",
-    "ID": 12
+    "ID": 12,
+    "supervised": "yes"
   },
   {
     "question_type": "drag_n_drop",
@@ -473,7 +485,8 @@
       }
     ],
     "text": "Az 1. mérésen megismerte az ARP protokoll működését. Hogyan alakulnak az ARP Reply üzenet mezőinek értékei, ha a kérést küldő gép MAC címe 1c:6f:65:cc:52:05, IP-címe 152.66.77.88, és a 152.66.77.89 IP-címhez tartozó MAC címet szeretné kideríteni, ami dc:8c:37:6a:ae:81. Az ARP Reply üzenet Opcode mezőjének értéke [field1] , az ARP további mezői: Sender MAC address: [field2] Sender IP address: [field3] Target MAC address: [field4] Target IP address: [field5]",
-    "ID": 13
+    "ID": 13,
+    "supervised": "yes"
   },
   {
     "question_type": "drag_n_drop",
@@ -536,7 +549,8 @@
       }
     ],
     "text": "A 2. mérésen megismerte a POP3 protokoll működését. Tegyük fel, hogy a POP3 protokoll segítségével kezeli a postafiókját, a felhasználóneve jancsi, a jelszava 123456. A POP3 szerverhez való csatlakozás után autentikálja magát, majd töltse le a 3-as számú levelét. [field1] [field2] [field3] [field4] [field5] [field6]",
-    "ID": 14
+    "ID": 14,
+    "supervised": "yes"
   },
   {
     "question_type": "multi_choice",
@@ -551,7 +565,8 @@
       "d",
       "a"
     ],
-    "ID": 15
+    "ID": 15,
+    "supervised": "yes"
   },
   {
     "question_type": "multi_choice",
@@ -565,7 +580,8 @@
     "answer": [
       "d"
     ],
-    "ID": 16
+    "ID": 16,
+    "supervised": "yes"
   },
   {
     "question_type": "multi_choice",
@@ -579,7 +595,8 @@
     "answer": [
       "d"
     ],
-    "ID": 17
+    "ID": 17,
+    "supervised": "yes"
   },
   {
     "question_type": "multi_choice",
@@ -594,7 +611,8 @@
       "b",
       "c"
     ],
-    "ID": 18
+    "ID": 18,
+    "supervised": "yes"
   },
   {
     "question_type": "multi_choice",
@@ -609,7 +627,8 @@
       "d",
       "c"
     ],
-    "ID": 19
+    "ID": 19,
+    "supervised": "yes"
   },
   {
     "question_type": "multi_choice",
@@ -623,7 +642,8 @@
     "answer": [
       "d"
     ],
-    "ID": 20
+    "ID": 20,
+    "supervised": "yes"
   },
   {
     "question_type": "fill_the_blanks",
@@ -632,6 +652,7 @@
       "identifier": "field1",
       "answer": "16"
     },
-    "ID": 21
+    "ID": 21,
+    "supervised": "yes"
   }
 ]

@@ -242,7 +242,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         clearEvaluationStyles(); // Clear styles before displaying
         const question = questions[index];
-        let html = `<h3>Question ${index + 1} of ${questions.length}</h3>`;
+        // --- Unsupervised/supervised indicator logic ---
+        let unsupervised = false;
+        let supervised = false;
+        if ('supervised' in question && typeof question.supervised === 'string' && question.supervised.trim().toLowerCase() === 'yes') {
+            supervised = true;
+        } else {
+            unsupervised = true;
+        }
+        let indicatorHtml = '';
+        if (supervised) {
+            indicatorHtml = `<span class="supervised-indicator" title="This question was reviewed and approved by a human">✔ supervised</span>`;
+        } else if (unsupervised) {
+            indicatorHtml = `<span class=\"unsupervised-indicator\" title=\"This question was generated from an LLM. The question was not yet supervised by a human\">❗ unsupervised</span>`;
+        }
+        let html = `<h3>Question ${index + 1} of ${questions.length}${indicatorHtml}</h3>`;
 
         switch (question.question_type) {
              case 'multi_choice':
