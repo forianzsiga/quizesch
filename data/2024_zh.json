@@ -293,15 +293,75 @@
   {
     "question_type": "drag_n_drop",
     "choices": [
-      {
-        "identifier": "field1",
-        "label": "forgalomszabályozás"
-      },
-      {
-        "identifier": "field2",
-        "label": "torlódásvezérlés"
-      }
-    ],
+  {
+    "identifier": "distractor1",
+    "label": "00:00:00:00:00:00"
+  },
+  {
+    "identifier": "distractor2",
+    "label": "152.66.77.88"
+  },
+  {
+    "identifier": "distractor3",
+    "label": "152.66.77.89"
+  },
+  {
+    "identifier": "distractor4",
+    "label": "0.0.0.0"
+  },
+  {
+    "identifier": "distractor5",
+    "label": "dc:8c:37:6a:ae:81"
+  },
+  {
+    "identifier": "distractor6",
+    "label": "2"
+  },
+  {
+    "identifier": "distractor7",
+    "label": "ff:ff:ff:ff:ff:ff"
+  },
+  {
+    "identifier": "distractor8",
+    "label": "255.255.255.255"
+  },
+  {
+    "identifier": "distractor9",
+    "label": "1c:6f:65:cc:52:05"
+  },
+  {
+    "identifier": "distractor10",
+    "label": "1"
+  },
+  {
+    "identifier": "distractor11",
+    "label": "ismétléskérés"
+  },
+  {
+    "identifier": "distractor12",
+    "label": "torlódásvezérlés"
+  },
+  {
+    "identifier": "distractor13",
+    "label": "multiplexálás"
+  },
+  {
+    "identifier": "distractor14",
+    "label": "háromutas kézfogás"
+  },
+  {
+    "identifier": "distractor15",
+    "label": "szelektív nyugtázás"
+  },
+  {
+    "identifier": "distractor16",
+    "label": "négyutas kézfogás"
+  },
+  {
+    "identifier": "distractor17",
+    "label": "forgalomszabályozás"
+  }
+],
     "text": "TCP-nél a(z) [field1] célja, hogy a küldő állomás annyi adatot küldjön, amennyit a fogadó fél fel tud dolgozni. A(z) [field2] célja pedig annak elkerülése, hogy valamely közbenső hálózati eszköz (router, link) túlterhelése miatt a hálózat teljesítőképessége radikálisan csökkenjen.",
     "ID": 11
   },
@@ -475,7 +535,7 @@
         "label": "QUIT"
       }
     ],
-    "text": "A 2. mérésen megismerte a POP3 protokoll működését. Tegyük fel, hogy a POP3 protokoll segítségével kezeli a postafiókját, a felhasználóneve jancsi, a jelszava 123456. A POP3 szerverhez való csatlakozás után autentikálja magát, majd töltse le a 3-as számú levelét. [field1] [field2] [field3] [field4] [field5] [field6] [field7]",
+    "text": "A 2. mérésen megismerte a POP3 protokoll működését. Tegyük fel, hogy a POP3 protokoll segítségével kezeli a postafiókját, a felhasználóneve jancsi, a jelszava 123456. A POP3 szerverhez való csatlakozás után autentikálja magát, majd töltse le a 3-as számú levelét. [field1] [field2] [field3] [field4] [field5] [field6]",
     "ID": 14
   },
   {
@@ -511,10 +571,10 @@
     "question_type": "multi_choice",
     "question_title": "Egyetlen optikai szálon mekkora a legnagyobb elérhető adatátviteli sebesség?",
     "options": {
-      "a": "több tíz $Mb/s$",
-      "b": "több ezer $Tb/s$",
-      "c": "több tíz $Gb/s$",
-      "d": "több tíz $Tb/s$"
+      "a": "több tíz Mb/s",
+      "b": "több ezer Tb/s",
+      "c": "több tíz Gb/s",
+      "d": "több tíz Tb/s"
     },
     "answer": [
       "d"
@@ -525,10 +585,10 @@
     "question_type": "multi_choice",
     "question_title": "Telefonhálózatokban alkalmazott PCM kódolással kapcsolatban mely állítás(ok) igaz(ak)?",
     "options": {
-      "a": "Létezik annyi kvantálási szint, aminél már tökéletesen visszaállítható a sávszűrt jel. X",
+      "a": "Létezik annyi kvantálási szint, aminél már tökéletesen visszaállítható a sávszűrt jel.",
       "b": "Létezik olyan mintavételi gyakoriság, aminél már tökéletesen visszaállítható a sávszűrt jel (ha a mintákat tökéletesen visszük át).",
       "c": "A kvantálási szintek nincsenek egyforma távolságra egymástól.",
-      "d": "A $D/A$ átalakítás a sávszűrő inverz karakterisztikájával történik. X"
+      "d": "A D/A átalakítás a sávszűrő inverz karakterisztikájával történik."
     },
     "answer": [
       "b",
@@ -540,7 +600,7 @@
     "question_type": "multi_choice",
     "question_title": "A telefonszámokról",
     "options": {
-      "a": "A belföldi rendeltetési szám tárcsázása elhagyható zárt számozási rendszerben, egy (földrajzi) körzeten belül X",
+      "a": "A belföldi rendeltetési szám tárcsázása elhagyható zárt számozási rendszerben, egy (földrajzi) körzeten belül",
       "b": "Ma Magyarországon a mobiltelefon-hálózatban nyílt számozási rendszert használnak",
       "c": "Két telefonszám esetén nem lehet az egyik a másik folytatása",
       "d": "Ma Magyarországon a vezetékes telefonhálózatban nyílt számozási rendszert használnak"
@@ -555,10 +615,10 @@
     "question_type": "multi_choice",
     "question_title": "Cat5e UTP kábelen max. 100 méter távolságra mekkora a legnagyobb érhető adatátviteli sebesség Ethernetet használva?",
     "options": {
-      "a": "10 $Kb/s",
-      "b": "10~Mb/s",
-      "c": "100~Mb/s?",
-      "d": "1~Gb/s"
+      "a": "10~ Kb/s",
+      "b": "10~ Mb/s",
+      "c": "100~ Mb/s?",
+      "d": "1~ Gb/s"
     },
     "answer": [
       "d"

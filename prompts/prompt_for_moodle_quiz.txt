@@ -1,7 +1,8 @@
 PROMPT_START
-Your task is to generate jsons from document(s) or image(s) provided. There is an example JSON below to showcase how the JSON should be formatted.
+Your task is to generate jsons from document(s) or image(s) provided. There is an example document 'example.pdf' attached and an example JSON below to showcase how the JSON should be formatted. This is NOT the document you have to interpret!!
 You can ONLY present the actual JSON as your main response (the thinking tokens are an exception of course)
 Here is your thinking procedure that you MUST follow in order to give back a proper response:
+	0. Identify which files that have been attached are the ones that you need to turn into JSON!
 	1. Translate all the questions into English for better performance
 	2. Understand the question's meaning
 	3. Identify the correct (green) and incorrect (red) or missing answers. In case of a wrong or a missing answer the solution is usually written down close to the field. If it's not the case, your task is to fill the missing information with your own knowledge

@@ -4,42 +4,38 @@
     "choices": [
       {
         "identifier": "field1",
-        "label": "kiszolgálónak"
+        "label": "szerver"
       },
       {
         "identifier": "field2",
-        "label": "jelszó"
+        "label": "kliens"
       },
       {
         "identifier": "field3",
-        "label": "biztonságos"
+        "label": "vezérlő"
       },
       {
         "identifier": "field4",
-        "label": "nem biztonságos"
-      },
-      {
-        "identifier": "field5",
         "label": "IP"
       },
       {
-        "identifier": "field6",
+        "identifier": "field5",
         "label": "port szám"
       },
       {
-        "identifier": "field7",
-        "label": "elutasítja"
-      },
-      {
-        "identifier": "field8",
-        "label": "engedélyezi"
-      },
-      {
         "identifier": "distractor1",
-        "label": "HTTP"
+        "label": "MAC"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "szimolikus név"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "adat"
       }
     ],
-    "text": "Az FTP protokoll már elavultnak számít, sokkal biztonságosabb kapcsolatot tesz lehetővé a(z) [...]. Kiszolgálóhoz [field1] a felhasználónév és [field2] azonosításra. Ezt a gyakorlatban úgy jelentik, hogy az [field3] / [field4] kapcsolaton keresztül elküldik az [field5] címet és a [field6]. A szerver a kapcsolat felépítését a kapott azonosítók alapján [field8].",
+	"text": "FTP aktív mód esetén az adat kapcsolat felépítését a(z) [field1] kezdeményezi a [field2] felé. Ez a gyakorlatban azt jelenti, hogy a(z) [field2] a [field3] kapcsolaton keresztül elküldi a(z) [field4] -cím és [field5] adatokat, ahova a(z) [field1] kapcsolódhat. Ezután a(z) [field1] megkezdi a kapcsolat felépítését a kapott azonosítók alapján."
     "ID": 1
   },
   {
