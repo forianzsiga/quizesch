@@ -36,7 +36,8 @@
       }
     ],
 	"text": "FTP aktív mód esetén az adat kapcsolat felépítését a(z) [field1] kezdeményezi a [field2] felé. Ez a gyakorlatban azt jelenti, hogy a(z) [field2] a [field3] kapcsolaton keresztül elküldi a(z) [field4] -cím és [field5] adatokat, ahova a(z) [field1] kapcsolódhat. Ezután a(z) [field1] megkezdi a kapcsolat felépítését a kapott azonosítók alapján.",
-  "ID": 1
+  "ID": 1,
+  "supervised": "yes"
   },
   {
     "question_type": "multi_choice",
