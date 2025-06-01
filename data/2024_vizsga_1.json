@@ -1,0 +1,317 @@
+[
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mit neveznek az útvonalválasztásnál autonóm rendszernek (AS)?",
+    "options": {
+      "a": "Egy olyan hálózatrészt, amelyen belül egységes útvonalválasztási módszert alkalmaznak.",
+      "b": "Egy teljesen elszigetelt hálózat, amely nem kapcsolódik más hálózatokhoz.",
+      "c": "Egy felügyelet nélküli, önállóan működő rendszer.",
+      "d": "Olyan hálózat, amely maga dönti el, milyen protokollokat használ."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 1,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi a TCP-nél a torlódásvezérlés célja?",
+    "options": {
+      "a": "A küldő állomás annyi adatot küldjön, amennyit a fogadó fél képes feldolgozni.",
+      "b": "A kapcsolat titkosítása.",
+      "c": "Az adatátviteli sebesség növelése mindenáron.",
+      "d": "A hálózat topológiájának automatikus felismerése."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 2,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik lépés NEM része a stateless IPv6 címkonfigurációnak?",
+    "options": {
+      "a": "Publikus IPv6 cím egyediségének ellenőrzése.",
+      "b": "Link-local cím generálása.",
+      "c": "RA üzenet fogadása.",
+      "d": "Globális cím összeállítása."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 3,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "FTP adatkapcsolatnál aktív módban a kliens mit küld?",
+    "options": {
+      "a": "PORT parancsot.",
+      "b": "PASV parancsot.",
+      "c": "SYN csomagot.",
+      "d": "ACK csomagot."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 4,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "FTP adatkapcsolatnál passzív módban a szerver mit küld?",
+    "options": {
+      "a": "PASV parancsot.",
+      "b": "PORT parancsot.",
+      "c": "DATA parancsot.",
+      "d": "ACK parancsot."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 5,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "192.168.100.0/23 felosztása 32 részre – első hálózat?",
+    "options": {
+      "a": "192.168.100.0 /28",
+      "b": "192.168.100.32 /28",
+      "c": "192.168.101.0 /28",
+      "d": "192.168.100.16 /28"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 6,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "192.168.100.0/23 felosztása 32 részre – második hálózat?",
+    "options": {
+      "a": "192.168.100.16 /28",
+      "b": "192.168.100.32 /28",
+      "c": "192.168.100.1 /28",
+      "d": "192.168.101.16 /28"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 7,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "192.168.100.0/23 felosztása 32 részre – utolsó előtti hálózat?",
+    "options": {
+      "a": "192.168.101.224 /28",
+      "b": "192.168.101.240 /28",
+      "c": "192.168.100.224 /28",
+      "d": "192.168.100.240 /28"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 8,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "192.168.100.0/23 felosztása 32 részre – utolsó hálózat?",
+    "options": {
+      "a": "192.168.101.240 /28",
+      "b": "192.168.101.224 /28",
+      "c": "192.168.101.252 /28",
+      "d": "192.168.100.240 /28"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 9,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Ping parancs mely értékeket méri?",
+    "options": {
+      "a": "RTT (oda-vissza idő), TTL (ugrások száma).",
+      "b": "Jitter, SNR.",
+      "c": "CSMA/CA hatékonyság.",
+      "d": "Bit Error Rate."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 10,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi a router címe 10.10.0.0/22 hálózatban?",
+    "options": {
+      "a": "10.10.0.1",
+      "b": "10.10.1.0",
+      "c": "10.10.255.254",
+      "d": "10.10.3.255"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 11,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi a broadcast cím 10.10.0.0/22 hálózatban?",
+    "options": {
+      "a": "10.10.3.255",
+      "b": "10.10.0.255",
+      "c": "10.10.255.255",
+      "d": "10.10.4.0"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 12,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "H.264 B keret jellemzője?",
+    "options": {
+      "a": "Dekódolása korábbi és későbbi képkockákhoz is kapcsolódik.",
+      "b": "Önmagában dekódolható.",
+      "c": "Csak előző képkockához kapcsolódik.",
+      "d": "Csak hangot tartalmaz."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 13,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "H.264 I keret jellemzője?",
+    "options": {
+      "a": "Önmagában dekódolható.",
+      "b": "Dekódolása más képkockáktól függ.",
+      "c": "Csak kulcsképkocka esetén használják.",
+      "d": "Előző képkockát interpolálja."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 14,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Beszédátvitelre mely kapcsolás célszerű?",
+    "options": {
+      "a": "Csomagkapcsolt.",
+      "b": "Áramkörkapcsolt.",
+      "c": "Token-alapú.",
+      "d": "Bridge-alapú."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 15,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Hazánkban mely hálózatban jelent meg először az áramkörkapcsolt adattovábbítás?",
+    "options": {
+      "a": "GSM.",
+      "b": "GPRS.",
+      "c": "UMTS.",
+      "d": "LTE."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 16,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Hazánkban mely hálózatban jelent meg először a csomagkapcsolt adatátvitel?",
+    "options": {
+      "a": "GPRS.",
+      "b": "UMTS.",
+      "c": "GSM.",
+      "d": "WiFi."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 17,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Hazánkban mely hálózatban jelent meg először a csomagkapcsolt beszédátvitel?",
+    "options": {
+      "a": "UMTS.",
+      "b": "GPRS.",
+      "c": "GSM.",
+      "d": "LTE."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 18,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Milyen többszörös hozzáférést használ a GSM?",
+    "options": {
+      "a": "FDMA + TDMA.",
+      "b": "CDMA.",
+      "c": "OFDM.",
+      "d": "TDMA + CDMA."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 19,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Milyen többszörös hozzáférést használ az UMTS?",
+    "options": {
+      "a": "CDMA.",
+      "b": "TDMA.",
+      "c": "FDMA.",
+      "d": "OFDMA."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 20,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "WiFi-ben melyik nincs jelen?",
+    "options": {
+      "a": "Megbízható pont-pont közti adatátvitel.",
+      "b": "MAC cím alapú címzés.",
+      "c": "Csomagkapcsolt adatátvitel.",
+      "d": "Adó-vevő mód váltás."
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 21,
+    "supervised": "yes"
+  }
+]
