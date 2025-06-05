@@ -330,3 +330,16 @@ button:hover:not(:disabled) {
     color: inherit !important;
 }
 
+.progress-dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+    border: 1px solid #999; /* default border */
+}
+.dot-neutral { background-color: #bbb; }
+.dot-correct { background-color: #27ae60; border-color: #1e8449; }
+.dot-incorrect { background-color: #e74c3c; border-color: #c0392b; }
+.dot-answered { background-color: #3498db; border-color: #2980b9; } /* For answered but not evaluated */
