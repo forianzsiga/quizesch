@@ -281,6 +281,30 @@ export function updateProgressPanel(questions, currentIndex, userAnswers, evalua
     // progressPanel.style.top = '10px'; // Position it if it's absolute/fixed
 }
 
+export function updateVoteUIDisplay(voteData) {
+    const voteUiContainer = questionContainer.querySelector('.vote-ui-container');
+    if (!voteUiContainer) return; // Should exist if displayQuestion was called
+
+    const scoreText = voteUiContainer.querySelector('.vote-score-text');
+    const trustBtn = voteUiContainer.querySelector('.vote-btn.trust');
+    const distrustBtn = voteUiContainer.querySelector('.vote-btn.distrust');
+
+    if (scoreText) {
+        if (voteData && voteData.totalVotes > 0) {
+            scoreText.textContent = `Trust: ${voteData.score}% (${voteData.positiveVotes}/${voteData.totalVotes} votes). `;
+        } else {
+            scoreText.textContent = "Trust: Be the first to rate! ";
+        }
+    }
+    if (trustBtn) {
+        trustBtn.classList.toggle('selected', voteData && voteData.userVote === 'trust');
+    }
+    if (distrustBtn) {
+        distrustBtn.classList.toggle('selected', voteData && voteData.userVote === 'distrust');
+    }
+}
+
+
 export function updateShuffleButtonText(isShuffled) { shuffleToggleBtn.textContent = isShuffled ? 'Unshuffle Questions' : 'Shuffle Questions'; }
 export function displayQuizListError(message) { quizListElement.innerHTML = `<li style="color:red;">${message}</li>`; }
 export function displayQuizLoadError(message, fileName) { questionContainer.innerHTML = `<p>Error loading quiz questions from ${fileName}. ${message}. Please check console.</p>`; }

@@ -44,27 +44,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function renderCurrentQuizView() {
-        const question = quizService.getCurrentQuestion();
-        if (question) {
-            const currentQIndex = quizService.getCurrentQuestionIndex();
-            const currentFile = quizService.getCurrentQuizFile();
-            let voteData = { positiveVotes: 0, totalVotes: 0, score: 0, userVote: null }; // Default
-            if (currentFile && currentQIndex !== undefined) {
-                 voteData = await firebaseService.getQuestionVoteData(currentFile, currentQIndex);
-            }
+    const question = quizService.getCurrentQuestion();
+    if (question) {
+        const currentQIndex = quizService.getCurrentQuestionIndex();
+        const currentFile = quizService.getCurrentQuizFile();
 
-            ui.displayQuestion(
-                question,
-                currentQIndex,
-                quizService.getTotalQuestions(),
-                quizService.getUserAnswerForCurrentQuestion(),
-                quizService.isCurrentQuestionEvaluated(),
-                voteData // Pass vote data
-            );
-            if (quizService.isCurrentQuestionEvaluated()) {
-                ui.evaluateQuestionDisplay(question, quizService.getUserAnswerForCurrentQuestion());
-            }
-        } else {
+        // 1. Display question structure immediately without vote data (decoupled from vote fetching)
+        ui.displayQuestion(
+            question,
+            currentQIndex,
+            quizService.getTotalQuestions(),
+            quizService.getUserAnswerForCurrentQuestion(),
+            quizService.isCurrentQuestionEvaluated(),
+            null // Pass null or a default loading state for voteData initially
+        );
+        if (quizService.isCurrentQuestionEvaluated()) {
+            ui.evaluateQuestionDisplay(question, quizService.getUserAnswerForCurrentQuestion());
+        }
+
+        // 2. Fetch vote data asynchronously and update vote UI part separately
+        if (currentFile && currentQIndex !== undefined) {
+            firebaseService.getQuestionVoteData(currentFile, currentQIndex)
+                .then(voteData => {
+                    // Ensure this update is for the *still current* question
+                    if (currentFile === quizService.getCurrentQuizFile() && currentQIndex === quizService.getCurrentQuestionIndex()) {
+                        ui.updateVoteUIDisplay(voteData); // NEW ui.js function
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching vote data for UI update:", error);
+                    // Optionally update UI to show error fetching votes
+                });
+        }
+    } else {
             quizService.calculateFinalScore();
             ui.displayResults(quizService.getScore(), quizService.getTotalQuestions());
         }
