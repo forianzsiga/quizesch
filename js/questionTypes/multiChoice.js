@@ -7,7 +7,7 @@ export function render(question, userAnswer, questionIndex, isEvaluated) {
             const isChecked = userAnswer && Array.isArray(userAnswer) && userAnswer.includes(key);
             const checkedAttribute = isChecked ? 'checked' : '';
             const inputType = Array.isArray(question.answer) && question.answer.length > 1 ? 'checkbox' : 'radio';
-            const disabledAttr = isEvaluated ? 'disabled' : ''; // Disable if already evaluated
+            const disabledAttr = isEvaluated ? 'disabled' : '';
             html += `
                 <li data-option-key="${key}">
                     <label>
@@ -33,8 +33,6 @@ export function addInputListeners(questionContainer, questionIndex, onAnswerChan
 
 export function getAnswer(questionContainer, questionIndex) {
     const selectedOptions = questionContainer.querySelectorAll(`input[name="q${questionIndex}_option"]:checked`);
-    // Logic to determine if it's single (radio) or multiple (checkbox) based on original question data
-    // This needs access to the question object, or the input type attribute
     const firstInput = questionContainer.querySelector(`input[name="q${questionIndex}_option"]`);
     const isMultipleAnswer = firstInput && firstInput.type === 'checkbox';
 
@@ -55,8 +53,8 @@ export function evaluateDisplay(question, userAnswer, questionContainer) {
         if (!optionInput) return;
 
         const optionValue = optionInput.value;
-        const isChecked = optionInput.checked; // User's choice at time of evaluation
-        const isCorrectOption = correctAnswerSet.has(optionValue); // Is this option part of the correct answer?
+        const isChecked = optionInput.checked;
+        const isCorrectOption = correctAnswerSet.has(optionValue);
 
         if (isChecked && isCorrectOption) {
             li.classList.add('evaluation-correct');
@@ -65,7 +63,7 @@ export function evaluateDisplay(question, userAnswer, questionContainer) {
         } else if (!isChecked && isCorrectOption) {
             li.classList.add('evaluation-missed');
         }
-        optionInput.disabled = true; // Disable inputs after evaluation
+        optionInput.disabled = true;
     });
 }
 
@@ -74,9 +72,8 @@ export function isCorrect(question, userAnswer) {
     const userAnswerMC = Array.isArray(userAnswer) ? userAnswer : [];
 
     if (userAnswerMC.length !== correctAnswerMC.length) return false;
-    if (userAnswerMC.length === 0 && correctAnswerMC.length === 0) return true; // No selection, none correct.
+    if (userAnswerMC.length === 0 && correctAnswerMC.length === 0) return true;
 
-    // Sort to compare content regardless of order
     const sortedUserAnswer = [...userAnswerMC].sort();
     const sortedCorrectAnswer = [...correctAnswerMC].sort();
     return JSON.stringify(sortedUserAnswer) === JSON.stringify(sortedCorrectAnswer);

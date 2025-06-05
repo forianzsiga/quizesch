@@ -7,10 +7,17 @@ format_list = [
     "css"
 ]
 
+# Collection of exception folders that are ignored by the script.
+exception_folders = [
+    "node_modules"
+]
+
 def collect_files(input_folder):
-    """Recursively collects all .extension file paths from the given folder for every extension in format_list."""
+    """Recursively collects all .extension file paths from the given folder for every extension in format_list, skipping exception_folders."""
     collected_files = []
-    for root, _, filenames in os.walk(input_folder):
+    for root, dirs, filenames in os.walk(input_folder):
+        # Remove exception folders from dirs in-place so os.walk does not traverse them
+        dirs[:] = [d for d in dirs if d not in exception_folders]
         for file in filenames:
             if file.lower().endswith(tuple(format_list)):
                 collected_files.append(os.path.join(root, file))
@@ -53,6 +60,15 @@ def write_batch(output_folder, batch_num, file_entries):
 def main():
     # Step 0: Show user the current format list and allow to continue or abort
     print("Current file extensions to search:", ', '.join(format_list))
+    print("Current exception folders:", ', '.join(exception_folders))
+    add_folders = input("Do you want to add more exception folders? (y/N): ").strip().lower() == 'y'
+    if add_folders:
+        new_folders = input("Enter additional folder names to ignore, separated by commas: ").strip()
+        if new_folders:
+            for folder in [f.strip() for f in new_folders.split(',') if f.strip()]:
+                if folder not in exception_folders:
+                    exception_folders.append(folder)
+            print("Updated exception folders:", ', '.join(exception_folders))
     proceed = input("Press Enter to continue with these, or Ctrl+C to abort...")
 
     # Step 1: Ask user for input folder, default is root folder

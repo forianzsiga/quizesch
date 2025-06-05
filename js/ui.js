@@ -1,9 +1,8 @@
 // js/ui.js
 import * as questionManager from './questionManager.js';
-import { DATA_DIRECTORY } from './config.js'; // For image paths or other UI-related config
-import * as apiService from './apiService.js'; // For quiz card supervision info
+import { DATA_DIRECTORY } from './config.js';
+import * as apiService from './apiService.js';
 
-// DOM Element References - to be initialized
 export let questionContainer, quizContainer, prevBtn, nextBtn, submitBtn, resultContainer,
            scoreElement, evaluateBtn, resetBtn, shuffleToggleBtn, quizListContainer,
            quizListElement, progressPanel, navigationControls;
@@ -31,7 +30,7 @@ export function displayQuizList(quizFileNames, onQuizSelectCallback) {
         quizListElement.innerHTML = '<li>No quizzes available.</li>';
         quizContainer.style.display = 'none';
         quizListContainer.style.display = 'block';
-        navigationControls.style.display = 'none';
+        if (navigationControls) navigationControls.style.display = 'none';
         return;
     }
 
@@ -55,8 +54,7 @@ export function displayQuizList(quizFileNames, onQuizSelectCallback) {
 
         const card = document.createElement('div');
         card.className = 'quiz-card';
-        // ... (rest of card creation logic from original, including supervision indicator fetch)
-        // For supervision indicator:
+
         apiService.fetchQuizSupervisionInfo(`${DATA_DIRECTORY}/${fileName}`)
             .then(supInfo => {
                 let indicator = '';
@@ -66,14 +64,18 @@ export function displayQuizList(quizFileNames, onQuizSelectCallback) {
                     indicator = '<span class="supervised-indicator" title="This quiz set is fully human supervised">✔ Fully Supervised</span>';
                 } else if (supInfo.supervised > 0) {
                     indicator = '<span class="partial-indicator" title="This quiz set already contains human supervised questions">⚠️ Partially Supervised</span>';
-                } else if (supInfo.total > 0) { // Check supInfo.total > 0 to avoid "Unsupervised" for empty quizzes
-                    indicator = '<span class="unsupervised-indicator" title="This quiz set ... not yet supervised">❗ Unsupervised</span>';
+                } else if (supInfo.total > 0) {
+                    indicator = '<span class="unsupervised-indicator" title="This quiz set generated from existing sources interpreted by an LLM and it was not yet supervised by a human">❗ Unsupervised</span>';
                 }
-                card.appendChild(document.createRange().createContextualFragment(indicator));
+                // Insert indicator after filename, before any potential future elements in card
+                const filenameDiv = card.querySelector('.quiz-filename');
+                if (filenameDiv && indicator) {
+                    filenameDiv.insertAdjacentHTML('afterend', indicator);
+                } else if (indicator) {
+                    card.appendChild(document.createRange().createContextualFragment(indicator));
+                }
             }).catch(err => console.warn(`Could not fetch supervision info for ${fileName}: ${err.message}`));
 
-
-        // Prettify title
         let pretty = fileName.replace('.json','').replace(/_/g,' ');
         pretty = pretty.replace(/\b(zh|pzh|ppzh)\b/gi, m => m.toUpperCase());
         pretty = pretty.replace(/\b(\d{4})\b/g, '($1)');
@@ -83,17 +85,14 @@ export function displayQuizList(quizFileNames, onQuizSelectCallback) {
         icon.className = 'quiz-icon';
         icon.textContent = '📚';
         card.appendChild(icon);
-
         const title = document.createElement('div');
         title.className = 'quiz-title';
         title.textContent = pretty;
         card.appendChild(title);
-
         const fname = document.createElement('div');
         fname.className = 'quiz-filename';
         fname.textContent = fileName;
         card.appendChild(fname);
-
 
         link.appendChild(card);
         listItem.appendChild(link);
@@ -102,49 +101,98 @@ export function displayQuizList(quizFileNames, onQuizSelectCallback) {
 
     quizContainer.style.display = 'none';
     quizListContainer.style.display = 'block';
-    navigationControls.style.display = 'none';
+    if (navigationControls) navigationControls.style.display = 'none';
 }
 
-export function displayQuestion(question, currentIndex, totalQuestions, userAnswer, isEvaluated) {
+export function displayQuestion(question, currentIndex, totalQuestions, userAnswer, isEvaluated, voteData) {
     if (!question) {
         questionContainer.innerHTML = '<p>No question to display.</p>';
         return;
     }
     clearEvaluationStylesForCurrentQuestion();
 
-    let indicatorHtml = '';
-    // ... (Supervision indicator logic for individual question from original displayQuestion)
-    if ('supervised' in question && typeof question.supervised === 'string') {
-        const sup = question.supervised.trim().toLowerCase();
-        if (sup === 'yes') indicatorHtml = `<span class="supervised-indicator" title="Reviewed by human">✔ supervised</span>`;
-        else if (sup === 'generated') indicatorHtml = `<span class="llm-indicator" title="Generated by LLM">🤖 LLM generated</span>`;
-        else indicatorHtml = `<span class="unsupervised-indicator" title="Not yet supervised">❗ unsupervised</span>`;
-    } else {
-        indicatorHtml = `<span class="unsupervised-indicator" title="Not yet supervised">❗ unsupervised</span>`;
+    let displaySupervisedIndicator = false;
+    if (voteData && voteData.totalVotes > 10 && voteData.score > 70) {
+        displaySupervisedIndicator = true;
     }
 
+    let indicatorHtml = '';
+    if (displaySupervisedIndicator || (question.supervised && question.supervised.trim().toLowerCase() === 'yes')) {
+        indicatorHtml = `<span class="supervised-indicator" title="This question is considered trustworthy.">✔ Supervised</span>`;
+    } else if (question.supervised && question.supervised.trim().toLowerCase() === 'generated') {
+        indicatorHtml = `<span class="llm-indicator" title="Generated by LLM">🤖 LLM generated</span>`;
+    } else {
+        indicatorHtml = `<span class="unsupervised-indicator" title="Not yet supervised or community reviewed">❗ Unsupervised</span>`;
+    }
 
     let html = `<h3>Question ${currentIndex + 1} of ${totalQuestions} ${indicatorHtml}</h3>`;
     html += questionManager.renderQuestionContent(question, userAnswer, questionContainer, currentIndex, isEvaluated);
     questionContainer.innerHTML = html;
 
-    // Attach listeners for the newly rendered question inputs
-    // The callback will be handled in main.js to update quizService
+    const voteUiContainer = document.createElement('div');
+    voteUiContainer.className = 'vote-ui-container';
+    const scoreText = document.createElement('span');
+    scoreText.className = 'vote-score-text';
+    if (voteData && voteData.totalVotes > 0) {
+        scoreText.textContent = `Trust: ${voteData.score}% (${voteData.positiveVotes}/${voteData.totalVotes} votes). `;
+    } else {
+        scoreText.textContent = "Trust: Be the first to rate! ";
+    }
+    voteUiContainer.appendChild(scoreText);
+
+    const trustBtn = document.createElement('button');
+    trustBtn.textContent = '👍 Trustworthy';
+    trustBtn.className = 'vote-btn trust';
+    if (voteData && voteData.userVote === 'trust') trustBtn.classList.add('selected');
+    trustBtn.onclick = () => {
+        document.dispatchEvent(new CustomEvent('questionVoted', {
+            detail: {
+                quizFile: window.quizServiceInstance.getCurrentQuizFile(), // HACK
+                questionIndex: currentIndex,
+                voteType: 'trust'
+            }
+        }));
+    };
+    voteUiContainer.appendChild(trustBtn);
+
+    const distrustBtn = document.createElement('button');
+    distrustBtn.textContent = '👎 Needs Review';
+    distrustBtn.className = 'vote-btn distrust';
+    if (voteData && voteData.userVote === 'distrust') distrustBtn.classList.add('selected');
+    distrustBtn.onclick = () => {
+        document.dispatchEvent(new CustomEvent('questionVoted', {
+            detail: {
+                quizFile: window.quizServiceInstance.getCurrentQuizFile(), // HACK
+                questionIndex: currentIndex,
+                voteType: 'distrust'
+            }
+        }));
+    };
+    voteUiContainer.appendChild(distrustBtn);
+
+    const verificationInfoLabel = document.createElement('div');
+    verificationInfoLabel.className = 'vote-verification-info';
+    verificationInfoLabel.innerHTML = 'Questions with over 10 votes and 70% trustworthiness are considered Human Verified. Powered by Firebase 🔥';
+    voteUiContainer.appendChild(verificationInfoLabel);
+
+    questionContainer.appendChild(voteUiContainer);
+
     questionManager.attachInputListeners(question, questionContainer, currentIndex);
 
     if (question.question_type === 'drag_n_drop') {
-        // D&D specific UI updates after render
+        // HACK: Ensure quizServiceInstance is available for D&D's internal population logic
+        // if (!window.quizServiceInstance) console.warn("ui.displayQuestion: quizServiceInstance hack not set for D&D population");
+        // The D&D module will use window.quizServiceInstance directly if needed
         questionManager.questionTypeModules.drag_n_drop.populateDropTargets(questionContainer, question, userAnswer);
         questionManager.questionTypeModules.drag_n_drop.updateDraggableVisibility(questionContainer);
     }
 
-    evaluateBtn.disabled = isEvaluated; // Disable if already evaluated
+    evaluateBtn.disabled = isEvaluated;
 }
-
 
 export function updateButtonStates(currentIndex, totalQuestions, questionsLoaded) {
     if (!questionsLoaded) {
-        navigationControls.style.display = 'none';
+        if (navigationControls) navigationControls.style.display = 'none';
         prevBtn.disabled = true;
         nextBtn.disabled = true;
         submitBtn.style.display = 'none';
@@ -154,7 +202,7 @@ export function updateButtonStates(currentIndex, totalQuestions, questionsLoaded
         return;
     }
 
-    navigationControls.style.display = 'flex';
+    if (navigationControls) navigationControls.style.display = 'flex';
     const onLastQuestion = currentIndex === totalQuestions - 1;
 
     prevBtn.disabled = currentIndex === 0;
@@ -168,22 +216,21 @@ export function updateButtonStates(currentIndex, totalQuestions, questionsLoaded
 
 export function displayResults(score, totalQuestions) {
     questionContainer.style.display = 'none';
-    navigationControls.style.display = 'none';
+    if (navigationControls) navigationControls.style.display = 'none';
     resultContainer.style.display = 'block';
     scoreElement.textContent = `${score} out of ${totalQuestions}`;
-    updateProgressPanel([], -1, [], [], () => {}); // Clear progress panel or show final state
+    updateProgressPanel([], -1, [], [], () => {});
 }
 
 export function clearEvaluationStylesForCurrentQuestion() {
     const styledElements = questionContainer.querySelectorAll('.evaluation-correct, .evaluation-incorrect, .evaluation-missed');
     styledElements.forEach(el => {
         el.classList.remove('evaluation-correct', 'evaluation-incorrect', 'evaluation-missed');
-         const label = el.querySelector('label'); // If it's a list item for multi-choice
+         const label = el.querySelector('label');
         if (label) {
             label.classList.remove('evaluation-correct', 'evaluation-incorrect', 'evaluation-missed');
         }
     });
-    // ... (clear styles for inputs, feedback spans, etc.)
     const feedbackSpans = questionContainer.querySelectorAll('.inline-feedback');
     feedbackSpans.forEach(span => {
         span.textContent = '';
@@ -195,7 +242,7 @@ export function clearEvaluationStylesForCurrentQuestion() {
     });
 }
 
-export function evaluateQuestionDisplay(question, userAnswer) { // Renamed
+export function evaluateQuestionDisplay(question, userAnswer) {
     questionManager.evaluateQuestionDisplay(question, userAnswer, questionContainer);
 }
 
@@ -208,24 +255,19 @@ export function updateProgressPanel(questions, currentIndex, userAnswers, evalua
     let html = '<h3 style="margin-top:0;">Progress</h3><ul style="padding-left:0;list-style:none;">';
 
     questions.forEach((q, idx) => {
-        let dotClass = 'dot-neutral'; // Default greyish
+        let dotClass = 'dot-neutral';
         let statusTitle = 'Not answered / Not evaluated';
 
         if (evaluatedQuestions[idx]) {
             if (questionManager.isAnswerCorrect(q, userAnswers[idx])) {
-                dotClass = 'dot-correct'; // Green
-                statusTitle = 'Correct';
+                dotClass = 'dot-correct'; statusTitle = 'Correct';
             } else {
-                dotClass = 'dot-incorrect'; // Red
-                statusTitle = 'Incorrect';
+                dotClass = 'dot-incorrect'; statusTitle = 'Incorrect';
             }
         } else if (userAnswers[idx] !== null && userAnswers[idx] !== undefined && (typeof userAnswers[idx] !== 'object' || Object.keys(userAnswers[idx]).length > 0)) {
-             // Answered but not evaluated - maybe a blueish dot
-            dotClass = 'dot-answered';
-            statusTitle = 'Answered, not evaluated';
+            dotClass = 'dot-answered'; statusTitle = 'Answered, not evaluated';
         }
 
-        // Add CSS for .dot-neutral, .dot-correct, .dot-incorrect, .dot-answered in style.css
         html += `<li style="margin-bottom:6px;cursor:pointer;${currentIndex === idx ? 'font-weight:bold;' : ''}" data-idx="${idx}" title="${statusTitle} - Go to question ${idx + 1}">
                     <span class="progress-dot ${dotClass}"></span>Question ${idx + 1}
                  </li>`;
@@ -236,31 +278,21 @@ export function updateProgressPanel(questions, currentIndex, userAnswers, evalua
     progressPanel.querySelectorAll('li[data-idx]').forEach(li => {
         li.onclick = () => {
             const idx = parseInt(li.getAttribute('data-idx'));
-            if (!isNaN(idx)) {
-                onQuestionSelect(idx);
-            }
+            if (!isNaN(idx)) { onQuestionSelect(idx); }
         };
     });
-    // Apply existing panel styles if not in CSS
     progressPanel.style.backgroundColor = '#fff';
     progressPanel.style.borderRadius = '8px';
-    // ... etc.
+    progressPanel.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+    progressPanel.style.padding = '16px';
+    progressPanel.style.margin = '16px'; // You might want this outside #quiz-container in HTML
+    // progressPanel.style.top = '10px'; // Position it if it's absolute/fixed
 }
-export function updateShuffleButtonText(isShuffled) {
-    shuffleToggleBtn.textContent = isShuffled ? 'Unshuffle Questions' : 'Shuffle Questions';
-}
-export function displayQuizListError(message) {
-    quizListElement.innerHTML = `<li>${message}</li>`;
-    quizListElement.style.color = 'red';
-    // ... hide other elements
-}
-export function displayQuizLoadError(message, fileName) {
-    questionContainer.innerHTML = `<p>Error loading quiz questions from ${fileName}. ${message}. Please check console.</p>`;
-    // ... hide/show relevant containers
-}
-export function showLoadingState() {
-    questionContainer.innerHTML = '<p>Loading quiz...</p>';
-}
+
+export function updateShuffleButtonText(isShuffled) { shuffleToggleBtn.textContent = isShuffled ? 'Unshuffle Questions' : 'Shuffle Questions'; }
+export function displayQuizListError(message) { quizListElement.innerHTML = `<li style="color:red;">${message}</li>`; }
+export function displayQuizLoadError(message, fileName) { questionContainer.innerHTML = `<p>Error loading quiz questions from ${fileName}. ${message}. Please check console.</p>`; }
+export function showLoadingState() { questionContainer.innerHTML = '<p>Loading quiz...</p>'; }
 export function hideQuizList() { quizListContainer.style.display = 'none'; }
 export function showQuizContainer() { quizContainer.style.display = 'block'; }
 export function disableEvaluateButton() { evaluateBtn.disabled = true; }
