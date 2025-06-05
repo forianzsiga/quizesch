@@ -1,7 +1,7 @@
 // js/questionManager.js
 import * as multiChoice from './questionTypes/multiChoice.js';
 import * as fillTheBlanks from './questionTypes/fillTheBlanks.js';
-import *  as dragAndDrop from './questionTypes/dragAndDrop.js';
+import * as dragAndDrop from './questionTypes/dragAndDrop.js';
 
 const questionTypeModules = {
     'multi_choice': multiChoice,
@@ -12,7 +12,7 @@ const questionTypeModules = {
 export function renderQuestionContent(question, userAnswer, container, questionIndex, isEvaluated) {
     const handler = questionTypeModules[question.question_type];
     if (handler && handler.render) {
-        return handler.render(question, userAnswer, container, questionIndex, isEvaluated);
+        return handler.render(question, userAnswer, questionIndex, isEvaluated);
     }
     return '<p>Unsupported question type.</p>';
 }
