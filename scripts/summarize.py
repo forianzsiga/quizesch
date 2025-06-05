@@ -28,7 +28,9 @@ def write_batch(output_folder, batch_num, file_entries):
       - Subsequent batches: output_02.txt, output_03.txt, ...
     
     Output format:
-    === filename.ext ===\nCONTENTS\n
+    === filename.ext ===\n```
+    CONTENTS
+    ```\n
     """
     # Determine file name based on batch number.
     if batch_num == 1:
@@ -41,7 +43,10 @@ def write_batch(output_folder, batch_num, file_entries):
         # Write each file's name and content in the batch.
         for file_name, content in file_entries:
             f_out.write(f"=== {file_name} ===\n")
+            f_out.write("```")
+            f_out.write("\n")
             f_out.write(content)
+            f_out.write("\n```")
             f_out.write("\n\n")
     print(f"Batch {batch_num} written to {output_path}")
 
