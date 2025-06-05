@@ -179,14 +179,6 @@ export function displayQuestion(question, currentIndex, totalQuestions, userAnsw
 
     questionManager.attachInputListeners(question, questionContainer, currentIndex);
 
-    if (question.question_type === 'drag_n_drop') {
-        // HACK: Ensure quizServiceInstance is available for D&D's internal population logic
-        // if (!window.quizServiceInstance) console.warn("ui.displayQuestion: quizServiceInstance hack not set for D&D population");
-        // The D&D module will use window.quizServiceInstance directly if needed
-        questionManager.questionTypeModules.drag_n_drop.populateDropTargets(questionContainer, question, userAnswer);
-        questionManager.questionTypeModules.drag_n_drop.updateDraggableVisibility(questionContainer);
-    }
-
     evaluateBtn.disabled = isEvaluated;
 }
 
