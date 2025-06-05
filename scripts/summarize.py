@@ -71,7 +71,7 @@ def main():
         max_tokens = float('inf')
 
     # Step 3: Ask user if every file should create a new output file (default: no)
-    one_file_per_output = input("Should every file create a new output file? (y/N): ").strip().lower() == 'y'
+    one_file_per_output = input("Should every file create a new output file? (y/N) (default:No): ").strip().lower() == 'y'
 
     files = collect_files(input_folder)
     if not files:
@@ -96,8 +96,11 @@ def main():
             print(f"Error reading {file_path}: {e}")
     print(f"Total files to process: {len(file_contents)} (skipped {skipped_files} file(s) due to length).")
 
-    # Step 5: Ask user for output folder.
-    output_folder = input("Enter the path to the output folder for the text files: ").strip()
+    # Step 5: Ask user for output folder, default is 'out' in the root folder
+    default_output_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'out'))
+    output_folder = input(f"Enter the path to the output folder for the text files (default: {default_output_folder}): ").strip()
+    if not output_folder:
+        output_folder = default_output_folder
     if not os.path.isdir(output_folder):
         try:
             os.makedirs(output_folder)
