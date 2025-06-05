@@ -1,17 +1,11 @@
 // js/questionTypes/dragAndDrop.js
 
-let currentDragData = null; // Module-level store for the item being dragged
+let currentDragData = null;
 
-/**
- * Generates the HTML for a drag-and-drop question.
- */
 export function render(question, userAnswer, questionIndex, isEvaluated) {
     let dragDropText = question.text || "";
     const choices = question.choices || [];
-    // Note: isEvaluated doesn't directly disable D&D elements here;
-    // behavior is controlled by disabling event listeners or by how populateDropTargets works.
 
-    // Create placeholders for drop targets
     choices.forEach(choice => {
         if (choice && choice.identifier) {
             const placeholder = `[${choice.identifier}]`;
@@ -29,21 +23,19 @@ export function render(question, userAnswer, questionIndex, isEvaluated) {
     });
 
     let html = `<p>${dragDropText.replace(/\n/g, '<br>')}</p>`;
-    html += '<div class="drag-options-container"><strong>Drag options:</strong><br><div id="drag-options">';
+    html += '<div class="drag-options-container"><strong>Drag options:</strong><br><div id="drag-options">'; // Added container class
     choices.forEach(choice => {
         if (choice && choice.identifier && choice.label) {
-            html += `<span class="draggable" draggable="true" id="drag-${questionIndex}-${choice.identifier}" data-identifier="${choice.identifier}">${choice.label}</span> `;
+            // Make ID unique per question instance if multiple D&D questions could somehow be on page (unlikely here)
+            html += `<span class="draggable" draggable="${!isEvaluated}" id="drag-${questionIndex}-${choice.identifier}" data-identifier="${choice.identifier}">${choice.label}</span> `;
         }
     });
     html += '</div></div>';
     return html;
 }
 
-/**
- * Attaches drag and drop event listeners.
- */
 export function addInputListeners(questionContainer, questionIndex, onAnswerChangeCallback) {
-    const draggables = questionContainer.querySelectorAll('.draggable');
+    const draggables = questionContainer.querySelectorAll('.draggable[draggable="true"]'); // Only attach to active ones
     const dropTargets = questionContainer.querySelectorAll('.drop-target');
 
     draggables.forEach(el => {
@@ -56,23 +48,29 @@ export function addInputListeners(questionContainer, questionIndex, onAnswerChan
         el.ondrop = (ev) => dropHandler(ev, questionContainer, questionIndex, onAnswerChangeCallback);
     });
 
-    // Initial population and visibility update
-    const questionData = window.quizServiceRefForDnD.getCurrentQuestion(); // HACK: Need a clean way to get question data here
-    const userAnswer = window.quizServiceRefForDnD.getUserAnswerForCurrentQuestion(); // HACK for current answer
-    populateDropTargets(questionContainer, questionData, userAnswer);
-    updateDraggableVisibility(questionContainer);
+    // HACK: Accessing global quizService instance to get necessary data for initial population
+    if (window.quizServiceInstance) {
+        const questionData = window.quizServiceInstance.getCurrentQuestion();
+        const userAnswer = window.quizServiceInstance.getUserAnswerForCurrentQuestion();
+        if (questionData && questionData.question_type === 'drag_n_drop') { // Ensure it's for D&D
+             populateDropTargets(questionContainer, questionData, userAnswer);
+             updateDraggableVisibility(questionContainer);
+        }
+    } else {
+        console.warn("D&D: quizServiceInstance not found on window for initial population.");
+    }
 }
 
 function dragStartHandler(ev) {
     const draggableElement = ev.target.closest('.draggable[data-identifier]');
-    if (!draggableElement) {
+    if (!draggableElement || draggableElement.getAttribute('draggable') === 'false') {
         ev.preventDefault(); return;
     }
     currentDragData = {
-        id: draggableElement.id, // Full ID of the draggable element
-        identifier: draggableElement.dataset.identifier // The semantic identifier of the choice
+        id: draggableElement.id,
+        identifier: draggableElement.dataset.identifier
     };
-    ev.dataTransfer.setData("text/plain", draggableElement.id); // Standard D&D API
+    ev.dataTransfer.setData("text/plain", draggableElement.id);
     ev.dataTransfer.effectAllowed = "move";
 }
 
@@ -90,76 +88,66 @@ function dragLeaveHandler(ev) {
 function dropHandler(ev, questionContainer, questionIndex, onAnswerChangeCallback) {
     ev.preventDefault();
     const targetElement = ev.target.closest('.drop-target[data-identifier]');
-    if (!targetElement || !currentDragData) { // No valid target or nothing being dragged
-        if (currentDragData) currentDragData = null; // Clear drag data if drop is invalid
+    if (!targetElement || !currentDragData) {
+        if (currentDragData) currentDragData = null;
         return;
     }
 
     targetElement.classList.remove('highlight-drop');
     const draggedChoiceIdentifier = currentDragData.identifier;
-    const draggedElementOriginal = document.getElementById(currentDragData.id); // The original draggable from options
+    // Find the original draggable element *within the current questionContainer* to get its text
+    const draggedElementOriginal = questionContainer.querySelector(`#${currentDragData.id}`);
 
-    // --- Handle returning an item already in the target back to the options ---
+
     const previouslyDroppedItemIdentifier = targetElement.getAttribute('data-dropped-item');
     if (previouslyDroppedItemIdentifier) {
         const existingDraggableInOptions = questionContainer.querySelector(`#drag-options .draggable[data-identifier="${previouslyDroppedItemIdentifier}"]`);
         if (existingDraggableInOptions) {
             existingDraggableInOptions.style.display = 'inline-block';
         }
-        targetElement.textContent = ''; // Clear old content
-        const feedbackSpan = document.createElement('span'); // Re-add feedback span
+        targetElement.textContent = '';
+        const feedbackSpan = document.createElement('span');
         feedbackSpan.className = 'inline-feedback';
         targetElement.appendChild(feedbackSpan);
     }
 
-    // --- Place the new item ---
-    const labelTextNode = document.createTextNode(draggedElementOriginal.textContent);
-    const feedbackSpan = targetElement.querySelector('.inline-feedback') || document.createElement('span');
-    if (!targetElement.querySelector('.inline-feedback')) { // Ensure feedback span exists
-        feedbackSpan.className = 'inline-feedback';
-        targetElement.appendChild(feedbackSpan);
+    if (draggedElementOriginal) { // Ensure original draggable was found
+        const labelTextNode = document.createTextNode(draggedElementOriginal.textContent);
+        let feedbackSpan = targetElement.querySelector('.inline-feedback');
+        if (!feedbackSpan) {
+            feedbackSpan = document.createElement('span');
+            feedbackSpan.className = 'inline-feedback';
+            targetElement.appendChild(feedbackSpan);
+        }
+        targetElement.insertBefore(labelTextNode, feedbackSpan);
+        targetElement.setAttribute('data-dropped-item', draggedChoiceIdentifier);
+        draggedElementOriginal.style.display = 'none';
+    } else {
+        console.warn("D&D: Original draggable element not found for drop:", currentDragData.id);
     }
-    targetElement.insertBefore(labelTextNode, feedbackSpan); // Insert text before feedback
-    targetElement.setAttribute('data-dropped-item', draggedChoiceIdentifier);
 
-    if (draggedElementOriginal) {
-        draggedElementOriginal.style.display = 'none'; // Hide from options
-    }
 
-    currentDragData = null; // Clear drag data
+    currentDragData = null;
 
     const newAnswerMap = getAnswer(questionContainer, questionIndex);
-    onAnswerChangeCallback(newAnswerMap); // Notify main logic of the change
+    onAnswerChangeCallback(newAnswerMap); // This will trigger 'answerChanged' event in questionManager
 
-    updateDraggableVisibility(questionContainer); // Update visibility of options
-    // Clear any existing top-level evaluation styles (ui.js would handle this more broadly)
-    const uiModule = window.uiRefForDnD; // HACK: Access ui module
-    if (uiModule && uiModule.clearEvaluationStylesForCurrentQuestion) {
-        uiModule.clearEvaluationStylesForCurrentQuestion();
-        uiModule.enableEvaluateButton();
-    }
+    updateDraggableVisibility(questionContainer);
 }
 
-
-/**
- * Retrieves the current answers from the DOM for a drag-and-drop question.
- */
 export function getAnswer(questionContainer, questionIndex) {
     const answers = {};
     const targets = questionContainer.querySelectorAll('.drop-target[data-identifier]');
     targets.forEach(target => {
         const targetId = target.dataset.identifier;
         const droppedItemId = target.getAttribute('data-dropped-item');
-        if (targetId && droppedItemId) { // Only if something is dropped
+        if (targetId && droppedItemId) {
             answers[targetId] = droppedItemId;
         }
     });
     return answers;
 }
 
-/**
- * Visually evaluates the drag-and-drop question in the DOM.
- */
 export function evaluateDisplay(question, userAnswer, questionContainer) {
     const correctDropMapping = getCorrectDropMapping(question);
     const userAnswersMap = (userAnswer && typeof userAnswer === 'object') ? userAnswer : {};
@@ -171,46 +159,36 @@ export function evaluateDisplay(question, userAnswer, questionContainer) {
         target.classList.remove('evaluation-correct', 'evaluation-incorrect', 'evaluation-missed');
         if(feedbackSpan) feedbackSpan.textContent = '';
 
-        const droppedItemId = userAnswersMap[targetId]; // What user dropped here
-        const correctItemIdForThisTarget = correctDropMapping[targetId]; // What should be here
+        const droppedItemId = userAnswersMap[targetId];
+        const correctItemIdForThisTarget = correctDropMapping[targetId];
 
         const correctChoiceDetails = choices.find(c => c.identifier === correctItemIdForThisTarget);
         const correctLabel = correctChoiceDetails ? correctChoiceDetails.label : '??';
 
-        if (correctItemIdForThisTarget !== undefined) { // If this target is supposed to have something
+        if (correctItemIdForThisTarget !== undefined) {
             if (droppedItemId && droppedItemId === correctItemIdForThisTarget) {
                 target.classList.add('evaluation-correct');
                 if (feedbackSpan) feedbackSpan.textContent = '✓';
             } else if (droppedItemId && droppedItemId !== correctItemIdForThisTarget) {
                 target.classList.add('evaluation-incorrect');
                 if (feedbackSpan) feedbackSpan.textContent = `✗ (Should be: ${correctLabel})`;
-            } else { // Nothing dropped, but should have been
+            } else {
                 target.classList.add('evaluation-missed');
                 if (feedbackSpan) feedbackSpan.textContent = `Needed: ${correctLabel}`;
             }
         }
-        // Make targets non-interactive after evaluation by removing event handlers (or adding a class)
-        // For simplicity, we assume main.js/ui.js won't re-attach listeners if 'isEvaluated' is true
     });
-    // Disable further dragging
     questionContainer.querySelectorAll('.draggable').forEach(d => d.setAttribute('draggable', 'false'));
 }
 
-/**
- * Checks if the user's answer for a drag-and-drop question is correct.
- */
 export function isCorrect(question, userAnswer) {
     const correctMapping = getCorrectDropMapping(question);
     const targetIdsInQuestion = Object.keys(correctMapping);
 
     if (typeof userAnswer !== 'object' || userAnswer === null) {
-        // If there are targets to be filled, but no answer, it's incorrect.
-        // If there are no targets defined in the question, it's correct.
         return targetIdsInQuestion.length === 0;
     }
 
-    // Check if the user filled exactly the required targets
-    // And if all filled targets are correct
     let correctCount = 0;
     let userAnswerKeysCount = 0;
 
@@ -222,16 +200,9 @@ export function isCorrect(question, userAnswer) {
             }
         }
     }
-    // All required targets must be correctly filled, and no extra items dropped.
     return correctCount === targetIdsInQuestion.length && userAnswerKeysCount === targetIdsInQuestion.length;
 }
 
-
-// --- Helper functions for Drag and Drop ---
-
-/**
- * Populates drop targets with previously saved answers or clears them.
- */
 export function populateDropTargets(questionContainer, question, userAnswer) {
     const dropTargets = questionContainer.querySelectorAll('.drop-target[data-identifier]');
     const choices = question.choices || [];
@@ -239,7 +210,6 @@ export function populateDropTargets(questionContainer, question, userAnswer) {
 
     dropTargets.forEach(target => {
         const targetId = target.dataset.identifier;
-        // Clear existing content (text nodes), but preserve feedback span
         Array.from(target.childNodes).forEach(child => {
             if (child.nodeType === Node.TEXT_NODE) {
                 target.removeChild(child);
@@ -251,7 +221,7 @@ export function populateDropTargets(questionContainer, question, userAnswer) {
             feedbackSpan.className = 'inline-feedback';
             target.appendChild(feedbackSpan);
         }
-        feedbackSpan.textContent = ''; // Clear feedback
+        feedbackSpan.textContent = '';
         target.removeAttribute('data-dropped-item');
 
         const droppedChoiceIdentifier = savedUserAnswers[targetId];
@@ -266,9 +236,6 @@ export function populateDropTargets(questionContainer, question, userAnswer) {
     });
 }
 
-/**
- * Updates visibility of draggable items based on whether they've been placed.
- */
 export function updateDraggableVisibility(questionContainer) {
     const placedItemIdentifiers = new Set();
     questionContainer.querySelectorAll('.drop-target[data-dropped-item]').forEach(target => {
@@ -284,25 +251,14 @@ export function updateDraggableVisibility(questionContainer) {
     });
 }
 
-/**
- * Derives the correct mapping from target identifiers to choice identifiers.
- * This is an internal helper.
- */
 function getCorrectDropMapping(question) {
     const mapping = {};
     if (question && Array.isArray(question.choices)) {
         question.choices.forEach(choice => {
-            // Assuming the target identifier is the same as the choice identifier that belongs there
-            if (choice && choice.identifier && question.text.includes(`[${choice.identifier}]`)) {
+            if (choice && choice.identifier && question.text && question.text.includes(`[${choice.identifier}]`)) {
                 mapping[choice.identifier] = choice.identifier;
             }
         });
     }
     return mapping;
 }
-
-// HACK: For addInputListeners to access quizService and ui module.
-// This is not ideal. A better solution would be to pass necessary context or use a proper event bus.
-// In main.js, before calling questionManager.attachInputListeners:
-// window.quizServiceRefForDnD = quizService;
-// window.uiRefForDnD = ui;

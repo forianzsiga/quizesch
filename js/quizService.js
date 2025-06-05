@@ -1,36 +1,31 @@
 // js/quizService.js
 import { shuffleArray } from './utils.js';
-import * as questionManager from './questionManager.js'; // For isAnswerCorrect
+import * as questionManager from './questionManager.js';
 
 let questions = [];
 let originalQuestionsOrder = [];
 let currentQuestionIndex = 0;
 let userAnswers = [];
-let evaluatedQuestions = []; // array of booleans
+let evaluatedQuestions = [];
 let score = 0;
-let currentQuizFile = null; // To store the filename for persistence
+let currentQuizFile = null;
 
 export function loadQuiz(data, fileName) {
     originalQuestionsOrder = [...data];
-    questions = [...data]; // Initially not shuffled
+    questions = [...data];
     currentQuizFile = fileName;
     resetQuizState(data.length);
 }
 
 export function applyPersistedState(state) {
-    // Assuming state validation happened in storageService or main.js
     currentQuestionIndex = state.currentQuestionIndex;
     userAnswers = state.userAnswers;
     evaluatedQuestions = state.evaluatedQuestions || new Array(questions.length).fill(false);
-    // If questions were stored in a specific order (e.g. shuffled), re-apply that
-    // For simplicity now, we assume 'questions' array in state matches current quiz logic
     if (state.shuffledQuestions && state.originalQuestionsOrder) {
-         questions = state.shuffledQuestions; // If you decide to store shuffled order
+         questions = state.shuffledQuestions;
          originalQuestionsOrder = state.originalQuestionsOrder;
     }
-    // Score will be recalculated or loaded if stored
 }
-
 
 function resetQuizState(numQuestions) {
     currentQuestionIndex = 0;
@@ -39,24 +34,18 @@ function resetQuizState(numQuestions) {
     score = 0;
 }
 
-export function getCurrentQuestion() {
-    return questions[currentQuestionIndex];
-}
+export function getCurrentQuestion() { return questions[currentQuestionIndex]; }
 export function getCurrentQuestionIndex() { return currentQuestionIndex; }
 export function getTotalQuestions() { return questions.length; }
 export function getUserAnswers() { return userAnswers; }
 export function getEvaluatedQuestions() { return evaluatedQuestions; }
-export function getQuestions() { return questions; } // For progress panel
+export function getQuestions() { return questions; }
+export function getUserAnswerForCurrentQuestion() { return userAnswers[currentQuestionIndex]; }
 
-
-export function getUserAnswerForCurrentQuestion() {
-    return userAnswers[currentQuestionIndex];
-}
-
-export function saveAnswer(index, answerData) { // answerData is what specific question type returns
+export function saveAnswer(index, answerData) {
     if (index >= 0 && index < userAnswers.length) {
         userAnswers[index] = answerData;
-        evaluatedQuestions[index] = false; // New answer, needs re-evaluation
+        evaluatedQuestions[index] = false;
     }
 }
 
@@ -84,15 +73,15 @@ export function setCurrentQuestionIndex(index) {
 }
 
 export function toggleShuffle() {
-    const shuffleButtonText = document.getElementById('shuffle-toggle-btn')?.textContent; // একটু হ্যাক (a bit of a hack to check current state)
-    if (shuffleButtonText && shuffleButtonText.includes('Unshuffle')) { // Currently shuffled
+    const shuffleButton = document.getElementById('shuffle-toggle-btn');
+    if (shuffleButton && shuffleButton.textContent.includes('Unshuffle')) {
         questions = [...originalQuestionsOrder];
-        resetQuizState(questions.length); // Reset answers and progress
-        return false; // Now unshuffled
+        resetQuizState(questions.length);
+        return false;
     } else {
         questions = shuffleArray([...originalQuestionsOrder]);
-        resetQuizState(questions.length); // Reset answers and progress
-        return true; // Now shuffled
+        resetQuizState(questions.length);
+        return true;
     }
 }
 
@@ -117,28 +106,18 @@ export function calculateFinalScore() {
     });
 }
 export function getScore() { return score; }
-
-export function markCurrentQuestionEvaluated() {
-    evaluatedQuestions[currentQuestionIndex] = true;
-}
-export function isCurrentQuestionEvaluated() {
-    return evaluatedQuestions[currentQuestionIndex];
-}
-export function areQuestionsLoaded() {
-    return questions && questions.length > 0;
-}
-
+export function markCurrentQuestionEvaluated() { evaluatedQuestions[currentQuestionIndex] = true; }
+export function isCurrentQuestionEvaluated() { return evaluatedQuestions[currentQuestionIndex]; }
+export function areQuestionsLoaded() { return questions && questions.length > 0; }
 export function getCurrentQuizFile() { return currentQuizFile; }
 
 export function getFullState() {
     return {
         quizFile: currentQuizFile,
-        questionsLength: questions.length, // Or actual questions array if order matters
+        questionsLength: questions.length,
         currentQuestionIndex,
         userAnswers,
         evaluatedQuestions,
-        // originalQuestionsOrder, // If you want to persist shuffle state
-        // questions, // Persist current (possibly shuffled) order
         timestamp: Date.now(),
     };
 }
