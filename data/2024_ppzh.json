@@ -14,7 +14,8 @@
       "D",
       "E"
     ],
-    "ID": 22
+    "ID": 22,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -33,7 +34,8 @@
       "b",
       "g"
     ],
-    "ID": 23
+    "ID": 23,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -54,7 +56,8 @@
       "D",
       "F"
     ],
-    "ID": 24
+    "ID": 24,
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -73,7 +76,8 @@
       }
     ],
     "text": "Az [field1] [field2] lényege, hogy a hálózatcím és a gépcím határát az ún. hálózati maszk segítségével lehet megadni.",
-    "ID": 25
+    "ID": 25,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -88,7 +92,8 @@
     "answer": [
       "A"
     ],
-    "ID": 26
+    "ID": 26,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -103,7 +108,8 @@
     "answer": [
       "C"
     ],
-    "ID": 27
+    "ID": 27,
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -112,7 +118,8 @@
       "identifier": "field1",
       "answer": "multihomed"
     },
-    "ID": 28
+    "ID": 28,
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -127,7 +134,8 @@
       }
     ],
     "text": "A ping parancs segítségével megtudhatjuk a(z) [field1] értékét, tehát a teljes oda-vissza út idejét, illetve a(z) [field2] értékét, amiből egy számítógépnek az útvonalválasztók számában mért távolságára következtethetünk.",
-    "ID": 29
+    "ID": 29,
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -154,7 +162,8 @@
         "answer": "188"
       }
     ],
-    "ID": 30
+    "ID": 30,
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -181,7 +190,8 @@
         "answer": "152.66.77.89"
       }
     ],
-    "ID": 31
+    "ID": 31,
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -207,8 +217,9 @@
         "label": "half-close"
       }
     ],
-    "text": "Húzza be a megfelelő kifejezéseket, hogy a mondat teljes legyen!\nEgy TCP kapcsolatbontás során a(z) [field1] jelzésű kapcsolatot mindkét fél kezdeményezheti, míg a(z) [field2] jelzésű kapcsolattal csak függő vagy kényszerített aktiválása jön létre. Ha az utolsó kapcsolat a szervert kezdeményezi a kliens felé, akkor a(z) [field3] módúak, ellenkező esetben [field4] módúak nevezzük. Ha a kliens NAT mögött van és egy tudós megfigyelő van, akkor használjunk [field5] módot!",
-    "ID": 32
+    "text": "Húzza be a megfelelő kifejezéseket, hogy a mondat teljes legyen!\\nEgy TCP kapcsolatbontás során a(z) [field1] jelzésű kapcsolatot mindkét fél kezdeményezheti, míg a(z) [field2] jelzésű kapcsolattal csak függő vagy kényszerített aktiválása jön létre. Ha az utolsó kapcsolat a szervert kezdeményezi a kliens felé, akkor a(z) [field3] módúak, ellenkező esetben [field4] módúak nevezzük. Ha a kliens NAT mögött van és egy tudós megfigyelő van, akkor használjunk [field5] módot!",
+    "ID": 32,
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -217,7 +228,8 @@
       "identifier": "field1",
       "answer": "1400"
     },
-    "ID": 33
+    "ID": 33,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -236,7 +248,8 @@
       "d",
       "e"
     ],
-    "ID": 34
+    "ID": 34,
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -245,7 +258,8 @@
       "identifier": "field1",
       "answer": "200000"
     },
-    "ID": 35
+    "ID": 35,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -264,7 +278,8 @@
       "e",
       "f"
     ],
-    "ID": 36
+    "ID": 36,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -280,7 +295,8 @@
     "answer": [
       "a"
     ],
-    "ID": 37
+    "ID": 37,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -295,7 +311,8 @@
       "a",
       "c"
     ],
-    "ID": 38
+    "ID": 38,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -313,6 +330,7 @@
       "d",
       "f"
     ],
-    "ID": 39
+    "ID": 39,
+    "supervised": "no"
   }
 ]

@@ -6,7 +6,8 @@ import * as apiService from './apiService.js';
 export let questionContainer, quizContainer, prevBtn, nextBtn, submitBtn, resultContainer,
            scoreElement, evaluateBtn, resetBtn, shuffleToggleBtn, quizListContainer,
            quizListElement, progressPanel, navigationControls, quizSelectionArea,
-           filterPanel, filtersContainer, untaggedQuizContainer, untaggedQuizListElement;
+           filterPanel, filtersContainer, untaggedQuizContainer, untaggedQuizListElement,
+           mainBannerContainer;
 
 export function initDOMReferences() {
     questionContainer = document.getElementById('question-container');
@@ -28,6 +29,7 @@ export function initDOMReferences() {
     filtersContainer = document.getElementById('filters');
     untaggedQuizContainer = document.getElementById('untagged-quiz-container');
     untaggedQuizListElement = document.getElementById('untagged-quiz-list');
+    mainBannerContainer = document.getElementById('main-banner-container');
 }
 
 export function displayFilters(availableTags, onFilterChangeCallback) {
@@ -385,13 +387,15 @@ export function showLoadingState() { questionContainer.innerHTML = '<p>Loading q
 
 export function hideQuizList() {
     if (quizSelectionArea) quizSelectionArea.style.display = 'none';
+    if (mainBannerContainer) mainBannerContainer.style.display = 'none';
 }
 function showQuizList() {
     if (quizSelectionArea) quizSelectionArea.style.display = 'flex';
+    if (mainBannerContainer) mainBannerContainer.style.display = 'block';
     if (quizContainer) quizContainer.style.display = 'none';
     if (navigationControls) navigationControls.style.display = 'none';
 }
 
-export function showQuizContainer() { quizContainer.style.display = 'block'; }
+export function showQuizContainer() { quizContainer.style.display = 'block'; progressPanel.style.display = 'block'; }
 export function disableEvaluateButton() { evaluateBtn.disabled = true; }
 export function enableEvaluateButton() { evaluateBtn.disabled = false; }

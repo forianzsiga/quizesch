@@ -7,55 +7,66 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="quiz-container">
-        <img src="quizesch-banner.svg" alt="Quizesch Banner" style="width: 50%; max-width: 600px; margin: 20px auto; display: block;">
-        <div id="question-container"></div>
-        <div id="navigation-controls">
-             <button id="prev-btn" disabled>Previous</button>
-             <button id="evaluate-btn">Evaluate Question</button>
-             <button id="next-btn">Next</button>
-             <button id="submit-btn" style="display: none;">Submit Quiz</button>
-			 <button id="reset-btn">Clear</button>
-			 <button id="shuffle-toggle-btn">Shuffle Questions</button> </div>
-        <div id="result-container" style="display: none;">
-            <h2>Your Score:</h2>
-            <p id="score"></p>
+    <!-- Wrapper for the In-Quiz View -->
+    <div id="in-quiz-wrapper">
+        <div id="quiz-container">
+            <img src="quizesch-banner.svg" alt="Quizesch Banner" style="width: 50%; max-width: 600px; margin: 20px auto; display: block;">
+            <div id="question-container"></div>
+            <div id="navigation-controls">
+                <button id="prev-btn" disabled>Previous</button>
+                <button id="evaluate-btn">Evaluate Question</button>
+                <button id="next-btn">Next</button>
+                <button id="submit-btn" style="display: none;">Submit Quiz</button>
+                <button id="reset-btn">Clear</button>
+                <button id="shuffle-toggle-btn">Shuffle Questions</button> </div>
+            <div id="result-container" style="display: none;">
+                <h2>Your Score:</h2>
+                <p id="score"></p>
+            </div>
+            <div id="warning-message" style="border: 2px solid #f39c12; background-color: #fff3cd; padding: 15px; margin-top: 50px; margin-bottom: 20px; border-radius: 8px; font-size: 12px">
+                <strong style="color: #d35400;">⚠️ Warning:</strong> This quiz is still under construction. Data is being manually extracted from the provided PDFs and turned into JSONs using multimodal LLM prompting. This means there definitely wil be broken questions along the way.<br><br>
+                    🛠️ Feel free to contribute to the project on GitHub by extending codebase or fixing questions:
+                <a href="https://github.com/forianzsiga/quizesch" target="_blank">https://github.com/forianzsiga/quizesch</a><br><br>
+                    🚀 Upcoming features:
+                <ul style="margin-top: 10px;">
+                    <li>Making progression persistent in browser</li>
+                    <li>Server-side generation of new questions via OpenAI API based on past questions + merged presentation notes submitted as a PDF</li>
+                </ul>
+            </div>
+            <div id="attribution-notice">
+                Made with <3 by Zsigmond Forian-Szabo <br> Project is under MIT License
+            </div>
         </div>
-        <div id="warning-message" style="border: 2px solid #f39c12; background-color: #fff3cd; padding: 15px; margin-top: 50px; margin-bottom: 20px; border-radius: 8px; font-size: 12px">
-			<strong style="color: #d35400;">⚠️ Warning:</strong> This quiz is still under construction. Data is being manually extracted from the provided PDFs and turned into JSONs using multimodal LLM prompting. This means there definitely wil be broken questions along the way.<br><br>
-				🛠️ Feel free to contribute to the project on GitHub by extending codebase or fixing questions:
-			<a href="https://github.com/forianzsiga/quizesch" target="_blank">https://github.com/forianzsiga/quizesch</a><br><br>
-				🚀 Upcoming features:
-			<ul style="margin-top: 10px;">
-				<li>Making progression persistent in browser</li>
-				<li>Server-side generation of new questions via OpenAI API based on past questions + merged presentation notes submitted as a PDF</li>
-			</ul>
-		</div>
-        <div id="attribution-notice">
-            Made with <3 by Zsigmond Forian-Szabo <br> Project is under MIT License
+        <div id="progress-panel"></div>
+    </div>
+
+    <!-- Wrapper for the Main Selection View -->
+    <div id="main-view-wrapper">
+        <div id="main-banner-container">
+            <img src="quizesch-banner.svg" alt="Quizesch Banner">
+        </div>
+
+        <div id="quiz-selection-area">
+            <div id="quiz-list-wrapper">
+                <div id="quiz-list-container">
+                        <h2>Available Quizzes</h2>
+                        <ul id="quiz-list"></ul>
+                </div>
+                <div id="untagged-quiz-container">
+                    <h2>Legacy Quizzes</h2>
+                    <p>These quizzes have not yet been tagged and will not be affected by the filters.</p>
+                    <ul id="untagged-quiz-list"></ul>
+                </div>
+            </div>
+            <aside id="filter-panel">
+                <h3>Filter Quizzes</h3>
+                <div id="filters">
+                    <!-- Content generated by JS -->
+                </div>
+            </aside>
         </div>
     </div>
-    <div id="progress-panel"></div>
-    <div id="quiz-selection-area">
-        <div id="quiz-list-wrapper">
-            <div id="quiz-list-container">
-                    <img src="quizesch-banner.svg" alt="Quizesch Banner" style="width: 100%; max-width: 600px; margin: 20px auto; display: block;">
-                    <h2>Available Quizzes</h2>
-                    <ul id="quiz-list"></ul>
-            </div>
-            <div id="untagged-quiz-container">
-                <h2>Legacy Quizzes</h2>
-                <p>These quizzes have not yet been tagged and will not be affected by the filters.</p>
-                <ul id="untagged-quiz-list"></ul>
-            </div>
-        </div>
-        <aside id="filter-panel">
-            <h3>Filter Quizzes</h3>
-            <div id="filters">
-                <!-- Content generated by JS -->
-            </div>
-        </aside>
-    </div>
+
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>

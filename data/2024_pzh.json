@@ -54,7 +54,8 @@
       "D",
       "E"
     ],
-    "ID": 2
+    "ID": 2,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -69,7 +70,8 @@
     "answer": [
       "d"
     ],
-    "ID": 3
+    "ID": 3,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -84,7 +86,8 @@
     "answer": [
       "e"
     ],
-    "ID": 4
+    "ID": 4,
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -115,7 +118,8 @@
       }
     ],
     "text": "Az [field1] megadására szolgálhatnak teljes tartománynevek (FQDN), vagy [field2] azonosítók. A [field3] rendszerben regisztrált [field4] szerverek [field5] (UDP) biztosítják, melyek üzemein át [field6] lekérdezési eljárások visznek.",
-    "ID": 5
+    "ID": 5,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -129,7 +133,8 @@
     "answer": [
       "D"
     ],
-    "ID": 6
+    "ID": 6,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -143,7 +148,8 @@
     "answer": [
       "C"
     ],
-    "ID": 7
+    "ID": 7,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -160,7 +166,8 @@
       "b",
       "c"
     ],
-    "ID": 8
+    "ID": 8,
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -191,7 +198,8 @@
       }
     ],
     "text": "IPv6 cím automatikus konfigurációja során az eszköz többek között több üzenetet küld, és a [field1] alapján kapott prefixet, akkor ebből [field2] [előállít], másodsorban az AG által [field3] alapján, válaszok után stb.",
-    "ID": 9
+    "ID": 9,
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -222,7 +230,8 @@
       }
     ],
     "text": "Egy TCP kapcsolat felépítésekor a három utas kézfogás során [field1] üzenetet küld az első és a második csomópont is, míg a harmadikban [field2] üzenetet küld a második és a harmadik csomópontnak megfelelően. [field3]",
-    "ID": 10
+    "ID": 10,
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -249,7 +258,8 @@
         "answer": "64"
       }
     ],
-    "ID": 11
+    "ID": 11,
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -268,7 +278,8 @@
         "answer": "80"
       }
     ],
-    "ID": 12
+    "ID": 12,
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -291,7 +302,8 @@
       }
     ],
     "text": "Az SMTP protokoll megbízható parancsot adja meg, hogy a levél feladója az mhkft@kornhall.t-online.hu legyen, és a levelet recevi@kornhall.t-online.hu címre kézbesítsék (envelope recipient). [field1] [field2] mhkft@kornhall.t-online.hu [field3] [field4] recevi@kornhall.t-online.hu",
-    "ID": 13
+    "ID": 13,
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -318,7 +330,8 @@
         "answer": "253"
       }
     ],
-    "ID": 14
+    "ID": 14,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -334,7 +347,8 @@
       "b",
       "c"
     ],
-    "ID": 15
+    "ID": 15,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -349,7 +363,8 @@
     "answer": [
       "b"
     ],
-    "ID": 16
+    "ID": 16,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -367,7 +382,8 @@
       "c",
       "e"
     ],
-    "ID": 17
+    "ID": 17,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -384,7 +400,8 @@
       "b",
       "c"
     ],
-    "ID": 18
+    "ID": 18,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -400,7 +417,8 @@
     "answer": [
       "b"
     ],
-    "ID": 19
+    "ID": 19,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -416,6 +434,7 @@
     "answer": [
       "d"
     ],
-    "ID": 20
+    "ID": 20,
+    "supervised": "no"
   }
 ]

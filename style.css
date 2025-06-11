@@ -1,22 +1,57 @@
 body {
     font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-color: #f4f4f4;
-    margin: 0; /* Add this to prevent potential scrollbars */
+    margin: 0;
+}
+
+#main-view-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#in-quiz-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1100px; /* Consistent max-width */
+    margin: 40px auto; /* Center the whole wrapper */
+}
+
+/* This container will only be shown on the quiz selection screen */
+#main-banner-container {
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+}
+#main-banner-container img {
+    width: 80%;
+    max-width: 600px;
 }
 
 #quiz-container {
+    flex: 3;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 80%;
-    max-width: 600px;
     position: relative; /* Needed for absolute positioning of children */
     padding-bottom: 45px; /* Add padding to prevent overlap with the notice */
+}
+
+#progress-panel {
+    flex: 0.5; /* Adjusted from 1 to make it narrower */
+    display: none; /* Hidden by default, shown when in quiz */
+    position: sticky;
+    top: 20px; /* Sticks to the top of the viewport on scroll */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 16px;
 }
 
 #question-container {
@@ -184,7 +219,7 @@ button:hover:not(:disabled) {
     gap: 30px;
     width: 90%;
     max-width: 1100px;
-    margin-top: 40px;
+    margin-top: 20px; /* Reduced margin-top as banner now provides space */
     align-items: flex-start;
 }
 
@@ -192,27 +227,42 @@ button:hover:not(:disabled) {
     flex: 3; /* Take up more space */
     display: flex;
     flex-direction: column;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+#quiz-list-wrapper h2 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
 }
 
 #quiz-list-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch; /* Change from center */
 }
 
+
 #untagged-quiz-container {
-    margin-top: 60px;
-    padding-top: 30px;
-    border-top: 2px solid #e0e0e0;
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 2px solid #e9e9e9;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch; /* Change from center */
 }
+
 #untagged-quiz-container > p {
     font-size: 0.9em;
     color: #666;
     margin-top: -10px;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 
@@ -279,7 +329,7 @@ button:hover:not(:disabled) {
     padding: 0;
     margin: 30px 0 0 0;
     width: 100%;
-    max-width: 800px; /* Allow it to be a bit wider in the new layout */
+    /* max-width removed as the wrapper now constrains it */
     list-style: none;
 }
 

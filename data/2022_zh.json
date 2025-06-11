@@ -19,7 +19,8 @@
     "answer": [
       "A"
     ],
-    "ID": 1
+    "ID": 1,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -34,7 +35,8 @@
     "answer": [
       "C"
     ],
-    "ID": 2
+    "ID": 2,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -49,7 +51,8 @@
     "answer": [
       "A"
     ],
-    "ID": 3
+    "ID": 3,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -64,7 +67,8 @@
     "answer": [
       "E"
     ],
-    "ID": 4
+    "ID": 4,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -79,7 +83,8 @@
     "answer": [
       "A"
     ],
-    "ID": 5
+    "ID": 5,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -94,7 +99,8 @@
     "answer": [
       "D"
     ],
-    "ID": 6
+    "ID": 6,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -109,7 +115,8 @@
     "answer": [
       "A"
     ],
-    "ID": 7
+    "ID": 7,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -124,7 +131,8 @@
     "answer": [
       "A"
     ],
-    "ID": 8
+    "ID": 8,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -139,7 +147,8 @@
     "answer": [
       "D"
     ],
-    "ID": 9
+    "ID": 9,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -154,7 +163,8 @@
     "answer": [
       "C"
     ],
-    "ID": 10
+    "ID": 10,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -169,7 +179,8 @@
     "answer": [
       "E"
     ],
-    "ID": 11
+    "ID": 11,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -184,7 +195,8 @@
     "answer": [
       "E"
     ],
-    "ID": 12
+    "ID": 12,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -199,7 +211,8 @@
     "answer": [
       "A"
     ],
-    "ID": 15
+    "ID": 15,
+    "supervised": "no"
   }
 ]
 }
