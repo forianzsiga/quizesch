@@ -1,0 +1,521 @@
+[
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az IPv6 fejrészének egyes részei hasonló funkciókat látnak el, mint az IPv4 fejrész bizonyos részei. Az alábbiakban (IPv4 -> IPv6 alakban) megadott összerendelések közül melyek helyesek?",
+    "options": {
+      "A": "A többi válasz közül egyik sem helyes.",
+      "B": "Header Checksum -> Next Header",
+      "C": "ToS -> Traffic Class",
+      "D": "TTL -> Hop Limit",
+      "E": "Flow Label -> Identification"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "ID": 1,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "Link-lokális IPv6 cím generálása"
+      },
+      {
+        "identifier": "field2",
+        "label": "Link-lokális IPv6 cím egyediségének ellenőrzése"
+      },
+      {
+        "identifier": "field3",
+        "label": "Hálózati prefix kérése"
+      },
+      {
+        "identifier": "field4",
+        "label": "Hálózati prefix információ vétele"
+      },
+      {
+        "identifier": "field5",
+        "label": "Globálisan egyedi IPv6 cím előállítása"
+      },
+      {
+        "identifier": "field6",
+        "label": "Globálisan egyedi IPv6 cím egyediségének ellenőrzése"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "Lokális prefix kérése"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "Site-lokális IPv6 cím generálása"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "Lokális prefix információ vétele"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "Privát IPv6 cím egyediségének ellenőrzése"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "Privát IPv6 cím generálása"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "Publikus IPv6 cím egyediségének ellenőrzése"
+      },
+      {
+        "identifier": "distractor7",
+        "label": "Site-lokális IPv6 cím egyediségének ellenőrzése"
+      },
+      {
+        "identifier": "distractor8",
+        "label": "Publikus IPv6 cím generálása"
+      }
+    ],
+    "text": "A 3. mérés 4. feladatában az állapotmentes automatikus címkonfiguráció lépéseit tanulmányozta. Adja meg a lépéseket a helyes sorrendben:\n1. lépés: [field1]\n2. lépés: [field2]\n3. lépés: [field3]\n4. lépés: [field4]\n5. lépés: [field5]\n6. lépés: [field6]",
+    "ID": 2,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "hálózati maszk"
+      },
+      {
+        "identifier": "field2",
+        "label": "hálózati cím"
+      },
+      {
+        "identifier": "field3",
+        "label": "gépcím"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "forgalmi cim"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "másodlagos cím"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "elsődleges cim"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "alhálózat"
+      }
+    ],
+    "text": "Az osztálymentes címzés lényege, hogy egy [field1] segítségével rugalmasan határozhatjuk meg a(z) [field2] (IP cím eleje) és a(z) [field3] (IP cím vége) határát.",
+    "ID": 3,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "2"
+      },
+      {
+        "identifier": "field2",
+        "label": "nincs sodorva"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "16"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "érnégyesenként sodort"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "1"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "4"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "8"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "érpáranként sodort"
+      }
+    ],
+    "text": "Ennyi, egymástól elektromosan szigetelt fémvezető van egy koaxiális kábelben: [field1].\nEzek sodrásának típusa: [field2].",
+    "ID": 4,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Az ábrán egy beszédrészlet látható, melyet mikrofonnal rögzítettünk, és egy 4 kHz-es aluláteresztő szűrőn átengedtünk. PCM kódolással szeretnénk ezt digitalizálni. Ennek a sávszűrés utáni első lépése a mintavételezés. A mintavételi időpontokat az ábrán pirossal bejelöltük a második és negyedik nagy függőleges osztás közötti szakaszon. (A többi részen is ugyanígy történik a mintavételezés, csak ott nem jelöltük be.)\nMennyi a mintavételek közti idő?\nA válasz: [field1] [field2]\nE mintavételezési gyakoriság elegendő-e ahhoz, hogy a jel tökéletesen visszaállítható legyen?\nA válasz: [field3]",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "0.25"
+      },
+      {
+        "identifier": "field2",
+        "answer": "ms"
+      },
+      {
+        "identifier": "field3",
+        "answer": "nem elegendő"
+      }
+    ],
+    "ID": 5,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mobiltelefon-hálózatokban miért alkalmaznak cellákat? (Ha több jó válasz is van, a legfontosabb okot jelölje meg.)",
+    "options": {
+      "a": "Csak így garantálható, hogy városon belül egy járműben is lehessen beépített telefon.",
+      "b": "A rádiós terjedés amúgy nem tenné lehetővé egész országok lefedését.",
+      "c": "Így egy adott földrajzi területen többen tudnak egyszerre beszélni (ill. mobilon internetezni) az adott rádiós frekvenciatartományban, mint vezetékes hálózaton.",
+      "d": "A műholdas szolgáltatásokkal való kompatibilitás céljából.",
+      "e": "Ez teszi lehetővé a nemzetközi kompatibilitást (barangolás, avagy roaming).",
+      "f": "Hogy azon előfizetők is fizessenek a szolgáltatásért, akik olyan közel vannak egymáshoz, hogy a mobiltelefonjaik közvetlenül is tudnának kommunikálni."
+    },
+    "answer": [
+      "b"
+    ],
+    "ID": 6,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Honnan derül ki, hogy egy Ethernet keret(ek)ben szállított IPv4 csomag hossza mekkora?",
+    "options": {
+      "a": "Az Ethernet keret hasznos teher (payload) mezőjéből",
+      "b": "Az UDP vagy TCP fejlécből",
+      "c": "A végpontok közötti előzetes egyeztetésből",
+      "d": "Egyik megadott válasz sem megfelelő",
+      "e": "A router vagy Ethernet kapcsoló (switch) beállításából",
+      "f": "Az IP csomag hasznos teher (payload) mezőjéből",
+      "g": "Az IP csomag fejlécéből",
+      "h": "Az Ethernet keret fejlécéből"
+    },
+    "answer": [
+      "g"
+    ],
+    "ID": 7,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az alábbiak közül milyen kábel javasolt 10 Mb/s sebességű Ethernet forgalom átvitelére 80 méter távolságra? (Ha több ilyen is van, a legalacsonyabb kategóriájút válassza!)",
+    "options": {
+      "a": "CAT5e UTP",
+      "b": "CAT4 UTP",
+      "c": "CAT7 UTP",
+      "d": "Egyik megadott válasz sem megfelelő",
+      "e": "CAT5 UTP",
+      "f": "CAT6 UTP"
+    },
+    "answer": [
+      "e"
+    ],
+    "ID": 8,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "IPTV rendszerben a felhasználó csatornát vált. Az új műsor elindulásáig egy keveset várakoznia kell. Az alább felsoroltak közül melyik növeli ezt a várakozási időt?",
+    "options": {
+      "a": "Az első P keretet meg kell várni a lejátszással.",
+      "b": "A multicast routing protokollhoz kapcsolódó elosztó fa kiépítése.",
+      "c": "Egyik megadott válasz sem megfelelő.",
+      "d": "Valamelyest fel kell tölteni a közbenső switch-ekben a vételi puffert.",
+      "e": "Az Ethernet kapcsoló végrehajtja az IGMP snooping-ot."
+    },
+    "answer": [
+      "b"
+    ],
+    "ID": 9,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Telefonhálózatokban melyik állítások igazak a zárt számozási rendszerre?",
+    "options": {
+      "a": "Mindig kell belföldi rendeltetési számot használni.",
+      "b": "Előnye, hogy nem kell prefix kódnak lennie.",
+      "c": "Kevésbé egyértelmű, mint a nyílt: más helyről másképp lehet vagy kell tárcsázni.",
+      "d": "Több szám kiadható benne, mint a nyíltban.",
+      "e": "Ilyen a magyar mobil telefonhálózat.",
+      "f": "Ilyen a magyar vezetékes telefonhálózat."
+    },
+    "answer": [
+      "a",
+      "d",
+      "e"
+    ],
+    "ID": 10,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi az GSM közeghozzáférési módszere?",
+    "options": {
+      "a": "OFDMA (Ortogonális FDMA)",
+      "b": "Egyik megadott válasz sem megfelelő",
+      "c": "FDMA+TDMA",
+      "d": "FDMA",
+      "e": "TDMA+CDMA",
+      "f": "CDMA",
+      "g": "TDMA"
+    },
+    "answer": [
+      "c"
+    ],
+    "ID": 11,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "WiFi-ben miért használnak CSMA/CA-t, azaz ütközéselkerülés CSMA-t? Az összes helyes választ jelölje meg!",
+    "options": {
+      "a": "A WiFi frekvencia túl magas a CSMA/CD-hez.",
+      "b": "A WiFi adatsebesség túl magas a CSMA/CD-hez.",
+      "c": "Az ütközésérzékelés nehéz lenne a vett és kiküldött jelek frekvenciája közötti nagy különbség miatt.",
+      "d": "Trükkös kérdés, hiszen nem is CSMA/CA-t használnak WiFi-ben.",
+      "e": "Az ütközés nem minden esetben érzékelhető a rejtett végberendezések problémája miatt."
+    },
+    "answer": [
+      "e"
+    ],
+    "ID": 12,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Tegyük fel, hogy egy VoIP átvitel esetén hagyományos (azaz telefonhálózatokban használt) PCM kodeket használunk, és az átvitel során egy csomagban a fejlécek összesen 40 byte-ot (byte-ot, nem bitet) foglalnak el. Az átvitel során az overhead (=a fejléc hossza/a teljes csomag (=fejléc+hasznos teher) hossza) 20%. Mekkora késleltetést okoz az átvitelben az, hogy meg kell várni, amíg megtelik egy csomag hasznos teher része?\nA választ ezredmásodpercben (milliszekundum, ms) adja meg!",
+    "blank": {
+      "identifier": "field1",
+      "answer": "20"
+    },
+    "ID": 13,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az alábbiak közül mi igaz a web proxy szerverre?",
+    "options": {
+      "A": "Központi gyorsítótárazás (cache) funkcióját látja el.",
+      "B": "Használatával jelentős sávszélesség takarítható meg.",
+      "C": "Jól használható, ha a kliensek nem rendelkeznek külső (az Interneten is érvényes) IP-címmel.",
+      "D": "A webszerverrel DNS-en keresztül kommunikál.",
+      "E": "A névfeloldás a web proxy kliens (böngésző) feladata.",
+      "F": "A többi válasz közül egyik sem helyes."
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "ID": 14,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "IP"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "DNS"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "ARP"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "TCP"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "UDP"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "HTTP"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "DHCP"
+      }
+    ],
+    "text": "Az ICMP üzeneteket [field1] üzenetekbe ágyazva szállítjuk.",
+    "ID": 15,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "bárki"
+      },
+      {
+        "identifier": "field2",
+        "label": "nem szükséges"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "csak időnként szükséges"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "senki sem"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "csak adminisztrátor"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "szükséges"
+      }
+    ],
+    "text": "A privát vagy nem publikus IP-cím tartományokat saját intézményen belüli kommunikációhoz [field1] használhatja, külön igénylés [field2].",
+    "ID": 16,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "A 3. mérés 1. feladatában gyakorolta az ún. solicited-node multicast address előállítását a ff02::1:ff00:0/104 prefix segítségével. Állítson most elő ilyen címet a 2001:db8::abba:edda:0bcd IPv6 címhez.\nff[field1]::[field2]:ff[field3]:[field4]",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "02"
+      },
+      {
+        "identifier": "field2",
+        "answer": "1"
+      },
+      {
+        "identifier": "field3",
+        "answer": "da"
+      },
+      {
+        "identifier": "field4",
+        "answer": "0bcd"
+      }
+    ],
+    "ID": 17,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Bontsa fel a 172.16.0.0/18 hálózatot 8 azonos méretű hálózatra. Adja meg az első kettőt és az utolsó kettőt.\nAdja meg az új maszkot: /[field1], majd a hálózatokat maszk nélkül:\nelső hálózat: 172.16.[field2].[field3]\nmásodik hálózat: 172.16.[field4].[field5]\nutolsó előtti hálózat: 172.16.[field6].[field7]\nutolsó hálózat: 172.16.[field8].[field9]",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "21"
+      },
+      {
+        "identifier": "field2",
+        "answer": "0"
+      },
+      {
+        "identifier": "field3",
+        "answer": "0"
+      },
+      {
+        "identifier": "field4",
+        "answer": "8"
+      },
+      {
+        "identifier": "field5",
+        "answer": "0"
+      },
+      {
+        "identifier": "field6",
+        "answer": "48"
+      },
+      {
+        "identifier": "field7",
+        "answer": "0"
+      },
+      {
+        "identifier": "field8",
+        "answer": "56"
+      },
+      {
+        "identifier": "field9",
+        "answer": "0"
+      }
+    ],
+    "ID": 18,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "A 192.168.10.128/26 hálózatban a router a legnagyobb kiosztható IP-címet kapta. Adja meg a router IP-címét, a gépeknek kiosztható IP-címek tartományát és a broadcast címet!\nEgészítse ki az egyes címeket:\nBroadcast cím: 192.168.10.[field1]\nRouter címe: 192.168.10.[field2]\n1. számítógép: 192.168.10.[field3]\nutolsó számítógép: 192.168.10.[field4]\nAdja meg a számítógépeknek kiosztható IP-címek számát is: [field5]",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "191"
+      },
+      {
+        "identifier": "field2",
+        "answer": "190"
+      },
+      {
+        "identifier": "field3",
+        "answer": "129"
+      },
+      {
+        "identifier": "field4",
+        "answer": "189"
+      },
+      {
+        "identifier": "field5",
+        "answer": "62"
+      }
+    ],
+    "ID": 19,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Milyen tulajdonságai vannak a routing centralizált megoldásának?",
+    "options": {
+      "A": "Nagy kockázatot jelent az egész hálózat működését biztosító központi vezérlés meghibásodása.",
+      "B": "A többi válasz közül egyik sem helyes.",
+      "C": "Így biztosítható a legkönnyebben, hogy a hálózati csomópontok egységesen \"lássák\" a hálózatot.",
+      "D": "Nem biztosítható, hogy a hálózati csomópontok egységesen \"lássák\" a hálózatot.",
+      "E": "A nagy kiterjedésű csomagkapcsolt hálózatok működésének ez a legrobosztusabb módja."
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "ID": 20,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Az 1. mérésen a TCP Window scaling opciót tanulmányozhatta. Mennyi lesz a tényleges ablakméret, ha a TCP Window size mező értéke 10 000, a shift count értéke pedig 4? A tényleges ablakméret:",
+    "blank": {
+      "identifier": "field1",
+      "answer": "160000"
+    },
+    "ID": 21,
+    "supervised": "no"
+  }
+]

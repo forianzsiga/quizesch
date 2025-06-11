@@ -1,0 +1,526 @@
+[
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az alábbiak közül mely állítás(ok) igaz(ak) az SMTP-re?",
+    "options": {
+      "A": "A többi válasz közül egyik sem helyes.",
+      "B": "Létezik titkosított verziója is, az SMTPS.",
+      "C": "A POP3/IMAP4 kliensek ennek segítségével küldhetnek levelet.",
+      "D": "A HELO paranccsal kezdeményezheti a fogadó a kapcsolat létrejöttének visszaigazolását.",
+      "E": "A 25-ös TCP portot használja.",
+      "F": "A levél küldésének végét két egymást követő sortörés jelzi."
+    },
+    "answer": [
+      "B",
+      "E"
+    ],
+    "ID": 1,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "A Bellman-Ford algoritmus alkalmazása során egy adott időpontban a hálózat A csomópontja a következő állapotvektort tartja nyilván:\nB,1 C,2 D,3 E,4 F,1\nMegérkezik B-től a következő állapotvektor:\nA,1 C,3 D,2 E,4 H,2\nMely bejegyzéssel/bejegyzésekkel bővíti ill. módosítja A az állapotvektorát?\nA válaszban az állapotvektor elemet NAGYBETŰBŐL és számból álló párként adja meg a két tagot VESSZŐvel elválasztva (a fentieknek megfelelően). Amennyiben a helyes válaszban több állapotvektor elemet is meg kell adni, azokat PONTOSVESSZŐvel válassza el! SZÓKÖZöket NE használjon!",
+    "blank": {
+      "identifier": "field1",
+      "answer": "H,3"
+    },
+    "ID": 2,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Ha adott kliens és szerver gépek között több DNS üzenetváltás is történik, akkor a(z) __________ alapján tudja azonosítani a kliens, hogy melyik kérdésére jött az adott válasz.",
+    "options": {
+      "a": "Transaction ID",
+      "b": "AAA rekord",
+      "c": "recursive query",
+      "d": "A rekord"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 3,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi a szerepe az ICMP-nek?",
+    "options": {
+      "A": "Kezeli a multicast csoportokat.",
+      "B": "A többi válasz közül egyik sem helyes.",
+      "C": "Kezeli a TCP/IP architektúra hálózati rétegének működéséhez szükséges vezérlőüzeneteket.",
+      "D": "Kijavítja a csomagtovábbítás során keletkező hibákat."
+    },
+    "answer": [
+      "C"
+    ],
+    "ID": 4,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az alábbi routing protokollok közül melyik szolgál autonóm rendszerek közötti útvonalirányításra?",
+    "options": {
+      "A": "BGP (Border Gateway Protocol)",
+      "B": "OSPF (Open Shortest Path First)",
+      "C": "EIGRP (Enhanced Interior Gateway Routing Protocol)",
+      "D": "RIP (Routing Information Protocol)",
+      "E": "Az alábbi routing protokollok közül egyik sem használatos autonóm rendszerek közötti útvonalirányításra.",
+      "F": "IS-IS (Intermediate System to Intermediate System)"
+    },
+    "answer": [
+      "A"
+    ],
+    "ID": 5,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mely állítás igaz a TCP MSS-re (Maximum Segment Size)?",
+    "options": {
+      "A": "Az AIMD módszer esetén minden sikeres szegmensküldés után ennyivel csökken a torlódási ablak mérete.",
+      "B": "Az átlagos adatméret bájtban, amit a TCP küld egy szegmensben.",
+      "C": "Nem kell összeegyeztetni az adatkapcsolati réteg MTU-jával.",
+      "D": "A többi válasz közül egyik sem helyes."
+    },
+    "answer": [
+      "D"
+    ],
+    "ID": 6,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "SLAAC"
+      },
+      {
+        "identifier": "field2",
+        "label": "IPv6"
+      },
+      {
+        "identifier": "field3",
+        "label": "EUI-64"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "MAC"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "HTTP"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "IPv4"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "egyedi"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "globális"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "reverse mapping"
+      }
+    ],
+    "text": "A(z) [field1] lehetővé teszi, hogy a számítógépek emberi beavatkozás nélkül kapjanak [field2] címet. A protokoll a módosított [field3] azonosítót használja.",
+    "ID": 7,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Az első mérésen az első feladatban megvizsgálta az IP datagram fejrészét. Azt találta, hogy az első két 4-4 bites mező (Version és IHL) értéke 0x45, és az IP datagram fejrészének mérete 20 oktett. Mekkora az IP datagram fejrésze abban az esetben, ha ez az érték 0x47?\nA fejész mérete [field1] oktett.",
+    "blank": {
+      "identifier": "field1",
+      "answer": "28"
+    },
+    "ID": 8,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "A 10.10.0.0/22 hálózatban a router a legkisebb kiosztható IP-címet kapta. Adja meg a router IP-címét, a gépeknek kiosztható IP-címek tartományát és a broadcast címet!\nEgészítse ki az egyes címeket:\nBroadcast cím: 10.10.[field1].[field2]\nRouter címe: 10.10.[field3].[field4]\n1. számítógép: 10.10.[field5].[field6]\nutolsó számítógép: 10.10.[field7].[field8]\nAdja meg a számítógépeknek kiosztható IP-címek számát is: [field9]",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "3"
+      },
+      {
+        "identifier": "field2",
+        "answer": "255"
+      },
+      {
+        "identifier": "field3",
+        "answer": "0"
+      },
+      {
+        "identifier": "field4",
+        "answer": "1"
+      },
+      {
+        "identifier": "field5",
+        "answer": "0"
+      },
+      {
+        "identifier": "field6",
+        "answer": "2"
+      },
+      {
+        "identifier": "field7",
+        "answer": "3"
+      },
+      {
+        "identifier": "field8",
+        "answer": "254"
+      },
+      {
+        "identifier": "field9",
+        "answer": "1022"
+      }
+    ],
+    "ID": 9,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "Temporary IPv6 Address"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "IPv6 Address"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "Link-local IPv6 Address"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "Private IPv6 Address"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "Solicited Node IPv6 Address"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "Public IPv6 Address"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "Permanent IPv6 Address"
+      }
+    ],
+    "text": "A 3. mérés 1. feladatában azt tapasztalta, hogy számítógépének több IPv6 címe van. Ezek közül a számítógépe melyik IPv6 címét használta forráscímként weblap letölésekor?\nEz volt a forráscím: [field1].",
+    "ID": 10,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "A és B és D"
+      },
+      {
+        "identifier": "field2",
+        "label": "C"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "A és B és C"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "A és B"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "D"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "B"
+      }
+    ],
+    "text": "Egy Ethernet kapcsolóhoz négy számítógép csatlakozik: A, B, C és D.\nBekapcsoljuk a kapcsolót, és ekkor először C küld egy Ethernet keretet D-nek, majd D válaszol C-nek.\nAz első keretet kinek továbbítja a kapcsoló? [field1]-nak/nek.\nA második keretet kinek továbbítja a kapcsoló? [field2]-nak/nek.",
+    "ID": 11,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "I,P,B,B,P,B,B,..."
+      },
+      {
+        "identifier": "field2",
+        "label": "I,B,B,P,B,B,P,..."
+      },
+      {
+        "identifier": "field3",
+        "label": "router 1"
+      },
+      {
+        "identifier": "field4",
+        "label": "local multicast router"
+      },
+      {
+        "identifier": "field5",
+        "label": "local multicast router"
+      },
+      {
+        "identifier": "field6",
+        "label": "video kliens"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "B,P,P,I,P,P,I,..."
+      },
+      {
+        "identifier": "distractor2",
+        "label": "P,I,I,B,I,I,B,..."
+      },
+      {
+        "identifier": "distractor3",
+        "label": "I,P,B,B,P,B,B,..."
+      },
+      {
+        "identifier": "distractor4",
+        "label": "B,I,I,P,I,I,P,..."
+      },
+      {
+        "identifier": "distractor5",
+        "label": "L2 switch"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "video szerver"
+      }
+    ],
+    "text": "A H.264 GOP (Group of Pictures)-ban (a GOP elejétől kezdve)\n- egy lehetséges dekódolási sorrend eleje: [field1]\n- egy lehetséges lejátszási sorrend eleje: [field2]\n\nA fenti ábrán látható rendszerben multicast továbbítással juttatjuk el az IPTV adatokat a klienshez. Ekkor:\n- A(z) [field3] és a(z) [field4] között használunk PIM-et.\n- A(z) [field5] és a(z) [field6] között használunk IGMP-t.",
+    "ID": 12,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "IMEI"
+      },
+      {
+        "identifier": "field2",
+        "label": "4"
+      },
+      {
+        "identifier": "field3",
+        "label": "trusted"
+      },
+      {
+        "identifier": "field4",
+        "label": "untrusted"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "telefonszám"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "3"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "default"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "VoWiFi"
+      }
+    ],
+    "text": "Egy GSM-mel kompatibilis telefon esetében a *#06# karaktersorozat hatására a(z) [field1] íródik ki.\nA VoWiFi [field2]. generációs mobilhálózatok kiegészítése.\nA WiFi hálózat üzemeltetőjétől függően két üzemmódja van a VoWiFi-nek. Mikor melyiket használják?\n- [field3] üzemmód: ugyanaz az operátor biztosítja a mobil és a WiFi szolgáltatásokat\n- [field4] üzemmód: tetszőleges más WiFi hozzáférési pont használata.",
+    "ID": 13,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "csökkent"
+      },
+      {
+        "identifier": "field2",
+        "label": "nőtt"
+      },
+      {
+        "identifier": "field3",
+        "label": "nőtt"
+      },
+      {
+        "identifier": "field4",
+        "label": "moduláció"
+      },
+      {
+        "identifier": "field5",
+        "label": "csökkent"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "vonali kódolás"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "közeghozzáférési módszer"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "jel-zaj viszony"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "bithibaarány"
+      }
+    ],
+    "text": "Egy mobiltelefon változtatja a helyét a bázisállomáshoz képest, de a kettő között jelentősebb akadályok nincsenek. Az ábrán látható változást látjuk a rádiós átvitelben: a munkapont először az „1.\", utána a „2.\" számú lila nyíllal jelölt irányban változott meg.\nMi történt az 1. nyíllal jelölt szakaszon?\n- A vett jel jel-zaj viszonya [field1].\n- Ami azt jelenti, hogy a mobil és a bázisállomás távolsága minden bizonnyal [field2].\n- Ezzel együtt a bithibaarány [field3].\nMi változott a 2. nyíllal jelölt szakaszon?\n- A használt [field4] más lett. Ezáltal a bitsebesség [field5].",
+    "ID": 14,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "ADSL esetében az előfizetői hurkon áthaladó jel tartalmazza:",
+    "options": {
+      "a": "Az Internet (fel- és letöltés) és az analóg kábelTV jelét, frekvenciában elkülönítve.",
+      "b": "Az Internet (fel- és letöltés) és az analóg kábelTV jelét, kódosztással elkülönítve.",
+      "c": "Az Internet (fel- és letöltés) és az analóg kábelTV jelét, időben elkülönítve.",
+      "d": "Csak a telefonbeszélgetés jelét.",
+      "e": "A felfelé menő adatokat és a lefelé jövő adatokat, mindezt egymástól kódosztással elkülönítve.",
+      "f": "A felfelé menő adatokat és a lefelé jövő adatokat, mindezt egymástól frekvenciában elkülönítve.",
+      "g": "A felfelé menő adatokat és a lefelé jövő adatokat, mindezt egymástól időben elkülönítve.",
+      "h": "A felfelé menő adatokat, a lefelé jövő adatokat, a telefonbeszélgetés jelét, mindezt egymástól frekvenciában elkülönítve."
+    },
+    "answer": [
+      "h"
+    ],
+    "ID": 15,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Jelölje be az igaz állítás(ok)at a digitális jelekkel és négyszögjelekkel kapcsolatban!",
+    "options": {
+      "a": "Egy digitális jel nem lehet négyszögjel.",
+      "b": "Egy négyszögjel lehet digitális jel.",
+      "c": "Egy négyszögjel mindig digitális jel.",
+      "d": "Egy négyszögjel nem lehet digitális jel.",
+      "e": "Egy digitális jel mindig négyszögjel.",
+      "f": "Egy digitális jel lehet négyszögjel."
+    },
+    "answer": [
+      "b",
+      "f"
+    ],
+    "ID": 16,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mely közeghozzáférési módszerekre igaz, hogy figyelik a közösen használt csatornát és csak akkor kezdenek el adni, ha az szabad, illetve adás közben tovább figyelik a csatornát, és ütközés esetén megszakítják az adást?\n(A kérdés az egyszerűbb olvashatóság céljából többes számban van, de ez nem jelenti azt, hogy több jó válasz van. Persze, azt sem jelenti, hogy egy.)",
+    "options": {
+      "a": "CSMA/CD",
+      "b": "A többi válasz egyike sem jó.",
+      "c": "CSMA",
+      "d": "CSMA/CA"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 17,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "VoIP átvitelben (sőt, igazából tetszőleges beszédátvitelben) \"tűrhető\" minőségű (szájtól fülig tartó) késleltetésnek számít:",
+    "options": {
+      "a": "30 us (mikrosec.)",
+      "b": "30 s",
+      "c": "30 ms",
+      "d": "3 ms",
+      "e": "0,3 s",
+      "f": "3 s",
+      "g": "0,3 ms"
+    },
+    "answer": [
+      "e"
+    ],
+    "ID": 18,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik egy ugrásos, infrastruktúra nélküli rádiós hálózat?",
+    "options": {
+      "a": "VANET: Vehicular ad hoc network, járművek közti alkalmi hálózat",
+      "b": "Bluetooth",
+      "c": "A többi válasz egyike sem helyes.",
+      "d": "WiFi mesh",
+      "e": "WiFi"
+    },
+    "answer": [
+      "b"
+    ],
+    "ID": 19,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Egy 10 km x 20 km területű, téglalap alaprajzú város átlagos népsűrűsége 3000 fő/km². Egy szolgáltató mobilhálózattal szeretné lefedni a várost. A mobilhálózatról nem tudjuk, hogy konkrétan milyen fajta (pl. GSM vagy más), de azt igen, hogy a szolgáltató rendelkezésre álló teljes frekvenciatartománynak a jobb kihasználása céljából a cellás elvet alkalmazza. A szolgáltató rendelkezésére álló teljes frekvenciatartományban egyszerre 3000 fő beszélgethetne, ha nem osztanák fel. Mivel a szolgáltató arra készül, hogy egyszerre a lakosság 1%-a beszélhet maximum, cellákra osztja a várost, amihez 10 különböző típusú cellát használ (tehát nem 7-et, mint ahogy a méhsejt alakú iskolapéldán látható) azért, hogy a szomszédos cellák között ne legyen interferencia. Összesen hány cellára lesz szükség a városban? (Számológépet nem használhat.)",
+    "blank": {
+      "identifier": "field1",
+      "answer": "20"
+    },
+    "ID": 20,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "A 2. mérésen lehetősége volt kipróbálni, hogyan lehet csupán telnet segítségével FTP-zni. Tegyül fel, hogy egy ilyen feladat során a szervertől a következő választ kapta: 227 Entering Passive Mode (193,224,131,12,192,130) Lépjen be telnet segítségével a megfelelő IP-című gép megfelelő portjára. (Segítség: a $((...)) kifejezés elvégzi a számolást.)\ntelnet [field1].[field2].[field3].[field4] $((256*[field5]+[field6]))",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "193"
+      },
+      {
+        "identifier": "field2",
+        "answer": "224"
+      },
+      {
+        "identifier": "field3",
+        "answer": "131"
+      },
+      {
+        "identifier": "field4",
+        "answer": "12"
+      },
+      {
+        "identifier": "field5",
+        "answer": "192"
+      },
+      {
+        "identifier": "field6",
+        "answer": "130"
+      }
+    ],
+    "ID": 21,
+    "supervised": "no"
+  }
+]

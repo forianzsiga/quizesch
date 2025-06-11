@@ -12,7 +12,7 @@
       "c"
     ],
     "ID": 1,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -27,7 +27,7 @@
       "c"
     ],
     "ID": 2,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -43,7 +43,7 @@
       "C"
     ],
     "ID": 3,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -95,7 +95,7 @@
     ],
     "text": "FTP aktív mód esetén az adat kapcsolat felépítését a(z) [field1] kezdeményezi a [field2] felé. Ez a gyakorlatban azt jelenti, hogy a(z) [field3] a [field4] kapcsolaton keresztül elküldi a(z) [field5]-cím és [field6] adatokat, ahova a(z) [field7] kapcsolódhat. Ezután a(z) FTP [field8] megkezdi a kapcsolat felépítését a kapott azonosítók alapján.",
     "ID": 4,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -111,7 +111,7 @@
       "c"
     ],
     "ID": 5,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -139,7 +139,7 @@
       }
     ],
     "ID": 6,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -158,7 +158,7 @@
       "d"
     ],
     "ID": 7,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -242,7 +242,7 @@
     ],
     "text": "A [field1] útvonalválasztásnál, amennyiben a router egynél több útvonalat kap egy prefixhez, akkor elsősorban a(z) [field2] alapján fog dönteni, másodsorban az AS-PATH attribútum alapján, utóbbi a(z) [field3] sorozatát adja meg, amelyen áthaladt a prefix hirdetés.",
     "ID": 8,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -252,7 +252,7 @@
       "answer": "1.2"
     },
     "ID": 9,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -284,7 +284,7 @@
     ],
     "text": "A(z) [field1] rekord egy másik névre mutató alias bejegyzés a DNS-ben.",
     "ID": 10,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -352,7 +352,7 @@
     ],
     "text": "Az [field1] protokoll arra való, hogy a(z) [field2] cím ismeretében felderítsük a hozzá tartozó [field3] címet. A(z) [field4] protokoll arra jó, hogy egy állomás [field5] címet kérhessen a hozzá tartozó alhálózati maszkkal, amihez társíthatja még a [field6] címét is.",
     "ID": 11,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "drag_n_drop",
@@ -412,7 +412,7 @@
     ],
     "text": "Az AMR-WB (G.722.2) beszédkódoló marketingneve [field1]. A legnagyobb elkódolt hangfrekvencia kb. [field2]. A mintavételezési frekvencia [field3]. Ezek miatt e kódoló hangminősége a hagyományos telefonos PCM-hez képest [field4], adatsebessége pedig [field5].",
     "ID": 12,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -433,7 +433,7 @@
       "b"
     ],
     "ID": 13,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -449,7 +449,7 @@
       "b"
     ],
     "ID": 14,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -464,7 +464,7 @@
       "a"
     ],
     "ID": 15,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -482,7 +482,7 @@
       "a"
     ],
     "ID": 16,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -501,7 +501,7 @@
       "h"
     ],
     "ID": 17,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -511,7 +511,7 @@
       "answer": "40"
     },
     "ID": 18,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -521,7 +521,7 @@
       "answer": "200"
     },
     "ID": 19,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -531,7 +531,7 @@
       "answer": "100"
     },
     "ID": 20,
-    "supervised": "yes"
+    "supervised": "no"
   },
   {
     "question_type": "fill_the_blanks",
@@ -555,6 +555,6 @@
       }
     ],
     "ID": 21,
-    "supervised": "yes"
+    "supervised": "no"
   }
 ]
