@@ -1,4 +1,10 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "Vizsga",
+    "year": "2024"
+  },
+  "questions": [
   {
     "question_type": "multi_choice",
     "question_title": "Az IPv6 fejrészének egyes részei hasonló funkciókat látnak el, mint az IPv4 fejrész bizonyos részei. Az alábbiakban (IPv4 -> IPv6 alakban) megadott összerendelések közül melyek helyesek?",
@@ -519,3 +525,4 @@
     "supervised": "no"
   }
 ]
+}

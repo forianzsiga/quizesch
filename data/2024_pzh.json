@@ -1,4 +1,10 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "PZH",
+    "year": "2024"
+  },
+  "questions": [
   {
     "question_type": "drag_n_drop",
     "choices": [
@@ -438,3 +444,4 @@
     "supervised": "no"
   }
 ]
+}

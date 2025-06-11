@@ -1,4 +1,10 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "Vizsga",
+    "year": "2024"
+  },
+  "questions": [
   {
     "question_type": "multi_choice",
     "question_title": "Mit neveznek az útvonalválasztásnál autonóm rendszernek (AS)?",
@@ -315,3 +321,4 @@
     "supervised": "yes"
   }
 ]
+}

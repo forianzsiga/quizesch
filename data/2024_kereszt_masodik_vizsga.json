@@ -1,4 +1,10 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "Vizsga",
+    "year": "2024"
+  },
+  "questions": [
   {
     "question_type": "multi_choice",
     "question_title": "Az alábbiak közül mely állítás(ok) igaz(ak) az SMTP-re?",
@@ -524,3 +530,4 @@
     "supervised": "no"
   }
 ]
+}

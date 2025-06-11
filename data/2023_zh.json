@@ -1,4 +1,10 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "ZH",
+    "year": "2023"
+  },
+  "questions": [
   {
     "question_type": "multi_choice",
     "question_title": "Melyik állítás igaz a telefonszámokra, mint kódokra?",
@@ -224,3 +230,4 @@
     "supervised": "no"
   }
 ]
+}

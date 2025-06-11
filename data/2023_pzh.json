@@ -1,4 +1,10 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "PZH",
+    "year": "2023"
+  },
+  "questions": [
   {
     "question_type": "multi_choice",
     "question_title": "Melyik állítás igaz?",
@@ -240,3 +246,4 @@
     "supervised": "no"
   }
 ]
+}

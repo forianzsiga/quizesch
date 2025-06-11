@@ -1,4 +1,9 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "Synthetic Questionnaire"
+  },
+  "questions": [
   {
     "question_type": "multi_choice",
     "question_title": "Melyik protokollok működnek a Szállítási rétegben (Transport Layer) a TCP/IP modell szerint?",
@@ -250,3 +255,4 @@
     "supervised": "generated"
   }
 ]
+}

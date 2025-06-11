@@ -1,4 +1,10 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "PPZH",
+    "year": "2024"
+  },
+  "questions": [
   {
     "question_type": "multi_choice",
     "question_title": "Az alábbiak közül mi a különbség a POP3 és az IMAP4 protokollokban?",
@@ -334,3 +340,4 @@
     "supervised": "no"
   }
 ]
+}

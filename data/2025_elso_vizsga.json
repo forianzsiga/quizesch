@@ -1,4 +1,10 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "Vizsga",
+    "year": "2025"
+  },
+  "questions": [
   {
     "question_type": "multi_choice",
     "question_title": "Egy hálózatnak 255.255.240.0 az alhálózati maszkja. Legfeljebb hány hostot képes kezelni ez a hálózat?",
@@ -558,3 +564,4 @@
     "supervised": "no"
   }
 ]
+}

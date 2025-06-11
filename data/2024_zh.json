@@ -1,4 +1,10 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "ZH",
+    "year": "2024"
+  },
+  "questions": [
   {
     "question_type": "multi_choice",
     "question_title": "A ping parancs milyen ICMP üzeneteket használ?",
@@ -656,3 +662,4 @@
     "supervised": "yes"
   }
 ]
+}
