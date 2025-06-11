@@ -5,5 +5,5 @@ if (window.location.hostname.includes("github.io")) {
     console.log("github pages detected");
 }
 export const DATA_DIRECTORY = dataDir.replace(/\/+$/, ''); // Normalize
-export const QUIZ_MANIFEST_ENDPOINT = '/quiz-manifest.json'; // Serve from root
+export const QUIZ_MANIFEST_ENDPOINT = `${DATA_DIRECTORY}/quiz_manifest.json`;
 export const STORAGE_KEY = 'quizesch_state_v2'; // Increment version if structure changes
