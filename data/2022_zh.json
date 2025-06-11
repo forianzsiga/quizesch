@@ -1,3 +1,10 @@
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "ZH",
+    "year": "2022"
+  },
+  "questions": 
 [
   {
     "question_type": "multi_choice",
@@ -195,3 +202,4 @@
     "ID": 15
   }
 ]
+}

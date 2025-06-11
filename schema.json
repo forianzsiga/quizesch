@@ -1,175 +1,99 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "QuizeSCH Schema",
-  "description": "A schema for an array of questions, where each question can be one of three types: multi_choice, drag_n_drop, or fill_the_blanks.",
-  "type": "array",
-  "items": {
-    "oneOf": [
-      {
-        "title": "Multiple Choice Question",
-        "type": "object",
-        "properties": {
-          "question_type": {
-            "description": "Defines the type of the question.",
-            "const": "multi_choice"
-          },
-          "question_title": {
-            "description": "The main text of the question.",
-            "type": "string"
-          },
-          "options": {
+  "title": "QuizeSCH Quiz File Schema",
+  "description": "A schema for a single quiz file, containing metadata (tags) and an array of questions.",
+  "type": "object",
+  "properties": {
+    "tags": {
+      "type": "object",
+      "description": "Metadata tags for the quiz.",
+      "properties": {
+        "subject": { "type": "string" },
+        "type": { "type": "string" },
+        "year": { "type": "string" }
+      },
+      "required": ["subject", "type", "year"]
+    },
+    "questions": {
+      "description": "An array of questions, where each question can be one of three types: multi_choice, drag_n_drop, or fill_the_blanks.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "title": "Multiple Choice Question",
             "type": "object",
-            "description": "An object where keys are option identifiers (e.g., 'a', 'b') and values are the option text.",
-            "additionalProperties": {
-              "type": "string"
-            }
-          },
-          "answer": {
-            "type": "array",
-            "description": "An array of strings, where each string is a key from the 'options' object, representing a correct answer.",
-            "items": {
-              "type": "string"
-            }
-          },
-          "ID": {
-            "description": "A unique identifier for the question.",
-            "type": "integer"
-          },
-          "supervised": {
-            "description": "A flag indicating if the question is supervised.",
-            "const": "yes"
-          }
-        },
-        "required": [
-          "question_type",
-          "question_title",
-          "options",
-          "answer",
-          "ID",
-          "supervised"
-        ]
-      },
-      {
-        "title": "Drag and Drop Question",
-        "type": "object",
-        "properties": {
-          "question_type": {
-            "description": "Defines the type of the question.",
-            "const": "drag_n_drop"
-          },
-          "choices": {
-            "type": "array",
-            "description": "An array of all possible choices (both correct answers and distractors).",
-            "items": {
-              "type": "object",
-              "properties": {
-                "identifier": {
-                  "type": "string",
-                  "description": "A unique identifier for the choice (e.g., 'field1', 'distractor1')."
-                },
-                "label": {
-                  "type": "string",
-                  "description": "The text content of the choice."
-                }
-              },
-              "required": [
-                "identifier",
-                "label"
-              ]
-            }
-          },
-          "text": {
-            "type": "string",
-            "description": "The question text containing placeholders like [field1] that correspond to identifiers in the 'choices' array."
-          },
-          "ID": {
-            "description": "A unique identifier for the question.",
-            "type": "integer"
-          },
-          "supervised": {
-            "description": "A flag indicating if the question is supervised.",
-            "const": "yes"
-          }
-        },
-        "required": [
-          "question_type",
-          "choices",
-          "text",
-          "ID",
-          "supervised"
-        ]
-      },
-      {
-        "title": "Fill the Blanks Question",
-        "type": "object",
-        "properties": {
-          "question_type": {
-            "description": "Defines the type of the question.",
-            "const": "fill_the_blanks"
-          },
-          "text": {
-            "type": "string",
-            "description": "The question text containing placeholders like [field1] that correspond to identifiers in the 'blank' property."
-          },
-          "blank": {
-            "description": "Can be a single blank object or an array of blank objects, each representing a correct answer for a placeholder.",
-            "oneOf": [
-              {
+            "properties": {
+              "question_type": { "const": "multi_choice" },
+              "question_title": { "type": "string" },
+              "options": {
                 "type": "object",
-                "properties": {
-                  "identifier": {
-                    "type": "string",
-                    "description": "The identifier for the blank, matching a placeholder in the text."
-                  },
-                  "answer": {
-                    "type": "string",
-                    "description": "The correct answer for the blank."
-                  }
-                },
-                "required": [
-                  "identifier",
-                  "answer"
-                ]
+                "additionalProperties": { "type": "string" }
               },
-              {
+              "answer": { "type": "array", "items": { "type": "string" } },
+              "ID": { "type": "integer" },
+              "supervised": { "type": "string" }
+            },
+            "required": ["question_type", "question_title", "options", "answer", "ID"]
+          },
+          {
+            "title": "Drag and Drop Question",
+            "type": "object",
+            "properties": {
+              "question_type": { "const": "drag_n_drop" },
+              "choices": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "properties": {
-                    "identifier": {
-                      "type": "string",
-                      "description": "The identifier for the blank, matching a placeholder in the text."
-                    },
-                    "answer": {
-                      "type": "string",
-                      "description": "The correct answer for the blank."
-                    }
+                    "identifier": { "type": "string" },
+                    "label": { "type": "string" }
                   },
-                  "required": [
-                    "identifier",
-                    "answer"
-                  ]
+                  "required": ["identifier", "label"]
                 }
-              }
-            ]
+              },
+              "text": { "type": "string" },
+              "ID": { "type": "integer" },
+              "supervised": { "type": "string" }
+            },
+            "required": ["question_type", "choices", "text", "ID"]
           },
-          "ID": {
-            "description": "A unique identifier for the question.",
-            "type": "integer"
-          },
-          "supervised": {
-            "description": "A flag indicating if the question is supervised.",
-            "const": "yes"
+          {
+            "title": "Fill the Blanks Question",
+            "type": "object",
+            "properties": {
+              "question_type": { "const": "fill_the_blanks" },
+              "text": { "type": "string" },
+              "blank": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "identifier": { "type": "string" },
+                      "answer": { "type": "string" }
+                    },
+                    "required": ["identifier", "answer"]
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "identifier": { "type": "string" },
+                        "answer": { "type": "string" }
+                      },
+                      "required": ["identifier", "answer"]
+                    }
+                  }
+                ]
+              },
+              "ID": { "type": "integer" },
+              "supervised": { "type": "string" }
+            },
+            "required": ["question_type", "text", "blank", "ID"]
           }
-        },
-        "required": [
-          "question_type",
-          "text",
-          "blank",
-          "ID",
-          "supervised"
         ]
       }
-    ]
-  }
+    }
+  },
+  "required": ["tags", "questions"]
 }

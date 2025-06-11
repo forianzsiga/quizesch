@@ -1,482 +1,519 @@
-[
-  {
-    "question_type": "multi_choice",
-    "question_title": "A beszédátvitelben a nagy késletetés zavaró a beszédátvitelben. Melyik állítás igaz agyirányú, szájtól fülig tartó késleltetésre?",
-    "options": {
-      "a": "A felhasználók több mint felét zavarja az 500 nanoszekundumos késletetés",
-      "b": "150 ms (millisec.) alatt a legtöbb felhasználó számára még nem zavaró a késletetés",
-      "c": "500 ms alatt a legtöbb felhasználó számára még nem zavaró a késletetés",
-      "d": "Több mint 5 percet késni illetlenség, még egy hanghullámnak is.",
-      "e": "A felhasználók több mint felét zavarja a 500 mikroszekundumos késletetés",
-      "f": "1,5-2 s alatt a legtöbb felhasználó számára még nem zavaró a késletetés"
-    },
-    "answer": [
-      "b"
-    ],
-    "ID": 1
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "ZH",
+    "year": "2020"
   },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Az újgenerációs hálózatok (Next Generation Networks, NGN)-re melyik állítás igaz?",
-    "options": {
-      "a": "a kábelTV-s Internet hozzáféréssel nem kompatibilis",
-      "b": "a telefonszolgáltatást is IP alapon lehet rajta megvalósítani",
-      "c": "kizárólag VoIP-ra való, Triple Play-re alkalmatlan",
-      "d": "a vezetékes telefonhálózat továbbfejlesztése, ezért csak hagyományos telefonkészülékkel használható",
-      "e": "még az IP világ előtt született, a koncepció a csomagkapcsolással nehezen összeegyeztethető",
-      "f": "az 5G mobilhálózatokkal együtt fogják majd bevezetni"
+  "questions": [
+    {
+      "question_type": "multi_choice",
+      "question_title": "A beszédátvitelben a nagy késletetés zavaró a beszédátvitelben. Melyik állítás igaz agyirányú, szájtól fülig tartó késleltetésre?",
+      "options": {
+        "a": "A felhasználók több mint felét zavarja az 500 nanoszekundumos késletetés",
+        "b": "150 ms (millisec.) alatt a legtöbb felhasználó számára még nem zavaró a késletetés",
+        "c": "500 ms alatt a legtöbb felhasználó számára még nem zavaró a késletetés",
+        "d": "Több mint 5 percet késni illetlenség, még egy hanghullámnak is.",
+        "e": "A felhasználók több mint felét zavarja a 500 mikroszekundumos késletetés",
+        "f": "1,5-2 s alatt a legtöbb felhasználó számára még nem zavaró a késletetés"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 1,
+      "supervised": "no"
     },
-    "answer": [
-      "b"
-    ],
-    "ID": 2
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik állítás igaz egy digitális jelekre?",
-    "options": {
-      "a": "csak két diszkrét állapota lehet",
-      "b": "analóg jel",
-      "c": "minden esetben négyszögjel",
-      "d": "amplitúdómodulált jel",
-      "e": "nem lehet négyszögjel",
-      "f": "lehet szinuszos jel, melynek frekvenciája időnként változik"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az újgenerációs hálózatok (Next Generation Networks, NGN)-re melyik állítás igaz?",
+      "options": {
+        "a": "a kábelTV-s Internet hozzáféréssel nem kompatibilis",
+        "b": "a telefonszolgáltatást is IP alapon lehet rajta megvalósítani",
+        "c": "kizárólag VoIP-ra való, Triple Play-re alkalmatlan",
+        "d": "a vezetékes telefonhálózat továbbfejlesztése, ezért csak hagyományos telefonkészülékkel használható",
+        "e": "még az IP világ előtt született, a koncepció a csomagkapcsolással nehezen összeegyeztethető",
+        "f": "az 5G mobilhálózatokkal együtt fogják majd bevezetni"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 2,
+      "supervised": "no"
     },
-    "answer": [
-      "f"
-    ],
-    "ID": 3
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "A GSM hálózatokra melyik állítás igaz?",
-    "options": {
-      "a": "egy vivőben 8 időrés van, így egyszerre időosztásos és frekvenciaosztásos a közeghozzáférése",
-      "b": "GSM900 esetében egy időben 900 fél beszélhet",
-      "c": "beszélgetés közben a végberendezés sugárzási teljesítménye állandó: fix 2 mW (2 milliwatt)",
-      "d": "88 mérföld/óra felett korlátozott időutazási lehetőséget is nyújtottak az USA egyes részein",
-      "e": "analóg rendszerek voltak",
-      "f": "beszélgetés közben a végberendezés sugárzási teljesítménye állandó: fix 2 W (2 watt)"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz egy digitális jelekre?",
+      "options": {
+        "a": "csak két diszkrét állapota lehet",
+        "b": "analóg jel",
+        "c": "minden esetben négyszögjel",
+        "d": "amplitúdómodulált jel",
+        "e": "nem lehet négyszögjel",
+        "f": "lehet szinuszos jel, melynek frekvenciája időnként változik"
+      },
+      "answer": [
+        "f"
+      ],
+      "ID": 3,
+      "supervised": "no"
     },
-    "answer": [
-      "a"
-    ],
-    "ID": 4
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "VoIP esetén az adatcsomag felépítése a következő:",
-    "options": {
-      "a": "UDP fejléc | IP fejléc | RTP fejléc | beszédinformáció",
-      "b": "IP fejléc | RTP fejléc | UDP fejléc | beszédinformáció",
-      "c": "UDP fejléc | RTP fejléc | IP fejléc | beszédinformáció",
-      "d": "RTP fejléc | IP fejléc | UDP fejléc | beszédinformáció",
-      "e": "RTP fejléc | UDP fejléc | IP fejléc | beszédinformáció",
-      "f": "IP fejléc | UDP fejléc | RTP fejléc | beszédinformáció"
+    {
+      "question_type": "multi_choice",
+      "question_title": "A GSM hálózatokra melyik állítás igaz?",
+      "options": {
+        "a": "egy vivőben 8 időrés van, így egyszerre időosztásos és frekvenciaosztásos a közeghozzáférése",
+        "b": "GSM900 esetében egy időben 900 fél beszélhet",
+        "c": "beszélgetés közben a végberendezés sugárzási teljesítménye állandó: fix 2 mW (2 milliwatt)",
+        "d": "88 mérföld/óra felett korlátozott időutazási lehetőséget is nyújtottak az USA egyes részein",
+        "e": "analóg rendszerek voltak",
+        "f": "beszélgetés közben a végberendezés sugárzási teljesítménye állandó: fix 2 W (2 watt)"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 4,
+      "supervised": "no"
     },
-    "answer": [
-      "f"
-    ],
-    "ID": 5
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "A GSM hálózatokbeli MSISDN-re mi igaz?",
-    "options": {
-      "a": "a SIM kártyához van rendelve",
-      "b": "Dán tudósok Viking-korabeli MSISDN-re bukkantak",
-      "c": "lekérdezése: *#06#",
-      "d": "Magyarországon 216-tal kezdődik, de más országokban is kezdődhet ezzel",
-      "e": "segítségével visszaszorítható a mobiltelefonok lopása",
-      "f": "egyedi a világon, Magyarországon 36-tal kezdődik"
+    {
+      "question_type": "multi_choice",
+      "question_title": "VoIP esetén az adatcsomag felépítése a következő:",
+      "options": {
+        "a": "UDP fejléc | IP fejléc | RTP fejléc | beszédinformáció",
+        "b": "IP fejléc | RTP fejléc | UDP fejléc | beszédinformáció",
+        "c": "UDP fejléc | RTP fejléc | IP fejléc | beszédinformáció",
+        "d": "RTP fejléc | IP fejléc | UDP fejléc | beszédinformáció",
+        "e": "RTP fejléc | UDP fejléc | IP fejléc | beszédinformáció",
+        "f": "IP fejléc | UDP fejléc | RTP fejléc | beszédinformáció"
+      },
+      "answer": [
+        "f"
+      ],
+      "ID": 5,
+      "supervised": "no"
     },
-    "answer": [
-      "f"
-    ],
-    "ID": 6
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "GSM 900 esetén a használt frekvenciák: mobil adó: 890-915 MHz, bázisállomás: 935-960 MHz. Ha két szolgáltató van egy adott országban, melyek egyformán részesülnek ezen rádiós frekvenciatartományokból, akkor egy szolgáltató egy cellájában egyszerre átlagosan hányan beszélgethetnek? Egy vivő 200 kHz széles, és 10 különböző frekvenciájú cellát használnak a szolgáltatók a cellás elv szerint (nem 7-et).",
-    "options": {
-      "a": "60-80 között",
-      "b": "25-40 között",
-      "c": "100 felett",
-      "d": "80-100 között",
-      "e": "25 alatt",
-      "f": "40-60 között"
+    {
+      "question_type": "multi_choice",
+      "question_title": "A GSM hálózatokbeli MSISDN-re mi igaz?",
+      "options": {
+        "a": "a SIM kártyához van rendelve",
+        "b": "Dán tudósok Viking-korabeli MSISDN-re bukkantak",
+        "c": "lekérdezése: *#06#",
+        "d": "Magyarországon 216-tal kezdődik, de más országokban is kezdődhet ezzel",
+        "e": "segítségével visszaszorítható a mobiltelefonok lopása",
+        "f": "egyedi a világon, Magyarországon 36-tal kezdődik"
+      },
+      "answer": [
+        "f"
+      ],
+      "ID": 6,
+      "supervised": "no"
     },
-    "answer": [
-      "f"
-    ],
-    "ID": 7
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik állítás igaz az IPTV-ben alkalmazott médiafolyamokra?",
-    "options": {
-      "a": "egy HD videostream sávszélességigénye nagyságrendileg 80 Mb/s",
-      "b": "az SD (Standard Definition) képfelbontás kb. 2 megapixel (1920 x 1080 pixel)",
-      "c": "SD felbontásban nincsen színinformáció, így leginkább a korai fekete-fehér filmek és egyes művészfilmek továbbítására alkalmas",
-      "d": "egy SD videostream sávszélességigénye nagyságrendileg 2 Mb/s",
-      "e": "egy HD videostream sávszélességigénye nagyságrendileg 2 Gb/s",
-      "f": "SD minőségben nincsen hang, csak némafilmek továbbíthatóak így"
+    {
+      "question_type": "multi_choice",
+      "question_title": "GSM 900 esetén a használt frekvenciák: mobil adó: 890-915 MHz, bázisállomás: 935-960 MHz. Ha két szolgáltató van egy adott országban, melyek egyformán részesülnek ezen rádiós frekvenciatartományokból, akkor egy szolgáltató egy cellájában egyszerre átlagosan hányan beszélgethetnek? Egy vivő 200 kHz széles, és 10 különböző frekvenciájú cellát használnak a szolgáltatók a cellás elv szerint (nem 7-et).",
+      "options": {
+        "a": "60-80 között",
+        "b": "25-40 között",
+        "c": "100 felett",
+        "d": "80-100 között",
+        "e": "25 alatt",
+        "f": "40-60 között"
+      },
+      "answer": [
+        "f"
+      ],
+      "ID": 7,
+      "supervised": "no"
     },
-    "answer": [
-      "d"
-    ],
-    "ID": 8
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik állítás igaz kábelTV-s internet-elérésre?",
-    "options": {
-      "a": "Telefonszolgáltatást nem lehet kábelTV hálózaton nyújtani",
-      "b": "A KábelTV hálózatokon nem lehetséges triple play szolgáltatást nyújtani",
-      "c": "A hálózat egy részén koaxiális kábelen, egy részén optikai szálon történik az információtovábbítás",
-      "d": "A kábelTV rendszerkben CDMA-t használnak a 3G mobilokkal való kompatibilitás miatt",
-      "e": "A KábelTV hálózatokon nyújtott triple play jelentése: egy fiú, két lány",
-      "f": "Internetszolgáltatást nem lehet kábelTV hálózaton nyújtani"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz az IPTV-ben alkalmazott médiafolyamokra?",
+      "options": {
+        "a": "egy HD videostream sávszélességigénye nagyságrendileg 80 Mb/s",
+        "b": "az SD (Standard Definition) képfelbontás kb. 2 megapixel (1920 x 1080 pixel)",
+        "c": "SD felbontásban nincsen színinformáció, így leginkább a korai fekete-fehér filmek és egyes művészfilmek továbbítására alkalmas",
+        "d": "egy SD videostream sávszélességigénye nagyságrendileg 2 Mb/s",
+        "e": "egy HD videostream sávszélességigénye nagyságrendileg 2 Gb/s",
+        "f": "SD minőségben nincsen hang, csak némafilmek továbbíthatóak így"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 8,
+      "supervised": "no"
     },
-    "answer": [
-      "c"
-    ],
-    "ID": 9
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "A beszédkodekeknek mennyi a jellemző adatsebessége?",
-    "options": {
-      "a": "nagyságrendileg néhány, ill. néhányszor tíz kb/s",
-      "b": "300-3100 Hz",
-      "c": "2,4 -- 64 Mb/s",
-      "d": "0,125 - 80 ms",
-      "e": "4 felett: nagyon jónak számít",
-      "f": "20 kHz"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz kábelTV-s internet-elérésre?",
+      "options": {
+        "a": "Telefonszolgáltatást nem lehet kábelTV hálózaton nyújtani",
+        "b": "A KábelTV hálózatokon nem lehetséges triple play szolgáltatást nyújtani",
+        "c": "A hálózat egy részén koaxiális kábelen, egy részén optikai szálon történik az információtovábbítás",
+        "d": "A kábelTV rendszerkben CDMA-t használnak a 3G mobilokkal való kompatibilitás miatt",
+        "e": "A KábelTV hálózatokon nyújtott triple play jelentése: egy fiú, két lány",
+        "f": "Internetszolgáltatást nem lehet kábelTV hálózaton nyújtani"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 9,
+      "supervised": "no"
     },
-    "answer": [
-      "a"
-    ],
-    "ID": 10
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik állítás igaz a passzív optikai hálózatokra (PON-okra)?",
-    "options": {
-      "a": "Csak részben használnak optikai átvitelt, a felhasználóhoz közel már vezeték nélküli átvitelt alkalmaznak",
-      "b": "Egymás után nem rakható több mint egy elosztópont",
-      "c": "Nem használnak optikai átvitelt",
-      "d": "Csak részben használnak optikai átvitelt, a felhasználóhoz közel már a hagyományos telefon- vagy kábeTV-kábeleket használják",
-      "e": "A \"passzív\" azt jelenti, hogy az elosztópontok nem igényelnek tápellátást",
-      "f": "A pont-pont optikai összeköttetéseknél több fényszálat igényel"
+    {
+      "question_type": "multi_choice",
+      "question_title": "A beszédkodekeknek mennyi a jellemző adatsebessége?",
+      "options": {
+        "a": "nagyságrendileg néhány, ill. néhányszor tíz kb/s",
+        "b": "300-3100 Hz",
+        "c": "2,4 -- 64 Mb/s",
+        "d": "0,125 - 80 ms",
+        "e": "4 felett: nagyon jónak számít",
+        "f": "20 kHz"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 10,
+      "supervised": "no"
     },
-    "answer": [
-      "e"
-    ],
-    "ID": 11
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik eszköz NEM része a 3G mobilhálózatoknak?",
-    "options": {
-      "a": "SGSN: Serving GPRS Support Node",
-      "b": "RNC: Radio Network Controller, Rádiós hálózati vezérlő",
-      "c": "MME: Mobility Management Entity",
-      "d": "Node B: 3G bázisállomás",
-      "e": "GMSC: Gateway MSC",
-      "f": "HLR: Home Location Register, honos helyregiszter"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz a passzív optikai hálózatokra (PON-okra)?",
+      "options": {
+        "a": "Csak részben használnak optikai átvitelt, a felhasználóhoz közel már vezeték nélküli átvitelt alkalmaznak",
+        "b": "Egymás után nem rakható több mint egy elosztópont",
+        "c": "Nem használnak optikai átvitelt",
+        "d": "Csak részben használnak optikai átvitelt, a felhasználóhoz közel már a hagyományos telefon- vagy kábeTV-kábeleket használják",
+        "e": "A \"passzív\" azt jelenti, hogy az elosztópontok nem igényelnek tápellátást",
+        "f": "A pont-pont optikai összeköttetéseknél több fényszálat igényel"
+      },
+      "answer": [
+        "e"
+      ],
+      "ID": 11,
+      "supervised": "no"
     },
-    "answer": [
-      "c"
-    ],
-    "ID": 12
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik állítás igaz a LTE-re? (4G mobil)",
-    "options": {
-      "a": "A beamforming technika hasonló ahhoz, mintha egy lámpát folyamatosan ki-be kapcsolgatnánk",
-      "b": "A koronavírus terjedését az 5G hálózatok elősegítik, a 4G hálózatok azonban lassítják",
-      "c": "LTE-ben csak áramkörkapcsolt gerinchálózat van",
-      "d": "Az LTE önmagában csak internetszolgáltatást biztosít, hangszolgáltatást nem",
-      "e": "LTE-ben csak puha hívásátadás létezik",
-      "f": "LTE-ben továbbra is van csomagkapcsolt és áramkörkapcsolt gerinchálózat"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik eszköz NEM része a 3G mobilhálózatoknak?",
+      "options": {
+        "a": "SGSN: Serving GPRS Support Node",
+        "b": "RNC: Radio Network Controller, Rádiós hálózati vezérlő",
+        "c": "MME: Mobility Management Entity",
+        "d": "Node B: 3G bázisállomás",
+        "e": "GMSC: Gateway MSC",
+        "f": "HLR: Home Location Register, honos helyregiszter"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 12,
+      "supervised": "no"
     },
-    "answer": [
-      "d"
-    ],
-    "ID": 13
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "MOS-ra (Mean Opinion Score, átlagolt véleménypontok) melyik állítás igaz?",
-    "options": {
-      "a": "150 Hz alatt jónak tekintjük",
-      "b": "80 ms alatt elfogadható",
-      "c": "az utóbbi évtizedekben már mobiltelefon méretű célhardverrel mérik",
-      "d": "400 ms alatt elfogadható",
-      "e": "a beszédhangminőség mérésére szolgál",
-      "f": "az átviteli csillapítás ingadozásának a minőségét méri"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz a LTE-re? (4G mobil)",
+      "options": {
+        "a": "A beamforming technika hasonló ahhoz, mintha egy lámpát folyamatosan ki-be kapcsolgatnánk",
+        "b": "A koronavírus terjedését az 5G hálózatok elősegítik, a 4G hálózatok azonban lassítják",
+        "c": "LTE-ben csak áramkörkapcsolt gerinchálózat van",
+        "d": "Az LTE önmagában csak internetszolgáltatást biztosít, hangszolgáltatást nem",
+        "e": "LTE-ben csak puha hívásátadás létezik",
+        "f": "LTE-ben továbbra is van csomagkapcsolt és áramkörkapcsolt gerinchálózat"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 13,
+      "supervised": "no"
     },
-    "answer": [
-      "e"
-    ],
-    "ID": 14
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik állítás igaz a HSPA-ra?",
-    "options": {
-      "a": "Az GSM továbbfejlesztése, de még nem 3G rendszer",
-      "b": "Az NMT továbbfejlesztése, de még nem 2G rendszer",
-      "c": "1,21 gigawatt energiát tud termelni, ami időutazásra használható (Amúgy: a watt minek a mértékegysége? Mi az energiájé?)",
-      "d": "Az LTE továbbfejlesztése, de még nem 5G rendszer",
-      "e": "Az 5G továbbfejlesztése, de még nem 6G rendszer",
-      "f": "Az UMTS továbbfejlesztése, de még nem 4G rendszer"
+    {
+      "question_type": "multi_choice",
+      "question_title": "MOS-ra (Mean Opinion Score, átlagolt véleménypontok) melyik állítás igaz?",
+      "options": {
+        "a": "150 Hz alatt jónak tekintjük",
+        "b": "80 ms alatt elfogadható",
+        "c": "az utóbbi évtizedekben már mobiltelefon méretű célhardverrel mérik",
+        "d": "400 ms alatt elfogadható",
+        "e": "a beszédhangminőség mérésére szolgál",
+        "f": "az átviteli csillapítás ingadozásának a minőségét méri"
+      },
+      "answer": [
+        "e"
+      ],
+      "ID": 14,
+      "supervised": "no"
     },
-    "answer": [
-      "f"
-    ],
-    "ID": 15
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "A klasszikus telefonhálózatokban előfizetői hurokra (helyi hurok, local loop) melyik állítás igaz?",
-    "options": {
-      "a": "szinte mindig egyetlen szigetelt rézdrótból áll",
-      "b": "a helyi telefonközpontokat köti össze egymással",
-      "c": "az előfizetőt köti össze a legközelebbi telefonközponttal",
-      "d": "szinte mindig fényvezető (pl. üvegszál) az anyaga",
-      "e": "akár 100 km hosszú is lehet",
-      "f": "jellemzően 30-50 km hosszú"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz a HSPA-ra?",
+      "options": {
+        "a": "Az GSM továbbfejlesztése, de még nem 3G rendszer",
+        "b": "Az NMT továbbfejlesztése, de még nem 2G rendszer",
+        "c": "1,21 gigawatt energiát tud termelni, ami időutazásra használható (Amúgy: a watt minek a mértékegysége? Mi az energiájé?)",
+        "d": "Az LTE továbbfejlesztése, de még nem 5G rendszer",
+        "e": "Az 5G továbbfejlesztése, de még nem 6G rendszer",
+        "f": "Az UMTS továbbfejlesztése, de még nem 4G rendszer"
+      },
+      "answer": [
+        "f"
+      ],
+      "ID": 15,
+      "supervised": "no"
     },
-    "answer": [
-      "c"
-    ],
-    "ID": 16
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "UMTS csatornázási kódolásnál egy 5 MHz széles vivőben a chipsebesség 3,84 Mc/s. Mennyi egy csatorna sebessége, ha egyszerre 8 csatornán lehet kommunikálni e vivőn belül?",
-    "options": {
-      "a": "4000 kb/s felett",
-      "b": "600-4000 kb/s között",
-      "c": "40-60 kb/s között",
-      "d": "60-400 kb/s között",
-      "e": "400-600 kb/s között",
-      "f": "40 kb/s alatt"
+    {
+      "question_type": "multi_choice",
+      "question_title": "A klasszikus telefonhálózatokban előfizetői hurokra (helyi hurok, local loop) melyik állítás igaz?",
+      "options": {
+        "a": "szinte mindig egyetlen szigetelt rézdrótból áll",
+        "b": "a helyi telefonközpontokat köti össze egymással",
+        "c": "az előfizetőt köti össze a legközelebbi telefonközponttal",
+        "d": "szinte mindig fényvezető (pl. üvegszál) az anyaga",
+        "e": "akár 100 km hosszú is lehet",
+        "f": "jellemzően 30-50 km hosszú"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 16,
+      "supervised": "no"
     },
-    "answer": [
-      "e"
-    ],
-    "ID": 17
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik állítás igaz a IPTV-re? (tehát nem az Internet-TV-re)",
-    "options": {
-      "a": "csak a 7-es IGMP változattal működik együtt",
-      "b": "nem IP protokoll felett működik",
-      "c": "menedzselt hálózatot használ",
-      "d": "Multicast itt nem elérhető, ezért kizárólag CDN rendszereket kell használjanak",
-      "e": "igény szerinti tartalom biztosítása nem lehetséges",
-      "f": "globálisan elérhető a világ minden pontjáról, ahol megfelelő minőségű internetszolgáltatás van"
+    {
+      "question_type": "multi_choice",
+      "question_title": "UMTS csatornázási kódolásnál egy 5 MHz széles vivőben a chipsebesség 3,84 Mc/s. Mennyi egy csatorna sebessége, ha egyszerre 8 csatornán lehet kommunikálni e vivőn belül?",
+      "options": {
+        "a": "4000 kb/s felett",
+        "b": "600-4000 kb/s között",
+        "c": "40-60 kb/s között",
+        "d": "60-400 kb/s között",
+        "e": "400-600 kb/s között",
+        "f": "40 kb/s alatt"
+      },
+      "answer": [
+        "e"
+      ],
+      "ID": 17,
+      "supervised": "no"
     },
-    "answer": [
-      "c"
-    ],
-    "ID": 18
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "A telefonhálózatokban alkalmazott PCM-re (Pulse Code Modulation, impulzuskód moduláció) melyik állítás igaz?",
-    "options": {
-      "a": "a kvantálás során másodpercenként 8000 kvantálási szintet veszünk",
-      "b": "a kvantálás Európában egyenletes, Amerikában logaritmikus",
-      "c": "a kvantálási szintek számának kiszámításához Bernoulli törvényét alkalmazták",
-      "d": "a mintavételezés során nem veszik el információ",
-      "e": "a mintavételi frekvencia kiszámításához Moore törvényét alkalmazták",
-      "f": "a rezonanciafrekvencia kiszámításához Ohm törvényét alkalmazták"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz a IPTV-re? (tehát nem az Internet-TV-re)",
+      "options": {
+        "a": "csak a 7-es IGMP változattal működik együtt",
+        "b": "nem IP protokoll felett működik",
+        "c": "menedzselt hálózatot használ",
+        "d": "Multicast itt nem elérhető, ezért kizárólag CDN rendszereket kell használjanak",
+        "e": "igény szerinti tartalom biztosítása nem lehetséges",
+        "f": "globálisan elérhető a világ minden pontjáról, ahol megfelelő minőségű internetszolgáltatás van"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 18,
+      "supervised": "no"
     },
-    "answer": [
-      "d"
-    ],
-    "ID": 19
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik állítás igaz a zárt számozási rendszerre?",
-    "options": {
-      "a": "nem minden esetben prefix számok",
-      "b": "nem mindig kell a belföldi rendeltetési számot tárcsázni",
-      "c": "jobb minőségű beszédátvitel valósítható meg általa",
-      "d": "hazánkban ilyen a mobil számmező",
-      "e": "nem egyértelmű, honnan hogyan kell tárcsázni",
-      "f": "soha nem hosszabb a hívott szám, mint a nyílt rendszerben"
+    {
+      "question_type": "multi_choice",
+      "question_title": "A telefonhálózatokban alkalmazott PCM-re (Pulse Code Modulation, impulzuskód moduláció) melyik állítás igaz?",
+      "options": {
+        "a": "a kvantálás során másodpercenként 8000 kvantálási szintet veszünk",
+        "b": "a kvantálás Európában egyenletes, Amerikában logaritmikus",
+        "c": "a kvantálási szintek számának kiszámításához Bernoulli törvényét alkalmazták",
+        "d": "a mintavételezés során nem veszik el információ",
+        "e": "a mintavételi frekvencia kiszámításához Moore törvényét alkalmazták",
+        "f": "a rezonanciafrekvencia kiszámításához Ohm törvényét alkalmazták"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 19,
+      "supervised": "no"
     },
-    "answer": [
-      "d"
-    ],
-    "ID": 20
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik NEM belföldi rendeltetési szám?",
-    "options": {
-      "a": "90 (emelt díjas számok)",
-      "b": "36 (Magyarország)",
-      "c": "1 (Budapest)",
-      "d": "80 (díjmentes számok)",
-      "e": "62 (Szeged és környéke)",
-      "f": "70 (Vodafone)"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz a zárt számozási rendszerre?",
+      "options": {
+        "a": "nem minden esetben prefix számok",
+        "b": "nem mindig kell a belföldi rendeltetési számot tárcsázni",
+        "c": "jobb minőségű beszédátvitel valósítható meg általa",
+        "d": "hazánkban ilyen a mobil számmező",
+        "e": "nem egyértelmű, honnan hogyan kell tárcsázni",
+        "f": "soha nem hosszabb a hívott szám, mint a nyílt rendszerben"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 20,
+      "supervised": "no"
     },
-    "answer": [
-      "b"
-    ],
-    "ID": 21
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "A klasszikus telefonhálózatokban trönkökre (angolul: trunk) melyik állítás igaz?",
-    "options": {
-      "a": "az előfizetőt köti össze a legközelebbi telefonközponttal",
-      "b": "sok beszédcsatorna nyalábolt továbbítására szolgál",
-      "c": "a végberendezések meghibásodásának észlelése a célja",
-      "d": "kizárólag rézvezető lehet az anyaga",
-      "e": "kizárólag fényvezető (pl. üvegszál) lehet az anyaga",
-      "f": "egyetlen beszédcsatorna átvitelére szolgál"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik NEM belföldi rendeltetési szám?",
+      "options": {
+        "a": "90 (emelt díjas számok)",
+        "b": "36 (Magyarország)",
+        "c": "1 (Budapest)",
+        "d": "80 (díjmentes számok)",
+        "e": "62 (Szeged és környéke)",
+        "f": "70 (Vodafone)"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 21,
+      "supervised": "no"
     },
-    "answer": [
-      "b"
-    ],
-    "ID": 22
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "A beszédkodekek témakörében melyik állítás igaz?",
-    "options": {
-      "a": "a félsebességű GSM kodek adatsebessége a PCM bitsebességének egy picit kevesebb mint a tizede",
-      "b": "a kódolási késleltetés jellemzően 1-2 másodperc",
-      "c": "az adaptív többsebességű (AMR) kódolót csak 2G GSM hálózatokban használják",
-      "d": "minél nagyobb a kódolási késleltetés, annál könnyebb a telefonszám-kiosztást megvalósítani zárt számozási rendszerekben",
-      "e": "a vokóderek bitsebessége magasabb a hullámforma kódolókénál",
-      "f": "a vokóderek hangminősége jobb a hibrid kódolókénál"
+    {
+      "question_type": "multi_choice",
+      "question_title": "A klasszikus telefonhálózatokban trönkökre (angolul: trunk) melyik állítás igaz?",
+      "options": {
+        "a": "az előfizetőt köti össze a legközelebbi telefonközponttal",
+        "b": "sok beszédcsatorna nyalábolt továbbítására szolgál",
+        "c": "a végberendezések meghibásodásának észlelése a célja",
+        "d": "kizárólag rézvezető lehet az anyaga",
+        "e": "kizárólag fényvezető (pl. üvegszál) lehet az anyaga",
+        "f": "egyetlen beszédcsatorna átvitelére szolgál"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 22,
+      "supervised": "no"
     },
-    "answer": [
-      "a"
-    ],
-    "ID": 23
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "3G mobilhálózatokban CDMA esetén melyik állítás igaz?",
-    "options": {
-      "a": "a csatornázási kódolásban az ortogonalitás tökéletes, ezért NEM szükséges szinkronizáció",
-      "b": "a csatornázási kódolásban a kiterjesztési faktor mindig kisebb, mint a szórókód chip-ekben megadott hossza",
-      "c": "a csatornázási kódoláskor a szórókódok hossza lehet 38400 chip",
-      "d": "Az (1, -1) és (-1, 1) nem lehetnek együtt szórókódok.",
-      "e": "a csatornázási kódoláskor a szórókódok hossza minden esetben 38400 chip",
-      "f": "a csatornázási kódolás megalkotásakor figyelembe vették a kvantumfizika, a relativitáselmélet és a modern parapszichológia legújabb eredményeit is"
+    {
+      "question_type": "multi_choice",
+      "question_title": "A beszédkodekek témakörében melyik állítás igaz?",
+      "options": {
+        "a": "a félsebességű GSM kodek adatsebessége a PCM bitsebességének egy picit kevesebb mint a tizede",
+        "b": "a kódolási késleltetés jellemzően 1-2 másodperc",
+        "c": "az adaptív többsebességű (AMR) kódolót csak 2G GSM hálózatokban használják",
+        "d": "minél nagyobb a kódolási késleltetés, annál könnyebb a telefonszám-kiosztást megvalósítani zárt számozási rendszerekben",
+        "e": "a vokóderek bitsebessége magasabb a hullámforma kódolókénál",
+        "f": "a vokóderek hangminősége jobb a hibrid kódolókénál"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 23,
+      "supervised": "no"
     },
-    "answer": [
-      "d"
-    ],
-    "ID": 24
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "A klasszikus telefonhálózatokban átvitt beszédsávra melyik állítás igaz?",
-    "options": {
-      "a": "a teljes hallható frekvenciaspektrummal megegyezik",
-      "b": "sávszélessége védősávokkal 4 Mb/s",
-      "c": "sávszélessége védősávokkal 4 MHz",
-      "d": "a beszédjel teljes frekvenciaspektrumával megegyezik",
-      "e": "sávszélessége védősávokkal 4 kHz",
-      "f": "sávszélessége védősávokkal 4 Hz"
+    {
+      "question_type": "multi_choice",
+      "question_title": "3G mobilhálózatokban CDMA esetén melyik állítás igaz?",
+      "options": {
+        "a": "a csatornázási kódolásban az ortogonalitás tökéletes, ezért NEM szükséges szinkronizáció",
+        "b": "a csatornázási kódolásban a kiterjesztési faktor mindig kisebb, mint a szórókód chip-ekben megadott hossza",
+        "c": "a csatornázási kódoláskor a szórókódok hossza lehet 38400 chip",
+        "d": "Az (1, -1) és (-1, 1) nem lehetnek együtt szórókódok.",
+        "e": "a csatornázási kódoláskor a szórókódok hossza minden esetben 38400 chip",
+        "f": "a csatornázási kódolás megalkotásakor figyelembe vették a kvantumfizika, a relativitáselmélet és a modern parapszichológia legújabb eredményeit is"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 24,
+      "supervised": "no"
     },
-    "answer": [
-      "e"
-    ],
-    "ID": 25
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik állítás NEM igaz az UMTS teljesítményszabályozásra?",
-    "options": {
-      "a": "GSM-ben is van ilyen, és másodpercenként ugyanannyiszor történik a teljesítmény állítása, mint UMTS-ben",
-      "b": "Teljesítményszabályozás nélkül egy épület mögül előbukkanó, eddig erősen adó eszköz tönkretehetné az egész cella kommunikációját",
-      "c": "A Node B vezérli az eszközöket a vett teljesítmény alapján",
-      "d": "Az alkalmazott keverő kód nem ortogonális, ezért az egyik mobil eszköz jele a másik jelét picit zavarja, és ezt a zavarást szeretnénk alacsony szinten tartani",
-      "e": "Másodpercenként 1500-szor történik",
-      "f": "Célja, hogy minden mobil jele kb. egyforma teljesítménnyel érkezzen a Node B-hez"
+    {
+      "question_type": "multi_choice",
+      "question_title": "A klasszikus telefonhálózatokban átvitt beszédsávra melyik állítás igaz?",
+      "options": {
+        "a": "a teljes hallható frekvenciaspektrummal megegyezik",
+        "b": "sávszélessége védősávokkal 4 Mb/s",
+        "c": "sávszélessége védősávokkal 4 MHz",
+        "d": "a beszédjel teljes frekvenciaspektrumával megegyezik",
+        "e": "sávszélessége védősávokkal 4 kHz",
+        "f": "sávszélessége védősávokkal 4 Hz"
+      },
+      "answer": [
+        "e"
+      ],
+      "ID": 25,
+      "supervised": "no"
     },
-    "answer": [
-      "a"
-    ],
-    "ID": 26
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "A mobilhálózatokban a cellák méretére melyik állítás igaz?",
-    "options": {
-      "a": "a MHz-et egy svéd tudós találta fel 1987-ben",
-      "b": "a kisebb cellák megvalósításához kevesebb bázisállomás kell, ezért olcsóbb így a rendszer",
-      "c": "a nagyobb cellák előnye, hogy bennük átlagosan kevesebbet fogyaszt a mobilkészülék",
-      "d": "a jellemző cellaátmérő Magyarországon 500-600 km",
-      "e": "a kisebb cellák előnye, hogy egy adott területen többen beszélhetnek egyszerre",
-      "f": "a 2 GHz körüli frekvenciatartományban kevésbé csillapodnak a rádióhullámok, mint 500 MHz körül, ezért könnyebb vele országos lefedést eléírni"
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás NEM igaz az UMTS teljesítményszabályozásra?",
+      "options": {
+        "a": "GSM-ben is van ilyen, és másodpercenként ugyanannyiszor történik a teljesítmény állítása, mint UMTS-ben",
+        "b": "Teljesítményszabályozás nélkül egy épület mögül előbukkanó, eddig erősen adó eszköz tönkretehetné az egész cella kommunikációját",
+        "c": "A Node B vezérli az eszközöket a vett teljesítmény alapján",
+        "d": "Az alkalmazott keverő kód nem ortogonális, ezért az egyik mobil eszköz jele a másik jelét picit zavarja, és ezt a zavarást szeretnénk alacsony szinten tartani",
+        "e": "Másodpercenként 1500-szor történik",
+        "f": "Célja, hogy minden mobil jele kb. egyforma teljesítménnyel érkezzen a Node B-hez"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 26,
+      "supervised": "no"
     },
-    "answer": [
-      "e"
-    ],
-    "ID": 27
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "A H.264 videokódolóra melyik állítás igaz?",
-    "options": {
-      "a": "egy B keret függhet egy P-től, így a P-t akkor is korábban kell dekódolni, ha az később kerül lejátszásra",
-      "b": "helyes lejátszás csak P kerettel kezdődhet, így a GOP (gorup of pictures) is P kerettel kezdődik",
-      "c": "a dekódoláshoz jövőbeli információk szükségesek, így a H.264 gyakorlati bevezetése nem volt lehetséges a fluxuskondenzátor feltalálása előtt",
-      "d": "egy makroblokk (MB) több szeletből (slice) áll",
-      "e": "egy I keret elvesztése kisebb probléma, mint egy B keret elvesztése",
-      "f": "a lejátszási és dekódolási sorrendje a kereteknek megegyezik"
+    {
+      "question_type": "multi_choice",
+      "question_title": "A mobilhálózatokban a cellák méretére melyik állítás igaz?",
+      "options": {
+        "a": "a MHz-et egy svéd tudós találta fel 1987-ben",
+        "b": "a kisebb cellák megvalósításához kevesebb bázisállomás kell, ezért olcsóbb így a rendszer",
+        "c": "a nagyobb cellák előnye, hogy bennük átlagosan kevesebbet fogyaszt a mobilkészülék",
+        "d": "a jellemző cellaátmérő Magyarországon 500-600 km",
+        "e": "a kisebb cellák előnye, hogy egy adott területen többen beszélhetnek egyszerre",
+        "f": "a 2 GHz körüli frekvenciatartományban kevésbé csillapodnak a rádióhullámok, mint 500 MHz körül, ezért könnyebb vele országos lefedést eléírni"
+      },
+      "answer": [
+        "e"
+      ],
+      "ID": 27,
+      "supervised": "no"
     },
-    "answer": [
-      "a"
-    ],
-    "ID": 28
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Melyik állítás igaz ADSL-re?",
-    "options": {
-      "a": "Az eredetileg telefonbeszélgetésekre szolgáló előfizetői hurkon visznek át internetes adatokat, maximum néhányszor 10 Mb/s sebességgel",
-      "b": "Az adatok feltöltésének és letöltésének a sebessége megegyezik",
-      "c": "A kábelTV hálózatok elődje",
-      "d": "Az adatok feltöltésének lényegesen nagyobb az elérhető sebessége, mint a letöltésnek",
-      "e": "Nagy sebességű optikai hálózat",
-      "f": "A kábelTV hálózatok továbbfejlesztése"
+    {
+      "question_type": "multi_choice",
+      "question_title": "A H.264 videokódolóra melyik állítás igaz?",
+      "options": {
+        "a": "egy B keret függhet egy P-től, így a P-t akkor is korábban kell dekódolni, ha az később kerül lejátszásra",
+        "b": "helyes lejátszás csak P kerettel kezdődhet, így a GOP (gorup of pictures) is P kerettel kezdődik",
+        "c": "a dekódoláshoz jövőbeli információk szükségesek, így a H.264 gyakorlati bevezetése nem volt lehetséges a fluxuskondenzátor feltalálása előtt",
+        "d": "egy makroblokk (MB) több szeletből (slice) áll",
+        "e": "egy I keret elvesztése kisebb probléma, mint egy B keret elvesztése",
+        "f": "a lejátszási és dekódolási sorrendje a kereteknek megegyezik"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 28,
+      "supervised": "no"
     },
-    "answer": [
-      "a"
-    ],
-    "ID": 29
-  },
-  {
-    "question_type": "multi_choice",
-    "question_title": "Bónusz kérdés: e ZH megoldása során használt-e nem megengedett segítséget, segédeszközt, vagy csalt-e bármilyen egyéb módon? (Mindegyik válasz 1 pont most.)",
-    "options": {
-      "a": "Igen, de egyszerűen nem érdekel ez a tárgy avagy nem érdekel ez a szak, csak a papírért csinálom.",
-      "b": "Nem csaltam, de ez hazugság. De ha hazugság, akkor ez igaz. De ha igaz, akkor nem igaz. Szegény Gödel!",
-      "c": "Igen.",
-      "d": "Nem.",
-      "e": "Igen, más írta meg helyettem, de csak mert 9-kor egyszerűen nem tudok még felkelni",
-      "f": "Igen, de este fogmosás után felköpök és aláállok."
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz ADSL-re?",
+      "options": {
+        "a": "Az eredetileg telefonbeszélgetésekre szolgáló előfizetői hurkon visznek át internetes adatokat, maximum néhányszor 10 Mb/s sebességgel",
+        "b": "Az adatok feltöltésének és letöltésének a sebessége megegyezik",
+        "c": "A kábelTV hálózatok elődje",
+        "d": "Az adatok feltöltésének lényegesen nagyobb az elérhető sebessége, mint a letöltésnek",
+        "e": "Nagy sebességű optikai hálózat",
+        "f": "A kábelTV hálózatok továbbfejlesztése"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 29,
+      "supervised": "no"
     },
-    "answer": [
-      "d"
-    ],
-    "ID": 31
-  }
-]
+    {
+      "question_type": "multi_choice",
+      "question_title": "Bónusz kérdés: e ZH megoldása során használt-e nem megengedett segítséget, segédeszközt, vagy csalt-e bármilyen egyéb módon? (Mindegyik válasz 1 pont most.)",
+      "options": {
+        "a": "Igen, de egyszerűen nem érdekel ez a tárgy avagy nem érdekel ez a szak, csak a papírért csinálom.",
+        "b": "Nem csaltam, de ez hazugság. De ha hazugság, akkor ez igaz. De ha igaz, akkor nem igaz. Szegény Gödel!",
+        "c": "Igen.",
+        "d": "Nem.",
+        "e": "Igen, más írta meg helyettem, de csak mert 9-kor egyszerűen nem tudok még felkelni",
+        "f": "Igen, de este fogmosás után felköpök és aláállok."
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 31,
+      "supervised": "no"
+    }
+  ]
+}

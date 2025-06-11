@@ -11,10 +11,13 @@ let score = 0;
 let currentQuizFile = null;
 
 export function loadQuiz(data, fileName) {
-    originalQuestionsOrder = [...data];
-    questions = [...data];
+    // Handle both legacy (array) and new (object with `questions` key) formats
+    const questionArray = Array.isArray(data) ? data : data.questions || [];
+    
+    originalQuestionsOrder = [...questionArray];
+    questions = [...questionArray];
     currentQuizFile = fileName;
-    resetQuizState(data.length);
+    resetQuizState(questionArray.length);
 }
 
 export function applyPersistedState(state) {

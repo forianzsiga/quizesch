@@ -10,17 +10,55 @@ import { DATA_DIRECTORY, QUIZ_MANIFEST_ENDPOINT } from './config.js';
 // This should ideally be refactored with better dependency injection or event system.
 window.quizServiceInstance = quizService;
 
+let taggedQuizzes = [];
+let untaggedQuizzes = [];
+let activeFilters = { subject: [], type: [], year: [] }; // To store current filter state
+
 document.addEventListener('DOMContentLoaded', () => {
     ui.initDOMReferences();
 
     async function initializeApp() {
         try {
-            const quizFiles = await apiService.fetchQuizList(QUIZ_MANIFEST_ENDPOINT);
-            ui.displayQuizList(quizFiles, handleQuizSelection);
+            const manifest = await apiService.fetchQuizList(QUIZ_MANIFEST_ENDPOINT);
+            const allQuizzes = manifest.quizzes || [];
+
+            // Split quizzes into tagged and untagged groups
+            taggedQuizzes = allQuizzes.filter(q => q.tags.subject !== 'Untagged');
+            untaggedQuizzes = allQuizzes.filter(q => q.tags.subject === 'Untagged');
+            
+            // Build available tags ONLY from the tagged quizzes
+            const availableTags = { subject: new Set(), type: new Set(), year: new Set() };
+            taggedQuizzes.forEach(quiz => {
+                availableTags.subject.add(quiz.tags.subject);
+                availableTags.type.add(quiz.tags.type);
+                availableTags.year.add(String(quiz.tags.year));
+            });
+            // Convert sets to sorted arrays for display
+            Object.keys(availableTags).forEach(key => {
+                availableTags[key] = [...availableTags[key]].sort();
+            });
+
+
+            ui.displayFilters(availableTags, handleFilterChange);
+            ui.displayQuizList(taggedQuizzes, handleQuizSelection);
+            ui.displayUntaggedQuizList(untaggedQuizzes, handleQuizSelection);
+
         } catch (error) {
             console.error('Error initializing app:', error);
             ui.displayQuizListError(`Error loading quiz list: ${error.message}`);
         }
+    }
+    
+    function handleFilterChange() {
+        activeFilters = ui.getActiveFilters();
+        const filteredQuizzes = taggedQuizzes.filter(quiz => {
+            const tags = quiz.tags;
+            return (activeFilters.subject.length === 0 || activeFilters.subject.includes(tags.subject)) &&
+                   (activeFilters.type.length === 0 || activeFilters.type.includes(tags.type)) &&
+                   (activeFilters.year.length === 0 || activeFilters.year.includes(String(tags.year)));
+        });
+        // Only re-render the filtered list
+        ui.displayQuizList(filteredQuizzes, handleQuizSelection);
     }
 
     async function handleQuizSelection(fileName) {
@@ -29,12 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const quizData = await apiService.fetchQuizData(`${DATA_DIRECTORY}/data/${fileName}`);
             quizService.loadQuiz(quizData, fileName);
 
-            const persistedState = storageService.loadQuizState(quizService.getCurrentQuizFile(), quizData.length);
+            const questionCount = Array.isArray(quizData) ? quizData.length : (quizData.questions || []).length;
+            const persistedState = storageService.loadQuizState(quizService.getCurrentQuizFile(), questionCount);
             if (persistedState) {
                 quizService.applyPersistedState(persistedState);
             }
 
-            await renderCurrentQuizView(); // Make it async to await vote data
+            await renderCurrentQuizView();
             ui.hideQuizList();
             ui.showQuizContainer();
         } catch (error) {

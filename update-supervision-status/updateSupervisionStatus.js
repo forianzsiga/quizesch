@@ -60,20 +60,19 @@ async function updateLocalJsonFiles() {
             // Check if file exists before trying to read
             await fs.access(filePath); // Throws error if not accessible
             let fileContent = await fs.readFile(filePath, 'utf8');
-            let quizDataArray = JSON.parse(fileContent);
+            let quizData = JSON.parse(fileContent);
 
-            if (!Array.isArray(quizDataArray)) {
-                console.error(`Error: Content of ${quizFileName} is not an array.`);
+            if (!quizData || !Array.isArray(quizData.questions)) {
+                console.error(`Error: Content of ${quizFileName} is not valid. Missing 'questions' array.`);
                 continue;
             }
 
             let fileModified = false;
             updatesByFile[quizFileName].forEach(update => {
-                if (quizDataArray[update.index]) {
-                    // Only update if the current status isn't already "yes" (or whatever newStatus is)
-                    // to avoid unnecessary file writes if nothing changed.
-                    if (quizDataArray[update.index].supervised !== update.newStatus) {
-                        quizDataArray[update.index].supervised = update.newStatus;
+                if (quizData.questions[update.index]) {
+                    // Only update if the current status isn't already "yes"
+                    if (quizData.questions[update.index].supervised !== update.newStatus) {
+                        quizData.questions[update.index].supervised = update.newStatus;
                         fileModified = true;
                     }
                 } else {
@@ -82,7 +81,7 @@ async function updateLocalJsonFiles() {
             });
 
             if (fileModified) {
-                await fs.writeFile(filePath, JSON.stringify(quizDataArray, null, 2));
+                await fs.writeFile(filePath, JSON.stringify(quizData, null, 2));
                 console.log(`Updated ${quizFileName}`);
                 filesUpdated++;
             } else {

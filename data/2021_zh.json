@@ -1,4 +1,10 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "ZH",
+    "year": "2021"
+  },
+  "questions": [
   {
     "question_type": "multi_choice",
     "question_title": "MOS-ra (Mean Opinion Score, átlagolt véleménypontok) melyik állítás igaz?",
@@ -13,7 +19,8 @@
     "answer": [
       "c"
     ],
-    "ID": 1
+    "ID": 1,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -29,7 +36,8 @@
     "answer": [
       "b"
     ],
-    "ID": 2
+    "ID": 2,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -45,7 +53,8 @@
     "answer": [
       "e"
     ],
-    "ID": 3
+    "ID": 3,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -61,7 +70,8 @@
     "answer": [
       "e"
     ],
-    "ID": 4
+    "ID": 4,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -77,7 +87,8 @@
     "answer": [
       "a"
     ],
-    "ID": 5
+    "ID": 5,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -93,7 +104,8 @@
     "answer": [
       "b"
     ],
-    "ID": 6
+    "ID": 6,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -109,7 +121,8 @@
     "answer": [
       "c"
     ],
-    "ID": 7
+    "ID": 7,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -125,7 +138,8 @@
     "answer": [
       "e"
     ],
-    "ID": 8
+    "ID": 8,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -141,7 +155,8 @@
     "answer": [
       "c"
     ],
-    "ID": 9
+    "ID": 9,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -157,7 +172,8 @@
     "answer": [
       "b"
     ],
-    "ID": 10
+    "ID": 10,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -173,7 +189,8 @@
     "answer": [
       "d"
     ],
-    "ID": 11
+    "ID": 11,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -189,7 +206,8 @@
     "answer": [
       "b"
     ],
-    "ID": 12
+    "ID": 12,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -205,7 +223,8 @@
     "answer": [
       "f"
     ],
-    "ID": 13
+    "ID": 13,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -221,7 +240,8 @@
     "answer": [
       "b"
     ],
-    "ID": 14
+    "ID": 14,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -237,11 +257,12 @@
     "answer": [
       "a"
     ],
-    "ID": 15
+    "ID": 15,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
-    "question_title": "GSM 900 esetén a használt frekvenciák: mobil adó: 890-915 MHz, bázisállomás: 935-960 MHz. Ha öt szolgáltató van egy adott országban, melyek egyformán részesülnek ezen rádiós frekvenciatartományokból, akkor egy szolgáltató egy cellájában egyszerre átlagosan hányan beszélgethetnek? Egy vivő 200 kHz széles, és 10 különböző frekvenciájú cellát használnak a szolgáltatók a cellás elv szerint (azaz nem 7-et).",
+    "question_title": "GSM 900 esetén a használt frekvenciák: mobil adó: 890-915 MHz, bázisállomás: 935-960 MHz. Ha öt szolgáltató van egy adott országban, melyek egyformán részesülnek ezen rádiós frekvenciatartományokból, akkor egy szolgáltató egy cellájában egyszerre átlagosan hányan beszélgethetnek? Egy vivő 200 kHz széles, és 10 különböző frekvencájú cellát használnak a szolgáltatók a cellás elv szerint (azaz nem 7-et).",
     "options": {
       "a": "25 alatt",
       "b": "25-40 között",
@@ -253,7 +274,8 @@
     "answer": [
       "a"
     ],
-    "ID": 16
+    "ID": 16,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -269,7 +291,8 @@
     "answer": [
       "c"
     ],
-    "ID": 17
+    "ID": 17,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -285,7 +308,8 @@
     "answer": [
       "b"
     ],
-    "ID": 18
+    "ID": 18,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -301,7 +325,8 @@
     "answer": [
       "e"
     ],
-    "ID": 19
+    "ID": 19,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -317,7 +342,8 @@
     "answer": [
       "c"
     ],
-    "ID": 20
+    "ID": 20,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -333,7 +359,8 @@
     "answer": [
       "b"
     ],
-    "ID": 21
+    "ID": 21,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -349,7 +376,8 @@
     "answer": [
       "c"
     ],
-    "ID": 22
+    "ID": 22,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -365,7 +393,8 @@
     "answer": [
       "b"
     ],
-    "ID": 23
+    "ID": 23,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -381,7 +410,8 @@
     "answer": [
       "f"
     ],
-    "ID": 24
+    "ID": 24,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -397,7 +427,8 @@
     "answer": [
       "f"
     ],
-    "ID": 25
+    "ID": 25,
+    "supervised": "no"
   },
   {
     "question_type": "multi_choice",
@@ -413,6 +444,8 @@
     "answer": [
       "f"
     ],
-    "ID": 26
+    "ID": 26,
+    "supervised": "no"
   }
 ]
+}

@@ -1,4 +1,10 @@
-[
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "PZH",
+    "year": "2025"
+  },
+  "questions": [
   {
     "question_type": "multi_choice",
     "question_title": "Az alábbiak közül melyik belföldi rendeltetési szám?",
@@ -180,3 +186,4 @@
     "ID": 12
   }
 ]
+}

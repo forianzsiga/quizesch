@@ -22,9 +22,13 @@ export async function fetchQuizSupervisionInfo(filePath) {
         throw new Error(`HTTP error fetching supervision info! status: ${response.status}`);
     }
     const quizData = await response.json();
-    let total = quizData.length;
+    
+    // Handle both legacy (array) and new (object) formats
+    const questionsArray = Array.isArray(quizData) ? quizData : quizData.questions || [];
+
+    let total = questionsArray.length;
     let supervised = 0, generated = 0, unsupervised = 0;
-    quizData.forEach(q => {
+    questionsArray.forEach(q => {
         if (typeof q.supervised === 'string') {
             const s = q.supervised.trim().toLowerCase();
             if (s === 'yes') supervised++;

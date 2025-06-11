@@ -176,22 +176,110 @@ button:hover:not(:disabled) {
     text-align: right;
 }
 
-/* --- Quiz List Styling --- */
+/* --- New Filter and Quiz Selection Layout --- */
+#quiz-selection-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1100px;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+
+#quiz-list-wrapper {
+    flex: 3; /* Take up more space */
+    display: flex;
+    flex-direction: column;
+}
+
 #quiz-list-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
 }
 
-#quiz-list {
+#untagged-quiz-container {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 2px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#untagged-quiz-container > p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+
+#filter-panel {
+    flex: 1; /* Take up less space */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    position: sticky; /* Make it stick on scroll */
+    top: 20px;
+}
+
+#filter-panel h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.filter-option {
+    display: inline-block;
+    background-color: #f0f4f8;
+    color: #444;
+    padding: 8px 12px;
+    border-radius: 16px;
+    margin-bottom: 8px;
+    margin-right: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 0.9em;
+    border: 1px solid transparent;
+    user-select: none;
+}
+
+.filter-option:hover {
+    background-color: #e1e9f2;
+}
+
+.filter-option.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-color: #0056b3;
+}
+
+
+/* --- Quiz List Styling --- */
+#quiz-list, #untagged-quiz-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 24px;
     padding: 0;
     margin: 30px 0 0 0;
     width: 100%;
-    max-width: 700px;
+    max-width: 800px; /* Allow it to be a bit wider in the new layout */
     list-style: none;
 }
 
@@ -232,7 +320,7 @@ button:hover:not(:disabled) {
     text-align: center;
 }
 
-#quiz-list li {
+#quiz-list li, #untagged-quiz-list li {
     background: none;
     border: none;
     box-shadow: none;
@@ -257,7 +345,8 @@ button:hover:not(:disabled) {
 .partial-indicator { background: #fff8e0; color: #d35400; border: 1px solid #f39c12; }
 
 
-#quiz-list a, #quiz-list a *, #quiz-list a::after, #quiz-list a::before, #quiz-list a *::after, #quiz-list a *::before {
+#quiz-list a, #quiz-list a *, #quiz-list a::after, #quiz-list a::before, #quiz-list a *::after, #quiz-list a *::before,
+#untagged-quiz-list a, #untagged-quiz-list a *, #untagged-quiz-list a::after, #untagged-quiz-list a::before, #untagged-quiz-list a *::after, #untagged-quiz-list a *::before {
     text-decoration: none !important;
     color: inherit !important;
 }

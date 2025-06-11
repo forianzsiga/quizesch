@@ -1,17 +1,142 @@
-[
-  "2020_zh.json"
-,  "2021_zh.json"
-,  "2022_pzh.json"
-,  "2022_zh.json"
-,  "2023_pzh.json"
-,  "2023_zh.json"
-,  "2024_elso_vizsga.json"
-,  "2024_kereszt_harmadik_vizsga.json"
-,  "2024_kereszt_masodik_vizsga.json"
-,  "2024_masodik_vizsga.json"
-,  "2024_ppzh.json"
-,  "2024_pzh.json"
-,  "2024_zh.json"
-,  "2025_elso_vizsga.json"
-,  "synthetic.json"
-]
+{
+  "quizzes": [
+    {
+      "fileName": "2020_zh.json",
+      "tags": {
+        "subject": "Kommunikációs Hálózatok",
+        "type": "ZH",
+        "year": "2020"
+      }
+    },
+    {
+      "fileName": "2021_zh.json",
+      "tags": {
+        "subject": "Kommunikációs Hálózatok",
+        "type": "ZH",
+        "year": "2021"
+      }
+    },
+    {
+      "fileName": "2022_pzh.json",
+      "tags": {
+        "subject": "Kommunikációs Hálózatok",
+        "type": "PZH",
+        "year": "2025"
+      }
+    },
+    {
+      "fileName": "2022_zh.json",
+      "tags": {
+        "subject": "Kommunikációs Hálózatok",
+        "type": "ZH",
+        "year": "2022"
+      }
+    },
+    {
+      "fileName": "2023_pzh.json",
+      "tags": {
+        "subject": "Untagged",
+        "type": "Untagged",
+        "year": "Untagged"
+      }
+    },
+    {
+      "fileName": "2023_zh.json",
+      "tags": {
+        "subject": "Untagged",
+        "type": "Untagged",
+        "year": "Untagged"
+      }
+    },
+    {
+      "fileName": "2024_elso_vizsga.json",
+      "tags": {
+        "subject": "Untagged",
+        "type": "Untagged",
+        "year": "Untagged"
+      }
+    },
+    {
+      "fileName": "2024_kereszt_harmadik_vizsga.json",
+      "tags": {
+        "subject": "Untagged",
+        "type": "Untagged",
+        "year": "Untagged"
+      }
+    },
+    {
+      "fileName": "2024_kereszt_masodik_vizsga.json",
+      "tags": {
+        "subject": "Untagged",
+        "type": "Untagged",
+        "year": "Untagged"
+      }
+    },
+    {
+      "fileName": "2024_masodik_vizsga.json",
+      "tags": {
+        "subject": "Untagged",
+        "type": "Untagged",
+        "year": "Untagged"
+      }
+    },
+    {
+      "fileName": "2024_ppzh.json",
+      "tags": {
+        "subject": "Untagged",
+        "type": "Untagged",
+        "year": "Untagged"
+      }
+    },
+    {
+      "fileName": "2024_pzh.json",
+      "tags": {
+        "subject": "Untagged",
+        "type": "Untagged",
+        "year": "Untagged"
+      }
+    },
+    {
+      "fileName": "2024_zh.json",
+      "tags": {
+        "subject": "Untagged",
+        "type": "Untagged",
+        "year": "Untagged"
+      }
+    },
+    {
+      "fileName": "2025_elso_vizsga.json",
+      "tags": {
+        "subject": "Untagged",
+        "type": "Untagged",
+        "year": "Untagged"
+      }
+    },
+    {
+      "fileName": "synthetic.json",
+      "tags": {
+        "subject": "Untagged",
+        "type": "Untagged",
+        "year": "Untagged"
+      }
+    }
+  ],
+  "availableTags": {
+    "subject": [
+      "Kommunikációs Hálózatok",
+      "Untagged"
+    ],
+    "type": [
+      "PZH",
+      "ZH",
+      "Untagged"
+    ],
+    "year": [
+      "2025",
+      "2022",
+      "2021",
+      "2020",
+      "Untagged"
+    ]
+  }
+}
