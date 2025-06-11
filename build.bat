@@ -29,13 +29,16 @@ REM Use parentheses and redirection to capture all echo output into the file at 
     REM Loop through all .json files in the specified data directory
     REM %%~nxF extracts just the filename and extension from the full path %%F
     for %%F in ("%DATA_DIR%\*.json") do (
-        if defined first_item (
-            REM First item: echo filename without preceding comma, then clear the flag
-            echo   "%%~nxF"
-            set "first_item="
-        ) else (
-            REM Subsequent items: echo comma, then filename
-            echo ,  "%%~nxF"
+        REM Exclude schema.json and quiz-manifest.json from the manifest
+        if /I not "%%~nxF"=="schema.json" if /I not "%%~nxF"=="quiz-manifest.json" (
+            if defined first_item (
+                REM First item: echo filename without preceding comma, then clear the flag
+                echo   "%%~nxF"
+                set "first_item="
+            ) else (
+                REM Subsequent items: echo comma, then filename
+                echo ,  "%%~nxF"
+            )
         )
     )
 

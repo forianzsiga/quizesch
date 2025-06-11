@@ -1,0 +1,560 @@
+[
+  {
+    "question_type": "multi_choice",
+    "question_title": "Egy hálózatnak 255.255.240.0 az alhálózati maszkja. Legfeljebb hány hostot képes kezelni ez a hálózat?",
+    "options": {
+      "a": "8190",
+      "b": "1024",
+      "c": "4094",
+      "d": "4096"
+    },
+    "answer": [
+      "c"
+    ],
+    "ID": 1,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi a szerepe a TCP portszámoknak?",
+    "options": {
+      "a": "A dinamikus IP címek kiszámítását segíti",
+      "b": "A TCP stream azonosítása",
+      "c": "A szolgáltatások/alkalmazások azonosítása a gépeken belül",
+      "d": "A hálózati csomagok prioritásának meghatározása"
+    },
+    "answer": [
+      "c"
+    ],
+    "ID": 2,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az IPv6 fejrészének egyes részei hasonló funkciókat látnak el, mint az IPv4 fejrész bizonyos részei. Az alábbiakban (IPv4 -> IPv6 alakban) megadott összerendelések közül melyek helyesek?",
+    "options": {
+      "A": "TTL -> Hop Limit",
+      "B": "Flow Label -> Identification",
+      "C": "ToS -> Traffic Class",
+      "D": "Header Checksum -> Next Header"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "ID": 3,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "szerver"
+      },
+      {
+        "identifier": "field2",
+        "label": "kliens"
+      },
+      {
+        "identifier": "field3",
+        "label": "kliens"
+      },
+      {
+        "identifier": "field4",
+        "label": "vezérlő"
+      },
+      {
+        "identifier": "field5",
+        "label": "IP"
+      },
+      {
+        "identifier": "field6",
+        "label": "port szám"
+      },
+      {
+        "identifier": "field7",
+        "label": "szerver"
+      },
+      {
+        "identifier": "field8",
+        "label": "szerver"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "adat"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "MAC"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "szimbolikus név"
+      }
+    ],
+    "text": "FTP aktív mód esetén az adat kapcsolat felépítését a(z) [field1] kezdeményezi a [field2] felé. Ez a gyakorlatban azt jelenti, hogy a(z) [field3] a [field4] kapcsolaton keresztül elküldi a(z) [field5]-cím és [field6] adatokat, ahova a(z) [field7] kapcsolódhat. Ezután a(z) FTP [field8] megkezdi a kapcsolat felépítését a kapott azonosítók alapján.",
+    "ID": 4,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "A 3. mérés második feladatában a \"netsh interface ipv6 delete neighbors\" parancsot használta. Mit eredményezett ez a parancs?",
+    "options": {
+      "a": "Törölte az összes eltárolt IPv6-cím -- MAC-cím összerendelést.",
+      "b": "A többi válasz egyike sem helyes.",
+      "c": "Törölte a neighbor table tartalmát.",
+      "d": "Törölte a számítógép összes aktív interfészéről a beállított IPv6 címeket."
+    },
+    "answer": [
+      "a",
+      "c"
+    ],
+    "ID": 5,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "A 172.16.2.96/27 hálózatban a router a legkisebb kiosztható IP-címet kapta. Adja meg a router IP-címét, a gépeknek kiosztható IP-címek tartományát és a broadcast címet! Egészítse ki az egyes címeket:\nRouter címe: 172.16.2.[field1]\n1. számítógép: 172.16.2.[field2]\nutolsó számítógép: 172.16.2.[field3]\nBroadcast cím: 172.16.2.[field4]\nAdja meg a számítógépeknek kiosztható IP-címek számát is: [field5]",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "97"
+      },
+      {
+        "identifier": "field2",
+        "answer": "98"
+      },
+      {
+        "identifier": "field3",
+        "answer": "126"
+      },
+      {
+        "identifier": "field4",
+        "answer": "127"
+      },
+      {
+        "identifier": "field5",
+        "answer": "30"
+      }
+    ],
+    "ID": 6,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Milyen hálózati rétegbeli protokoll szállítja az ICMP üzeneteket?",
+    "options": {
+      "a": "IS-IS",
+      "b": "RTP",
+      "c": "ARP",
+      "d": "IP",
+      "e": "IGMP",
+      "f": "OSPF",
+      "g": "TCP",
+      "h": "UDP"
+    },
+    "answer": [
+      "d"
+    ],
+    "ID": 7,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "BGP"
+      },
+      {
+        "identifier": "field2",
+        "label": "policy"
+      },
+      {
+        "identifier": "field3",
+        "label": "autonóm rendszerek"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "OSPF"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "távolságvektora"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "routerek"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "csomópontok"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "sorbanállási késleltetés"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "hot potato"
+      },
+      {
+        "identifier": "distractor7",
+        "label": "EIGRP"
+      },
+      {
+        "identifier": "distractor8",
+        "label": "cold potato"
+      },
+      {
+        "identifier": "distractor9",
+        "label": "RIP"
+      },
+      {
+        "identifier": "distractor10",
+        "label": "IS-IS"
+      },
+      {
+        "identifier": "distractor11",
+        "label": "MTU"
+      },
+      {
+        "identifier": "distractor12",
+        "label": "ToS mező"
+      },
+      {
+        "identifier": "distractor13",
+        "label": "link költsége"
+      },
+      {
+        "identifier": "distractor14",
+        "label": "NEXT-HOP router"
+      },
+      {
+        "identifier": "distractor15",
+        "label": "IGRP"
+      },
+      {
+        "identifier": "distractor16",
+        "label": "switchek"
+      }
+    ],
+    "text": "A [field1] útvonalválasztásnál, amennyiben a router egynél több útvonalat kap egy prefixhez, akkor elsősorban a(z) [field2] alapján fog dönteni, másodsorban az AS-PATH attribútum alapján, utóbbi a(z) [field3] sorozatát adja meg, amelyen áthaladt a prefix hirdetés.",
+    "ID": 8,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Számolja ki a pillanatnyi adatsebességet Mbit/s-ban TCP átvitel során, ha 5 körbefordulási idő után tapasztalunk először csomagvesztést (a 6.körben történik meg a csomagvesztés)! Additive Increase Multiplicative Decrease (AIMD) torlódásvezérlési eljárást használunk, a kezdeti torlódási ablak (congestion window) 48 kByte volt, míg a körülfordulási idő 200 ms, a maximális szegmensméret (MSS) pedig 2.4 kByte!",
+    "blank": {
+      "identifier": "field1",
+      "answer": "1.2"
+    },
+    "ID": 9,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "CNAME"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "Zóna"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "A"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "MX"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "PTR"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "Domain"
+      }
+    ],
+    "text": "A(z) [field1] rekord egy másik névre mutató alias bejegyzés a DNS-ben.",
+    "ID": 10,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "ARP"
+      },
+      {
+        "identifier": "field2",
+        "label": "IP"
+      },
+      {
+        "identifier": "field3",
+        "label": "MAC"
+      },
+      {
+        "identifier": "field4",
+        "label": "DHCP"
+      },
+      {
+        "identifier": "field5",
+        "label": "IP"
+      },
+      {
+        "identifier": "field6",
+        "label": "default router"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "RIP"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "port"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "Ethernet switch"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "mobil bázisállomás"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "IGMP"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "TCP"
+      },
+      {
+        "identifier": "distractor7",
+        "label": "WiFi"
+      },
+      {
+        "identifier": "distractor8",
+        "label": "OSPF"
+      },
+      {
+        "identifier": "distractor9",
+        "label": "WiFi Access point"
+      }
+    ],
+    "text": "Az [field1] protokoll arra való, hogy a(z) [field2] cím ismeretében felderítsük a hozzá tartozó [field3] címet. A(z) [field4] protokoll arra jó, hogy egy állomás [field5] címet kérhessen a hozzá tartozó alhálózati maszkkal, amihez társíthatja még a [field6] címét is.",
+    "ID": 11,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "HD hang"
+      },
+      {
+        "identifier": "field2",
+        "label": "7 kHz"
+      },
+      {
+        "identifier": "field3",
+        "label": "16 kHz"
+      },
+      {
+        "identifier": "field4",
+        "label": "jobb"
+      },
+      {
+        "identifier": "field5",
+        "label": "kisebb"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "16 MHz"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "4 Hz"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "nagyobb"
+      },
+      {
+        "identifier": "distractor4",
+        "label": "PCM"
+      },
+      {
+        "identifier": "distractor5",
+        "label": "azonos"
+      },
+      {
+        "identifier": "distractor6",
+        "label": "ADPCM"
+      },
+      {
+        "identifier": "distractor7",
+        "label": "rosszabb"
+      },
+      {
+        "identifier": "distractor8",
+        "label": "GSM FR"
+      }
+    ],
+    "text": "Az AMR-WB (G.722.2) beszédkódoló marketingneve [field1]. A legnagyobb elkódolt hangfrekvencia kb. [field2]. A mintavételezési frekvencia [field3]. Ezek miatt e kódoló hangminősége a hagyományos telefonos PCM-hez képest [field4], adatsebessége pedig [field5].",
+    "ID": 12,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "H.264 kereteket a következő sorrendben szeretnénk lejátszani: I, B, B, P. Milyen sorrendben kell dekódolni ezeket?",
+    "options": {
+      "a": "P, B, I, B",
+      "b": "I, P, B, B",
+      "c": "B, I, B, P",
+      "d": "P, B, B, I",
+      "e": "P, I, B, B",
+      "f": "B, B, P, I",
+      "g": "BIP-BIP-BIP!",
+      "h": "I, B, P, B",
+      "i": "I, B, B, P",
+      "j": "B, B, I, P"
+    },
+    "answer": [
+      "b"
+    ],
+    "ID": 13,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mely közeghozzáférési módszerre igaz, hogy az állomások figyelik a közösen használt csatornát és csak akkor kezdenek el adni, ha az szabad, de ütközés esetén nem szakítják meg az adást, és nincs előzetes engedélyeztetése sem az adásnak?",
+    "options": {
+      "a": "CSMA/XA",
+      "b": "CSMA",
+      "c": "A többi válasz egyike sem jó.",
+      "d": "CSMA/CD",
+      "e": "CSMA/CA"
+    },
+    "answer": [
+      "b"
+    ],
+    "ID": 14,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Digitális jel átvitelére analóg csatornán valamiféle modulációt választunk. Mi jellemző az így kapott jelre?",
+    "options": {
+      "a": "A többi válasz egyike sem.",
+      "b": "A jel spektruma a 0 Hz közelében van.",
+      "c": "A kapott jel négyszögjel jellegű",
+      "d": "Ilyenek lehetnek például: RZ, NRZ (return to zero, non return to zero)"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 15,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Egy szinuszos jel frekvenciája 1 MHz. Mekkora a periódusideje?",
+    "options": {
+      "a": "1 µs (mikrosec.)",
+      "b": "1000000 s",
+      "c": "1 s",
+      "d": "1 s",
+      "e": "1 ns",
+      "f": "1000 s",
+      "g": "1 ms"
+    },
+    "answer": [
+      "a"
+    ],
+    "ID": 16,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az alábbiak közül milyen kábel javasolt 1 Gb/s sebességű Ethernet forgalom átvitelére 80 méter távolságra? (Ha több ilyen is van, a legalacsonyabb kategóriájút válassza!)",
+    "options": {
+      "a": "Cat3",
+      "b": "Cat4b",
+      "c": "Cat6a",
+      "d": "Cat7",
+      "e": "Cat6",
+      "f": "Cat5",
+      "g": "Cat4",
+      "h": "Cat5e"
+    },
+    "answer": [
+      "h"
+    ],
+    "ID": 17,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Egy képzeletbeli mobilszolgáltató akkora rádiófrekvencia-tartományt kap, amelyben egyszerre 40 előfizető tud beszélgetni, ha nem osztják fel a lefedendő földrajzi tartományt cellákra. A szolgáltató célja egy kisváros lefedése. Az első ötlet a város 4 cellára bontása (hiszen a város kicsi). A cellák -- mivel csak négy van -- részben átfednek egymással (mindegyik mindegyikkel). A frekvenciatartományt úgy osztják fel a cellák között egyenletesen, hogy ne legyen interferencia sehol. Összesen egyszer hányan tudnak beszélgetni a városban e rendszeren át, ha ezt az első ötletet valósítják meg?",
+    "blank": {
+      "identifier": "field1",
+      "answer": "40"
+    },
+    "ID": 18,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Mondjuk, hogy egy 900 MHz-es GSM hálózatban (GSM900) 5 különböző cellánk van, így a teljes frekvenciatartománynak az ötödét használjuk egyetlen cellában. Ha egy szolgáltatónak a teljes 25 MHz-es sáv a rendelkezésére állna és abban a szokásos GSM közeghozzáférést használná, hány mobiltelefont lehetne egyszerre beszélgetésre használni egy ilyen cellában (mindenhol full rate kodek használatát feltételezve)?",
+    "blank": {
+      "identifier": "field1",
+      "answer": "200"
+    },
+    "ID": 19,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Tegyük fel, hogy egy VoIP átvitel esetén hagyományos (azaz telefonhálózatokban használt) PCM kodeket használunk, és egy IP csomagban a fejlécek összesen 40 byte-ot (byte-ot, nem bitet) foglalnak el. Az átvitel során az overhead (= a fejléc hossza/a teljes csomag (=fejléc+hasznos teher) hossza) 33,33%. Másodpercenként hány ilyen IP csomagot kell küldenünk a beszélgetés időtartama alatt?",
+    "blank": {
+      "identifier": "field1",
+      "answer": "100"
+    },
+    "ID": 20,
+    "supervised": "yes"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "A 3. mérés 7. (szorgalmi) feladatában lehetősége volt egy DNS64+NAT64 teszthálózat építésére virtuális gépek segítségével. Ennek során megismerhette az IPv4 címet beágyazó IPv6 cím (IPv4-embbedded IPv6 address) képzését. Képezzen ilyen címet a 64:ff9b::/96 prefix és a 192. 0.2.1 IPv4 cím használatával.\n64:ff9b::[field1]:[field2]:[field3]:[field4]",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "192"
+      },
+      {
+        "identifier": "field2",
+        "answer": "0"
+      },
+      {
+        "identifier": "field3",
+        "answer": "2"
+      },
+      {
+        "identifier": "field4",
+        "answer": "1"
+      }
+    ],
+    "ID": 21,
+    "supervised": "yes"
+  }
+]
