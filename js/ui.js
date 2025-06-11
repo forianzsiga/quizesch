@@ -55,7 +55,7 @@ export function displayQuizList(quizFileNames, onQuizSelectCallback) {
         const card = document.createElement('div');
         card.className = 'quiz-card';
 
-        apiService.fetchQuizSupervisionInfo(`${DATA_DIRECTORY}/${fileName}`)
+        apiService.fetchQuizSupervisionInfo(`${DATA_DIRECTORY}/data/${fileName}`)
             .then(supInfo => {
                 let indicator = '';
                 if (supInfo.generated === supInfo.total && supInfo.total > 0) {

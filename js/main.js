@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function handleQuizSelection(fileName) {
         try {
             ui.showLoadingState();
-            const quizData = await apiService.fetchQuizData(`${DATA_DIRECTORY}/${fileName}`);
+            const quizData = await apiService.fetchQuizData(`${DATA_DIRECTORY}/data/${fileName}`);
             quizService.loadQuiz(quizData, fileName);
 
             const persistedState = storageService.loadQuizState(quizService.getCurrentQuizFile(), quizData.length);
