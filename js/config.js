@@ -1,5 +1,5 @@
 // js/config.js
-let dataDir = '/data/';
+let dataDir = '/';
 if (window.location.hostname.includes("github.io")) {
     dataDir = "/quizesch" + dataDir;
     console.log("github pages detected");
