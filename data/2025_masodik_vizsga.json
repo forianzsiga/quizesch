@@ -1,0 +1,757 @@
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "Vizsga",
+    "year": "2025"
+  },
+  "questions": [
+    {
+      "question_type": "drag_n_drop",
+      "choices": [
+        {
+          "identifier": "c1",
+          "label": "IEEE"
+        },
+        {
+          "identifier": "c2",
+          "label": "OSI"
+        },
+        {
+          "identifier": "c3",
+          "label": "ISP"
+        },
+        {
+          "identifier": "c4",
+          "label": "ISO"
+        },
+        {
+          "identifier": "c5",
+          "label": "IETF"
+        }
+      ],
+      "text": "Az Ethernet címek első 3 bájtját az {c1} osztja ki a gyártók számára.",
+      "ID": 1,
+      "supervised": "A diák válasza 'OSI' volt, ami helytelen. A helyes válasz: Az Ethernet címek első 3 bájtját az [IEEE] osztja ki a gyártók számára."
+    },
+    {
+      "question_type": "drag_n_drop",
+      "choices": [
+        {
+          "identifier": "c1",
+          "label": "kliens"
+        },
+        {
+          "identifier": "c2",
+          "label": "router"
+        },
+        {
+          "identifier": "c3",
+          "label": "MAC-címét"
+        },
+        {
+          "identifier": "c4",
+          "label": "szerver"
+        },
+        {
+          "identifier": "c5",
+          "label": "FTP címét"
+        },
+        {
+          "identifier": "c6",
+          "label": "SSH kapcsolaton"
+        },
+        {
+          "identifier": "c7",
+          "label": "aktív"
+        },
+        {
+          "identifier": "c8",
+          "label": "adatkapcsolaton"
+        },
+        {
+          "identifier": "c9",
+          "label": "passzív"
+        },
+        {
+          "identifier": "c10",
+          "label": "vezérlő kapcsolaton"
+        },
+        {
+          "identifier": "c11",
+          "label": "portját"
+        },
+        {
+          "identifier": "c12",
+          "label": "IP-címét"
+        },
+        {
+          "identifier": "c13",
+          "label": "elérési útját"
+        },
+        {
+          "identifier": "c14",
+          "label": "implicit"
+        },
+        {
+          "identifier": "c15",
+          "label": "proxy"
+        }
+      ],
+      "text": "Az FTP működése során a kliens egy üzenetet küld a(z) {c10}, amelyben saját {c12} és egy {c11} is megadja. Ennek hatására egy új kapcsolat jön létre. Ezt nevezzük {c7} kapcsolatfelépítési módnak. A kapcsolatfelépítés módjának megnevezése a {c4} viselkedését tükrözi.",
+      "ID": 2,
+      "supervised": "A diák a 'kapcsolatfelépítési módnak' a 'passzív' választ adta, ami helytelen. A helyes válasz [aktív]."
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A harmadik mérés harmadik feladatában megismerte, hogyan ellenőrzik egy IPv6-cím egyediségét. Milyen csoportcímnek hívják azt, amire a címduplikáció ellenőrzése céljából üzenetet küldött a rendszer?",
+      "options": {
+        "a": "site-local all routers multicast address",
+        "b": "a többi válasz közül egyik sem helyes",
+        "c": "link-local all nodes multicast address",
+        "d": "solicited-node multicast address"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 3,
+      "supervised": "The correct answer is: solicited-node multicast address"
+    },
+    {
+      "question_type": "drag_n_drop",
+      "choices": [
+        {
+          "identifier": "c_00",
+          "label": "00"
+        },
+        {
+          "identifier": "c_1",
+          "label": "1"
+        },
+        {
+          "identifier": "c_2",
+          "label": "2"
+        },
+        {
+          "identifier": "c_10",
+          "label": "10"
+        },
+        {
+          "identifier": "c_21",
+          "label": "21"
+        },
+        {
+          "identifier": "c_01",
+          "label": "01"
+        },
+        {
+          "identifier": "c_02",
+          "label": "02"
+        },
+        {
+          "identifier": "c_12",
+          "label": "12"
+        },
+        {
+          "identifier": "c_0",
+          "label": "0"
+        },
+        {
+          "identifier": "c_20",
+          "label": "20"
+        }
+      ],
+      "text": "A 3. mérésen megismerkedett a \"solicited node multicast address\" képzésével. Képezzen ilyen címet, ha a kérdéses IPv6-cím: 2001:db8::1:2. (Kérjük, hogy a helyes kiértékelés érdekében minden 16 bites csoportot 4 db hexadecimális számjeggyel írjon le!)\nA képzett solicited node multicast address: ff02:0:0:0:0:1:ff{c_01}:{c_00}{c_02}.",
+      "ID": 4,
+      "supervised": "Helytelen válasz. A helyes cím a 2001:db8::1:2 unicast címből ff02::1:ff01:0002. A beírandó részek tehát: [01], [00], [02]."
+    },
+    {
+      "question_type": "drag_n_drop",
+      "choices": [
+        {
+          "identifier": "c508",
+          "label": "508"
+        },
+        {
+          "identifier": "c251",
+          "label": "251"
+        },
+        {
+          "identifier": "c125",
+          "label": "125"
+        },
+        {
+          "identifier": "c253",
+          "label": "253"
+        },
+        {
+          "identifier": "c3",
+          "label": "3"
+        },
+        {
+          "identifier": "c4",
+          "label": "4"
+        },
+        {
+          "identifier": "c1",
+          "label": "1"
+        },
+        {
+          "identifier": "c509",
+          "label": "509"
+        },
+        {
+          "identifier": "c255",
+          "label": "255"
+        },
+        {
+          "identifier": "c0",
+          "label": "0"
+        },
+        {
+          "identifier": "c1020",
+          "label": "1020"
+        },
+        {
+          "identifier": "c2",
+          "label": "2"
+        },
+        {
+          "identifier": "c127",
+          "label": "127"
+        },
+        {
+          "identifier": "c252",
+          "label": "252"
+        },
+        {
+          "identifier": "c510",
+          "label": "510"
+        },
+        {
+          "identifier": "c1021",
+          "label": "1021"
+        },
+        {
+          "identifier": "c1022",
+          "label": "1022"
+        },
+        {
+          "identifier": "c126",
+          "label": "126"
+        },
+        {
+          "identifier": "c130",
+          "label": "130"
+        },
+        {
+          "identifier": "c7",
+          "label": "7"
+        },
+        {
+          "identifier": "c128",
+          "label": "128"
+        },
+        {
+          "identifier": "c129",
+          "label": "129"
+        },
+        {
+          "identifier": "c131",
+          "label": "131"
+        },
+        {
+          "identifier": "c254",
+          "label": "254"
+        }
+      ],
+      "text": "A 10.10.0.0/22 hálózatban a router a legkisebb kiosztható IP-címet kapta. Adja meg a router IP-címét, a gépeknek kiosztható IP-címek tartományát és a broadcast címet!\nEgészítse ki az egyes címeket:\nBroadcast cím: 10.10.{c3}.{c255}\nRouter címe: 10.10.{c0}.{c1}\n1. számítógép: 10.10.{c0}.{c2}\nutolsó számítógép: 10.10.{c3}.{c254}\nAdja meg a számítógépeknek kiosztható IP-címek számát is: {c1021}",
+      "ID": 5,
+      "supervised": "Helytelen válaszok: A broadcast és az utolsó számítógép címében a harmadik oktett [3] (nem 63). A kiosztható címek száma 2^10 - 2 = 1022. Ha a kérdés a routeren kívüli gépekre vonatkozik, akkor 1021. A diák válasza [16384] helytelen, a helyes [1021]."
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül mely állítás(ok) igaz(ak) a HTTP-re?",
+      "options": {
+        "a": "Minden HTTP üzenet tartalmaz állapotkódot.",
+        "b": "Nem parancsorientált.",
+        "c": "A HTTPS a TCP 443-as portot használja.",
+        "d": "A többi válasz közül egyik sem helyes.",
+        "e": "Többféle hitelesítést (authentikációt) támogathat."
+      },
+      "answer": [
+        "c",
+        "e"
+      ],
+      "ID": 6,
+      "supervised": "The correct answers are: A HTTPS a TCP 443-as portot használja., Többféle hitelesítést (authentikációt) támogathat."
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül mi a közös a POP3 és az IMAP4 protokollokban?",
+      "options": {
+        "a": "Levelek letöltésére valók.",
+        "b": "Létezik titkosított változatuk.",
+        "c": "Automatikusan törlik a szerverről a levelet.",
+        "d": "UDP szállítási protokollt használnak."
+      },
+      "answer": [
+        "a",
+        "b"
+      ],
+      "ID": 7,
+      "supervised": "The correct answers are: Levelek letöltésére valók., Létezik titkosított változatuk."
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mely állítás igaz a TCP MSS-re (Maximum Segment Size)?",
+      "options": {
+        "a": "Az átlagos adatméret bájtban, amit a TCP küld egy szegmensben.",
+        "b": "Az AIMD módszer esetén minden sikeres szegmensküldés után ennyivel csökken a torlódási ablak mérete.",
+        "c": "A többi válasz közül egyik sem helyes.",
+        "d": "Nem kell összeegyeztetni az adatkapcsolati réteg MTU-jával."
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 8,
+      "supervised": "The correct answer is: A többi válasz közül egyik sem helyes."
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül mely(ek) routing feladat(ok)?",
+      "options": {
+        "a": "A hálózat aktuális állapotának ismeretében mindegyik csomópontban olyan információs bázist generálni, amelynek használatával meg lehet oldani az útválasztási feladatokat.",
+        "b": "Részben vagy egészében megismerni a hálózatot alkotó csomópontok és linkek aktuális struktúráját, állapotát.",
+        "c": "Olyan információs bázis generálása, amely segítségével torlódás esetén szabályozza a forrást.",
+        "d": "A csomagok sorrendjének ütemezése.",
+        "e": "A többi válasz közül egyik sem helyes."
+      },
+      "answer": [
+        "a",
+        "b"
+      ],
+      "ID": 9,
+      "supervised": "The correct answers are: Részben vagy egészében megismerni a hálózatot alkotó csomópontok és linkek aktuális struktúráját, állapotát., A hálózat aktuális állapotának ismeretében mindegyik csomópontban olyan információs bázist generálni, amelynek használatával meg lehet oldani az útválasztási feladatokat."
+    },
+    {
+      "question_type": "drag_n_drop",
+      "choices": [
+        {
+          "identifier": "c1",
+          "label": "link-local"
+        },
+        {
+          "identifier": "c2",
+          "label": "peer-to-peer"
+        },
+        {
+          "identifier": "c3",
+          "label": "broadcast"
+        },
+        {
+          "identifier": "c4",
+          "label": "allcast"
+        },
+        {
+          "identifier": "c5",
+          "label": "multicast"
+        },
+        {
+          "identifier": "c6",
+          "label": "manycast"
+        },
+        {
+          "identifier": "c7",
+          "label": "unicast"
+        }
+      ],
+      "text": "Az IPv6 protokollban nincs {c3} címzés, helyette a(z) {c5} és anycast címzési módokat alkalmazza a különböző típusú kommunikációhoz.",
+      "ID": 10,
+      "supervised": "Helyes válasz."
+    },
+    {
+      "question_type": "drag_n_drop",
+      "choices": [
+        {
+          "identifier": "c_s",
+          "label": "s"
+        },
+        {
+          "identifier": "c_10",
+          "label": "10"
+        },
+        {
+          "identifier": "c_Hz",
+          "label": "Hz"
+        },
+        {
+          "identifier": "c_MHz",
+          "label": "MHz"
+        },
+        {
+          "identifier": "c_GHz",
+          "label": "GHz"
+        },
+        {
+          "identifier": "c_1",
+          "label": "1"
+        },
+        {
+          "identifier": "c_100",
+          "label": "100"
+        },
+        {
+          "identifier": "c_3",
+          "label": "3"
+        },
+        {
+          "identifier": "c_30",
+          "label": "30"
+        },
+        {
+          "identifier": "c_us",
+          "label": "us (mikrosec.)"
+        },
+        {
+          "identifier": "c_300",
+          "label": "300"
+        },
+        {
+          "identifier": "c_ms",
+          "label": "ms"
+        },
+        {
+          "identifier": "c_ns",
+          "label": "ns"
+        },
+        {
+          "identifier": "c_kHz",
+          "label": "kHz"
+        }
+      ],
+      "text": "Egy rádióadó által kibocsátott elektromágneses hullámnak a hullámhossza 300 méter. A frekvenciája ekkor kb. {c_1} {c_MHz}. A jel periódusideje kb. {c_1} {c_us}.",
+      "ID": 11,
+      "supervised": "Helyes válasz."
+    },
+    {
+      "question_type": "drag_n_drop",
+      "choices": [
+        {
+          "identifier": "c1",
+          "label": "44 kHz"
+        },
+        {
+          "identifier": "c2",
+          "label": "20 GHz"
+        },
+        {
+          "identifier": "c3",
+          "label": "7000 Hz"
+        },
+        {
+          "identifier": "c4",
+          "label": "20 mHz"
+        },
+        {
+          "identifier": "c5",
+          "label": "20 kHz"
+        },
+        {
+          "identifier": "c6",
+          "label": "20 Hz"
+        },
+        {
+          "identifier": "c7",
+          "label": "3400 Hz"
+        },
+        {
+          "identifier": "c8",
+          "label": "300 Hz"
+        },
+        {
+          "identifier": "c9",
+          "label": "20 MHz"
+        },
+        {
+          "identifier": "c10",
+          "label": "1000 Hz"
+        }
+      ],
+      "text": "Az emberi fül által hallható legmélyebb hang frekvenciája kb. {c6}.\nAz emberi fül által hallható legmagasabb hang frekvenciája kb. {c5}.\nA hagyományos telefonhálózatokban átvitt legnagyobb frekvencia {c7}.\nAz emberi beszédhangban lévő legnagyobb frekvencia kb. {c3}.\nAz audio CD-kben használt PCM-ben a mintavételezési frekvencia kb. {c1}.",
+      "ID": 12,
+      "supervised": "Helyes válasz."
+    },
+    {
+      "question_type": "drag_n_drop",
+      "choices": [
+        {
+          "identifier": "c1",
+          "label": "5G"
+        },
+        {
+          "identifier": "c2",
+          "label": "B-Netz"
+        },
+        {
+          "identifier": "c3",
+          "label": "GSM"
+        },
+        {
+          "identifier": "c4",
+          "label": "5G-standalone"
+        },
+        {
+          "identifier": "c5",
+          "label": "HSPA"
+        },
+        {
+          "identifier": "c6",
+          "label": "GSM/GPRS"
+        },
+        {
+          "identifier": "c7",
+          "label": "HSXPA"
+        },
+        {
+          "identifier": "c8",
+          "label": "CIA"
+        },
+        {
+          "identifier": "c9",
+          "label": "FBI"
+        },
+        {
+          "identifier": "c10",
+          "label": "VoLTE"
+        },
+        {
+          "identifier": "c11",
+          "label": "A-Netz"
+        },
+        {
+          "identifier": "c12",
+          "label": "NMT"
+        },
+        {
+          "identifier": "c13",
+          "label": "VoWIFI"
+        },
+        {
+          "identifier": "c14",
+          "label": "LTE"
+        },
+        {
+          "identifier": "c15",
+          "label": "EDGE"
+        },
+        {
+          "identifier": "c16",
+          "label": "UMTS"
+        },
+        {
+          "identifier": "c17",
+          "label": "HSPA+"
+        }
+      ],
+      "text": "Adjon példát mobiltelefon-hálózatok generációira!\nEgy tipikus 1G rendszer: {c12}\nEgy tipikus 2,5G rendszer: {c6}\nEgy tipikus 3G rendszer: {c16}\nEgy tipikus 3,5G rendszer: {c5}\nEgy tipikus 4G rendszer: {c14}",
+      "ID": 13,
+      "supervised": "Helytelen válaszok: 1G: [NMT], 2.5G: [GSM/GPRS], 3G: [UMTS], 3.5G: [HSPA]."
+    },
+    {
+      "question_type": "drag_n_drop",
+      "choices": [
+        {
+          "identifier": "c1",
+          "label": "PMT"
+        },
+        {
+          "identifier": "c2",
+          "label": "PES"
+        },
+        {
+          "identifier": "c3",
+          "label": "egy"
+        },
+        {
+          "identifier": "c4",
+          "label": "kettő"
+        },
+        {
+          "identifier": "c5",
+          "label": "három"
+        },
+        {
+          "identifier": "c6",
+          "label": "PAT"
+        },
+        {
+          "identifier": "c7",
+          "label": "PID"
+        },
+        {
+          "identifier": "c8",
+          "label": "nulla"
+        },
+        {
+          "identifier": "c9",
+          "label": "EIT"
+        },
+        {
+          "identifier": "c10",
+          "label": "több"
+        },
+        {
+          "identifier": "c11",
+          "label": "PCR"
+        }
+      ],
+      "text": "MPEG2-TS-ben:\n- az egyes programokhoz tartozó elemi folyamok csomagazonosítóit tartalmazó tábla neve {c1}.\n- a transport streamben továbbított csatornák azonosítóit tartalmazó tábla neve {c6}.\nEgy MPEG2-TS-ben {c10} program lehet.\nEgy programban {c10} elemi folyam lehet.\nEgy MPEG2-TS-hez logikailag {c3} PAT tartozik.",
+      "ID": 14,
+      "supervised": "Helytelen válaszok: az első tábla neve [PMT], a másodiké [PAT]. Logikailag [egy] PAT tartozik a TS-hez."
+    },
+    {
+      "question_type": "drag_n_drop",
+      "choices": [
+        {
+          "identifier": "c_0_5",
+          "label": "0.5"
+        },
+        {
+          "identifier": "c_1",
+          "label": "1"
+        },
+        {
+          "identifier": "c_4a",
+          "label": "4"
+        },
+        {
+          "identifier": "c_2",
+          "label": "2"
+        },
+        {
+          "identifier": "c_0_75",
+          "label": "0.75"
+        },
+        {
+          "identifier": "c_0_25",
+          "label": "0.25"
+        },
+        {
+          "identifier": "c_0",
+          "label": "0"
+        },
+        {
+          "identifier": "c_16",
+          "label": "16"
+        },
+        {
+          "identifier": "c_4b",
+          "label": "4"
+        },
+        {
+          "identifier": "c_1_5",
+          "label": "1.5"
+        },
+        {
+          "identifier": "c_1_75",
+          "label": "1.75"
+        },
+        {
+          "identifier": "c_1_25",
+          "label": "1.25"
+        }
+      ],
+      "text": "Egyenletesen szeretnénk kvantálni (azaz lineárisan, nem logaritmikusan) a 0 V ... +2 V intervallumon. 2 biten tároljuk a mintákat. Ekkor {c_4a} kvantálási szintünk lesz.\nAz előző alkérdés folytatása: a minták tehát a 0 V... 2 V tartományból származhatnak, 2 biten tároljuk őket a kvantálás után, és minden tartományt a közepével reprezentálunk. Milyen értékekkel fogjuk reprezentálni a következő mért értékeket?\n0.3 V: {c_0_25} V\n1.61 V: {c_1_75} V",
+      "ID": 15,
+      "supervised": "A második rész helytelen. A kvantálási szintek [0, 0.5), [0.5, 1.0), [1.0, 1.5), [1.5, 2.0]. A reprezentatív értékek a közepek: 0.25, 0.75, 1.25, 1.75. Így 0.3V-hoz [0.25]V, 1.61V-hoz [1.75]V tartozik."
+    },
+    {
+      "question_type": "drag_n_drop",
+      "choices": [
+        {
+          "identifier": "c1",
+          "label": "zárt"
+        },
+        {
+          "identifier": "c2",
+          "label": "nyílt"
+        }
+      ],
+      "text": "Telefonhálózatokban a {c2} számozási rendszerben nem kell mindig a belföldi rendeltetési számot tárcsázni.\nA {c2} számozási rendszerű hálózatokban egy földrajzi körzeten belüli hívás esetén rövidebb lehet a tárcsázott szám.\nA {c1} számozási rendszerű hálózatokban egyszerűbb, egyértelműbb egy telefonszám megadása és felhívása.\nMa Magyarországon a vezetéses telefonhálózatok számozási rendszere {c2}.\nMa Magyarországon a mobiltelefon-hálózatok számozási rendszere {c1}.",
+      "ID": 16,
+      "supervised": "Több hiba. A helyes válaszok sorrendben: nyílt, nyílt, zárt, nyílt, zárt."
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Jelölje be a modulációra jellemző válaszokat:",
+      "options": {
+        "a": "Ilyen pl. a QAM16.",
+        "b": "Ilyen pl. az AMI (Alternate Mark Inversion).",
+        "c": "Kizárólag rádiós átvitel esetén használjuk.",
+        "d": "Moduláció esetében egy szinuszos jelet kicsit megváltoztatunk, ez hordozza az információt."
+      },
+      "answer": [
+        "a",
+        "d"
+      ],
+      "ID": 17,
+      "supervised": "The correct answers are: Ilyen pl. a QAM16., Moduláció esetében egy szinuszos jelet kicsit megváltoztatunk, ez hordozza az információt."
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A talajhullámokra az alábbiak igazak:",
+      "options": {
+        "a": "A látótávolságon túl is követik a földfelszínt.",
+        "b": "A fény is így terjed.",
+        "c": "A Földről is visszaverődnek.",
+        "d": "2 MHz frekvencia alatti rádiójelek terjednek így."
+      },
+      "answer": [
+        "a",
+        "d"
+      ],
+      "ID": 18,
+      "supervised": "The correct answers are: A látótávolságon túl is követik a földfelszínt., 2 MHz frekvencia alatti rádiójelek terjednek így."
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "GSM 1800 esetén a használt frekvenciák: mobil adó: 1710-1785 MHz, bázisállomás: 1805-1880 MHz. Ha három szolgáltató van egy adott országban, melyek egyformán részesülnek ezen rádiós frekvenciatartományokból, akkor egy szolgáltató egy cellájában egyszerre átlagosan hányan beszélgethetnek? Egy vivő 200 kHz széles, és 10 különböző frekvenciájú cellát használnak a szolgáltatók a cellás elv szerint (nem 7-et). Segítség: a többszörös közeghozzáférés a GSM-nél tanultak szerint történik.\nAnswer: [BLANK_1]",
+      "blank": {
+        "identifier": "BLANK_1",
+        "answer": "100"
+      },
+      "ID": 19,
+      "supervised": "The correct answer is: 100"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Szabad térben egy (irányítatlan antennával rendelkező) rádióadóhoz közeledünk. Ha 600 méter távolságra voltunk eredetileg és 200 méterre leszünk a mozgás végén, akkor várhatóan hányszorosára növekszik a rádió jelerőssége?\nAnswer: [BLANK_1]",
+      "blank": {
+        "identifier": "BLANK_1",
+        "answer": "9"
+      },
+      "ID": 20,
+      "supervised": "The correct answer is: 9"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "IMSc pontokért:\nA 2. mérésen lehetősége volt kipróbálni, hogyan lehet csupán telnet segítségével FTP-zni. Tegyül fel, hogy egy ilyen feladat során a szervertől a következő választ kapta: 227 Entering Passive Mode (193,224,131,12,192,130) Lépjen be telnet segítségével a megfelelő IP-című gép megfelelő portjára. (Segítség: a $((...)) kifejezés elvégzi a számolást.) telnet [BLANK_1] $((256*[BLANK_2]+[BLANK_3]))",
+      "blank": [
+        {
+          "identifier": "BLANK_1",
+          "answer": "193.224.131.12"
+        },
+        {
+          "identifier": "BLANK_2",
+          "answer": "192"
+        },
+        {
+          "identifier": "BLANK_3",
+          "answer": "130"
+        }
+      ],
+      "ID": 21,
+      "supervised": "Not answered. The correct command is: telnet 193.224.131.12 $((256*192+130))"
+    }
+  ]
+}

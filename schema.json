@@ -1,93 +1,124 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "QuizeSCH Quiz File Schema",
-  "description": "A schema for a single quiz file, containing metadata (tags) and an array of questions.",
+  "description": "This schema defines the structure for a single quiz file, used by the QuizeSCH application. It includes metadata tags for categorization and an array of various question types. LLM: When generating quiz files, ensure all required fields are present and adhere to the specified types. Pay close attention to the 'question_type' to correctly structure each question.",
   "type": "object",
   "properties": {
     "tags": {
       "type": "object",
-      "description": "Metadata tags for the quiz.",
+      "description": "Metadata tags for the quiz file. These tags help categorize and search for quizzes. LLM: Ensure 'subject' comes from the allowed list, 'type' is concise, and 'year' follows a standard year format.",
       "properties": {
-        "subject": { "type": "string" },
-        "type": { "type": "string" },
-        "year": { "type": "string" }
+        "subject": {
+          "type": "string",
+          "enum": ["Kommunikációs Hálózatok"],
+          "description": "The academic subject of the quiz. Currently limited to 'Kommunikációs Hálózatok'. LLM: Choose only from the provided enum values for 'subject'."
+        },
+        "type": { "type": "string", "description": "The type of quiz or content (e.g., 'Midterm', 'Final Exam', 'Practice', 'Chapter 5 Quiz')." },
+        "year": {
+          "type": "string",
+          "pattern": "^\\d{4}(?:-\\d{4})?$",
+          "description": "The academic year or specific year the quiz pertains to. Must be in 'YYYY' or 'YYYY-YYYY' format (e.g., '2023', '2023-2024'). LLM: Adhere strictly to the 'YYYY' or 'YYYY-YYYY' format for the year."
+        }
       },
       "required": ["subject", "type", "year"]
     },
     "questions": {
-      "description": "An array of questions, where each question can be one of three types: multi_choice, drag_n_drop, or fill_the_blanks.",
+      "description": "An array of questions for the quiz. Each question object must conform to one of the defined question types: 'multi_choice', 'drag_n_drop', or 'fill_the_blanks'. LLM: Iteratively generate each question based on its 'question_type'. Ensure unique IDs for each question within the array.",
       "type": "array",
       "items": {
         "oneOf": [
           {
             "title": "Multiple Choice Question",
             "type": "object",
+            "description": "A standard multiple-choice question where the user selects one or more correct answers from a set of options. LLM: 'options' should be an object where keys are option identifiers (e.g., 'A', 'B') and values are the option text. 'answer' should be an array of correct option identifiers.",
             "properties": {
-              "question_type": { "const": "multi_choice" },
-              "question_title": { "type": "string" },
+              "question_type": { "const": "multi_choice", "description": "Specifies this question is a multiple-choice type." },
+              "question_title": { "type": "string", "description": "The main text of the multiple-choice question." },
               "options": {
                 "type": "object",
+                "description": "An object where keys represent option labels (e.g., 'A', 'B', 'C', 'D') and values are the text for each option. LLM: Ensure a logical mapping between labels and text.",
                 "additionalProperties": { "type": "string" }
               },
-              "answer": { "type": "array", "items": { "type": "string" } },
-              "ID": { "type": "integer" },
-              "supervised": { "type": "string" }
+              "answer": { "type": "array", "items": { "type": "string" }, "description": "An array of option labels (keys from 'options') that represent the correct answer(s). Supports single or multiple correct answers." },
+              "ID": { "type": "integer", "description": "A unique integer identifier for this question within the quiz file. LLM: Assign a unique, incrementing ID." },
+              "supervised": {
+                "type": "string",
+                "enum": ["yes", "no"],
+                "description": "Indicates if the question requires supervision. Must be either 'yes' or 'no'. LLM: Set to 'yes' if the question content is sensitive or requires proctoring."
+              }
             },
             "required": ["question_type", "question_title", "options", "answer", "ID"]
           },
           {
             "title": "Drag and Drop Question",
             "type": "object",
+            "description": "A question where users drag and drop 'choices' into specific blanks within the 'text'. The 'text' will contain placeholders corresponding to 'choices'. LLM: The 'text' field should clearly indicate where the correct choices should be placed (e.g., using identifiers like '{field1}', '{field2}'). All 'identifier' strings must start with 'field' (for correct answers/targets) or 'distractor' (for incorrect options), followed by numbers.",
             "properties": {
-              "question_type": { "const": "drag_n_drop" },
+              "question_type": { "const": "drag_n_drop", "description": "Specifies this question is a drag-and-drop type." },
               "choices": {
                 "type": "array",
+                "description": "An array of draggable items. Each item has a unique 'identifier' and a 'label' (the text displayed). LLM: 'identifier' should match placeholders in the 'text' field. IMPORTANT: Identifiers starting with 'field' (e.g., 'field1', 'field2') represent the correct answers or target drop zones. Identifiers starting with 'distractor' (e.g., 'distractor1', 'distractor2') represent incorrect choices that are presented to the user but do not have a matching blank in the text.",
                 "items": {
                   "type": "object",
                   "properties": {
-                    "identifier": { "type": "string" },
-                    "label": { "type": "string" }
+                    "identifier": {
+                      "type": "string",
+                      "description": "A unique string to link the choice to a blank in the 'text' ('fieldN') or mark it as a distractor ('distractorN'). Must start with 'field' or 'distractor' followed by one or more digits.",
+                      "pattern": "^(field|distractor)\\d+$"
+                    },
+                    "label": { "type": "string", "description": "The text displayed on the draggable item." }
                   },
                   "required": ["identifier", "label"]
                 }
               },
-              "text": { "type": "string" },
-              "ID": { "type": "integer" },
-              "supervised": { "type": "string" }
+              "text": { "type": "string", "description": "The main text of the question, containing placeholders (e.g., 'The capital of France is {field1}.') that correspond to 'fieldN' identifiers from the 'choices'. LLM: Ensure placeholders exactly match 'fieldN' identifiers from 'choices'." },
+              "ID": { "type": "integer", "description": "A unique integer identifier for this question within the quiz file." },
+              "supervised": {
+                "type": "string",
+                "enum": ["yes", "no"],
+                "description": "Indicates if the question requires supervision. Must be either 'yes' or 'no'. LLM: Set to 'yes' if the question content is sensitive or requires proctoring."
+              }
             },
             "required": ["question_type", "choices", "text", "ID"]
           },
           {
             "title": "Fill the Blanks Question",
             "type": "object",
+            "description": "A question where users fill in blank spaces in a given text. The 'blank' field defines the correct answers for these blanks. LLM: The 'text' field should clearly indicate where blanks are located using identifiers (e.g., 'The Earth is {color}.'). The 'blank' field provides the correct answer(s) for those identifiers.",
             "properties": {
-              "question_type": { "const": "fill_the_blanks" },
-              "text": { "type": "string" },
+              "question_type": { "const": "fill_the_blanks", "description": "Specifies this question is a fill-in-the-blanks type." },
+              "text": { "type": "string", "description": "The question text, containing placeholders for blanks (e.g., 'Roses are {color} and violets are {color2}.')." },
               "blank": {
                 "oneOf": [
                   {
                     "type": "object",
+                    "description": "For a single blank. The 'identifier' links to the placeholder in 'text', and 'answer' is the correct text.",
                     "properties": {
-                      "identifier": { "type": "string" },
-                      "answer": { "type": "string" }
+                      "identifier": { "type": "string", "description": "The identifier used in the 'text' field to denote the blank (e.g., 'color')." },
+                      "answer": { "type": "string", "description": "The correct answer for this blank." }
                     },
                     "required": ["identifier", "answer"]
                   },
                   {
                     "type": "array",
+                    "description": "For multiple blanks. Each object in the array defines an 'identifier' and its corresponding 'answer'. LLM: Ensure all identifiers in 'text' have a corresponding entry here.",
                     "items": {
                       "type": "object",
                       "properties": {
-                        "identifier": { "type": "string" },
-                        "answer": { "type": "string" }
+                        "identifier": { "type": "string", "description": "The identifier used in the 'text' field to denote the blank (e.g., 'color2')." },
+                        "answer": { "type": "string", "description": "The correct answer for this specific blank." }
                       },
                       "required": ["identifier", "answer"]
                     }
                   }
                 ]
               },
-              "ID": { "type": "integer" },
-              "supervised": { "type": "string" }
+              "ID": { "type": "integer", "description": "A unique integer identifier for this question within the quiz file." },
+              "supervised": {
+                "type": "string",
+                "enum": ["yes", "no"],
+                "description": "Indicates if the question requires supervision. Must be either 'yes' or 'no'. LLM: Set to 'yes' if the question content is sensitive or requires proctoring."
+              }
             },
             "required": ["question_type", "text", "blank", "ID"]
           }

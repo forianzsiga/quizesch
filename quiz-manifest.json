@@ -113,6 +113,14 @@
       }
     },
     {
+      "fileName": "2025_masodik_vizsga.json",
+      "tags": {
+        "subject": "Kommunikációs Hálózatok",
+        "type": "Vizsga",
+        "year": "2024"
+      }
+    },
+    {
       "fileName": "synthetic.json",
       "tags": {
         "subject": "Kommunikációs Hálózatok",
