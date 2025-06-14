@@ -105,6 +105,14 @@
       }
     },
     {
+      "fileName": "2025_elso_vizsga_no_code.json",
+      "tags": {
+        "subject": "Szoftvertechnikák",
+        "type": "Vizsga",
+        "year": "2025"
+      }
+    },
+    {
       "fileName": "2025_elso_vizsga.json",
       "tags": {
         "subject": "Kommunikációs Hálózatok",
@@ -117,7 +125,7 @@
       "tags": {
         "subject": "Kommunikációs Hálózatok",
         "type": "Vizsga",
-        "year": "2024"
+        "year": "2025"
       }
     },
     {
@@ -130,7 +138,8 @@
   ],
   "availableTags": {
     "subject": [
-      "Kommunikációs Hálózatok"
+      "Kommunikációs Hálózatok",
+      "Szoftvertechnikák"
     ],
     "type": [
       "PPZH",
