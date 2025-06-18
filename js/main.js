@@ -98,7 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
             quizService.getTotalQuestions(),
             quizService.getUserAnswerForCurrentQuestion(),
             quizService.isCurrentQuestionEvaluated(),
-            null // Pass null or a default loading state for voteData initially
+            null, // Pass null or a default loading state for voteData initially
+            currentFile // Pass the quiz file name
         );
         if (quizService.isCurrentQuestionEvaluated()) {
             ui.evaluateQuestionDisplay(question, quizService.getUserAnswerForCurrentQuestion());

@@ -9,6 +9,16 @@ export let questionContainer, quizContainer, prevBtn, nextBtn, submitBtn, result
            filterPanel, filtersContainer, untaggedQuizContainer, untaggedQuizListElement,
            mainBannerContainer, backToMenuBtn, inQuizWrapper, mainViewWrapper;
 
+// Helper to format file names for display
+function _prettifyFileName(fileName) {
+    if (!fileName) return '';
+    let pretty = fileName.replace('.json','').replace(/_/g,' ');
+    pretty = pretty.replace(/\b(zh|pzh|ppzh)\b/gi, m => m.toUpperCase());
+    pretty = pretty.replace(/\b(\d{4})\b/g, '($1)');
+    pretty = pretty.replace(/\b([a-z])/g, c => c.toUpperCase());
+    return pretty;
+}
+
 export function initDOMReferences() {
     questionContainer = document.getElementById('question-container');
     quizContainer = document.getElementById('quiz-container');
@@ -136,10 +146,7 @@ function _createQuizCard(quiz, onQuizSelectCallback, allProgress) {
             }
         }).catch(err => console.warn(`Could not fetch supervision info for ${fileName}: ${err.message}`));
 
-    let pretty = fileName.replace('.json','').replace(/_/g,' ');
-    pretty = pretty.replace(/\b(zh|pzh|ppzh)\b/gi, m => m.toUpperCase());
-    pretty = pretty.replace(/\b(\d{4})\b/g, '($1)');
-    pretty = pretty.replace(/\b([a-z])/g, c => c.toUpperCase());
+    const pretty = _prettifyFileName(fileName);
 
     const icon = document.createElement('div');
     icon.className = 'quiz-icon';
@@ -234,7 +241,7 @@ export function displayUntaggedQuizList(quizzes, onQuizSelectCallback, allProgre
 }
 
 
-export function displayQuestion(question, currentIndex, totalQuestions, userAnswer, isEvaluated, voteData) {
+export function displayQuestion(question, currentIndex, totalQuestions, userAnswer, isEvaluated, voteData, quizFileName) {
     if (!question) {
         questionContainer.innerHTML = '<p>No question to display.</p>';
         return;
@@ -254,8 +261,9 @@ export function displayQuestion(question, currentIndex, totalQuestions, userAnsw
     } else {
         indicatorHtml = `<span class="unsupervised-indicator" title="Not yet supervised or community reviewed">❗ Unsupervised</span>`;
     }
-
-    let html = `<h3>Question ${currentIndex + 1} of ${totalQuestions} ${indicatorHtml}</h3>`;
+    
+    const prettyQuizName = _prettifyFileName(quizFileName);
+    let html = `<h3>${prettyQuizName}<br>Question ${currentIndex + 1} of ${totalQuestions} ${indicatorHtml}</h3>`;
     html += questionManager.renderQuestionContent(question, userAnswer, questionContainer, currentIndex, isEvaluated);
     questionContainer.innerHTML = html;
 

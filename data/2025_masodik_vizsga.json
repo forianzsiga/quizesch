@@ -29,7 +29,7 @@
           "label": "IETF"
         }
       ],
-      "text": "Az Ethernet címek első 3 bájtját az {c1} osztja ki a gyártók számára.",
+      "text": "Az Ethernet címek első 3 bájtját az [c1] osztja ki a gyártók számára.",
       "ID": 1,
       "supervised": "A diák válasza 'OSI' volt, ami helytelen. A helyes válasz: Az Ethernet címek első 3 bájtját az [IEEE] osztja ki a gyártók számára."
     },
@@ -97,7 +97,7 @@
           "label": "proxy"
         }
       ],
-      "text": "Az FTP működése során a kliens egy üzenetet küld a(z) {c10}, amelyben saját {c12} és egy {c11} is megadja. Ennek hatására egy új kapcsolat jön létre. Ezt nevezzük {c7} kapcsolatfelépítési módnak. A kapcsolatfelépítés módjának megnevezése a {c4} viselkedését tükrözi.",
+      "text": "Az FTP működése során a kliens egy üzenetet küld a(z) [c10], amelyben saját [c12] és egy [c11] is megadja. Ennek hatására egy új kapcsolat jön létre. Ezt nevezzük [c7] kapcsolatfelépítési módnak. A kapcsolatfelépítés módjának megnevezése a [c4] viselkedését tükrözi.",
       "ID": 2,
       "supervised": "A diák a 'kapcsolatfelépítési módnak' a 'passzív' választ adta, ami helytelen. A helyes válasz [aktív]."
     },
@@ -264,7 +264,7 @@
           "label": "254"
         }
       ],
-      "text": "A 10.10.0.0/22 hálózatban a router a legkisebb kiosztható IP-címet kapta. Adja meg a router IP-címét, a gépeknek kiosztható IP-címek tartományát és a broadcast címet!\nEgészítse ki az egyes címeket:\nBroadcast cím: 10.10.{c3}.{c255}\nRouter címe: 10.10.{c0}.{c1}\n1. számítógép: 10.10.{c0}.{c2}\nutolsó számítógép: 10.10.{c3}.{c254}\nAdja meg a számítógépeknek kiosztható IP-címek számát is: {c1021}",
+      "text": "A 10.10.0.0/22 hálózatban a router a legkisebb kiosztható IP-címet kapta. Adja meg a router IP-címét, a gépeknek kiosztható IP-címek tartományát és a broadcast címet!\nEgészítse ki az egyes címeket:\nBroadcast cím: 10.10.[c3].[c255]\nRouter címe: 10.10.[c0].[c1]\n1. számítógép: 10.10.[c0].[c2]\nutolsó számítógép: 10.10.[c3].[c254]\nAdja meg a számítógépeknek kiosztható IP-címek számát is: [c1021]",
       "ID": 5,
       "supervised": "Helytelen válaszok: A broadcast és az utolsó számítógép címében a harmadik oktett [3] (nem 63). A kiosztható címek száma 2^10 - 2 = 1022. Ha a kérdés a routeren kívüli gépekre vonatkozik, akkor 1021. A diák válasza [16384] helytelen, a helyes [1021]."
     },
@@ -365,7 +365,7 @@
           "label": "unicast"
         }
       ],
-      "text": "Az IPv6 protokollban nincs {c3} címzés, helyette a(z) {c5} és anycast címzési módokat alkalmazza a különböző típusú kommunikációhoz.",
+      "text": "Az IPv6 protokollban nincs [c3] címzés, helyette a(z) [c5] és anycast címzési módokat alkalmazza a különböző típusú kommunikációhoz.",
       "ID": 10,
       "supervised": "Helyes válasz."
     },
@@ -477,7 +477,7 @@
           "label": "1000 Hz"
         }
       ],
-      "text": "Az emberi fül által hallható legmélyebb hang frekvenciája kb. {c6}.\nAz emberi fül által hallható legmagasabb hang frekvenciája kb. {c5}.\nA hagyományos telefonhálózatokban átvitt legnagyobb frekvencia {c7}.\nAz emberi beszédhangban lévő legnagyobb frekvencia kb. {c3}.\nAz audio CD-kben használt PCM-ben a mintavételezési frekvencia kb. {c1}.",
+      "text": "Az emberi fül által hallható legmélyebb hang frekvenciája kb. [c6].\nAz emberi fül által hallható legmagasabb hang frekvenciája kb. [c5].\nA hagyományos telefonhálózatokban átvitt legnagyobb frekvencia [c7].\nAz emberi beszédhangban lévő legnagyobb frekvencia kb. [c3].\nAz audio CD-kben használt PCM-ben a mintavételezési frekvencia kb. [c1].",
       "ID": 12,
       "supervised": "Helyes válasz."
     },
@@ -553,7 +553,7 @@
           "label": "HSPA+"
         }
       ],
-      "text": "Adjon példát mobiltelefon-hálózatok generációira!\nEgy tipikus 1G rendszer: {c12}\nEgy tipikus 2,5G rendszer: {c6}\nEgy tipikus 3G rendszer: {c16}\nEgy tipikus 3,5G rendszer: {c5}\nEgy tipikus 4G rendszer: {c14}",
+      "text": "Adjon példát mobiltelefon-hálózatok generációira!\nEgy tipikus 1G rendszer: [c12]\nEgy tipikus 2,5G rendszer: [c6]\nEgy tipikus 3G rendszer: [c16]\nEgy tipikus 3,5G rendszer: [c5]\nEgy tipikus 4G rendszer: [c14]",
       "ID": 13,
       "supervised": "Helytelen válaszok: 1G: [NMT], 2.5G: [GSM/GPRS], 3G: [UMTS], 3.5G: [HSPA]."
     },
@@ -605,7 +605,7 @@
           "label": "PCR"
         }
       ],
-      "text": "MPEG2-TS-ben:\n- az egyes programokhoz tartozó elemi folyamok csomagazonosítóit tartalmazó tábla neve {c1}.\n- a transport streamben továbbított csatornák azonosítóit tartalmazó tábla neve {c6}.\nEgy MPEG2-TS-ben {c10} program lehet.\nEgy programban {c10} elemi folyam lehet.\nEgy MPEG2-TS-hez logikailag {c3} PAT tartozik.",
+      "text": "MPEG2-TS-ben:\n- az egyes programokhoz tartozó elemi folyamok csomagazonosítóit tartalmazó tábla neve [c1].\n- a transport streamben továbbított csatornák azonosítóit tartalmazó tábla neve [c6].\nEgy MPEG2-TS-ben [c10] program lehet.\nEgy programban [c10] elemi folyam lehet.\nEgy MPEG2-TS-hez logikailag [c3] PAT tartozik.",
       "ID": 14,
       "supervised": "Helytelen válaszok: az első tábla neve [PMT], a másodiké [PAT]. Logikailag [egy] PAT tartozik a TS-hez."
     },
@@ -677,7 +677,7 @@
           "label": "nyílt"
         }
       ],
-      "text": "Telefonhálózatokban a {c2} számozási rendszerben nem kell mindig a belföldi rendeltetési számot tárcsázni.\nA {c2} számozási rendszerű hálózatokban egy földrajzi körzeten belüli hívás esetén rövidebb lehet a tárcsázott szám.\nA {c1} számozási rendszerű hálózatokban egyszerűbb, egyértelműbb egy telefonszám megadása és felhívása.\nMa Magyarországon a vezetéses telefonhálózatok számozási rendszere {c2}.\nMa Magyarországon a mobiltelefon-hálózatok számozási rendszere {c1}.",
+      "text": "Telefonhálózatokban a [c2] számozási rendszerben nem kell mindig a belföldi rendeltetési számot tárcsázni.\nA [c2] számozási rendszerű hálózatokban egy földrajzi körzeten belüli hívás esetén rövidebb lehet a tárcsázott szám.\nA [c1] számozási rendszerű hálózatokban egyszerűbb, egyértelműbb egy telefonszám megadása és felhívása.\nMa Magyarországon a vezetéses telefonhálózatok számozási rendszere [c2].\nMa Magyarországon a mobiltelefon-hálózatok számozási rendszere [c1].",
       "ID": 16,
       "supervised": "Több hiba. A helyes válaszok sorrendben: nyílt, nyílt, zárt, nyílt, zárt."
     },
