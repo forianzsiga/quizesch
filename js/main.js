@@ -13,12 +13,14 @@ window.quizServiceInstance = quizService;
 let taggedQuizzes = [];
 let untaggedQuizzes = [];
 let activeFilters = { subject: [], type: [], year: [] }; // To store current filter state
+let allQuizProgress = {}; // To store progress for all quizzes
 
 document.addEventListener('DOMContentLoaded', () => {
     ui.initDOMReferences();
 
     async function initializeApp() {
         try {
+            allQuizProgress = storageService.loadAllProgress();
             const manifest = await apiService.fetchQuizList(QUIZ_MANIFEST_ENDPOINT);
             const allQuizzes = manifest.quizzes || [];
 
@@ -38,10 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 availableTags[key] = [...availableTags[key]].sort();
             });
 
-
             ui.displayFilters(availableTags, handleFilterChange);
-            ui.displayQuizList(taggedQuizzes, handleQuizSelection);
-            ui.displayUntaggedQuizList(untaggedQuizzes, handleQuizSelection);
+            ui.displayQuizList(taggedQuizzes, handleQuizSelection, allQuizProgress);
+            ui.displayUntaggedQuizList(untaggedQuizzes, handleQuizSelection, allQuizProgress);
+            ui.showQuizList(); // Ensure the list is shown and quiz view is hidden initially
 
         } catch (error) {
             console.error('Error initializing app:', error);
@@ -58,24 +60,25 @@ document.addEventListener('DOMContentLoaded', () => {
                    (activeFilters.year.length === 0 || activeFilters.year.includes(String(tags.year)));
         });
         // Only re-render the filtered list
-        ui.displayQuizList(filteredQuizzes, handleQuizSelection);
+        ui.displayQuizList(filteredQuizzes, handleQuizSelection, allQuizProgress);
     }
 
     async function handleQuizSelection(fileName) {
         try {
             ui.showLoadingState();
+            ui.hideQuizList(); // Hide list view first
+            ui.showQuizContainer(); // Then show quiz view
+
             const quizData = await apiService.fetchQuizData(`${DATA_DIRECTORY}/data/${fileName}`);
             quizService.loadQuiz(quizData, fileName);
 
             const questionCount = Array.isArray(quizData) ? quizData.length : (quizData.questions || []).length;
-            const persistedState = storageService.loadQuizState(quizService.getCurrentQuizFile(), questionCount);
+            const persistedState = storageService.loadQuizProgress(quizService.getCurrentQuizFile(), questionCount);
             if (persistedState) {
                 quizService.applyPersistedState(persistedState);
             }
 
             await renderCurrentQuizView();
-            ui.hideQuizList();
-            ui.showQuizContainer();
         } catch (error) {
             console.error('Error loading quiz:', error);
             ui.displayQuizLoadError(error.message, fileName);
@@ -139,14 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
     ui.prevBtn.addEventListener('click', async () => {
         if (quizService.goToPreviousQuestion()) {
             await renderCurrentQuizView();
-            storageService.saveQuizState(quizService.getFullState());
+            storageService.saveQuizProgress(quizService.getFullState());
         }
     });
 
     ui.nextBtn.addEventListener('click', async () => {
         if (quizService.goToNextQuestion()) {
             await renderCurrentQuizView();
-            storageService.saveQuizState(quizService.getFullState());
+            storageService.saveQuizProgress(quizService.getFullState());
         }
     });
 
@@ -164,26 +167,42 @@ document.addEventListener('DOMContentLoaded', () => {
             quizService.getEvaluatedQuestions(),
             async (index) => { quizService.setCurrentQuestionIndex(index); await renderCurrentQuizView(); }
         );
-        storageService.saveQuizState(quizService.getFullState());
+        storageService.saveQuizProgress(quizService.getFullState());
     });
 
     ui.submitBtn.addEventListener('click', () => {
         quizService.calculateFinalScore();
         ui.displayResults(quizService.getScore(), quizService.getTotalQuestions());
-        storageService.clearQuizState();
+        storageService.saveQuizProgress(quizService.getFullState()); // Save final state
     });
 
     ui.resetBtn.addEventListener('click', async () => {
-        quizService.resetCurrentQuestionAnswer();
-        await renderCurrentQuizView();
-        storageService.saveQuizState(quizService.getFullState());
+        const currentFile = quizService.getCurrentQuizFile();
+        if (!currentFile) return;
+    
+        if (confirm('Are you sure you want to clear all your answers and progress for this quiz? This cannot be undone.')) {
+            // Clear from persistent storage
+            storageService.clearQuizProgress(currentFile);
+            // Reset the in-memory state in the service
+            quizService.resetFullQuiz();
+            // Re-render the view, which will now be at the first question with no answers
+            await renderCurrentQuizView();
+        }
     });
 
     ui.shuffleToggleBtn.addEventListener('click', async () => {
         const isShuffled = quizService.toggleShuffle();
         ui.updateShuffleButtonText(isShuffled);
         await renderCurrentQuizView();
-        storageService.saveQuizState(quizService.getFullState());
+        storageService.saveQuizProgress(quizService.getFullState());
+    });
+    
+    ui.backToMenuBtn.addEventListener('click', () => {
+        if (quizService.areQuestionsLoaded()) {
+            storageService.saveQuizProgress(quizService.getFullState());
+        }
+        quizService.unloadQuiz();
+        initializeApp(); // Re-run to refresh list with latest progress
     });
 
     document.addEventListener('answerChanged', (event) => {
@@ -191,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
         quizService.saveAnswer(questionIndex, answer); // Removed questionType, saveAnswer doesn't use it
         ui.enableEvaluateButton();
         ui.clearEvaluationStylesForCurrentQuestion(); // Clear styles for the current question
-        storageService.saveQuizState(quizService.getFullState());
+        storageService.saveQuizProgress(quizService.getFullState());
         ui.updateProgressPanel( // Re-call with current args
             quizService.getQuestions(),
             quizService.getCurrentQuestionIndex(),
