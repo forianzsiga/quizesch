@@ -429,7 +429,7 @@
           "label": "kHz"
         }
       ],
-      "text": "Egy rádióadó által kibocsátott elektromágneses hullámnak a hullámhossza 300 méter. A frekvenciája ekkor kb. {c_1} {c_MHz}. A jel periódusideje kb. {c_1} {c_us}.",
+      "text": "Egy rádióadó által kibocsátott elektromágneses hullámnak a hullámhossza 300 méter. A frekvenciája ekkor kb. [c_1] [c_MHz]. A jel periódusideje kb. [c_1] [c_us].",
       "ID": 11,
       "supervised": "Helyes válasz."
     },
@@ -661,7 +661,7 @@
           "label": "1.25"
         }
       ],
-      "text": "Egyenletesen szeretnénk kvantálni (azaz lineárisan, nem logaritmikusan) a 0 V ... +2 V intervallumon. 2 biten tároljuk a mintákat. Ekkor {c_4a} kvantálási szintünk lesz.\nAz előző alkérdés folytatása: a minták tehát a 0 V... 2 V tartományból származhatnak, 2 biten tároljuk őket a kvantálás után, és minden tartományt a közepével reprezentálunk. Milyen értékekkel fogjuk reprezentálni a következő mért értékeket?\n0.3 V: {c_0_25} V\n1.61 V: {c_1_75} V",
+      "text": "Egyenletesen szeretnénk kvantálni (azaz lineárisan, nem logaritmikusan) a 0 V ... +2 V intervallumon. 2 biten tároljuk a mintákat. Ekkor [c_4a] kvantálási szintünk lesz.\nAz előző alkérdés folytatása: a minták tehát a 0 V... 2 V tartományból származhatnak, 2 biten tároljuk őket a kvantálás után, és minden tartományt a közepével reprezentálunk. Milyen értékekkel fogjuk reprezentálni a következő mért értékeket?\n0.3 V: [c_0_25] V\n1.61 V: [c_1_75] V",
       "ID": 15,
       "supervised": "A második rész helytelen. A kvantálási szintek [0, 0.5), [0.5, 1.0), [1.0, 1.5), [1.5, 2.0]. A reprezentatív értékek a közepek: 0.25, 0.75, 1.25, 1.75. Így 0.3V-hoz [0.25]V, 1.61V-hoz [1.75]V tartozik."
     },

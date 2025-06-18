@@ -54,7 +54,7 @@ export function addInputListeners(questionContainer, questionIndex, onAnswerChan
         const userAnswer = window.quizServiceInstance.getUserAnswerForCurrentQuestion();
         if (questionData && questionData.question_type === 'drag_n_drop') { // Ensure it's for D&D
              populateDropTargets(questionContainer, questionData, userAnswer);
-             updateDraggableVisibility(questionContainer);
+             // updateDraggableVisibility(questionContainer); // Make unconsumable
         }
     } else {
         console.warn("D&D: quizServiceInstance not found on window for initial population.");
@@ -121,7 +121,7 @@ function dropHandler(ev, questionContainer, questionIndex, onAnswerChangeCallbac
         }
         targetElement.insertBefore(labelTextNode, feedbackSpan);
         targetElement.setAttribute('data-dropped-item', draggedChoiceIdentifier);
-        draggedElementOriginal.style.display = 'none';
+        // draggedElementOriginal.style.display = 'none'; // Make unconsumable
     } else {
         console.warn("D&D: Original draggable element not found for drop:", currentDragData.id);
     }
@@ -132,7 +132,7 @@ function dropHandler(ev, questionContainer, questionIndex, onAnswerChangeCallbac
     const newAnswerMap = getAnswer(questionContainer, questionIndex);
     onAnswerChangeCallback(newAnswerMap); // This will trigger 'answerChanged' event in questionManager
 
-    updateDraggableVisibility(questionContainer);
+    // updateDraggableVisibility(questionContainer); // Make unconsumable
 }
 
 export function getAnswer(questionContainer, questionIndex) {
@@ -236,6 +236,7 @@ export function populateDropTargets(questionContainer, question, userAnswer) {
     });
 }
 
+/* // Make unconsumable
 export function updateDraggableVisibility(questionContainer) {
     const placedItemIdentifiers = new Set();
     questionContainer.querySelectorAll('.drop-target[data-dropped-item]').forEach(target => {
@@ -250,6 +251,7 @@ export function updateDraggableVisibility(questionContainer) {
         }
     });
 }
+*/
 
 function getCorrectDropMapping(question) {
     const mapping = {};
