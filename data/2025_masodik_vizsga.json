@@ -160,7 +160,7 @@
           "label": "20"
         }
       ],
-      "text": "A 3. mérésen megismerkedett a \"solicited node multicast address\" képzésével. Képezzen ilyen címet, ha a kérdéses IPv6-cím: 2001:db8::1:2. (Kérjük, hogy a helyes kiértékelés érdekében minden 16 bites csoportot 4 db hexadecimális számjeggyel írjon le!)\nA képzett solicited node multicast address: ff02:0:0:0:0:1:ff{c_01}:{c_00}{c_02}.",
+      "text": "A 3. mérésen megismerkedett a \"solicited node multicast address\" képzésével. Képezzen ilyen címet, ha a kérdéses IPv6-cím: 2001:db8::1:2. (Kérjük, hogy a helyes kiértékelés érdekében minden 16 bites csoportot 4 db hexadecimális számjeggyel írjon le!)\nA képzett solicited node multicast address: ff02:0:0:0:0:1:ff[c_01]:[c_00][c_02].",
       "ID": 4,
       "supervised": "Helytelen válasz. A helyes cím a 2001:db8::1:2 unicast címből ff02::1:ff01:0002. A beírandó részek tehát: [01], [00], [02]."
     },
