@@ -3,11 +3,11 @@ import * as questionManager from './questionManager.js';
 import { DATA_DIRECTORY } from './config.js';
 import * as apiService from './apiService.js';
 
-export let questionContainer, quizContainer, prevBtn, nextBtn, submitBtn, resultContainer,
+export let questionContainer, quizContainer, prevBtn, nextBtn, resultContainer,
            scoreElement, evaluateBtn, resetBtn, shuffleToggleBtn, quizListContainer,
            quizListElement, progressPanel, navigationControls, quizSelectionArea,
            filterPanel, filtersContainer, untaggedQuizContainer, untaggedQuizListElement,
-           mainBannerContainer, backToMenuBtn, inQuizWrapper, mainViewWrapper;
+           mainBannerContainer, backToMenuBtn, inQuizWrapper, mainViewWrapper, clearAllBtn;
 
 // Helper to format file names for display
 function _prettifyFileName(fileName) {
@@ -24,7 +24,6 @@ export function initDOMReferences() {
     quizContainer = document.getElementById('quiz-container');
     prevBtn = document.getElementById('prev-btn');
     nextBtn = document.getElementById('next-btn');
-    submitBtn = document.getElementById('submit-btn');
     resultContainer = document.getElementById('result-container');
     scoreElement = document.getElementById('score');
     evaluateBtn = document.getElementById('evaluate-btn');
@@ -43,6 +42,7 @@ export function initDOMReferences() {
     backToMenuBtn = document.getElementById('back-to-menu-btn');
     inQuizWrapper = document.getElementById('in-quiz-wrapper');
     mainViewWrapper = document.getElementById('main-view-wrapper');
+    clearAllBtn = document.getElementById('clear-all-btn');
 }
 
 export function displayFilters(availableTags, onFilterChangeCallback) {
@@ -263,7 +263,7 @@ export function displayQuestion(question, currentIndex, totalQuestions, userAnsw
     }
     
     const prettyQuizName = _prettifyFileName(quizFileName);
-    let html = `<h3>${prettyQuizName}<br>Question ${currentIndex + 1} of ${totalQuestions} ${indicatorHtml}</h3>`;
+    let html = `<h3>${prettyQuizName}<br><span style="font-size: 0.8em; color: #666;">Question ${currentIndex + 1} of ${totalQuestions} ${indicatorHtml}</span></h3>`;
     html += questionManager.renderQuestionContent(question, userAnswer, questionContainer, currentIndex, isEvaluated);
     questionContainer.innerHTML = html;
 
@@ -325,9 +325,9 @@ export function updateButtonStates(currentIndex, totalQuestions, questionsLoaded
         if (navigationControls) navigationControls.style.display = 'none';
         prevBtn.disabled = true;
         nextBtn.disabled = true;
-        submitBtn.style.display = 'none';
         evaluateBtn.style.display = 'none';
         resetBtn.disabled = true;
+        clearAllBtn.disabled = true;
         shuffleToggleBtn.disabled = true;
         return;
     }
@@ -337,10 +337,10 @@ export function updateButtonStates(currentIndex, totalQuestions, questionsLoaded
 
     prevBtn.disabled = currentIndex === 0;
     nextBtn.disabled = onLastQuestion;
-    submitBtn.style.display = onLastQuestion ? 'inline-block' : 'none';
     nextBtn.style.display = !onLastQuestion ? 'inline-block' : 'none';
     evaluateBtn.style.display = !onLastQuestion ? 'inline-block' : 'none';
     resetBtn.disabled = false;
+    clearAllBtn.disabled = false;
     shuffleToggleBtn.disabled = false;
 }
 

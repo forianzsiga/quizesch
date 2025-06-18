@@ -171,13 +171,15 @@ document.addEventListener('DOMContentLoaded', () => {
         storageService.saveQuizProgress(quizService.getFullState());
     });
 
-    ui.submitBtn.addEventListener('click', () => {
-        quizService.calculateFinalScore();
-        ui.displayResults(quizService.getScore(), quizService.getTotalQuestions());
-        storageService.saveQuizProgress(quizService.getFullState()); // Save final state
+    // "Clear Answer" button for the current question
+    ui.resetBtn.addEventListener('click', async () => {
+        quizService.resetCurrentQuestionAnswer();
+        await renderCurrentQuizView();
+        storageService.saveQuizProgress(quizService.getFullState());
     });
 
-    ui.resetBtn.addEventListener('click', async () => {
+    // New "Clear All Progress" button for the entire quiz
+    ui.clearAllBtn.addEventListener('click', async () => {
         const currentFile = quizService.getCurrentQuizFile();
         if (!currentFile) return;
     
@@ -235,6 +237,36 @@ document.addEventListener('DOMContentLoaded', () => {
             if (quizFile === quizService.getCurrentQuizFile() && questionIndex === quizService.getCurrentQuestionIndex()) {
                  await renderCurrentQuizView(); // Only re-render if it's the current view
             }
+        }
+    });
+
+    // Keyboard shortcuts listener
+    document.addEventListener('keydown', (event) => {
+        // Only fire shortcuts if the quiz view is active
+        if (ui.inQuizWrapper.style.display !== 'flex') {
+            return;
+        }
+
+        // Don't fire shortcuts if user is typing in an input
+        if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+            return;
+        }
+
+        switch (event.key.toLowerCase()) {
+            case 'arrowleft':
+                event.preventDefault(); // Prevent browser scrolling
+                ui.prevBtn.click();
+                break;
+            case 'arrowright':
+                event.preventDefault(); // Prevent browser scrolling
+                ui.nextBtn.click();
+                break;
+            case 'e':
+                ui.evaluateBtn.click();
+                break;
+            case 'c':
+                ui.resetBtn.click();
+                break;
         }
     });
 
