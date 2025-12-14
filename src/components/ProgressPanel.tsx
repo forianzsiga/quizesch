@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Question } from '../types';
-import { isAnswerCorrect } from '../hooks/useQuiz'; // Or utils if I moved it
+import { isAnswerCorrect } from '../hooks/useQuiz';
 
 interface Props {
     questions: Question[];
@@ -11,67 +11,46 @@ interface Props {
 }
 
 const ProgressPanel: React.FC<Props> = ({ questions, currentQuestionIndex, userAnswers, evaluatedQuestions, onNavigate }) => {
-    
-    // Calculate stats for display
-    let answered = 0;
-    let correct = 0;
-    let incorrect = 0;
-
-    evaluatedQuestions.forEach((isEval, idx) => {
-        if (isEval) {
-            if (isAnswerCorrect(questions[idx], userAnswers[idx])) {
-                correct++;
-            } else {
-                incorrect++;
-            }
-        }
-        // Count answered roughly? Or strictly? Original: "userAnswers[i] !== null" logic
-        // But userAnswers can be empty obj for DnD/Fill.
-        // Simplified:
-        const ans = userAnswers[idx];
-        if (ans && (Array.isArray(ans) ? ans.length > 0 : Object.keys(ans).length > 0)) {
-            answered++;
-        }
-    });
-
     return (
-        <div id="progress-panel">
-            <h3>Progress</h3>
-            <div className="progress-stats">
-                <div>Answered: {answered} / {questions.length}</div>
-                <div>Correct: <span style={{color: 'var(--success-color)'}}>{correct}</span></div>
-                <div>Incorrect: <span style={{color: 'var(--error-color)'}}>{incorrect}</span></div>
-            </div>
-            <div id="progress-grid">
+        <div id="progress-panel" style={{display: 'block', backgroundColor: 'rgb(255, 255, 255)', borderRadius: '8px', boxShadow: 'rgba(0, 0, 0, 0.1) 0px 2px 4px', padding: '16px', margin: '16px'}}>
+            <h3 style={{marginTop: 0}}>Progress</h3>
+            <ul style={{paddingLeft: 0, listStyle: 'none'}}>
                 {questions.map((q, idx) => {
-                    let className = 'progress-item';
-                    if (idx === currentQuestionIndex) className += ' active';
-                    
+                    let dotClass = 'dot-neutral';
+                    let statusTitle = 'Not answered / Not evaluated';
                     const isEval = evaluatedQuestions[idx];
                     const ans = userAnswers[idx];
-                    const hasAnswer = ans && (Array.isArray(ans) ? ans.length > 0 : Object.keys(ans).length > 0);
+                    // Check if there is a "meaningful" answer (not null/empty)
+                    const hasAnswer = ans !== null && ans !== undefined && (typeof ans !== 'object' || (Array.isArray(ans) ? ans.length > 0 : Object.keys(ans).length > 0));
 
                     if (isEval) {
                          if (isAnswerCorrect(q, ans)) {
-                             className += ' correct';
+                             dotClass = 'dot-correct';
+                             statusTitle = 'Correct';
                          } else {
-                             className += ' incorrect';
+                             dotClass = 'dot-incorrect';
+                             statusTitle = 'Incorrect';
                          }
                     } else if (hasAnswer) {
-                        className += ' answered';
+                        dotClass = 'dot-answered';
+                        statusTitle = 'Answered, not evaluated';
                     }
 
+                    const isCurrent = idx === currentQuestionIndex;
+
                     return (
-                        <div 
+                        <li 
                             key={idx} 
-                            className={className} 
+                            style={{marginBottom: '6px', cursor: 'pointer', fontWeight: isCurrent ? 'bold' : 'normal'}}
+                            data-idx={idx}
+                            title={`${statusTitle} - Go to question ${idx + 1}`}
                             onClick={() => onNavigate(idx)}
                         >
-                            {idx + 1}
-                        </div>
+                            <span className={`progress-dot ${dotClass}`}></span>Question {idx + 1}
+                        </li>
                     );
                 })}
-            </div>
+            </ul>
         </div>
     );
 };

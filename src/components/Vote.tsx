@@ -23,29 +23,43 @@ const Vote: React.FC<Props> = ({ quizFile, questionIndex }) => {
         return () => { mounted = false; };
     }, [quizFile, questionIndex]);
 
-    const handleVote = async () => {
+    const handleVote = async (type: 'trust' | 'distrust') => {
+        if (loading) return;
         setLoading(true);
-        const newData = await recordVote(quizFile, questionIndex, 'trust');
+        const newData = await recordVote(quizFile, questionIndex, type);
         if (newData) {
             setVoteData(newData);
         }
         setLoading(false);
     };
 
+    const getScoreText = () => {
+        if (voteData.totalVotes > 0) {
+            return `Trust: ${voteData.score}% (${voteData.positiveVotes}/${voteData.totalVotes} votes). `;
+        }
+        return "Trust: Be the first to rate! ";
+    };
+
     return (
-        <div className="vote-container">
-            <span>Is this answer correct?</span>
+        <div className="vote-ui-container">
+            <span className="vote-score-text">{getScoreText()}</span>
             <button 
-                className={`vote-btn vote-trust ${voteData.userVote === 'trust' ? 'active' : ''}`}
-                onClick={handleVote}
-                title="Trust this answer"
+                className={`vote-btn trust ${voteData.userVote === 'trust' ? 'selected' : ''}`}
+                onClick={() => handleVote('trust')}
                 disabled={loading}
             >
-                👍
+                👍 Trustworthy
             </button>
-            <span className="vote-score">
-                Trust Score: <strong>{voteData.score}%</strong> ({voteData.totalVotes} votes)
-            </span>
+            <button 
+                className={`vote-btn distrust ${voteData.userVote === 'distrust' ? 'selected' : ''}`}
+                onClick={() => handleVote('distrust')}
+                disabled={loading}
+            >
+                👎 Needs Review
+            </button>
+            <div className="vote-verification-info">
+                Questions with over 10 votes and 70% trustworthiness are considered Human Verified. Powered by Firebase 🔥
+            </div>
         </div>
     );
 };

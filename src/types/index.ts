@@ -5,7 +5,7 @@ export interface Tag {
 }
 
 export interface QuizManifestEntry {
-  filename: string;
+  fileName: string;
   tags: Tag;
 }
 
@@ -62,7 +62,7 @@ export interface UserVote {
   positiveVotes: number;
   totalVotes: number;
   score: number;
-  userVote: 'trust' | null;
+  userVote: 'trust' | 'distrust' | null;
 }
 
 export interface QuizProgress {

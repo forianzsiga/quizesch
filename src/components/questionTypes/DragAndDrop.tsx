@@ -50,7 +50,7 @@ const DragAndDrop: React.FC<Props> = ({ question, userAnswer, isEvaluated, onAns
     const renderContent = () => {
         const parts: React.ReactNode[] = [];
         let text = question.text || "";
-        const regex = /.*\[(.*?)\].*/g; // Corrected regex to match the intended pattern
+        const regex = /\[(.*?)\]/g; 
         let lastIndex = 0;
         let match;
 

@@ -32,12 +32,7 @@ const FillTheBlanks: React.FC<Props> = ({ question, userAnswer, isEvaluated, onA
         
         // We will split the text by placeholders
         // Regex to match [identifier]
-        // We need to handle special chars in identifiers for regex
-        // Construct a giant regex ORing all identifiers?
-        // Or simpler: iterate through text and find matches?
-        
-        // Let's use a regex that matches [anything] and check if it's a valid blank identifier
-        const regex = /\\\[(.*?)\\\]/g;
+        const regex = /\[(.*?)\]/g;
         let lastIndex = 0;
         let match;
 

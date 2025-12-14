@@ -34,7 +34,7 @@ function getFirestoreQuestionId(quizFileName: string, questionIndex: number) {
     return `${safeQuizFileName}_q_${questionIndex}`;
 }
 
-export async function recordVote(quizFileName: string, questionIndex: number, voteType: 'trust') {
+export async function recordVote(quizFileName: string, questionIndex: number, voteType: 'trust' | 'distrust') {
     if (!currentFirebaseUser) {
         alert("Authentication pending. Please try again in a moment.");
         console.warn("Attempted to vote without firebase user.");

@@ -1,0 +1,862 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://forianzsiga.github.io/quizesch/
+Subject: Quizesch
+Date: Sun, 14 Dec 2025 01:29:19 +0100
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--hvpSD9OZhLzOOQZfj4kYUIYrnXctob83Ee7qzPKK3D----"
+
+
+------MultipartBoundary--hvpSD9OZhLzOOQZfj4kYUIYrnXctob83Ee7qzPKK3D----
+Content-Type: text/html
+Content-ID: <frame-2CDD153AEC3BE4FF0FEF9611DADB8784@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://forianzsiga.github.io/quizesch/
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <title>Quizesch</title>
+    <link rel=3D"stylesheet" href=3D"https://forianzsiga.github.io/quizesch=
+/style.css">
+</head>
+<body>
+    <!-- Wrapper for the In-Quiz View -->
+    <div id=3D"in-quiz-wrapper" style=3D"display: flex;">
+        <div id=3D"quiz-container">
+            <button id=3D"back-to-menu-btn">=E2=86=90 Back to Quiz List</bu=
+tton>
+            <img src=3D"https://forianzsiga.github.io/quizesch/quizesch-ban=
+ner.svg" alt=3D"Quizesch Banner" style=3D"width: 50%; max-width: 600px; mar=
+gin: 20px auto; display: block;" width=3D"429" height=3D"87">
+            <div id=3D"question-container"><h3>(2020) ZH<br><span style=3D"=
+font-size: 0.8em; color: #666;">Question 1 of 30 <span class=3D"unsupervise=
+d-indicator" title=3D"Not yet supervised or community reviewed">=E2=9D=97 U=
+nsupervised</span></span></h3><p>A besz=C3=A9d=C3=A1tvitelben a nagy k=C3=
+=A9sletet=C3=A9s zavar=C3=B3 a besz=C3=A9d=C3=A1tvitelben. Melyik =C3=A1ll=
+=C3=ADt=C3=A1s igaz agyir=C3=A1ny=C3=BA, sz=C3=A1jt=C3=B3l f=C3=BClig tart=
+=C3=B3 k=C3=A9sleltet=C3=A9sre?</p><ul style=3D"list-style: none; padding: =
+0;">
+                <li data-option-key=3D"a">
+                    <label>
+                        <input type=3D"radio" name=3D"q0_option" value=3D"a=
+" disabled=3D"">
+                        A: A felhaszn=C3=A1l=C3=B3k t=C3=B6bb mint fel=C3=
+=A9t zavarja az 500 nanoszekundumos k=C3=A9sletet=C3=A9s
+                    </label>
+                </li>
+                <li data-option-key=3D"b" class=3D"evaluation-missed">
+                    <label>
+                        <input type=3D"radio" name=3D"q0_option" value=3D"b=
+" disabled=3D"">
+                        B: 150 ms (millisec.) alatt a legt=C3=B6bb felhaszn=
+=C3=A1l=C3=B3 sz=C3=A1m=C3=A1ra m=C3=A9g nem zavar=C3=B3 a k=C3=A9sletet=C3=
+=A9s
+                    </label>
+                </li>
+                <li data-option-key=3D"c" class=3D"evaluation-incorrect">
+                    <label>
+                        <input type=3D"radio" name=3D"q0_option" value=3D"c=
+" checked=3D"" disabled=3D"">
+                        C: 500 ms alatt a legt=C3=B6bb felhaszn=C3=A1l=C3=
+=B3 sz=C3=A1m=C3=A1ra m=C3=A9g nem zavar=C3=B3 a k=C3=A9sletet=C3=A9s
+                    </label>
+                </li>
+                <li data-option-key=3D"d">
+                    <label>
+                        <input type=3D"radio" name=3D"q0_option" value=3D"d=
+" disabled=3D"">
+                        D: T=C3=B6bb mint 5 percet k=C3=A9sni illetlens=C3=
+=A9g, m=C3=A9g egy hanghull=C3=A1mnak is.
+                    </label>
+                </li>
+                <li data-option-key=3D"e">
+                    <label>
+                        <input type=3D"radio" name=3D"q0_option" value=3D"e=
+" disabled=3D"">
+                        E: A felhaszn=C3=A1l=C3=B3k t=C3=B6bb mint fel=C3=
+=A9t zavarja a 500 mikroszekundumos k=C3=A9sletet=C3=A9s
+                    </label>
+                </li>
+                <li data-option-key=3D"f">
+                    <label>
+                        <input type=3D"radio" name=3D"q0_option" value=3D"f=
+" disabled=3D"">
+                        F: 1,5-2 s alatt a legt=C3=B6bb felhaszn=C3=A1l=C3=
+=B3 sz=C3=A1m=C3=A1ra m=C3=A9g nem zavar=C3=B3 a k=C3=A9sletet=C3=A9s
+                    </label>
+                </li></ul><div class=3D"vote-ui-container"><span class=3D"v=
+ote-score-text">Trust: 50% (1/2 votes). </span><button class=3D"vote-btn tr=
+ust selected">=F0=9F=91=8D Trustworthy</button><button class=3D"vote-btn di=
+strust">=F0=9F=91=8E Needs Review</button><div class=3D"vote-verification-i=
+nfo">Questions with over 10 votes and 70% trustworthiness are considered Hu=
+man Verified. Powered by Firebase =F0=9F=94=A5</div></div></div>
+            <div id=3D"navigation-controls" style=3D"display: flex;">
+                <button id=3D"prev-btn" disabled=3D""><nobr>=E2=8F=AE=EF=B8=
+=8F Previous</nobr><br><span class=3D"shortcut-hint"><nobr>(left arrow)</no=
+br></span></button>
+                <button id=3D"reset-btn"><nobr>Clear =F0=9F=97=91=EF=B8=8F<=
+/nobr><br><span class=3D"shortcut-hint">(C)</span></button>
+                <button id=3D"next-btn" style=3D"display: inline-block;"><n=
+obr>Next =E2=8F=AD=EF=B8=8F</nobr><br><span class=3D"shortcut-hint"><nobr>(=
+right arrow)</nobr></span></button>
+                <button id=3D"evaluate-btn" style=3D"display: inline-block;=
+" disabled=3D""><nobr>Evaluate =F0=9F=A7=AE</nobr><br><span class=3D"shortc=
+ut-hint">(E)</span></button>
+                <button id=3D"shuffle-toggle-btn"><nobr>Shuffle Questions =
+=F0=9F=94=80</nobr><br></button>=20
+                <button id=3D"clear-all-btn"><nobr>Clear All Progress =F0=
+=9F=92=A5</nobr><br></button>
+            </div>
+            <div id=3D"result-container" style=3D"display: none;">
+                <h2>Your Score:</h2>
+                <p id=3D"score"></p>
+            </div>
+            <div id=3D"warning-message" style=3D"border: 2px solid #f39c12;=
+ background-color: #fff3cd; padding: 15px; margin-top: 50px; margin-bottom:=
+ 20px; border-radius: 8px; font-size: 12px">
+                <strong style=3D"color: #d35400;">=E2=9A=A0=EF=B8=8F Warnin=
+g:</strong> This quiz is still under construction. Data is being manually e=
+xtracted from the provided PDFs and turned into JSONs using multimodal LLM =
+prompting. This means there definitely wil be broken questions along the wa=
+y.<br><br>
+                    =F0=9F=9B=A0=EF=B8=8F Feel free to contribute to the pr=
+oject on GitHub by extending codebase or fixing questions:
+                <a href=3D"https://github.com/forianzsiga/quizesch" target=
+=3D"_blank">https://github.com/forianzsiga/quizesch</a><br><br>
+                    =F0=9F=9A=80 Upcoming features:
+                <ul style=3D"margin-top: 10px;">
+                    <li>Making progression persistent in browser</li>
+                    <li>Server-side generation of new questions via OpenAI =
+API based on past questions + merged presentation notes submitted as a PDF<=
+/li>
+                </ul>
+            </div>
+            <div id=3D"attribution-notice">
+                Made with &lt;3 by Zsigmond Forian-Szabo <br> Project is un=
+der MIT License
+            </div>
+        </div>
+        <div id=3D"progress-panel" style=3D"display: block; background-colo=
+r: rgb(255, 255, 255); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.1) 0=
+px 2px 4px; padding: 16px; margin: 16px;"><h3 style=3D"margin-top:0;">Progr=
+ess</h3><ul style=3D"padding-left:0;list-style:none;"><li style=3D"margin-b=
+ottom:6px;cursor:pointer;font-weight:bold;" data-idx=3D"0" title=3D"Incorre=
+ct - Go to question 1">
+                    <span class=3D"progress-dot dot-incorrect"></span>Quest=
+ion 1
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"1" title=3D"Not answered / Not evaluated - Go to question 2">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 2
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"2" title=3D"Not answered / Not evaluated - Go to question 3">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 3
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"3" title=3D"Not answered / Not evaluated - Go to question 4">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 4
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"4" title=3D"Not answered / Not evaluated - Go to question 5">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 5
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"5" title=3D"Not answered / Not evaluated - Go to question 6">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 6
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"6" title=3D"Not answered / Not evaluated - Go to question 7">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 7
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"7" title=3D"Not answered / Not evaluated - Go to question 8">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 8
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"8" title=3D"Not answered / Not evaluated - Go to question 9">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 9
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"9" title=3D"Not answered / Not evaluated - Go to question 10">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 10
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"10" title=3D"Not answered / Not evaluated - Go to question 11">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 11
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"11" title=3D"Not answered / Not evaluated - Go to question 12">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 12
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"12" title=3D"Not answered / Not evaluated - Go to question 13">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 13
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"13" title=3D"Not answered / Not evaluated - Go to question 14">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 14
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"14" title=3D"Not answered / Not evaluated - Go to question 15">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 15
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"15" title=3D"Not answered / Not evaluated - Go to question 16">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 16
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"16" title=3D"Not answered / Not evaluated - Go to question 17">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 17
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"17" title=3D"Not answered / Not evaluated - Go to question 18">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 18
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"18" title=3D"Not answered / Not evaluated - Go to question 19">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 19
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"19" title=3D"Not answered / Not evaluated - Go to question 20">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 20
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"20" title=3D"Not answered / Not evaluated - Go to question 21">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 21
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"21" title=3D"Not answered / Not evaluated - Go to question 22">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 22
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"22" title=3D"Not answered / Not evaluated - Go to question 23">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 23
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"23" title=3D"Not answered / Not evaluated - Go to question 24">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 24
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"24" title=3D"Not answered / Not evaluated - Go to question 25">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 25
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"25" title=3D"Not answered / Not evaluated - Go to question 26">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 26
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"26" title=3D"Not answered / Not evaluated - Go to question 27">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 27
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"27" title=3D"Not answered / Not evaluated - Go to question 28">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 28
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"28" title=3D"Not answered / Not evaluated - Go to question 29">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 29
+                 </li><li style=3D"margin-bottom:6px;cursor:pointer;" data-=
+idx=3D"29" title=3D"Not answered / Not evaluated - Go to question 30">
+                    <span class=3D"progress-dot dot-neutral"></span>Questio=
+n 30
+                 </li></ul></div>
+    </div>
+
+    <!-- Wrapper for the Main Selection View -->
+    <div id=3D"main-view-wrapper" style=3D"display: none;">
+        <div id=3D"main-banner-container">
+            <img src=3D"https://forianzsiga.github.io/quizesch/quizesch-ban=
+ner.svg" alt=3D"Quizesch Banner">
+        </div>
+
+        <div id=3D"quiz-selection-area">
+            <div id=3D"quiz-list-wrapper">
+                <div id=3D"quiz-list-container">
+                        <h2>Available Quizzes</h2>
+                        <ul id=3D"quiz-list"><li><a href=3D"https://forianz=
+siga.github.io/quizesch/#" data-file-name=3D"2020_zh.json"><div class=3D"qu=
+iz-card"><div class=3D"quiz-icon">=F0=9F=93=9A</div><div class=3D"quiz-titl=
+e">(2020) ZH</div><div class=3D"quiz-filename">2020_zh.json</div><div style=
+=3D"text-align: center;"><span class=3D"unsupervised-indicator" title=3D"Th=
+is quiz set generated from existing sources interpreted by an LLM and it wa=
+s not yet supervised by a human">=E2=9D=97 Unsupervised</span></div><div cl=
+ass=3D"progress-bar-container"><div class=3D"progress-bar progress-bar-inco=
+rrect" style=3D"width: 3.33333%;"></div><div class=3D"progress-bar progress=
+-bar-neutral" style=3D"width: 96.6667%;"></div></div></div></a></li><li><a =
+href=3D"https://forianzsiga.github.io/quizesch/#" data-file-name=3D"2021_zh=
+.json"><div class=3D"quiz-card"><div class=3D"quiz-icon">=F0=9F=93=9A</div>=
+<div class=3D"quiz-title">(2021) ZH</div><div class=3D"quiz-filename">2021_=
+zh.json</div><div style=3D"text-align: center;"><span class=3D"unsupervised=
+-indicator" title=3D"This quiz set generated from existing sources interpre=
+ted by an LLM and it was not yet supervised by a human">=E2=9D=97 Unsupervi=
+sed</span></div><div class=3D"progress-bar-container"><div class=3D"progres=
+s-bar progress-bar-neutral" style=3D"width: 100%;"></div></div></div></a></=
+li><li><a href=3D"https://forianzsiga.github.io/quizesch/#" data-file-name=
+=3D"2022_pzh.json"><div class=3D"quiz-card"><div class=3D"quiz-icon">=F0=9F=
+=93=9A</div><div class=3D"quiz-title">(2022) PZH</div><div class=3D"quiz-fi=
+lename">2022_pzh.json</div><div style=3D"text-align: center;"><span class=
+=3D"unsupervised-indicator" title=3D"This quiz set generated from existing =
+sources interpreted by an LLM and it was not yet supervised by a human">=E2=
+=9D=97 Unsupervised</span></div><div class=3D"progress-bar-container"><div =
+class=3D"progress-bar progress-bar-neutral" style=3D"width: 100%;"></div></=
+div></div></a></li><li><a href=3D"https://forianzsiga.github.io/quizesch/#"=
+ data-file-name=3D"2022_zh.json"><div class=3D"quiz-card"><div class=3D"qui=
+z-icon">=F0=9F=93=9A</div><div class=3D"quiz-title">(2022) ZH</div><div cla=
+ss=3D"quiz-filename">2022_zh.json</div><div style=3D"text-align: center;"><=
+span class=3D"unsupervised-indicator" title=3D"This quiz set generated from=
+ existing sources interpreted by an LLM and it was not yet supervised by a =
+human">=E2=9D=97 Unsupervised</span></div><div class=3D"progress-bar-contai=
+ner"><div class=3D"progress-bar progress-bar-neutral" style=3D"width: 100%;=
+"></div></div></div></a></li><li><a href=3D"https://forianzsiga.github.io/q=
+uizesch/#" data-file-name=3D"2023_pzh.json"><div class=3D"quiz-card"><div c=
+lass=3D"quiz-icon">=F0=9F=93=9A</div><div class=3D"quiz-title">(2023) PZH</=
+div><div class=3D"quiz-filename">2023_pzh.json</div><div style=3D"text-alig=
+n: center;"><span class=3D"unsupervised-indicator" title=3D"This quiz set g=
+enerated from existing sources interpreted by an LLM and it was not yet sup=
+ervised by a human">=E2=9D=97 Unsupervised</span></div><div class=3D"progre=
+ss-bar-container"><div class=3D"progress-bar progress-bar-neutral" style=3D=
+"width: 100%;"></div></div></div></a></li><li><a href=3D"https://forianzsig=
+a.github.io/quizesch/#" data-file-name=3D"2023_zh.json"><div class=3D"quiz-=
+card"><div class=3D"quiz-icon">=F0=9F=93=9A</div><div class=3D"quiz-title">=
+(2023) ZH</div><div class=3D"quiz-filename">2023_zh.json</div><div style=3D=
+"text-align: center;"><span class=3D"unsupervised-indicator" title=3D"This =
+quiz set generated from existing sources interpreted by an LLM and it was n=
+ot yet supervised by a human">=E2=9D=97 Unsupervised</span></div><div class=
+=3D"progress-bar-container"><div class=3D"progress-bar progress-bar-neutral=
+" style=3D"width: 100%;"></div></div></div></a></li><li><a href=3D"https://=
+forianzsiga.github.io/quizesch/#" data-file-name=3D"2024_elso_vizsga.json">=
+<div class=3D"quiz-card"><div class=3D"quiz-icon">=F0=9F=93=9A</div><div cl=
+ass=3D"quiz-title">(2024) Elso Vizsga</div><div class=3D"quiz-filename">202=
+4_elso_vizsga.json</div><div style=3D"text-align: center;"><span class=3D"s=
+upervised-indicator" title=3D"This quiz set is fully human supervised">=E2=
+=9C=94 Fully Supervised</span></div><div class=3D"progress-bar-container"><=
+div class=3D"progress-bar progress-bar-neutral" style=3D"width: 100%;"></di=
+v></div></div></a></li><li><a href=3D"https://forianzsiga.github.io/quizesc=
+h/#" data-file-name=3D"2024_kereszt_harmadik_vizsga.json"><div class=3D"qui=
+z-card"><div class=3D"quiz-icon">=F0=9F=93=9A</div><div class=3D"quiz-title=
+">(2024) Kereszt Harmadik Vizsga</div><div class=3D"quiz-filename">2024_ker=
+eszt_harmadik_vizsga.json</div><div style=3D"text-align: center;"><span cla=
+ss=3D"unsupervised-indicator" title=3D"This quiz set generated from existin=
+g sources interpreted by an LLM and it was not yet supervised by a human">=
+=E2=9D=97 Unsupervised</span></div><div class=3D"progress-bar-container"><d=
+iv class=3D"progress-bar progress-bar-correct" style=3D"width: 52.381%;"></=
+div><div class=3D"progress-bar progress-bar-incorrect" style=3D"width: 23.8=
+095%;"></div><div class=3D"progress-bar progress-bar-neutral" style=3D"widt=
+h: 23.8095%;"></div></div></div></a></li><li><a href=3D"https://forianzsiga=
+.github.io/quizesch/#" data-file-name=3D"2024_kereszt_masodik_vizsga.json">=
+<div class=3D"quiz-card"><div class=3D"quiz-icon">=F0=9F=93=9A</div><div cl=
+ass=3D"quiz-title">(2024) Kereszt Masodik Vizsga</div><div class=3D"quiz-fi=
+lename">2024_kereszt_masodik_vizsga.json</div><div style=3D"text-align: cen=
+ter;"><span class=3D"unsupervised-indicator" title=3D"This quiz set generat=
+ed from existing sources interpreted by an LLM and it was not yet supervise=
+d by a human">=E2=9D=97 Unsupervised</span></div><div class=3D"progress-bar=
+-container"><div class=3D"progress-bar progress-bar-correct" style=3D"width=
+: 19.0476%;"></div><div class=3D"progress-bar progress-bar-neutral" style=
+=3D"width: 80.9524%;"></div></div></div></a></li><li><a href=3D"https://for=
+ianzsiga.github.io/quizesch/#" data-file-name=3D"2024_masodik_vizsga.json">=
+<div class=3D"quiz-card"><div class=3D"quiz-icon">=F0=9F=93=9A</div><div cl=
+ass=3D"quiz-title">(2024) Masodik Vizsga</div><div class=3D"quiz-filename">=
+2024_masodik_vizsga.json</div><div style=3D"text-align: center;"><span clas=
+s=3D"unsupervised-indicator" title=3D"This quiz set generated from existing=
+ sources interpreted by an LLM and it was not yet supervised by a human">=
+=E2=9D=97 Unsupervised</span></div><div class=3D"progress-bar-container"><d=
+iv class=3D"progress-bar progress-bar-neutral" style=3D"width: 100%;"></div=
+></div></div></a></li><li><a href=3D"https://forianzsiga.github.io/quizesch=
+/#" data-file-name=3D"2024_ppzh.json"><div class=3D"quiz-card"><div class=
+=3D"quiz-icon">=F0=9F=93=9A</div><div class=3D"quiz-title">(2024) PPZH</div=
+><div class=3D"quiz-filename">2024_ppzh.json</div><div style=3D"text-align:=
+ center;"><span class=3D"unsupervised-indicator" title=3D"This quiz set gen=
+erated from existing sources interpreted by an LLM and it was not yet super=
+vised by a human">=E2=9D=97 Unsupervised</span></div><div class=3D"progress=
+-bar-container"><div class=3D"progress-bar progress-bar-neutral" style=3D"w=
+idth: 100%;"></div></div></div></a></li><li><a href=3D"https://forianzsiga.=
+github.io/quizesch/#" data-file-name=3D"2024_pzh.json"><div class=3D"quiz-c=
+ard"><div class=3D"quiz-icon">=F0=9F=93=9A</div><div class=3D"quiz-title">(=
+2024) PZH</div><div class=3D"quiz-filename">2024_pzh.json</div><div style=
+=3D"text-align: center;"><span class=3D"partial-indicator" title=3D"This qu=
+iz set already contains human supervised questions">=E2=9A=A0=EF=B8=8F Part=
+ially Supervised</span></div><div class=3D"progress-bar-container"><div cla=
+ss=3D"progress-bar progress-bar-neutral" style=3D"width: 100%;"></div></div=
+></div></a></li><li><a href=3D"https://forianzsiga.github.io/quizesch/#" da=
+ta-file-name=3D"2024_zh.json"><div class=3D"quiz-card"><div class=3D"quiz-i=
+con">=F0=9F=93=9A</div><div class=3D"quiz-title">(2024) ZH</div><div class=
+=3D"quiz-filename">2024_zh.json</div><div style=3D"text-align: center;"><sp=
+an class=3D"supervised-indicator" title=3D"This quiz set is fully human sup=
+ervised">=E2=9C=94 Fully Supervised</span></div><div class=3D"progress-bar-=
+container"><div class=3D"progress-bar progress-bar-neutral" style=3D"width:=
+ 100%;"></div></div></div></a></li><li><a href=3D"https://forianzsiga.githu=
+b.io/quizesch/#" data-file-name=3D"2025_elso_vizsga_no_code.json"><div clas=
+s=3D"quiz-card"><div class=3D"quiz-icon">=F0=9F=93=9A</div><div class=3D"qu=
+iz-title">(2025) Elso Vizsga No Code</div><div class=3D"quiz-filename">2025=
+_elso_vizsga_no_code.json</div><div style=3D"text-align: center;"><span cla=
+ss=3D"unsupervised-indicator" title=3D"This quiz set generated from existin=
+g sources interpreted by an LLM and it was not yet supervised by a human">=
+=E2=9D=97 Unsupervised</span></div><div class=3D"progress-bar-container"><d=
+iv class=3D"progress-bar progress-bar-neutral" style=3D"width: 100%;"></div=
+></div></div></a></li><li><a href=3D"https://forianzsiga.github.io/quizesch=
+/#" data-file-name=3D"2025_elso_vizsga.json"><div class=3D"quiz-card"><div =
+class=3D"quiz-icon">=F0=9F=93=9A</div><div class=3D"quiz-title">(2025) Elso=
+ Vizsga</div><div class=3D"quiz-filename">2025_elso_vizsga.json</div><div s=
+tyle=3D"text-align: center;"><span class=3D"unsupervised-indicator" title=
+=3D"This quiz set generated from existing sources interpreted by an LLM and=
+ it was not yet supervised by a human">=E2=9D=97 Unsupervised</span></div><=
+div class=3D"progress-bar-container"><div class=3D"progress-bar progress-ba=
+r-neutral" style=3D"width: 100%;"></div></div></div></a></li><li><a href=3D=
+"https://forianzsiga.github.io/quizesch/#" data-file-name=3D"2025_masodik_v=
+izsga.json"><div class=3D"quiz-card"><div class=3D"quiz-icon">=F0=9F=93=9A<=
+/div><div class=3D"quiz-title">(2025) Masodik Vizsga</div><div class=3D"qui=
+z-filename">2025_masodik_vizsga.json</div><div style=3D"text-align: center;=
+"><span class=3D"unsupervised-indicator" title=3D"This quiz set generated f=
+rom existing sources interpreted by an LLM and it was not yet supervised by=
+ a human">=E2=9D=97 Unsupervised</span></div><div class=3D"progress-bar-con=
+tainer"><div class=3D"progress-bar progress-bar-incorrect" style=3D"width: =
+4.7619%;"></div><div class=3D"progress-bar progress-bar-neutral" style=3D"w=
+idth: 95.2381%;"></div></div></div></a></li><li><a href=3D"https://forianzs=
+iga.github.io/quizesch/#" data-file-name=3D"synthetic.json"><div class=3D"q=
+uiz-card"><div class=3D"quiz-icon">=F0=9F=93=9A</div><div class=3D"quiz-tit=
+le">Synthetic</div><div class=3D"quiz-filename">synthetic.json</div><div st=
+yle=3D"text-align: center;"><span class=3D"llm-indicator" title=3D"This qui=
+z set is entirely generated by an LLM">=F0=9F=A4=96 Generated</span></div><=
+div class=3D"progress-bar-container"><div class=3D"progress-bar progress-ba=
+r-neutral" style=3D"width: 100%;"></div></div></div></a></li></ul>
+                </div>
+                <div id=3D"untagged-quiz-container" style=3D"display: none;=
+">
+                    <h2>Legacy Quizzes</h2>
+                    <p>These quizzes have not yet been tagged and will not =
+be affected by the filters.</p>
+                    <ul id=3D"untagged-quiz-list"></ul>
+                </div>
+            </div>
+            <aside id=3D"filter-panel" style=3D"display: block;">
+                <h3>Filter Quizzes</h3>
+                <div id=3D"filters"><div class=3D"filter-group" data-filter=
+-type=3D"subject"><h4>Subject</h4><div class=3D"filter-option" data-tag=3D"=
+Kommunik=C3=A1ci=C3=B3s H=C3=A1l=C3=B3zatok">Kommunik=C3=A1ci=C3=B3s H=C3=
+=A1l=C3=B3zatok</div><div class=3D"filter-option" data-tag=3D"Szoftvertechn=
+ik=C3=A1k">Szoftvertechnik=C3=A1k</div></div><div class=3D"filter-group" da=
+ta-filter-type=3D"type"><h4>Type</h4><div class=3D"filter-option" data-tag=
+=3D"PPZH">PPZH</div><div class=3D"filter-option" data-tag=3D"PZH">PZH</div>=
+<div class=3D"filter-option" data-tag=3D"Synthetic Questionnaire">Synthetic=
+ Questionnaire</div><div class=3D"filter-option" data-tag=3D"Vizsga">Vizsga=
+</div><div class=3D"filter-option" data-tag=3D"ZH">ZH</div></div><div class=
+=3D"filter-group" data-filter-type=3D"year"><h4>Year</h4><div class=3D"filt=
+er-option" data-tag=3D"2020">2020</div><div class=3D"filter-option" data-ta=
+g=3D"2021">2021</div><div class=3D"filter-option" data-tag=3D"2022">2022</d=
+iv><div class=3D"filter-option" data-tag=3D"2023">2023</div><div class=3D"f=
+ilter-option" data-tag=3D"2024">2024</div><div class=3D"filter-option" data=
+-tag=3D"2025">2025</div><div class=3D"filter-option" data-tag=3D"undefined"=
+>undefined</div></div></div>
+            </aside>
+        </div>
+    </div>
+
+   =20
+   =20
+   =20
+    =20
+
+<protonpass-root-5166 data-protonpass-role=3D"root" data-protonpass-theme=
+=3D"os"><template shadowmode=3D"closed"></template></protonpass-root-5166><=
+/body></html>
+------MultipartBoundary--hvpSD9OZhLzOOQZfj4kYUIYrnXctob83Ee7qzPKK3D----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://forianzsiga.github.io/quizesch/quizesch-banner.svg
+
+<?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<svg id=3D"Layer_1" xmlns=3D"http://www.w3.org/2000/svg" viewBox=3D"0 0 423=
+.75 85.94">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5187c6;
+      }
+
+      .cls-2 {
+        fill: #706872;
+      }
+
+      .cls-3 {
+        fill: #ededec;
+      }
+    </style>
+  </defs>
+  <path class=3D"cls-1" d=3D"M85.12,43.79c0,4.99.08,9.99-.02,14.98-.29,15.0=
+2-10.44,26.07-25.4,26.78-11.3.53-22.66.5-33.97,0-14.29-.64-24.27-10.57-25.1=
+9-24.8-.79-12.29-.71-24.62.19-36.91C1.54,12.67,11.76,1.84,23.57.78c12.48-1.=
+12,24.99-.92,37.44-.12,13.66.88,23.61,12.29,24.05,26.66.17,5.49.03,10.98.03=
+,16.48h.03ZM67.46,66.33c-1.8-2.61-5.74-4.2-2.36-8.96,7.07-9.96,7.04-20.84.2=
+1-30.83-6.71-9.82-16.94-13.64-28.47-11.3-18.57,3.76-25.93,19.23-21.2,35.47,=
+4.11,14.12,17.08,21.75,33.82,17.92,3.44-.79,6.11-.95,8.48,1.91,1.4,1.69,3.0=
+2,1.88,4.75.35,1.61-1.41,3.66-2.35,4.76-4.57h0Z"/>
+  <path class=3D"cls-2" d=3D"M131.89,15.6c10.44.5,19.54,4.56,24.44,14.61,5.=
+01,10.28,4.52,20.83-2.63,30.08-2.84,3.68-2.65,5.77.79,8.27,1.69,1.23,4.3,2.=
+63,1.39,4.84-2.31,1.75-3.92,7.25-8.14,2.94-4.75-4.84-9.89-6.21-16.74-5.51-9=
+.94,1.01-18.4-3.77-23.68-11.87-5.95-9.12-5.83-19.43-.54-29.07,5.25-9.55,13.=
+95-13.8,25.11-14.29ZM130.57,60.3c9.64.11,17.13-7.24,17.22-16.89.09-9.54-6.6=
+7-16.74-15.89-16.93-9.15-.18-16.77,7.31-16.93,16.65-.17,9.58,6.63,17.07,15.=
+6,17.17Z"/>
+  <path class=3D"cls-2" d=3D"M396.78,34.16c1.97-1.14,3.2-1.93,4.5-2.59,9.24=
+-4.71,19.84.02,21.64,10.06,1.56,8.71.4,17.58.64,26.38.05,1.76-.96,2.31-2.51=
+,2.31-1.66,0-3.34-.14-4.99.04-3.18.35-3.97-1.14-3.91-4.07.13-6.15.14-12.3-.=
+12-18.45-.24-5.83-2.5-8.12-7.28-8.1-4.78.02-7.64,2.88-7.84,8.4-.23,6.14-.23=
+,12.3-.08,18.45.07,2.83-.89,3.69-3.7,3.74-7.99.13-7.98.25-7.96-7.53.02-6.82=
+.02-13.63.06-20.45.04-7.31.37-14.64.09-21.94-.15-3.92,1.21-5.11,4.81-4.47.4=
+8.09,1.01.08,1.49,0,3.99-.66,5.69.63,5.23,5-.43,4.1-.09,8.29-.09,13.22h.02Z=
+"/>
+  <path class=3D"cls-2" d=3D"M273.1,54.4c1.31,6.44,9.37,9.93,15.07,5.67,4.2=
+3-3.16,6.53-.55,9.55.98,1.63.83,1.58,1.95.47,3.2-.55.62-1.13,1.22-1.71,1.81=
+-6.4,6.56-25.65,8.08-32.66-3.32-3.95-6.41-3.83-18.54,1.1-24.87,5.66-7.26,16=
+.16-10.07,24.78-6.63,7.95,3.17,12.65,11.1,12.17,19.91-.15,2.69-1.46,2.87-3.=
+5,2.85-6.82-.06-13.64-.06-20.46-.03-1.61,0-3.28-.47-4.81.43h0ZM272.89,46.8c=
+4.89,0,9.49.03,14.09-.02,1.07-.01,2.53.47,2.95-1.07.32-1.17-.25-2.28-1.02-3=
+.21-2.47-3.01-5.67-3.94-9.38-3.09-3.69.84-6.15,2.9-6.64,7.39Z"/>
+  <path class=3D"cls-2" d=3D"M190.71,66.75c-5.77,4.99-11.87,5.46-18.09,2.69=
+-6.05-2.69-7.92-8.2-8.09-14.36-.19-6.98-.18-13.96-.25-20.94-.06-6.23,4.73-2=
+.83,7.33-3.54,2.95-.8,4.04.75,3.92,3.84-.23,5.81-.19,11.64-.04,17.45.16,6.0=
+6,2.77,8.88,7.79,8.88,4.74,0,7.7-3.17,7.89-9,.19-5.64.29-11.32-.1-16.95-.33=
+-4.84,2.58-4.48,5.68-4.35,2.82.12,5.95-.99,5.78,4.13-.33,9.96.1,19.94,0,29.=
+91-.02,1.98,1.5,5.45-2.08,5.54-3.3.08-7.79,2.35-9.74-3.32v.02Z"/>
+  <path class=3D"cls-2" d=3D"M365.96,29.87c4.05,0,9.73,3.13,13.76,9.34,1.26=
+,1.95,1.39,3.27-1.3,3.96-3.63.92-6.83,3.48-10.35-1.33-2.82-3.85-9.21-2.96-1=
+2.47.54-4.09,4.38-3.95,12.36.27,16.3,3.53,3.29,9.48,3.59,12.48-.44,3.67-4.9=
+1,7.34-2.13,10.97-1.06,3.06.9,1.02,2.97.24,4.35-6.53,11.45-24.16,13.05-33.0=
+6,2.93-6.05-6.89-6.9-14.97-3.28-23.04,3.6-8.03,10.59-11.57,22.74-11.55Z"/>
+  <path class=3D"cls-2" d=3D"M322.17,29.86c4.11-.15,7.97.88,11.42,3,1.42.87=
+,4.9,1.77,2.79,4.01-1.83,1.94-2.59,7.62-7.74,4.1-2.06-1.41-4.48-2.2-7.05-2.=
+21-2.24-.01-4.66.04-5.1,2.81-.42,2.63,1.87,3.17,3.82,3.71,3.52.97,7.15,1.64=
+,10.55,2.93,8.45,3.2,9.95,13.57,2.93,19.22-6.8,5.47-21.36,4.58-27.48-1.6-1.=
+36-1.38-1.65-2.73.04-3.61,2.27-1.19,2.96-6.3,6.95-3.27,3.11,2.37,6.41,3.41,=
+10.22,2.96,1.77-.21,3.32-.92,3.48-2.93.16-2.02-1.25-2.91-3.01-3.36-3.06-.78=
+-6.15-1.44-9.16-2.38-6.43-2.02-9.3-5.45-9.3-10.78s3.6-9.82,9.75-11.72c2.27-=
+.7,4.57-.83,6.89-.88h0Z"/>
+  <path class=3D"cls-2" d=3D"M239.96,60.91c5.47,0,9.98.32,14.43-.09,4.35-.4=
+,3.93,2.22,3.97,4.94.04,2.65.21,4.81-3.76,4.62-7.47-.35-14.98-.02-22.46-.24=
+-2.1-.06-5.34,1.45-6.12-1.5-.76-2.88-1.16-6.29,1.19-9.03,4.23-4.91,8.47-9.8=
+2,12.69-14.74,1.07-1.24,2.08-2.53,3.48-4.24-4.86-1.27-9.29-.74-13.62-.59-3.=
+69.13-4.01-1.63-3.95-4.54.07-2.84-.17-5.18,3.99-5.03,7.14.27,14.31-.07,21.4=
+6.07,2.17.04,5.53-1.39,6.3,1.15.89,2.94,1.29,6.51-1.29,9.44-4.39,4.99-8.65,=
+10.11-12.92,15.2-1.03,1.23-1.93,2.58-3.4,4.56v.02Z"/>
+  <path class=3D"cls-2" d=3D"M220.16,50.46c0,5.31-.15,10.62.06,15.93.12,2.9=
+7-.63,4.1-3.86,3.97-8.74-.34-7.17.71-7.23-7.04-.08-9.46.2-18.92-.14-28.37-.=
+21-5.96,3.9-3.8,6.73-4.25,3.45-.56,4.69.79,4.5,4.33-.27,5.13-.07,10.28-.07,=
+15.43h.01Z"/>
+  <path class=3D"cls-2" d=3D"M215.25,13.07c3.92.28,6.38,3.06,6.15,6.93-.21,=
+3.44-3.53,6.31-7.12,6.16-3.84-.16-6.51-3.02-6.32-6.78.21-4.03,3.19-6.61,7.3=
+-6.31h0Z"/>
+  <path class=3D"cls-3" d=3D"M67.46,66.33c-1.1,2.22-3.15,3.16-4.76,4.57-1.7=
+4,1.53-3.35,1.33-4.75-.35-2.37-2.86-5.04-2.7-8.48-1.91-16.74,3.82-29.71-3.8=
+1-33.82-17.92-4.73-16.23,2.63-31.71,21.2-35.47,11.53-2.34,21.76,1.48,28.47,=
+11.3,6.82,9.98,6.86,20.87-.21,30.83-3.38,4.76.56,6.35,2.36,8.96h-.01ZM45.1,=
+58.37c.21-1.43-1.04-1.95-1.77-2.76-3.74-4.15-3.4-6.17,1.45-8.61,3.5-1.77,4.=
+6,1.59,6.43,3.11,2.01,1.66,3.49,3.11,5.43-.12,4.43-7.39,1.26-18.53-6.67-22.=
+89-8.18-4.5-18.53-1.11-22.46,7.16-1.75,3.67-1.43,7.12-.82,11.03,1.48,9.54,8=
+.95,15.17,18.41,13.1v-.02Z"/>
+  <path class=3D"cls-1" d=3D"M45.1,58.37c-9.46,2.07-16.93-3.56-18.41-13.1-.=
+61-3.9-.93-7.36.82-11.03,3.93-8.27,14.28-11.65,22.46-7.16,7.93,4.36,11.1,15=
+.5,6.67,22.89-1.94,3.24-3.42,1.78-5.43.12-1.83-1.51-2.93-4.87-6.43-3.11-4.8=
+5,2.44-5.19,4.47-1.45,8.61.74.81,1.98,1.33,1.77,2.76v.02Z"/>
+</svg>
+------MultipartBoundary--hvpSD9OZhLzOOQZfj4kYUIYrnXctob83Ee7qzPKK3D----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://forianzsiga.github.io/quizesch/style.css
+
+@charset "utf-8";
+
+body { font-family: sans-serif; background-color: rgb(244, 244, 244); margi=
+n: 0px; }
+
+#main-view-wrapper { display: flex; flex-direction: column; align-items: ce=
+nter; width: 100%; }
+
+#in-quiz-wrapper { display: none; flex-direction: row; align-items: flex-st=
+art; justify-content: center; gap: 20px; width: 90%; max-width: 1100px; mar=
+gin: 40px auto; }
+
+#main-banner-container { width: 100%; text-align: center; padding-top: 40px=
+; }
+
+#main-banner-container img { width: 80%; max-width: 600px; }
+
+#quiz-container { flex: 3 1 0%; background: rgb(255, 255, 255); padding: 20=
+px 20px 45px; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10=
+px; position: relative; }
+
+#back-to-menu-btn { background-color: rgb(108, 117, 125); color: white; pad=
+ding: 8px 12px; margin-bottom: 15px; border: none; border-radius: 5px; curs=
+or: pointer; font-size: 0.9em; }
+
+#back-to-menu-btn:hover { background-color: rgb(90, 98, 104); }
+
+#progress-panel { flex: 0.5 1 0%; display: none; position: sticky; top: 20p=
+x; background-color: rgb(255, 255, 255); border-radius: 8px; box-shadow: rg=
+ba(0, 0, 0, 0.1) 0px 2px 4px; padding: 16px; }
+
+#question-container { margin-bottom: 20px; padding-bottom: 10px; border-bot=
+tom: 1px solid rgb(238, 238, 238); }
+
+h1, h2 { text-align: center; color: rgb(51, 51, 51); }
+
+h3 { margin-bottom: 10px; color: rgb(85, 85, 85); text-align: center; line-=
+height: 1.4; }
+
+label { display: block; margin-bottom: 8px; cursor: pointer; }
+
+.input-wrapper { display: inline-block; vertical-align: middle; margin: 0px=
+ 2px; }
+
+.input-wrapper input[type=3D"text"] { width: 120px; display: inline-block; =
+vertical-align: middle; margin: 0px; padding: 4px 6px; }
+
+li.evaluation-correct { background-color: rgb(224, 255, 224); padding: 3px =
+6px; margin-bottom: 4px; border-radius: 4px; border-left: 3px solid green; =
+}
+
+li.evaluation-incorrect { background-color: rgb(255, 224, 224); padding: 3p=
+x 6px; margin-bottom: 4px; border-radius: 4px; border-left: 3px solid red; =
+}
+
+li.evaluation-missed { background-color: rgb(255, 248, 224); padding: 3px 6=
+px; margin-bottom: 4px; border-radius: 4px; border-left: 3px solid orange; =
+}
+
+.input-wrapper .feedback-correct { color: green; }
+
+.input-wrapper .feedback-incorrect { color: red; }
+
+.input-wrapper .feedback-missed { color: orange; }
+
+.input-wrapper input.evaluation-correct { border: 1px solid green; backgrou=
+nd-color: rgb(224, 255, 224); }
+
+.input-wrapper input.evaluation-incorrect { border: 1px solid red; backgrou=
+nd-color: rgb(255, 224, 224); }
+
+.input-wrapper input.evaluation-missed { border: 1px solid orange; backgrou=
+nd-color: rgb(255, 248, 224); }
+
+.input-wrapper .inline-feedback { display: block; font-size: 0.8em; margin-=
+top: 2px; min-height: 1em; }
+
+input[type=3D"checkbox"], input[type=3D"radio"] { margin-right: 5px; }
+
+button { padding: 10px 15px; margin: 5px; border: none; border-radius: 4px;=
+ background-color: rgb(0, 123, 255); color: white; cursor: pointer; font-si=
+ze: 1em; }
+
+button:disabled { background-color: rgb(204, 204, 204); cursor: not-allowed=
+; }
+
+button:hover:not(:disabled) { background-color: rgb(0, 86, 179); }
+
+#clear-all-btn { background-color: rgb(200, 35, 51); border-color: rgb(189,=
+ 33, 48); }
+
+#clear-all-btn:hover:not(:disabled) { background-color: rgb(167, 29, 42); }
+
+.drop-target { display: inline-block; border: 1px dashed rgb(204, 204, 204)=
+; padding: 5px 10px; margin: 0px 5px; min-width: 80px; min-height: 20px; te=
+xt-align: center; vertical-align: middle; background-color: rgb(240, 240, 2=
+40); }
+
+.draggable { display: inline-block; border: 1px solid rgb(170, 170, 170); p=
+adding: 5px 10px; margin: 5px; cursor: grab; background-color: rgb(249, 249=
+, 249); }
+
+.draggable:active { cursor: grabbing; }
+
+.drag-options-container { margin-top: 15px; padding-top: 15px; border-top: =
+1px solid rgb(238, 238, 238); }
+
+#drag-options { }
+
+.highlight-drop { background-color: rgb(224, 255, 224); }
+
+#attribution-notice { position: absolute; bottom: 10px; right: 15px; font-s=
+ize: 0.75em; color: rgb(204, 204, 204); text-align: right; }
+
+#quiz-selection-area { display: flex; flex-direction: row; justify-content:=
+ center; gap: 30px; width: 90%; max-width: 1100px; margin-top: 20px; align-=
+items: flex-start; }
+
+#quiz-list-wrapper { flex: 3 1 0%; display: flex; flex-direction: column; b=
+ackground: rgb(255, 255, 255); padding: 25px 30px; border-radius: 8px; box-=
+shadow: rgba(0, 0, 0, 0.07) 0px 2px 8px; }
+
+#quiz-list-wrapper h2 { text-align: left; margin-top: 0px; margin-bottom: 0=
+px; padding-bottom: 15px; border-bottom: 1px solid rgb(238, 238, 238); }
+
+#quiz-list-container { display: flex; flex-direction: column; align-items: =
+stretch; }
+
+#untagged-quiz-container { margin-top: 40px; padding-top: 25px; border-top:=
+ 2px solid rgb(233, 233, 233); display: flex; flex-direction: column; align=
+-items: stretch; }
+
+#untagged-quiz-container > p { font-size: 0.9em; color: rgb(102, 102, 102);=
+ margin-top: -10px; margin-bottom: 20px; text-align: left; }
+
+#filter-panel { flex: 1 1 0%; background-color: rgb(255, 255, 255); padding=
+: 20px; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 8px; po=
+sition: sticky; top: 20px; }
+
+#filter-panel h3 { margin-top: 0px; margin-bottom: 20px; text-align: left; =
+border-bottom: 1px solid rgb(238, 238, 238); padding-bottom: 10px; }
+
+.filter-group { margin-bottom: 25px; }
+
+.filter-group h4 { margin: 0px 0px 10px; font-size: 1.1em; color: rgb(51, 5=
+1, 51); }
+
+.filter-option { display: inline-block; background-color: rgb(240, 244, 248=
+); color: rgb(68, 68, 68); padding: 8px 12px; border-radius: 16px; margin-b=
+ottom: 8px; margin-right: 6px; cursor: pointer; transition: background-colo=
+r 0.2s, color 0.2s; font-size: 0.9em; border: 1px solid transparent; user-s=
+elect: none; }
+
+.filter-option:hover { background-color: rgb(225, 233, 242); }
+
+.filter-option.active { background-color: rgb(0, 123, 255); color: white; f=
+ont-weight: bold; border-color: rgb(0, 86, 179); }
+
+#quiz-list, #untagged-quiz-list { display: grid; grid-template-columns: rep=
+eat(auto-fit, minmax(220px, 1fr)); gap: 24px; padding: 0px; margin: 30px 0p=
+x 0px; width: 100%; list-style: none; }
+
+.quiz-card { background: rgb(249, 249, 255); border-radius: 10px; box-shado=
+w: rgba(0, 0, 0, 0.07) 0px 2px 8px; padding: 18px 18px 28px; display: flex;=
+ flex-direction: column; align-items: center; transition: 0.2s; cursor: poi=
+nter; border: 1.5px solid rgb(224, 224, 224); position: relative; overflow:=
+ hidden; }
+
+.quiz-card:hover { box-shadow: rgba(0, 123, 255, 0.13) 0px 6px 18px; transf=
+orm: translateY(-3px) scale(1.03); border-color: rgb(0, 123, 255); }
+
+.quiz-card .quiz-icon { font-size: 2.2em; margin-bottom: 10px; color: rgb(0=
+, 123, 255); }
+
+.quiz-card .quiz-title { font-weight: 600; font-size: 1.1em; color: rgb(34,=
+ 34, 34); margin-bottom: 4px; text-align: center; }
+
+.quiz-card .quiz-filename { font-size: 0.85em; color: rgb(136, 136, 136); m=
+argin-bottom: 12px; text-align: center; }
+
+.quiz-card.fully-correct { background-color: rgb(240, 255, 240); border-col=
+or: rgb(166, 230, 166); }
+
+.quiz-card.fully-correct:hover { border-color: rgb(40, 167, 69); }
+
+.completion-checkmark { position: absolute; top: -1px; right: -1px; width: =
+35px; height: 35px; background-color: rgb(40, 167, 69); color: white; font-=
+size: 1.5em; line-height: 35px; text-align: center; clip-path: polygon(0px =
+0px, 100% 0px, 100% 100%); border-bottom-left-radius: 10px; }
+
+.completion-checkmark::before { content: "=E2=9C=93"; display: inline-block=
+; transform: translate(-3px, -2px); }
+
+.progress-bar-container { position: absolute; bottom: 0px; left: 0px; width=
+: 100%; height: 8px; background-color: rgb(233, 236, 239); display: flex; }
+
+.progress-bar { height: 100%; transition: width 0.3s ease-in-out; }
+
+.progress-bar-correct { background-color: rgb(40, 167, 69); }
+
+.progress-bar-incorrect { background-color: rgb(220, 53, 69); }
+
+.progress-bar-neutral { background-color: rgb(224, 224, 224); }
+
+#quiz-list li, #untagged-quiz-list li { background: none; border: none; box=
+-shadow: none; padding: 0px; margin: 0px; }
+
+.unsupervised-indicator, .supervised-indicator, .llm-indicator, .partial-in=
+dicator { display: inline-block; border-radius: 16px; padding: 2px 10px; fo=
+nt-size: 0.8em; margin: 4px 2px; vertical-align: middle; font-weight: 500; =
+cursor: help; user-select: none; }
+
+.unsupervised-indicator { background: rgb(255, 234, 234); color: rgb(179, 0=
+, 0); border: 1px solid rgb(255, 179, 179); }
+
+.supervised-indicator { background: rgb(234, 255, 234); color: rgb(33, 122,=
+ 33); border: 1px solid rgb(166, 230, 166); }
+
+.llm-indicator { background: rgb(234, 243, 255); color: rgb(23, 97, 166); b=
+order: 1px solid rgb(142, 198, 255); }
+
+.partial-indicator { background: rgb(255, 248, 224); color: rgb(211, 84, 0)=
+; border: 1px solid rgb(243, 156, 18); }
+
+#quiz-list a, #quiz-list a *, #quiz-list a::after, #quiz-list a::before, #q=
+uiz-list a ::after, #quiz-list a ::before, #untagged-quiz-list a, #untagged=
+-quiz-list a *, #untagged-quiz-list a::after, #untagged-quiz-list a::before=
+, #untagged-quiz-list a ::after, #untagged-quiz-list a ::before { text-deco=
+ration: none !important; color: inherit !important; }
+
+.progress-dot { display: inline-block; width: 14px; height: 14px; border-ra=
+dius: 50%; margin-right: 8px; vertical-align: middle; border: 1px solid rgb=
+(153, 153, 153); }
+
+.dot-neutral { background-color: rgb(187, 187, 187); }
+
+.dot-correct { background-color: rgb(39, 174, 96); border-color: rgb(30, 13=
+2, 73); }
+
+.dot-incorrect { background-color: rgb(231, 76, 60); border-color: rgb(192,=
+ 57, 43); }
+
+.dot-answered { background-color: rgb(52, 152, 219); border-color: rgb(41, =
+128, 185); }
+
+.vote-ui-container { margin-top: 15px; padding-top: 10px; border-top: 1px s=
+olid rgb(238, 238, 238); font-size: 0.9em; display: flex; align-items: cent=
+er; flex-wrap: wrap; }
+
+.vote-score-text { margin-right: 10px; color: rgb(51, 51, 51); flex-shrink:=
+ 0; }
+
+.vote-btn { padding: 5px 10px; margin-left: 5px; margin-bottom: 5px; cursor=
+: pointer; border: 1px solid rgb(204, 204, 204); background-color: rgb(249,=
+ 249, 249); border-radius: 4px; font-size: 0.9em; color: rgb(51, 51, 51); }
+
+.vote-btn:hover { background-color: rgb(233, 233, 233); }
+
+.vote-btn.selected { font-weight: bold; border-width: 2px; }
+
+.vote-btn.trust.selected { border-color: green; background-color: rgb(230, =
+255, 230); }
+
+.vote-btn.distrust.selected { border-color: red; background-color: rgb(255,=
+ 230, 230); }
+
+.vote-ui-container { margin-top: 15px; padding-top: 10px; border-top: 1px s=
+olid rgb(238, 238, 238); font-size: 0.9em; display: flex; align-items: cent=
+er; flex-wrap: wrap; }
+
+.vote-score-text { margin-right: 10px; color: rgb(51, 51, 51); flex-shrink:=
+ 0; }
+
+.vote-btn { padding: 5px 10px; margin-left: 5px; margin-bottom: 5px; cursor=
+: pointer; border: 1px solid rgb(204, 204, 204); background-color: rgb(249,=
+ 249, 249); border-radius: 4px; font-size: 0.9em; color: rgb(51, 51, 51); }
+
+.vote-btn:hover { background-color: rgb(233, 233, 233); }
+
+.vote-btn.selected { font-weight: bold; border-width: 2px; }
+
+.vote-btn.trust.selected { border-color: green; background-color: rgb(230, =
+255, 230); }
+
+.vote-btn.distrust.selected { border-color: red; background-color: rgb(255,=
+ 230, 230); }
+
+.vote-verification-info { font-size: 0.8em; color: rgb(119, 119, 119); marg=
+in-top: 8px; width: 100%; text-align: left; line-height: 1.3; }
+
+.shortcut-hint { font-size: 0.8em; opacity: 0.7; }
+------MultipartBoundary--hvpSD9OZhLzOOQZfj4kYUIYrnXctob83Ee7qzPKK3D------

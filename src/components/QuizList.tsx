@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { fetchQuizList } from '../services/api';
+import { fetchQuizList, fetchQuizData } from '../services/api';
 import { loadAllProgress } from '../services/storage';
-import type { QuizManifestEntry } from '../types';
+import type { QuizManifestEntry, Question } from '../types';
 
 interface Props {
     onSelectQuiz: (fileName: string) => void;
+}
+
+interface SupervisionInfo {
+    total: number;
+    supervised: number;
+    generated: number;
+    unsupervised: number;
 }
 
 const QuizList: React.FC<Props> = ({ onSelectQuiz }) => {
@@ -14,6 +21,7 @@ const QuizList: React.FC<Props> = ({ onSelectQuiz }) => {
     const [availableTags, setAvailableTags] = useState<{ subject: string[], type: string[], year: string[] }>({ subject: [], type: [], year: [] });
     const [activeFilters, setActiveFilters] = useState<{ subject: string[], type: string[], year: string[] }>({ subject: [], type: [], year: [] });
     const [progress, setProgress] = useState<Record<string, any>>({});
+    const [supervisionInfos, setSupervisionInfos] = useState<Record<string, SupervisionInfo>>({});
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
@@ -44,6 +52,42 @@ const QuizList: React.FC<Props> = ({ onSelectQuiz }) => {
 
                 setProgress(loadAllProgress());
 
+                // Fetch supervision info for all quizzes
+                const supervisionPromises = all.map(async (q) => {
+                    try {
+                        const data = await fetchQuizData(q.fileName);
+                        const questions = Array.isArray(data) ? data : data.questions || [];
+                        let total = questions.length;
+                        let supervised = 0, generated = 0, unsupervised = 0;
+                        questions.forEach((question: Question) => {
+                            if (question.supervised) {
+                                const s = question.supervised.trim().toLowerCase();
+                                if (s === 'yes') supervised++;
+                                else if (s === 'generated') generated++;
+                                else unsupervised++;
+                            } else {
+                                unsupervised++;
+                            }
+                        });
+                        return { 
+                            fileName: q.fileName, 
+                            info: { total, supervised, generated, unsupervised } 
+                        };
+                    } catch (e) {
+                        console.warn(`Failed to load stats for ${q.fileName}`, e);
+                        return null;
+                    }
+                });
+
+                const results = await Promise.all(supervisionPromises);
+                const newInfos: Record<string, SupervisionInfo> = {};
+                results.forEach(res => {
+                    if (res) {
+                        newInfos[res.fileName] = res.info;
+                    }
+                });
+                setSupervisionInfos(newInfos);
+
             } catch (e: any) {
                 setError(e.message);
             }
@@ -71,32 +115,61 @@ const QuizList: React.FC<Props> = ({ onSelectQuiz }) => {
     };
 
     const renderQuizItem = (quiz: QuizManifestEntry) => {
-        const quizProgress = progress[quiz.filename];
-        let statusClass = "status-new";
-        let statusText = "New";
+        const quizProgress = progress[quiz.fileName];
+        const supInfo = supervisionInfos[quiz.fileName];
 
-        if (quizProgress) {
-            const p = quizProgress.progress;
-            if (p && p.totalEvaluated > 0) {
-                 if (p.totalEvaluated === p.totalQuestions) {
-                     statusClass = "status-completed";
-                     statusText = `Completed (${p.correct}/${p.totalQuestions})`;
-                 } else {
-                     statusClass = "status-in-progress";
-                     statusText = `In Progress (${p.totalEvaluated}/${p.totalQuestions})`;
-                 }
+        let correctWidth = 0;
+        let incorrectWidth = 0;
+        let isFullyCorrect = false;
+
+        if (quizProgress && quizProgress.progress && quizProgress.progress.totalQuestions > 0) {
+            const { correct, incorrect, totalQuestions, totalEvaluated } = quizProgress.progress;
+            correctWidth = (correct / totalQuestions) * 100;
+            incorrectWidth = (incorrect / totalQuestions) * 100;
+
+            if (totalEvaluated === totalQuestions && totalQuestions > 0 && incorrect === 0) {
+                isFullyCorrect = true;
+            }
+        }
+        
+        const neutralWidth = 100 - correctWidth - incorrectWidth;
+
+        let indicator = null;
+        if (supInfo) {
+            if (supInfo.generated === supInfo.total && supInfo.total > 0) {
+                indicator = <span className="llm-indicator" title="This quiz set is entirely generated by an LLM">🤖 Generated</span>;
+            } else if (supInfo.supervised === supInfo.total && supInfo.total > 0) {
+                indicator = <span className="supervised-indicator" title="This quiz set is fully human supervised">✔ Fully Supervised</span>;
+            } else if (supInfo.supervised > 0) {
+                indicator = <span className="partial-indicator" title="This quiz set already contains human supervised questions">⚠️ Partially Supervised</span>;
+            } else if (supInfo.total > 0) {
+                indicator = <span className="unsupervised-indicator" title="This quiz set generated from existing sources interpreted by an LLM and it was not yet supervised by a human">❗ Unsupervised</span>;
             }
         }
 
         return (
-            <li key={quiz.filename} className="quiz-list-item" onClick={() => onSelectQuiz(quiz.filename)}>
-                <div className="quiz-info">
-                    <span className="quiz-title">
-                        {quiz.tags.subject} - {quiz.tags.type} ({quiz.tags.year})
-                    </span>
-                    <span className="quiz-meta">{quiz.filename}</span>
-                </div>
-                <span className={`quiz-status ${statusClass}`}>{statusText}</span>
+            <li key={quiz.fileName}>
+                <a href="#" onClick={(e) => { e.preventDefault(); onSelectQuiz(quiz.fileName); }} data-file-name={quiz.fileName}>
+                    <div className={`quiz-card ${isFullyCorrect ? 'fully-correct' : ''}`}>
+                        <div className="quiz-icon">📚</div>
+                        <div className="quiz-title">
+                            {/* Prettify filename logic not fully replicated here but simplified title from tags is used */}
+                            ({quiz.tags.year}) {quiz.tags.type}
+                        </div>
+                        <div className="quiz-filename">{quiz.fileName}</div>
+                        
+                        <div style={{textAlign: 'center'}}>
+                            {indicator}
+                        </div>
+
+                        <div className="progress-bar-container">
+                            {correctWidth > 0 && <div className="progress-bar progress-bar-correct" style={{width: `${correctWidth}%`}}></div>}
+                            {incorrectWidth > 0 && <div className="progress-bar progress-bar-incorrect" style={{width: `${incorrectWidth}%`}}></div>}
+                            {neutralWidth > 0.1 && <div className="progress-bar progress-bar-neutral" style={{width: `${neutralWidth}%`}}></div>}
+                        </div>
+                        {isFullyCorrect && <div className="completion-checkmark"></div>}
+                    </div>
+                </a>
             </li>
         );
     };
@@ -104,7 +177,7 @@ const QuizList: React.FC<Props> = ({ onSelectQuiz }) => {
     if (error) return <div style={{color: 'red'}}>Error: {error}</div>;
 
     return (
-        <div id="main-view-wrapper" className="active" style={{display: 'flex'}}>
+        <div id="main-view-wrapper" style={{display: 'flex'}}>
             <div id="main-banner-container">
                 <img src="quizesch-banner.svg" alt="Quizesch Banner" />
             </div>
@@ -118,7 +191,7 @@ const QuizList: React.FC<Props> = ({ onSelectQuiz }) => {
                         </ul>
                     </div>
                     {untaggedQuizzes.length > 0 && (
-                        <div id="untagged-quiz-container">
+                        <div id="untagged-quiz-container" style={{display: 'flex'}}>
                             <h2>Legacy Quizzes</h2>
                             <p>These quizzes have not yet been tagged and will not be affected by the filters.</p>
                             <ul id="untagged-quiz-list">
@@ -127,22 +200,21 @@ const QuizList: React.FC<Props> = ({ onSelectQuiz }) => {
                         </div>
                     )}
                 </div>
-                <aside id="filter-panel">
+                <aside id="filter-panel" style={{display: 'block'}}>
                     <h3>Filter Quizzes</h3>
                     <div id="filters">
                         {Object.entries(availableTags).map(([category, values]) => (
-                            <div key={category} className="filter-group">
-                                <h4 style={{textTransform: 'capitalize'}}>{category}</h4>
+                            <div key={category} className="filter-group" data-filter-type={category}>
+                                <h4>{category.charAt(0).toUpperCase() + category.slice(1)}</h4>
                                 {values.map(val => (
-                                    <label key={val} className="filter-option">
-                                        <input
-                                            type="checkbox"
-                                            value={val}
-                                            checked={activeFilters[category as keyof typeof activeFilters].includes(val)}
-                                            onChange={(e) => handleFilterChange(category as any, val, e.target.checked)}
-                                        />
+                                    <div 
+                                        key={val} 
+                                        className={`filter-option ${activeFilters[category as keyof typeof activeFilters].includes(val) ? 'active' : ''}`}
+                                        data-tag={val}
+                                        onClick={() => handleFilterChange(category as any, val, !activeFilters[category as keyof typeof activeFilters].includes(val))}
+                                    >
                                         {val}
-                                    </label>
+                                    </div>
                                 ))}
                             </div>
                         ))}
