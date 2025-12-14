@@ -158,7 +158,7 @@ const QuizView: React.FC<Props> = ({ fileName, onBack }) => {
                     <div id="question-container">
                         <h3>
                             {prettifyFileName(fileName)}<br/>
-                            <span style={{fontSize: '0.8em', color: '#666'}}>
+                            <span style={{fontSize: '0.8em', color: 'var(--text-secondary)'}}>
                                 Question {currentQuestionIndex + 1} of {questions.length} {indicator}
                             </span>
                         </h3>
@@ -202,8 +202,8 @@ const QuizView: React.FC<Props> = ({ fileName, onBack }) => {
                     </div>
                 )}
 
-                <div id="warning-message" style={{border: '2px solid #f39c12', backgroundColor: '#fff3cd', padding: '15px', marginTop: '50px', marginBottom: '20px', borderRadius: '8px', fontSize: '12px'}}>
-                    <strong style={{color: '#d35400'}}>⚠️ Warning:</strong> This quiz is still under construction. Data is being manually extracted from the provided PDFs and turned into JSONs using multimodal LLM prompting. This means there definitely wil be broken questions along the way.<br /><br />
+                <div className="warning-message">
+                    <strong className="warning-title">⚠️ Warning:</strong> This quiz is still under construction. Data is being manually extracted from the provided PDFs and turned into JSONs using multimodal LLM prompting. This means there definitely wil be broken questions along the way.<br /><br />
                     🛠️ Feel free to contribute to the project on GitHub by extending codebase or fixing questions:
                     <a href="https://github.com/forianzsiga/quizesch" target="_blank" style={{marginLeft: '5px'}}>https://github.com/forianzsiga/quizesch</a><br /><br />
                     🚀 Upcoming features:

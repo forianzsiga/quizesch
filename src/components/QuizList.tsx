@@ -174,21 +174,39 @@ const QuizList: React.FC<Props> = ({ onSelectQuiz }) => {
         );
     };
 
-    if (error) return <div style={{color: 'red'}}>Error: {error}</div>;
+    if (error) return <div className="error-text">Error: {error}</div>;
+
+    const subjectsToRender = activeFilters.subject.length > 0 
+        ? activeFilters.subject 
+        : availableTags.subject;
 
     return (
         <div id="main-view-wrapper" style={{display: 'flex'}}>
             <div id="main-banner-container">
-                <img src="quizesch-banner.svg" alt="Quizesch Banner" />
+                <img src="quizesch-banner.svg" alt="Quizesch Banner" width="429" height="87" />
             </div>
 
             <div id="quiz-selection-area">
                 <div id="quiz-list-wrapper">
                     <div id="quiz-list-container">
                         <h2>Available Quizzes</h2>
-                        <ul id="quiz-list">
-                            {filteredQuizzes.map(renderQuizItem)}
-                        </ul>
+                        {subjectsToRender.length === 0 && filteredQuizzes.length === 0 ? (
+                             <p style={{color: 'var(--text-muted)'}}>No quizzes found matching filters.</p>
+                        ) : (
+                            subjectsToRender.map(subject => {
+                                const quizzesInSubject = filteredQuizzes.filter(q => q.tags.subject === subject);
+                                if (quizzesInSubject.length === 0) return null;
+
+                                return (
+                                    <details key={subject} className="subject-group" open>
+                                        <summary>{subject}</summary>
+                                        <ul className="quiz-grid">
+                                            {quizzesInSubject.map(renderQuizItem)}
+                                        </ul>
+                                    </details>
+                                );
+                            })
+                        )}
                     </div>
                     {untaggedQuizzes.length > 0 && (
                         <div id="untagged-quiz-container" style={{display: 'flex'}}>
