@@ -1,0 +1,447 @@
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "PZH",
+    "year": "2024"
+  },
+  "questions": [
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "szerver"
+      },
+      {
+        "identifier": "field2",
+        "label": "kliens"
+      },
+      {
+        "identifier": "field3",
+        "label": "vezérlő"
+      },
+      {
+        "identifier": "field4",
+        "label": "IP"
+      },
+      {
+        "identifier": "field5",
+        "label": "port szám"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "MAC"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "szimolikus név"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "adat"
+      }
+    ],
+	"text": "FTP aktív mód esetén az adat kapcsolat felépítését a(z) [field1] kezdeményezi a [field2] felé. Ez a gyakorlatban azt jelenti, hogy a(z) [field2] a [field3] kapcsolaton keresztül elküldi a(z) [field4] -cím és [field5] adatokat, ahova a(z) [field1] kapcsolódhat. Ezután a(z) [field1] megkezdi a kapcsolat felépítését a kapott azonosítók alapján.",
+  "ID": 1,
+  "supervised": "yes"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mit tartalmaz egy HTTP-válasz az alábbiak közül?",
+    "options": {
+      "A": "Fejlécet.",
+      "B": "A szolgáltatást kérő klienst valami módon annak leírására eljutattni.",
+      "C": "Az azonosítót, amelyikkel a kérést azonosítani válaszokat.",
+      "D": "Státuszkódot, amelyikkel a kérést leíró szám helyes.",
+      "E": "Adattörzset."
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "ID": 2,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "A Transmission Control Protocol (TCP) az információátvitelhez jelentős plusz terhet ad az IP hálózatokra, ezért fontos volt a működési paramétereinek optimalizálása. Az egyik legfontosabb ezek közül a nyugtázási mechanizmus. Az alábbiak közül melyik állítás a helyes, és miért?",
+    "options": {
+      "a": "A jó megoldás az, ha a küldő alkalmazásokhoz a hálózaton felépített forgalomirányítási útvonalak időtartamainak megválasztásánál, mert így biztosan kihasználható a hálózaton elérhető információsávszélességet.",
+      "b": "A jó megoldás az, ha a küldő biztosan várakozik a nyugtára, mert ebből megtudja, hogy az üzenet sikeresen megérkezett, csak legfeljebb valamelyik csomópont az útvonalon ill. maga a vevő nem terhelődik túl a hálózaton.",
+      "c": "A jobb válasz közül egyik sem helyes.",
+      "d": "A jó megoldás az, ha a küldő részére minden válaszában a nyugtára, mert a vételi oldalon elfogadott és helyesnek vélt csomag esetén az utolsó, még egy egységben vett egybefüggő és sorrendhelyes byte sorszámát + 1-et küld egy nyugtában válaszul a felhasználónak.",
+      "e": "A jó megoldás az, ha a nyugtázás várakozási időtartamának meghatározása a legfontosabb, hogy hogyan a nyugtára várakozási időtartamát kell megválasztani, mert ez biztosítja az erőforrások ítélet és szempont szerintük igazolja megbízhatóság."
+    },
+    "answer": [
+      "d"
+    ],
+    "ID": 3,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az SMTP protokoll használatakor használt szállítási protokoll az alábbi:",
+    "options": {
+      "a": "UDP",
+      "b": "IGMP",
+      "c": "OLDP",
+      "d": "RDP",
+      "e": "TCP"
+    },
+    "answer": [
+      "e"
+    ],
+    "ID": 4,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "IP cím"
+      },
+      {
+        "identifier": "field2",
+        "label": "integerrel"
+      },
+      {
+        "identifier": "field3",
+        "label": "DNS"
+      },
+      {
+        "identifier": "field4",
+        "label": "név"
+      },
+      {
+        "identifier": "field5",
+        "label": "53-as porton"
+      },
+      {
+        "identifier": "field6",
+        "label": "rekurzív"
+      }
+    ],
+    "text": "Az [field1] megadására szolgálhatnak teljes tartománynevek (FQDN), vagy [field2] azonosítók. A [field3] rendszerben regisztrált [field4] szerverek [field5] (UDP) biztosítják, melyek üzemein át [field6] lekérdezési eljárások visznek.",
+    "ID": 5,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Hogyan küldi az IPv4 a hasznos terhet (payload) részekre?",
+    "options": {
+      "A": "A Payload Length mezőben, 32 bites egységekben.",
+      "B": "A Total Length mezőben.",
+      "C": "Igazából sehogy, mert ez nem része az IPv4-nek.",
+      "D": "Csak közvetve."
+    },
+    "answer": [
+      "D"
+    ],
+    "ID": 6,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Miért szükséges az IP-fragmentáció (helyesen: Mobile IP) a mobilhálózati rendszerekben?",
+    "options": {
+      "A": "Nagyobb legyen az adatátviteli sebesség a mobilhálózati cellák között.",
+      "B": "Segít az IP-cím kiosztás hatékonyabbá tételében.",
+      "C": "Hogy a vezeték nélküli (nomád) terminálok elérhetők legyenek egy állandó IP címen.",
+      "D": "Hogy ne kelljen ideiglenes IP címet kiosztogatni minden egyes bejelentkezéskor egy másik hálózathoz."
+    },
+    "answer": [
+      "C"
+    ],
+    "ID": 7,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mely állítások igazak az alábbiak közül az ISO OSI szerinti PDU elnevezésekkel kapcsolatban?",
+    "options": {
+      "a": "A hálózati réteg PDU-neve: csomag (packet).",
+      "b": "A szállítási réteg PDU-neve: szegmens (segment).",
+      "c": "Az adatkapcsolati réteg PDU-neve: keret (frame).",
+      "d": "Az alkalmazási réteg PDU-neve: felhasználói adatcsomag (user datagram).",
+      "e": "A fizikai réteg PDU-neve: adatcsomag (datagram)."
+    },
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ],
+    "ID": 8,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "RA (Router Advertisement)"
+      },
+      {
+        "identifier": "field2",
+        "label": "önmaga"
+      },
+      {
+        "identifier": "field3",
+        "label": "MAC-címből"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "link"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "automatikus rendszerrel"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "prefix hossza"
+      }
+    ],
+    "text": "IPv6 cím automatikus konfigurációja során az eszköz többek között több üzenetet küld, és a [field1] alapján kapott prefixet, akkor ebből [field2] [előállít], másodsorban az AG által [field3] alapján, válaszok után stb.",
+    "ID": 9,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "SYN"
+      },
+      {
+        "identifier": "field2",
+        "label": "ACK"
+      },
+      {
+        "identifier": "field3",
+        "label": "az első"
+      },
+      {
+        "identifier": "distractor1",
+        "label": "mindkettő"
+      },
+      {
+        "identifier": "distractor2",
+        "label": "semelyik"
+      },
+      {
+        "identifier": "distractor3",
+        "label": "a második"
+      }
+    ],
+    "text": "Egy TCP kapcsolat felépítésekor a három utas kézfogás során [field1] üzenetet küld az első és a második csomópont is, míg a harmadikban [field2] üzenetet küld a második és a harmadik csomópontnak megfelelően. [field3]",
+    "ID": 10,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Bontsa fel a 172.16.0.0/18 hálózatot 16 azonos méretű hálózatra. Adja meg az első kettőt és az utolsó kettőt. Adja meg az új maszkot: /[field1], majd a hálózatokat maszk nélkül: első hálózat: 172.16.[field2].0 második hálózat: 172.16.[field3].0 utolsó előtti hálózat: 172.16.[field4].0 utolsó hálózat: 172.16.[field5].0",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "22"
+      },
+      {
+        "identifier": "field2",
+        "answer": "0"
+      },
+      {
+        "identifier": "field3",
+        "answer": "4"
+      },
+      {
+        "identifier": "field4",
+        "answer": "60"
+      },
+      {
+        "identifier": "field5",
+        "answer": "64"
+      }
+    ],
+    "ID": 11,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "Készítsen Wireshark capture filtert, amellyel azokat a http forgalom (80-as portra küldött vagy onnan érkező) kereteket listázzuk ki. (Figyelem, ez NEM display filter!) [field1] [field2] [field3]",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "tcp"
+      },
+      {
+        "identifier": "field2",
+        "answer": "port"
+      },
+      {
+        "identifier": "field3",
+        "answer": "80"
+      }
+    ],
+    "ID": 12,
+    "supervised": "no"
+  },
+  {
+    "question_type": "drag_n_drop",
+    "choices": [
+      {
+        "identifier": "field1",
+        "label": "mail"
+      },
+      {
+        "identifier": "field2",
+        "label": "from:"
+      },
+      {
+        "identifier": "field3",
+        "label": "rcpt"
+      },
+      {
+        "identifier": "field4",
+        "label": "to:"
+      }
+    ],
+    "text": "Az SMTP protokoll megbízható parancsot adja meg, hogy a levél feladója az mhkft@kornhall.t-online.hu legyen, és a levelet recevi@kornhall.t-online.hu címre kézbesítsék (envelope recipient). [field1] [field2] mhkft@kornhall.t-online.hu [field3] [field4] recevi@kornhall.t-online.hu",
+    "ID": 13,
+    "supervised": "no"
+  },
+  {
+    "question_type": "fill_the_blanks",
+    "text": "A 10.10.10.0/24 hálózatban a router a legnagyobb kiosztható IP-címet kapta. Adja meg a router IP-címét, a legkisebb kiosztható IP-címet és a broadcast címet! Egészítse ki az alábbi címeket:\nBroadcast: 10.10.10.[field1]\nRouter címe: 10.10.10.[field2]\n1. számítógép (legkisebb kiosztható): 10.10.10.[field3]\nUtolsó számítógép (legnagyobb kiosztható a routeren kívül): 10.10.10.[field4]\nAdja meg a számítógépeknek kiosztható IP-címek számát is: [field5]",
+    "blank": [
+      {
+        "identifier": "field1",
+        "answer": "255"
+      },
+      {
+        "identifier": "field2",
+        "answer": "254"
+      },
+      {
+        "identifier": "field3",
+        "answer": "1"
+      },
+      {
+        "identifier": "field4",
+        "answer": "253"
+      },
+      {
+        "identifier": "field5",
+        "answer": "253"
+      }
+    ],
+    "ID": 14,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik állítások igazak?",
+    "options": {
+      "a": "A rádióhullám terjedhet szabad térben?",
+      "b": "A látható fény elektromágneses hullám.",
+      "c": "Használunk látható fényt optikai kommunikációs hálózatokban információátvitelre.",
+      "d": "A mikrohullám és a röntgen sugárzás ugyanaz.",
+      "e": "A látható fény rádióhullám."
+    },
+    "answer": [
+      "b",
+      "c"
+    ],
+    "ID": 15,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Koaxiális kábellel a gyakorlatban elérhető maximális sávszélesség és távolság:",
+    "options": {
+      "a": "50 - 100 MHz akár 20 km távolságra",
+      "b": "300 MHz - 1 GHz akár 10 km távolságra",
+      "c": "50 - 100 MHz akár 1 km távolságra",
+      "d": "1-2 MHz akár 500 m távolságra",
+      "e": "5 - 10 GHz akár 50 km távolságra"
+    },
+    "answer": [
+      "b"
+    ],
+    "ID": 16,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az alábbiak közül melyik töltheti be a hozzáférési hálózat szerepét NGN-ben?",
+    "options": {
+      "a": "VoIP",
+      "b": "dedikált optikai szál (on alapuló hálózat)",
+      "c": "4G mobilhálózat",
+      "d": "PCM K",
+      "e": "klasszikus kábel TV hálózat",
+      "f": "IPTV"
+    },
+    "answer": [
+      "b",
+      "c",
+      "e"
+    ],
+    "ID": 17,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Az optikai szál",
+    "options": {
+      "a": "elnyeli a rezonanciától",
+      "b": "(Az optikai szálat) nem zavarja az elektromágneses sugárzás és nem is kelt ilyet",
+      "c": "sávszélessége több 10 THz",
+      "d": "legfeljebb néhányszor 10 Gb/s adatátviteli sebességet tesz lehetővé",
+      "e": "belső magátmérője 1-3 mm",
+      "f": "nehezebb a koaxiális kábelnél (azonos hosszút tekintve)"
+    },
+    "answer": [
+      "b",
+      "c"
+    ],
+    "ID": 18,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Egy analóg jel maximális átvitt frekvenciája 5 kHz. PCM kódolást alkalmazunk a digitalizálásához úgy, hogy a mintavételezés során ne vesszen el információ, és 16 szintre kvantálunk. Mekkora a kódoló kimeneti adatsebessége?",
+    "options": {
+      "a": "2.5 kbit/s",
+      "b": "40 kbit/s",
+      "c": "80 kbit/s",
+      "d": "160 kbit/s",
+      "e": "10 kbit/s",
+      "f": "20 kbit/s"
+    },
+    "answer": [
+      "b"
+    ],
+    "ID": 19,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "A +36 20 555-7890 telefonszámban a „20\" alapesetben a Yettel mobilhálózathoz tartozik. Ez tehát:",
+    "options": {
+      "a": "Körzetszám",
+      "b": "Előfizetői szám",
+      "c": "Országhívószám",
+      "d": "Hálózatelérési szám",
+      "e": "Szolgáltatáskijelölő szám",
+      "f": "Belföldi rendeltetési szám"
+    },
+    "answer": [
+      "d"
+    ],
+    "ID": 20,
+    "supervised": "no"
+  }
+]
+}

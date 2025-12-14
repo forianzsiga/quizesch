@@ -1,0 +1,218 @@
+{
+  "tags": {
+    "subject": "Kommunikációs Hálózatok",
+    "type": "ZH",
+    "year": "2022"
+  },
+  "questions": 
+[
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik funkcionalitás nincs meg az IPTV fejállomásban?",
+    "options": {
+      "A": "IGMP csomagok küldése és fogadása",
+      "B": "Műsorfolyamok összegyűjtése különböző forrásokból",
+      "C": "Hozzáférés-szabályozás és DRM (kb. digitális jogvédelem) megvalósítása",
+      "D": "IP/UDP/RTP/MPEG-2 TS/ES beágyazás",
+      "E": "Médiafolyam újrakódolása"
+    },
+    "answer": [
+      "A"
+    ],
+    "ID": 1,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "A telefonhálózatokban alkalmazott PCM kódolásra melyik állítás igaz?",
+    "options": {
+      "A": "Másodpercenként 8000 szintre kvantálunk",
+      "B": "Egy mintát 256 biten kódolunk",
+      "C": "A kvantálás során torzul a jel",
+      "D": "Csak beszédjel átvitelére alkalmas",
+      "E": "A mintavételezés frekvenciája 3400 Hz"
+    },
+    "answer": [
+      "C"
+    ],
+    "ID": 2,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik igaz az LTE-re az alábbiak közül?",
+    "options": {
+      "A": "Önmagában csak internetszolgáltatást biztosít, hangszolgáltatást nem",
+      "B": "Az 5G technológiai elnevezése",
+      "C": "Minden verziójában egy eszköz egy antennát használ",
+      "D": "Jobban véd a covidtól, mint a Sinopharm...",
+      "E": "Legalább 1 Gb/s sebességet biztosít minden felhasználónak"
+    },
+    "answer": [
+      "A"
+    ],
+    "ID": 3,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "UMTS hálózatokban egy 5 MHz-es csatornában egyszerre négyen visznek át adatot. Mekkora az egyes adatcsatornák bitsebessége? (A chipsebesség 3,84 Mchip/s)",
+    "options": {
+      "A": "60 kb/s",
+      "B": "3840 kb/s",
+      "C": "480 kb/s",
+      "D": "Kb. 5 Mb/s",
+      "E": "960 kb/s"
+    },
+    "answer": [
+      "E"
+    ],
+    "ID": 4,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik az a jellemző, amelyik megmondja, hogy beszédhangon kívül más hang is jól kódolható-e az adott kodekkel?",
+    "options": {
+      "A": "Átlátszóság",
+      "B": "Hibridség (azaz hibriditás)",
+      "C": "Robosztusság",
+      "D": "Adaptivitás",
+      "E": "Tandemezhetőség"
+    },
+    "answer": [
+      "A"
+    ],
+    "ID": 5,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi az emberi beszédjel spektrumának (frekvenciatartományának) felső határa?",
+    "options": {
+      "A": "Kb. 20.000 kHz",
+      "B": "Kb. 6-7000 Hz",
+      "C": "Kb. 20.000 Hz",
+      "D": "Kb. 3400 Hz",
+      "E": "Kb. 20 Hz"
+    },
+    "answer": [
+      "D"
+    ],
+    "ID": 6,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mobilhálózatokban mik a nagyobb cellák előnyei a kisebbekkel szemben?",
+    "options": {
+      "A": "Olcsóbb velük egy terület lefedése",
+      "B": "Jobban kímélik a telefonok akkumulátorát",
+      "C": "Jobb beszédminőség érhető így el",
+      "D": "Nagyobb adatsebesség érhető így el",
+      "E": "Többen beszélhetnek így egyszerre"
+    },
+    "answer": [
+      "A"
+    ],
+    "ID": 7,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik állítás igaz NGN-re?",
+    "options": {
+      "A": "Az IPTV egy lehetséges alkalmazás NGN-ben, melyet egy (vagy több) szerver szolgáltat",
+      "B": "A hozzáférési hálózat nem lehet mobil",
+      "C": "A hozzáférési hálózat mindig mobil",
+      "D": "Az IP az csak egy szolgáltatás a felhasználók felé, a gerinchálózatban nem használják",
+      "E": "Az NGN egy hollywoodi filmstúdió"
+    },
+    "answer": [
+      "A"
+    ],
+    "ID": 8,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mi jellemző egy MPEG-2 TS csomagra?",
+    "options": {
+      "A": "Mindig a programok (csatornák) azonosítóit hordozza",
+      "B": "Egy TS csomag több Packetized Elementary Stream (PES) csomagot is tartalmazhat",
+      "C": "Több, jellemzően 7 IP csomag egyben",
+      "D": "Kicsi: kevesebb, mint 200 byte",
+      "E": "Nagy: több kB hosszú"
+    },
+    "answer": [
+      "D"
+    ],
+    "ID": 9,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Milyen számozási rendszert alkalmaznak Magyarországon a távbeszélő hálózatokban?",
+    "options": {
+      "A": "Belföldi rendeltetési számozást",
+      "B": "Zárt számozást",
+      "C": "Nyílt számozást",
+      "D": "Mobilban zárt, vezetékesben nyílt számozást",
+      "E": "Mobilban nyílt, vezetékesben zárt számozást"
+    },
+    "answer": [
+      "C"
+    ],
+    "ID": 10,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "VoIP hálózatokban melyik protokollt használjuk a hívások lebontására?",
+    "options": {
+      "A": "IP",
+      "B": "AMR-WB",
+      "C": "RTP",
+      "D": "RIP",
+      "E": "SIP"
+    },
+    "answer": [
+      "E"
+    ],
+    "ID": 11,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Melyik állítás igaz a digitális jelekre?",
+    "options": {
+      "A": "Akkor digitális, ha frekvenciabillentyűzést alkalmazunk",
+      "B": "Nem lehet szinuszos jel",
+      "C": "Mindig négyszögjel",
+      "D": "Nem lehet négyszögjel",
+      "E": "Lehet szinuszos jel"
+    },
+    "answer": [
+      "E"
+    ],
+    "ID": 12,
+    "supervised": "no"
+  },
+  {
+    "question_type": "multi_choice",
+    "question_title": "Mikor alapították a BME első, közvetlen elődintézményét?",
+    "options": {
+      "A": "1782",
+      "B": "1972",
+      "C": "1872",
+      "D": "1982",
+      "E": "1672"
+    },
+    "answer": [
+      "A"
+    ],
+    "ID": 15,
+    "supervised": "no"
+  }
+]
+}

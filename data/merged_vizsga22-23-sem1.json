@@ -1,0 +1,909 @@
+{
+  "tags": {
+    "subject": "Objektumorientált Rendszertervezés",
+    "type": "Vizsga",
+    "year": "2022/23/1"
+  },
+  "questions": [
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik elv segítségével lehet feloldani a csomagok közötti körkörös függőséget?",
+      "options": {
+        "a": "SRP",
+        "b": "DIP",
+        "c": "REP",
+        "d": "LSP"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 1,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? A Visitor tervezési minta sérti az OCP elvet.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 2,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Az öröklődés célja az ősosztályban definiált mezők újrahasznosítása.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 3,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? A laza csatolás előnyös a karbantarthatóság szempontjából.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 4,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Egy szoftver akkor van jól tervezve, ha a stabil csomagok függnek az instabil csomagoktól.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 5,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? A többnyelvűséget támogató erőforrásfájlok sértik az SCP elvet.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 6,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Ki számít ismerősnek a Demeter-törvény szerint?",
+      "options": {
+        "a": "Aki velünk egy a csomagban van",
+        "b": "Akire van asszociációnk",
+        "c": "Akit bejövő paraméterként kaptunk",
+        "d": "Aki létrehozott minket"
+      },
+      "answer": [
+        "b",
+        "c"
+      ],
+      "ID": 7,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi csomagokat: [diagram]. Mely csomagok stabilak?",
+      "puml_code": "@startuml\npackage A\npackage B\npackage C\npackage D\n\nD ..> C\nD ..> B\nA ..> B\n@enduml",
+      "options": {
+        "a": "D",
+        "b": "B",
+        "c": "A",
+        "d": "C"
+      },
+      "answer": [
+        "b",
+        "d"
+      ],
+      "ID": 8,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot: [diagram]. Teljesül-e a bar függvényre a Liskov-elv?",
+      "puml_code": "@startuml\nclass X\nclass Y\nclass Z\n\nX <|-- Y\nY <|-- Z\n\nclass Foo {\n  +bar(p: X)\n}\n\nclass Quux {\n  +bar(p: Z)\n}\n\nFoo <|-- Quux\n@enduml",
+      "options": {
+        "a": "Teljesül",
+        "b": "Sérül"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 9,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot: [diagram]. Ismertek továbbá az alábbi feltételek: A.foo pre: -100 <= x <= 100, B.foo pre: -101 <= x <= 101, C.foo pre: -200 <= x <= 150, D.foo pre: -100 <= x <= 100. Teljesül-e a foo függvényre a Liskov-elv?",
+      "puml_code": "@startuml\nclass A {\n +foo(x: int): int\n}\nclass B {\n +foo(x: int): int\n}\nclass C {\n +foo(x: int): int\n}\nclass D {\n +foo(x: int): int\n}\n\nA <|-- B\nB <|-- C\nB <|-- D\n@enduml",
+      "options": {
+        "a": "Teljesül",
+        "b": "Sérül"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 10,
+      "supervised": "no"
+    },
+    {
+      "question_type": "drag_n_drop",
+      "text": "Párosítsa az alábbi OO tervezési heurisztikákat a nekik leginkább megfelelő tervezési mintákkal! Egy tervezési mintát legfeljebb egyszer használjon fel!\nA statikus szemantikát és kényszereket a modell struktúrájába építsük be! [field1]\nA tartalmazó objektum használja a tartalmazott objektumokat! [field2]\nA tartalmazott objektumok ne beszélgessenek egymással közvetlenül! [field3]",
+      "choices": [
+        {
+          "identifier": "field1",
+          "label": "Interpreter"
+        },
+        {
+          "identifier": "field2",
+          "label": "Decorator"
+        },
+        {
+          "identifier": "field3",
+          "label": "Mediator"
+        }
+      ],
+      "ID": 11,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely OO tervezési heurisztikák teljesülnek az alábbiak közül?",
+      "puml_code": "@startuml\nclass UpgradeableGameObject {\n +placeStone(s: MagicStone)\n}\nclass MagicStone {\n +MagicStone(s: string, i1: int, i2: int)\n +getPrice(): int\n +addDamage(t: Tower)\n +addSlowing(m: Mud)\n +addRange(t: Tower)\n +addFirerate(t: Tower)\n +damage(e: Elf)\n +slow(e: Elf)\n +damage(d: Dwarf)\n +slow(d: Dwarf)\n +damage(h: Human)\n +slow(h: Human)\n +damage(h: Hobbit)\n +slow(h: Hobbit)\n}\nclass YellowStone\nclass RedStone\nclass PurpleStone\nclass OrangeStone\nclass BlueStone\nclass GreenStone\nclass WhiteStone\n\nMagicStone <|-- YellowStone\nMagicStone <|-- RedStone\nMagicStone <|-- PurpleStone\nMagicStone <|-- OrangeStone\nMagicStone <|-- BlueStone\nMagicStone <|-- GreenStone\nMagicStone <|-- WhiteStone\n\nUpgradeableGameObject <|-- Tower\nUpgradeableGameObject <|-- Mud\n\nUpgradeableGameObject \"0..*\" -- \"0..*\" MagicStone\n@enduml",
+      "options": {
+        "a": "Soha ne kódoljuk a típust enum vagy int értékekbe, használjunk helyette polimorfizmust!",
+        "b": "Implementáljuk a sztenderd metódusokat!",
+        "c": "Asszociáció helyett preferáljuk a tartalmazást!",
+        "d": "A gyakran változó dinamikus szemantikát és kényszereket külső viselkedésként implementáljuk!",
+        "e": "Egy osztály ne függjön a saját leszármazottaitól!"
+      },
+      "answer": [
+        "a",
+        "d",
+        "e"
+      ],
+      "ID": 12,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely OO tervezési heurisztikák teljesülnek az alábbiak közül?",
+      "puml_code": "@startuml\nclass UpgradeableGameObject\nclass MagicStone\nclass Tower\nclass Mud\nclass EnemyUnit\n\nUpgradeableGameObject <|-- Tower\nUpgradeableGameObject <|-- Mud\nUpgradeableGameObject -- MagicStone\n\nclass WhiteStone\nclass GreenStone\nclass BlueStone\nclass YellowStone\nclass RedStone\nclass PurpleStone\nclass OrangeStone\n\nMagicStone <|-- WhiteStone\nMagicStone <|-- GreenStone\nMagicStone <|-- BlueStone\nMagicStone <|-- YellowStone\nMagicStone <|-- RedStone\nMagicStone <|-- PurpleStone\nMagicStone <|-- OrangeStone\n\nEnemyUnit <|-- Human\nEnemyUnit <|-- Hobbit\nEnemyUnit <|-- Dwarf\nEnemyUnit <|-- Elf\n@enduml",
+      "options": {
+        "a": "Az öröklési hierarchia gyökerében interfészek vagy absztrakt osztályok legyenek!",
+        "b": "Ne keverjük össze a leszármazottakat az objektumokkal! Vigyázzunk azokkal a leszármazottakkal, amelyekből csak egyetlen példányt hozunk létre!",
+        "c": "Az öröklődés célja mindig a viselkedés újrahasznosítása!",
+        "d": "Kerüljük a csak adattárolásra használt osztályokat!",
+        "e": "A viselkedést modellezzük, ne a szerepeket!"
+      },
+      "answer": [
+        "b",
+        "d",
+        "e"
+      ],
+      "ID": 13,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? A refaktorálás célja a kódban lévő hibák (bugok) javítása.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 14,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? A refaktorálás során érdemes egyszerre több refaktorálási műveletet is elvégezni, hogy időt spóroljunk.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 15,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A Feature envy code smell melyik refaktorálási minták segítségével javítható?",
+      "options": {
+        "a": "Remove control flag",
+        "b": "Introduce explaining variable",
+        "c": "Move method",
+        "d": "Rename method",
+        "e": "Change value to reference"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 16,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A Duplicated code code smell melyik refaktorálási minták segítségével javítható?",
+      "options": {
+        "a": "Inline method",
+        "b": "Extract class",
+        "c": "Substitute algorithm",
+        "d": "Duplicate observed data",
+        "e": "Extract method"
+      },
+      "answer": [
+        "b",
+        "e"
+      ],
+      "ID": 17,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyek jó függvénynevek a clean code elvek szerint?",
+      "options": {
+        "a": "F",
+        "b": "Copy",
+        "c": "CP",
+        "d": "Manager",
+        "e": "PickColor",
+        "f": "Pick",
+        "g": "ColorPicker"
+      },
+      "answer": [
+        "b",
+        "e",
+        "f"
+      ],
+      "ID": 18,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? A kivételek típusait a hívó objektum szemszögéből kell definiálni.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 19,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Az alábbi kódrészlet megfelel a clean code elveknek: [CODE]",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 20,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A HTTP cookie-k milyen állapottárolást tesznek lehetővé?",
+      "options": {
+        "a": "Állapot a szerver memóriájában",
+        "b": "Állapot a kliens oldalon",
+        "c": "Állapot a szerver adatbázisában"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 21,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mire szolgál a trading service?",
+      "options": {
+        "a": "Szolgáltatások logikai név alapján történő keresésére",
+        "b": "Szolgáltatások interfész alapján történő keresésére",
+        "c": "Tőzsdei szolgáltatások szabványos interfészleírója",
+        "d": "Szolgáltatások használati díjának adminisztrálására"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 22,
+      "supervised": "no"
+    },
+    {
+      "question_type": "drag_n_drop",
+      "text": "Tekintsük az alábbi szekvencia diagramot: [diagram].\nMelyik konkurens-elosztott minta látható az ábrán? [field1]\nMit jelöl az X lifeline? [field2]\nMit jelöl a W lifeline? [field3]\nMit jelöl a B üzenet? [field4]",
+      "puml_code": "@startuml\nparticipant U\nparticipant W\nparticipant X\nparticipant Y\n\nU -> W: A(y,v)\nactivate W\nW -> X: B()\ndeactivate W\n\nloop\n  X -> X: C()\n  activate X\n  X -> Y: D(y,e)\n  activate Y\n  Y -> X: y,e\n  deactivate Y\n  X -> U: E(y,e)\n  activate U\n  U -> Y: F()\n  deactivate U\n  deactivate X\nend\n@enduml",
+      "choices": [
+        {
+          "identifier": "field1",
+          "label": "Reactor"
+        },
+        {
+          "identifier": "field2",
+          "label": "EventQueue"
+        },
+        {
+          "identifier": "field3",
+          "label": "Reactor"
+        },
+        {
+          "identifier": "field4",
+          "label": "AddEvent"
+        }
+      ],
+      "ID": 23,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Immutable objektumok használatával elkerülhető a védelmi másolatok készítése.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 24,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Az ImmutableArray<T> hatékonyabb, mint az ImmutableList<T>, ha a gyűjteményt ritkán módosítjuk, de sokszor kell rajta végigiterálnunk.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 25,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik elv segítségével lehet feloldani a csomagok közötti körkörös függőséget?",
+      "options": {
+        "a": "SDP",
+        "b": "ISP",
+        "c": "LSP",
+        "d": "REP"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 26,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? A Decorator tervezési minta sérti az OCP elvet.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 27,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Az Abstract Factory tervezési minta sérti az OCP elvet.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 28,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Egy osztály interfésze ugyanaz, mint az általa implementált interfészek halmaza.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 29,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Egy szoftver tervezése során mindig minden lehetséges követelményváltozásra fel kell készülni.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 30,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? A DbC elv szerint a prekondíciókat nem szabad erősíteni.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 31,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? A DIP elv egy lehetséges megfogalmazása az, hogy absztrakcióktól függjünk.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 32,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Ki számít ismerősnek a Demeter-törvény szerint?",
+      "options": {
+        "a": "Aki velünk egy a csomagban van",
+        "b": "Aki ismer minket",
+        "c": "Akit mi hoztunk létre",
+        "d": "Aki létrehozott minket"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 33,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi csomagokat: [diagram]. Mely csomagok instabilak?",
+      "puml_code": "@startuml\npackage A\npackage B\npackage C\npackage D\n\nD ..> C\nD ..> B\nA ..> B\n@enduml",
+      "options": {
+        "a": "B",
+        "b": "A",
+        "c": "D",
+        "d": "C"
+      },
+      "answer": [
+        "b",
+        "c"
+      ],
+      "ID": 34,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot: [diagram]. Teljesül-e a bar függvényre a Liskov-elv?",
+      "puml_code": "@startuml\nclass X\nclass Y\nclass Z\n\nX <|-- Y\nY <|-- Z\n\nclass Foo {\n  +bar(p: Z)\n}\n\nclass Quux {\n  +bar(p: X)\n}\n\nFoo <|-- Quux\n@enduml",
+      "options": {
+        "a": "Teljesül",
+        "b": "Sérül"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 35,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot: [diagram]. Ismertek továbbá az alábbi feltételek: A.foo pre: -100 <= x <= 100, B.foo pre: -101 <= x <= 101, C.foo pre: -200 <= x <= 150, D.foo pre: -110 <= x <= 110. Teljesül-e a foo függvényre a Liskov-elv?",
+      "puml_code": "@startuml\nclass A {\n +foo(x: int): int\n}\nclass B {\n +foo(x: int): int\n}\nclass C {\n +foo(x: int): int\n}\nclass D {\n +foo(x: int): int\n}\n\nA <|-- B\nB <|-- C\nB <|-- D\n@enduml",
+      "options": {
+        "a": "Teljesül",
+        "b": "Sérül"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 36,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely OO tervezési heurisztikák teljesülnek az alábbiak közül?",
+      "puml_code": "@startuml\nclass Application\nclass Engine\nclass TickListener\nclass Field\nclass FieldObject\nclass Enemy\nclass Defense\nclass Player\nclass Tower\nclass Obstruction\nclass TowerStone\nclass MagicStone\nclass ObstructionStone\nclass Hobbit\nclass Dwarf\nclass Elf\nclass Human\n\nApplication --> Engine\nApplication --> Field\nEngine --> TickListener\nEngine <.. Field\nTickListener <|-- FieldObject\nFieldObject <|-- Enemy\nFieldObject <|-- Defense\nEnemy <|-- Hobbit\nEnemy <|-- Dwarf\nEnemy <|-- Elf\nEnemy <|-- Human\nDefense <|-- Tower\nDefense <|-- Obstruction\nDefense --> Player\nTowerStone <|-- MagicStone\nMagicStone <|-- ObstructionStone\nTowerStone --> MagicStone\nDefense ..> MagicStone\n@enduml",
+      "options": {
+        "a": "Kerüljük a csak adattárolásra használt osztályokat!",
+        "b": "Implementáljuk a sztenderd metódusokat!",
+        "c": "Egy osztály ne függjön a saját leszármazottaitól!",
+        "d": "Kerüljük az isten-osztályokat!",
+        "e": "Ne keverjük össze a statikus és a dinamikus kényszereket!"
+      },
+      "answer": [
+        "c",
+        "d",
+        "e"
+      ],
+      "ID": 37,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely OO tervezési heurisztikák teljesülnek az alábbiak közül?",
+      "puml_code": "@startuml\nclass Application\nclass Engine\nclass TickListener\nclass Field\nclass FieldObject\nclass Enemy\nclass Defense\nclass Player\nclass Tower\nclass Obstruction\nclass TowerStone\nclass MagicStone\nclass ObstructionStone\nclass Hobbit\nclass Dwarf\nclass Elf\nclass Human\n\nApplication --> Engine\nApplication --> Field\nEngine --> TickListener\nEngine <.. Field\nTickListener <|-- FieldObject\nFieldObject <|-- Enemy\nFieldObject <|-- Defense\nEnemy <|-- Hobbit\nEnemy <|-- Dwarf\nEnemy <|-- Elf\nEnemy <|-- Human\nDefense <|-- Tower\nDefense <|-- Obstruction\nDefense --> Player\nTowerStone <|-- MagicStone\nMagicStone <|-- ObstructionStone\nTowerStone --> MagicStone\nDefense ..> MagicStone\n@enduml",
+      "options": {
+        "a": "A viselkedést modellezzük, ne a szerepeket!",
+        "b": "Az öröklési hierarchia gyökerében interfészek vagy absztrakt osztályok legyenek!",
+        "c": "Ne keverjük össze a leszármazottakat az objektumokkal! Vigyázzunk azokkal a leszármazottakkal, amelyekből csak egyetlen példányt hozunk létre!",
+        "d": "Az opcionális elemeket tartalmazásként implementáljuk, ne öröklődéssel!",
+        "e": "Ne készítsünk függvényeket a típusok illetve a képességek megkülönböztetésére, használjunk helyettük polimorfizmust!"
+      },
+      "answer": [
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "ID": 38,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Ha büdös kódot (code smell) találunk a szoftverben, akkor a szoftverben hiba (bug) van.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 39,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? A refaktorálás nem változtatja meg a szoftver struktúráját, csak a szoftver viselkedését.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 40,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A Long method code smell melyik refaktorálási minták segítségével javítható?",
+      "options": {
+        "a": "Decompose conditional",
+        "b": "Rename method",
+        "c": "Introduce assertion",
+        "d": "Inline method",
+        "e": "Encapsulate field"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 41,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A Inappropriate intimacy code smell melyik refaktorálási minták segítségével javítható?",
+      "options": {
+        "a": "Remove control flag",
+        "b": "Replace delegation with inheritance",
+        "c": "Move method",
+        "d": "Inline method",
+        "e": "Hide method"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 42,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyek jó osztálynevek a clean code elvek szerint?",
+      "options": {
+        "a": "SyntaxVisitor",
+        "b": "MPoint",
+        "c": "Info",
+        "d": "Student",
+        "e": "SqlStatementFromHardCodedValuesAnd...",
+        "f": "Move",
+        "g": "MP"
+      },
+      "answer": [
+        "a",
+        "d"
+      ],
+      "ID": 43,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi felszólítás a clean-code szerint? Ne használjunk unchecked kivételeket!",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 44,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyek szerepelnek a Clean Code és az API tervezési elvek között is?",
+      "options": {
+        "a": "Functions should be small",
+        "b": "Stepdown rule",
+        "c": "Avoid abbreviations"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 45,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely osztályok sértik meg a következő OO tervezési heurisztikát? \"A viselkedést modellezzük, ne a szerepeket!\"",
+      "puml_code": "@startuml\nclass Map\nclass Field\nclass Frame\nclass House\nclass Road\nclass Game\nclass Player\nclass Vehicle\nclass HidingPlace\nclass Citizen\nclass Cop\nclass Blocker\nclass Lamp\nclass StopTable\ninterface Ticker\n\nMap *-- Field\nField -- Field\nMap -- Game\nGame *-- Ticker\nGame -- Player\nGame -- Citizen\nGame -- Cop\nPlayer -- Field\nVehicle -- Field\nCitizen -- Field\nCop -- Field\nBlocker -- Field\nFrame -- Field\nHouse -- Field\nRoad -- Field\nRoad *-- Vehicle\nRoad *-- Blocker\nHidingPlace -- Road\nBlocker <|-- Lamp\nBlocker <|-- StopTable\nTicker <|.. Vehicle\nTicker <|.. Blocker\n@enduml",
+      "options": {
+        "a": "Frame",
+        "b": "House",
+        "c": "Lamp",
+        "d": "Cop",
+        "e": "StopTable",
+        "f": "Player"
+      },
+      "answer": [
+        "c",
+        "e"
+      ],
+      "ID": 46,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyek jó nevek ciklusváltozónak a clean code elvek szerint?",
+      "options": {
+        "a": "accountIterator",
+        "b": "bookIdentifier",
+        "c": "i",
+        "d": "a"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 47,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül mely elemek részei a WSDL-nek?",
+      "options": {
+        "a": "api",
+        "b": "envelope",
+        "c": "binding",
+        "d": "types",
+        "e": "header"
+      },
+      "answer": [
+        "c",
+        "d"
+      ],
+      "ID": 48,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz-e a következő állítás? Az alábbi kódrészlet Java környezetben megfelel a clean code elveknek: public interface IPerson { ... }",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 49,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Az immutable osztályok szálbiztosak.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 50,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot: [diagram]. Igaz-e, hogy az alábbi feltételekkel teljesül a Liskov-elv? Base.Calculate pre: 0 <= x <= 100, Derived.Calculate pre: 20 <= x <= 50",
+      "puml_code": "@startuml\nclass Base {\n +Calculate(x: int): int\n}\nclass Derived {\n +Calculate(x: int): int\n}\nBase <|-- Derived\n@enduml",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 51,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz-e, hogy Visitor tervezési minta sérti az ISP elvet?",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 52,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Az alábbi kódrészlet megfelel a clean code elveknek: [CODE: Max(List<int> values)...]",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 53,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyek szerepelnek az API tervezési és a clean code témakörben is?",
+      "options": {
+        "a": "Válasszunk megfelelő alapértelmezett értékeket",
+        "b": "Használjunk beszédes neveket",
+        "c": "Egy függvény legfeljebb 20 soros legyen",
+        "d": "Kerüljük a hosszú paraméterlistákat",
+        "e": "Kerüljük a mellékhatásokat",
+        "f": "Kerüljük a rövidítéseket",
+        "g": "Ha egy függvény előfeltételei sérülnek, azonnal dobjunk kivételt a függvényből",
+        "h": "Egy függvény egyszerre csak egy absztrakciós szinten dolgozzon"
+      },
+      "answer": [
+        "d",
+        "e",
+        "f"
+      ],
+      "ID": 54,
+      "supervised": "no"
+    },
+    {
+      "question_type": "drag_n_drop",
+      "text": "Tekintsük az alábbi szekvencia diagramot: [diagram].\nMelyik konkurens-elosztott minta látható az ábrán? [field1]\nMit jelöl az X lifeline? [field2]\nMit jelöl a W lifeline? [field3]\nMit jelöl a B üzenet? [field4]",
+      "puml_code": "@startuml\nparticipant U\nparticipant W\nparticipant X\nparticipant Z\nparticipant Y\n\nU -> W: A()\ncreate V\nW -> V: <<create>>\nW -> X: B(v,p)\nX -> Z: D(e,r)\nZ -> Y: C(p)\nY -> Z: r\nZ -> X: E()\nX -> U: F(e,r)\n@enduml",
+      "choices": [
+        {
+          "identifier": "field1",
+          "label": "Proactor"
+        },
+        {
+          "identifier": "field2",
+          "label": "Completion Handler"
+        },
+        {
+          "identifier": "field3",
+          "label": "Asynchronous Operation Processor"
+        },
+        {
+          "identifier": "field4",
+          "label": "Initiate Operation"
+        }
+      ],
+      "ID": 55,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Immutable objektumok használata során nincs szükség klónozásra és másoló konstruktorra.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 56,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Egy ImmutableList<T> foreach ciklussal történő bejárása kevésbé hatékony, mint egy List<T> bejárása.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 57,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely OO tervezési heurisztikák teljesülnek az alábbiak közül?",
+      "puml_code": "@startuml\nclass UpgradeableGameObject\nclass MagicStone\nclass Tower\nclass Mud\nclass EnemyUnit\n\nUpgradeableGameObject <|-- Tower\nUpgradeableGameObject <|-- Mud\nUpgradeableGameObject -- MagicStone\n\nclass WhiteStone\nclass GreenStone\nclass BlueStone\nclass YellowStone\nclass RedStone\nclass PurpleStone\nclass OrangeStone\n\nMagicStone <|-- WhiteStone\nMagicStone <|-- GreenStone\nMagicStone <|-- BlueStone\nMagicStone <|-- YellowStone\nMagicStone <|-- RedStone\nMagicStone <|-- PurpleStone\nMagicStone <|-- OrangeStone\n\nEnemyUnit <|-- Human\nEnemyUnit <|-- Hobbit\nEnemyUnit <|-- Dwarf\nEnemyUnit <|-- Elf\n@enduml",
+      "options": {
+        "a": "A gyakran változó dinamikus szemantikát és kényszereket külső viselkedésként implementáljuk!",
+        "b": "Asszociáció helyett preferáljuk a tartalmazást!",
+        "c": "Implementáljuk a sztenderd metódusokat!",
+        "d": "Soha ne kódoljuk a típust enum vagy int értékekbe, használjunk helyette polimorfizmust!",
+        "e": "Egy osztály ne függjön a saját leszármazottaitól!"
+      },
+      "answer": [
+        "d",
+        "e"
+      ],
+      "ID": 58,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítás? Az alábbi kódrészlet megfelel a clean code elveknek: [CODE: Save(string message)...]",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 59,
+      "supervised": "no"
+    }
+  ]
+}

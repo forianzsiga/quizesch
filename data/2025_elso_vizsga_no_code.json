@@ -1,0 +1,246 @@
+{
+  "tags": {
+    "subject": "Szoftvertechnikák",
+    "type": "ZH",
+    "year": "2023"
+  },
+  "questions": [
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítások? A sorok elején I és H betűkkel jelölje az igaz és hamis válaszokat (jó válasz: 2p, üres: 0p, rossz: -1p)\n\n- A .NET keretrendszerben az osztályok egy osztályhierarchiát alkotnak.",
+      "options": {
+        "A": "Igaz",
+        "B": "Hamis"
+      },
+      "answer": ["A"],
+      "ID": 1,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítások? A sorok elején I és H betűkkel jelölje az igaz és hamis válaszokat (jó válasz: 2p, üres: 0p, rossz: -1p)\n\n- A JIT compiler feladata, hogy a .NET kódját natív gépi kódra fordítsa le.",
+      "options": {
+        "A": "Igaz",
+        "B": "Hamis"
+      },
+      "answer": ["A"],
+      "ID": 2,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítások? A sorok elején I és H betűkkel jelölje az igaz és hamis válaszokat (jó válasz: 2p, üres: 0p, rossz: -1p)\n\n- A .NET környezetben egy folyamat (process) a rendszer erőforrásait felügyeli.",
+      "options": {
+        "A": "Igaz",
+        "B": "Hamis"
+      },
+      "answer": ["A"],
+      "ID": 3,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítások? A sorok elején I és H betűkkel jelölje az igaz és hamis válaszokat (jó válasz: 2p, üres: 0p, rossz: -1p)\n\n- A .NET környezetben egy adott osztályról több példányt is létrehozhatunk.",
+      "options": {
+        "A": "Igaz",
+        "B": "Hamis"
+      },
+      "answer": ["A"],
+      "ID": 4,
+      "supervised": "no"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Mely művelet hívódhat eredményezi az alábbi kód a blokkból való kilépés során az A1 objektumon? using (A a1 = new A()) { } Válasz: [answer1]",
+      "blank": {
+        "identifier": "answer1",
+        "answer": "Dispose()"
+      },
+      "ID": 5,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mely interfészt kell .NET környezetben egy osztályban megvalósítani, amennyiben az osztályba nem felügyelt erőforrásra hivatkozik, és szeretnénk azt determinisztikusan felszabadítani?",
+      "options": {
+        "A": "IDisposable",
+        "B": "ICloneable",
+        "C": "IEnumerable",
+        "D": "IComparable"
+      },
+      "answer": ["A"],
+      "ID": 6,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": ".NET környezetben a célunk az, hogy amikor egy szál beolvas egy adatot, akkor úgy tudjon jelezni más erre várakozó szálnak, hogy azok mind tovább futhassanak, és feldolgozhassák az adatot. Adja meg egy szóval, mit használna ehhez?",
+      "options": {
+        "A": "Monitor",
+        "B": "Mutex",
+        "C": "Semaphore",
+        "D": "EventWaitHandle"
+      },
+      "answer": ["A"],
+      "ID": 7,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítások? A sorok elején I és H betűkkel jelölje az igaz és hamis válaszokat (jó válasz: 2p, üres: 0p, rossz: -1p)\n\n- A Dependency Injection tervezési minta lényege, hogy az osztály a függőségeit konstruktor vagy művelet paraméterekben kapja meg (interfész típusként).",
+      "options": {
+        "A": "Igaz",
+        "B": "Hamis"
+      },
+      "answer": ["A"],
+      "ID": 8,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítások? A sorok elején I és H betűkkel jelölje az igaz és hamis válaszokat (jó válasz: 2p, üres: 0p, rossz: -1p)\n\n- A Singleton tervezési mintában az osztály egyetlen példányát az osztály egy statikus tagváltozója tárolja.",
+      "options": {
+        "A": "Igaz",
+        "B": "Hamis"
+      },
+      "answer": ["A"],
+      "ID": 9,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítások? A sorok elején I és H betűkkel jelölje az igaz és hamis válaszokat (jó válasz: 2p, üres: 0p, rossz: -1p)\n\n- A Proxy tervezési mintában a kliens objektumban van egy mutató/hivatkozás egy proxy objektumra, a proxy objektumban pedig van egy mutató/hivatkozás az eredeti (subject) objektumra.",
+      "options": {
+        "A": "Igaz",
+        "B": "Hamis"
+      },
+      "answer": ["A"],
+      "ID": 10,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítások? A sorok elején I és H betűkkel jelölje az igaz és hamis válaszokat (jó válasz: 2p, üres: 0p, rossz: -1p)\n\n- A Document View architektúrában a dokumentumban külön tagváltozót vezetünk be az egyes nézetekre.",
+      "options": {
+        "A": "Igaz",
+        "B": "Hamis"
+      },
+      "answer": ["H"],
+      "ID": 11,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítások? A sorok elején I és H betűkkel jelölje az igaz és hamis válaszokat (jó válasz: 2p, üres: 0p, rossz: -1p)\n\n- Az adatforrás által rekurzívan többször is megnyitható/lezárható ugyanazon lock objektumra.",
+      "options": {
+        "A": "Igaz",
+        "B": "Hamis"
+      },
+      "answer": ["A"],
+      "ID": 12,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis az alábbi állítások? A sorok elején I és H betűkkel jelölje az igaz és hamis válaszokat (jó válasz: 2p, üres: 0p, rossz: -1p)\n\n- Az üzleti logikai réteg a két- és háromrétegű architektúrának is része.",
+      "options": {
+        "A": "Igaz",
+        "B": "Hamis"
+      },
+      "answer": ["A"],
+      "ID": 13,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Adja meg, mely beépített .NET típussal lehet olyan függvényekre hivatkozni, melyeknek egy char és egy bool paramétere van (ebben a sorrendben), és void a visszatérőjük.",
+      "options": {
+        "A": "Action<char, bool>",
+        "B": "Func<char, bool, void>",
+        "C": "Predicate<char, bool>",
+        "D": "Converter<char, bool>"
+      },
+      "answer": ["A"],
+      "ID": 14,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik C# nyelvi forráskódot és egy pár soros példaprogramot, mely létrehoz egy példányt belőle, feliratozza az eseményére, és annak minden kiváltódásakor kiírja a kicsi boldogságát a konzolra. A generálás során nem használhatja a .NET keretrendszer beépített eseménytípusait. (Eventhandler, Func, Action és hasonlókat).",
+      "options": {
+        "A": "Egy saját delegált és esemény definíciója",
+        "B": "Egy Action delegált és esemény definíciója",
+        "C": "Egy Func delegált és esemény definíciója",
+        "D": "Egy EventHandler delegált és esemény definíciója"
+      },
+      "answer": ["A"],
+      "ID": 15,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik .NET osztályt kell használni MSSQL szerver esetén egy több rekordból álló eredményhalmaz feldolgozására?",
+      "options": {
+        "A": "SqlDataReader",
+        "B": "SqlCommand",
+        "C": "SqlConnection",
+        "D": "SqlDataAdapter"
+      },
+      "answer": ["A"],
+      "ID": 16,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen osztályt kell használni MSSQL szerver esetén egy több rekordból álló eredményhalmaz feldolgozására?",
+      "options": {
+        "A": "SqlDataReader",
+        "B": "DataSet",
+        "C": "DataTable",
+        "D": "SqlDataAdapter"
+      },
+      "answer": ["A"],
+      "ID": 17,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik az a metódus, amely egy aszinkron függvény fejléce (deklarációja) sorban, mely visszaadja a string típust, és egy megadott stringet különbbé tesz?",
+      "options": {
+        "A": "public async Task<string> ProcessStringAsync(string input)",
+        "B": "public string ProcessString(string input)",
+        "C": "public async void ProcessString(string input)",
+        "D": "public Task ProcessStringAsync(string input)"
+      },
+      "answer": ["A"],
+      "ID": 18,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik az a metódus, amely egy aszinkron függvény fejléce (deklarációja) sorban, mely visszaadja a string típust, és egy megadott stringet különbbé tesz?",
+      "options": {
+        "A": "public async Task<string> TransformStringAsync(string original)",
+        "B": "public string TransformString(string original)",
+        "C": "public async void TransformString(string original)",
+        "D": "public Task TransformStringAsync(string original)"
+      },
+      "answer": ["A"],
+      "ID": 19,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik az a metódus, amely egy aszinkron függvény fejléce (deklarációja) sorban, mely visszaadja a string típust, és egy megadott stringet különbbé tesz?",
+      "options": {
+        "A": "public async Task<string> ModifyStringAsync(string input)",
+        "B": "public string ModifyString(string input)",
+        "C": "public async void ModifyString(string input)",
+        "D": "public Task ModifyStringAsync(string input)"
+      },
+      "answer": ["A"],
+      "ID": 20,
+      "supervised": "no"
+    }
+  ]
+}
