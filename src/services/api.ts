@@ -9,7 +9,7 @@ export const DATA_DIRECTORY = dataDir.replace(/\/+$/, ''); // Normalize
 export const QUIZ_MANIFEST_ENDPOINT = `${DATA_DIRECTORY}/quiz-manifest.json`;
 
 export async function fetchQuizList(): Promise<QuizManifest> {
-    const response = await fetch(QUIZ_MANIFEST_ENDPOINT);
+    const response = await fetch(QUIZ_MANIFEST_ENDPOINT, { cache: 'no-store' });
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status} fetching manifest.`);
     }
@@ -18,7 +18,7 @@ export async function fetchQuizList(): Promise<QuizManifest> {
 
 export async function fetchQuizData(fileName: string): Promise<QuizData | any[]> {
     const filePath = `${DATA_DIRECTORY}/data/${fileName}`;
-    const response = await fetch(filePath);
+    const response = await fetch(filePath, { cache: 'no-store' });
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status} loading ${filePath}`);
     }

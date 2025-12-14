@@ -129,6 +129,22 @@
       }
     },
     {
+      "fileName": "merged_vizsga20-21-sem1.json",
+      "tags": {
+        "subject": "Objektumorientált Rendszertervezés",
+        "type": "Vizsga",
+        "year": "2020/21/1"
+      }
+    },
+    {
+      "fileName": "merged_vizsga22-23-sem1.json",
+      "tags": {
+        "subject": "Objektumorientált Rendszertervezés",
+        "type": "Vizsga",
+        "year": "2022/23/1"
+      }
+    },
+    {
       "fileName": "synthetic.json",
       "tags": {
         "subject": "Kommunikációs Hálózatok",
@@ -139,6 +155,7 @@
   "availableTags": {
     "subject": [
       "Kommunikációs Hálózatok",
+      "Objektumorientált Rendszertervezés",
       "Szoftvertechnikák"
     ],
     "type": [
@@ -155,6 +172,8 @@
       "2022",
       "2021",
       "2020",
+      "2020/21/1",
+      "2022/23/1",
       "undefined"
     ]
   }

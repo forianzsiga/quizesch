@@ -92,7 +92,18 @@ const QuizList: React.FC<Props> = ({ onSelectQuiz }) => {
                 setError(e.message);
             }
         };
+
         init();
+
+        if (import.meta.hot) {
+            const onManifestUpdated = () => {
+                init();
+            };
+            import.meta.hot.on('quiz-manifest-updated', onManifestUpdated);
+            return () => {
+                import.meta.hot?.off?.('quiz-manifest-updated', onManifestUpdated);
+            };
+        }
     }, []);
 
     useEffect(() => {

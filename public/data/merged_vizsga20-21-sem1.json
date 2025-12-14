@@ -1,0 +1,695 @@
+{
+  "tags": {
+    "subject": "Objektumorientált Rendszertervezés",
+    "type": "Vizsga",
+    "year": "2020/21/1"
+  },
+  "questions": [
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alkalmazásunk lefagyott, és a Windows szerint a program nem válaszol. Melyik mintát használtuk rosszul?",
+      "options": {
+        "a": "Reactor",
+        "b": "Proactor",
+        "c": "AutoResetEvent",
+        "d": "ManualResetEvent",
+        "e": "Cancellation token",
+        "f": "Asynchronous completion token"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 1,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely osztályok sértik meg a következő OO tervezési heurisztikát? \"A viselkedést modellezzük, ne a szerepeket!\"",
+      "puml_code": "@startuml\nclass Worker\nclass Map\nclass Sun\nclass Settler\nclass Robot\nclass Asteroid\nclass Material\n\nWorker <|-- Settler\nWorker <|-- Robot\nMap *-- Asteroid\nMap -- Sun\nSettler -- Asteroid\nRobot -- Asteroid\nAsteroid *-- Material\n@enduml",
+      "options": {
+        "a": "Worker",
+        "b": "Asteroid",
+        "c": "Egyik felkínált opció sem sérti a heurisztikát",
+        "d": "Settler",
+        "e": "Map",
+        "f": "Robot",
+        "g": "Sun"
+      },
+      "answer": [
+        "f"
+      ],
+      "ID": 2,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely osztályok sértik meg a következő OO tervezési heurisztikát? \"Ne készítsünk függvényeket a típusok illetve a képességek megkülönböztetésére, használjunk helyettük polimorfizmust!\"",
+      "puml_code": "@startuml\nclass Thing\nclass Settler\nclass Robot\nclass Game\nclass Space\nclass Stepable\nclass Timer\nclass Asteroid\n\nThing <|-- Settler\nThing <|-- Robot\nThing <|-- Asteroid\nGame -- Space\nSpace *-- Asteroid\nSpace -- Settler\nSpace -- Robot\nTimer -- Stepable\nAsteroid -- Stepable\n@enduml",
+      "options": {
+        "a": "Settler",
+        "b": "Thing",
+        "c": "Robot",
+        "d": "Game",
+        "e": "Space",
+        "f": "Timer",
+        "g": "Asteroid",
+        "h": "Mindegyik felkínált opció rendben van, egyiknél sem sérül a heurisztika"
+      },
+      "answer": [
+        "g"
+      ],
+      "ID": 3,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely asszociációk sértik meg a következő OO tervezési heurisztikát? \"Asszociáció helyett preferáljuk a tartalmazást!\"",
+      "puml_code": "@startuml\nclass Character\nclass Field\nclass Settler\nclass Robot\nclass Asteroid\nclass Sun\nclass Resources\n\nCharacter -- Field\nCharacter -- Asteroid\nField -- Asteroid\nField -- Sun\nSettler -- Resources\nAsteroid -- Resources\nAsteroid -- Sun\n@enduml",
+      "options": {
+        "a": "Field-Character",
+        "b": "Field-Asteroid",
+        "c": "Character-Asteroid",
+        "d": "Egyik felkínált opció sem sérti a heurisztikát",
+        "e": "Field-Sun"
+      },
+      "answer": [
+        "a",
+        "e"
+      ],
+      "ID": 4,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely osztályok sértik meg a következő OO tervezési heurisztikát? \"Kerüljük a csak adattárolásra használt osztályokat!\"",
+      "puml_code": "@startuml\nclass Worker\nclass Map\nclass Sun\nclass Settler\nclass Robot\nclass Asteroid\nclass Material\n\nWorker <|-- Settler\nWorker <|-- Robot\nMap *-- Asteroid\nMap -- Sun\nSettler -- Asteroid\nRobot -- Asteroid\nAsteroid *-- Material\n@enduml",
+      "options": {
+        "a": "Egyik felkínált opció sem sérti a heurisztikát",
+        "b": "Map",
+        "c": "Worker",
+        "d": "Sun",
+        "e": "Asteroid",
+        "f": "Settler"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 5,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? Az alábbi kódrészlet nem biztosít kölcsönös kizárást a Work() függvény számára: [CODE]",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 6,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A WS-Addressing szabvány a SOAP üzenetkre két speciális fejlécet is definiál: MessageId és RelatesTo... Melyik mintának felel meg ez a megoldás?",
+      "options": {
+        "a": "Active object",
+        "b": "Cancellation token",
+        "c": "Asynchronous completion token",
+        "d": "Scheduler",
+        "e": "Proactor",
+        "f": "Future",
+        "g": "AutoResetEvent",
+        "h": "ManualResetEvent",
+        "i": "Reactor"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 7,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy szálbiztos FIFO-t kell implementálnunk, amely tetszőlegesen sok üzenetet tartalmazhat. Melyik mintával lehet megoldani a szálbiztosságot?",
+      "options": {
+        "a": "Cancellation token",
+        "b": "GlobalContext",
+        "c": "Guarded suspension",
+        "d": "ThreadLocalContext"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 8,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? Atomi műveletek kombinációja is atomi művelet.",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 9,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? A C# nyelv async-await megoldása a Proactor mintát követi.",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 10,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Teljesül-e a Liskov-elv, ha X bar() függvénye 0..10 közötti értékeket vár, míg Y bar() függvénye -10..10 közötti értékeket vár?",
+      "puml_code": "@startuml\nclass X {\n +bar(p: int):int\n}\nclass Y {\n +bar(p: int):int\n}\nX <|-- Y\n@enduml",
+      "options": {
+        "a": "Teljesül",
+        "b": "Sérül"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 11,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely osztályok sértik meg a következő OO tervezési heurisztikát? \"Kerüljük az isten-osztályokat!\"",
+      "puml_code": "@startuml\nclass Space\nclass Asteroid\nclass Empty\nclass Radioactive\nclass NormalAsteroid\nclass Settler\nclass GamePlayer\nclass GameController\nclass Robot\nclass Moveable\n\nSpace -- Asteroid\nAsteroid *-- Asteroid\nAsteroid <|-- Empty\nAsteroid <|-- Radioactive\nAsteroid <|-- NormalAsteroid\nAsteroid *-- Settler\nGamePlayer -- Settler\nGameController -- Robot\nGameController -- Moveable\nSettler <|-- Moveable\nRobot <|-- Moveable\n@enduml",
+      "options": {
+        "a": "Settler",
+        "b": "Gameplayer",
+        "c": "Egyik felkínált opció sem sérti a heurisztikát",
+        "d": "Robot",
+        "e": "Radioactive",
+        "f": "Moveable",
+        "g": "Empty",
+        "h": "Asteroid",
+        "i": "GameController",
+        "j": "NormalAsteroid",
+        "k": "Space"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 12,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? Immutable objektumok használatával elkerülhető a védelmi másolatok készítése.",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 13,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely állítások igazak az alábbiak közül?",
+      "puml_code": "@startuml\nclass Robot\nclass Settler\nclass Asteroid\nclass HollowAsteroid\nclass DangerousAsteroid\nclass SpaceStation\nclass Resources\nclass SunStorm\nclass AsteroidBelt\n\nSettler -- Asteroid\nRobot -- Asteroid\nAsteroid <|-- HollowAsteroid\nAsteroid <|-- DangerousAsteroid\nAsteroid -- Resources\nDangerousAsteroid -- SunStorm\nAsteroidBelt -- Asteroid\n@enduml",
+      "options": {
+        "a": "A HollowAsteroid önálló leszármazottként való szerepeltetése jó választás...",
+        "b": "A Resources osztály megsért legalább egy OO tervezési heurisztikát, mert csak adatokat tárol.",
+        "c": "Az Asteroid-Settler asszociáció végei fordítva vannak felcímkézve.",
+        "d": "Az AsteroidBelt osztály megsért legalább egy OO tervezési heurisztikát, mert csak adatokat tárol.",
+        "e": "A Robot osztály hibás, mert hiába tartalmaz egy privát függvényt az őshöz képest...",
+        "f": "Az üres SpaceStation osztály hibás, mert így semmilyen felelősséggel nem rendelkezik."
+      },
+      "answer": [
+        "b",
+        "c",
+        "e",
+        "f"
+      ],
+      "ID": 14,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A böngészőben a GMail felületén egy levelet olvasunk... Melyik minta valósítja ezt meg?",
+      "options": {
+        "a": "Scheduler",
+        "b": "ManualResetEvent",
+        "c": "Cancellation token",
+        "d": "Proactor",
+        "e": "AutoResetEvent",
+        "f": "Reactor"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 15,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? \"A szekvencia diagram alapján sérül a LoD elv.\"",
+      "puml_code": "@startuml\nactor Player\nparticipant Settler\nparticipant Asteroid1\nparticipant Asteroid2\n\nPlayer -> Settler: Move(n)\nactivate Settler\nSettler -> Asteroid1: GetNeighbor(n)\nactivate Asteroid1\nAsteroid1 -> Asteroid2: Remove(s)\nactivate Asteroid2\nAsteroid2 -> Settler: Accept(s)\ndeactivate Asteroid2\ndeactivate Asteroid1\ndeactivate Settler\n@enduml",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 16,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi kódrészletet: [CODE]. Igaz-e a következő állítás? A Clean Code elvek szerint helyesen használtuk a kommentet.",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 17,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy szoftver tervezése során mindig minden lehetséges követelményváltozásra fel kell készülni.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 18,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? A Reactor minta lényege, hogy aszinkron módon reagálunk a kívülről érkező eseményekre.",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 19,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Az alábbiak közül mely OO tervezési heurisztikákat sérti a diagram?",
+      "puml_code": "@startuml\nclass Player\nclass Game\nclass Settler\nclass Asteroid\nclass Hollow\nclass Radioactive\nclass AIController\nclass AISolarStorm\nclass AIRobot\n\nPlayer -- Settler\nGame -- Game\nSettler <|-- AIController\nAIController <|-- AISolarStorm\nAIController <|-- AIRobot\nSettler -- Asteroid\nAsteroid <|-- Hollow\nAsteroid <|-- Radioactive\n@enduml",
+      "options": {
+        "a": "Az öröklődés helyett preferáljuk a tartalmazást!",
+        "b": "Kerüljük a csak adattárolásra használt osztályokat!",
+        "c": "Egy osztály ne függjön a saját leszármazottaitól!",
+        "d": "Az attribútumok mindig legyenek privátok!",
+        "e": "A tartalmazott objektumok ne beszélgessenek egymással közvetlenül!"
+      },
+      "answer": [
+        "a",
+        "c"
+      ],
+      "ID": 20,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Válassza ki, hogy az alábbiak közül mely osztályoknak kellett volna egy közös ősből származniuk!",
+      "puml_code": "@startuml\nclass Player\nclass Settler\nclass Game\nclass Hollow\nclass Asteroid\nclass Radioactive\nclass AIController\nclass AISolarStorm\nclass AIRobot\n\nPlayer -- Settler\nGame -- Game\nSettler -- Asteroid\nSettler <|-- AIController\nAIController <|-- AISolarStorm\nAIController <|-- AIRobot\nAsteroid <|-- Hollow\nAsteroid <|-- Radioactive\n@enduml",
+      "options": {
+        "a": "Hollow",
+        "b": "Radioactive",
+        "c": "AISolarStorm",
+        "d": "AIRobot",
+        "e": "Settler"
+      },
+      "answer": [
+        "d",
+        "e"
+      ],
+      "ID": 21,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? Elosztott objektumorientáltság esetén a szöveges sorosítás ugyan lassabb, mint a bináris, de jobb kompatibilitást biztosít.",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 22,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely osztályok sértik meg a következő OO tervezési heurisztikát? \"Soha ne kódoljuk a típust (pl. enum vagy int értékekbe), használjunk helyettük polimorfizmust!\"",
+      "puml_code": "@startuml\nclass Character\nclass Field\nclass Settler\nclass Asteroid\nclass Sun\nclass Resources\nclass Robot\n\nCharacter <|-- Settler\nCharacter <|-- Robot\nField -- Character\nField -- Asteroid\nField -- Sun\nAsteroid -- Resources\nSettler -- Resources\nAsteroid -- Sun\n@enduml",
+      "options": {
+        "a": "Resources",
+        "b": "Asteroid",
+        "c": "Field",
+        "d": "Settler",
+        "e": "Sun",
+        "f": "Character",
+        "g": "Robot",
+        "h": "Egyik felkínált opció sem sérti a heurisztikát"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 23,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy osztály interfésze ugyanaz, mint az általa implementált interfészek halmaza.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 24,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Teljesül-e a Liskov-elv, ha U a V leszármazottja?",
+      "puml_code": "@startuml\nclass A {\n +foo(s:P): U\n}\nclass B {\n +foo(s:Q): V\n}\nA <|-- B\n@enduml",
+      "options": {
+        "a": "Teljesül",
+        "b": "Sérül"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 25,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely osztályok sértik meg a következő OO tervezési heurisztikát? \"Modellezésnél maradjunk a rendszer határain belül!\"",
+      "puml_code": "@startuml\nclass SolarSystem\nclass Game\nclass Worker\nclass Asteroid\nclass Material\nclass Robot\nclass Settler\nclass Ice\nclass Iron\nclass Carbon\nclass Radioactive\nclass None\n\nSolarSystem -- Game\nSolarSystem -- Asteroid\nSolarSystem -- Worker\nWorker <|-- Robot\nWorker <|-- Settler\nAsteroid -- Worker\nAsteroid -- Settler\nAsteroid *-- Material\nMaterial <|-- Ice\nMaterial <|-- Iron\nMaterial <|-- Carbon\nMaterial <|-- Radioactive\nMaterial <|-- None\n@enduml",
+      "options": {
+        "a": "Iron",
+        "b": "Ice",
+        "c": "Worker",
+        "d": "Asteroid",
+        "e": "Carbon",
+        "f": "Material",
+        "g": "Robot",
+        "h": "Settler",
+        "i": "Radioactive",
+        "j": "Game",
+        "k": "SolarSystem",
+        "l": "Egyik felkínált opció sem sérti a heurisztikát",
+        "m": "None"
+      },
+      "answer": [
+        "l"
+      ],
+      "ID": 26,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? \"A szekvencia diagram alapján sérül a LoD elv.\"",
+      "puml_code": "@startuml\nactor Player\nparticipant \"s: Settler\" as s\nparticipant \"a: Asteroid\" as a\nparticipant \"m: Material\" as m\n\nPlayer -> s: Drill()\nactivate s\ns -> a: Deepens()\nactivate a\nopt\n  a -> a: Explode(a)\n  activate a\n  deactivate a\n  a -> m: Explode()\n  activate m\n  m --> a\n  deactivate m\nend\ndeactivate a\ndeactivate s\n@enduml",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 27,
+      "supervised": "no"
+    },
+    {
+      "question_type": "drag_n_drop",
+      "text": "Párosítsa az alábbi OO tervezési heurisztikákat a nekik leginkább megfelelő refaktorálási mintákkal!\nAz opcionális elemeket tartalmazásként implementáljuk, ne öröklődéssel! [field1]\nKerüljük az isten-osztályokat! [field2]\nA közös viselkedés és közös adat minél magasabban legyen az öröklési hierarchiában! [field3]\nAz attribútumok mindig legyenek privátok! [field4]\nMinimalizáljuk a publikus metódusok számát! [field5]",
+      "choices": [
+        {
+          "identifier": "field1",
+          "label": "Introduce null object"
+        },
+        {
+          "identifier": "field2",
+          "label": "Extract class"
+        },
+        {
+          "identifier": "field3",
+          "label": "Pull up method"
+        },
+        {
+          "identifier": "field4",
+          "label": "Encapsulate field"
+        },
+        {
+          "identifier": "field5",
+          "label": "Hide method"
+        }
+      ],
+      "ID": 28,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? \"A szekvencia diagram alapján sérül a LSP elv.\"",
+      "puml_code": "@startuml\nactor Player\nparticipant Settler\nparticipant Asteroid1\nparticipant Asteroid2\n\nPlayer -> Settler: Move(n)\nactivate Settler\nSettler -> Asteroid1: GetNeighbor(n)\nactivate Asteroid1\nAsteroid1 -> Asteroid2: Remove(s)\nactivate Asteroid2\nAsteroid2 -> Settler: Accept(s)\ndeactivate Asteroid2\ndeactivate Asteroid1\ndeactivate Settler\n@enduml",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 29,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? A DIP elv egy lehetséges megfogalmazása az, hogy absztrakcióktól függjünk.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 30,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely osztályok sértik meg a következő OO tervezési heurisztikát? \"A viselkedést modellezzük, ne a szerepeket!\"",
+      "puml_code": "@startuml\nclass SolarSystem\nclass Game\nclass Worker\nclass Asteroid\nclass Material\nclass Robot\nclass Settler\nclass Ice\nclass Iron\nclass Carbon\nclass Radioactive\nclass None\n\nSolarSystem -- Game\nSolarSystem -- Asteroid\nSolarSystem -- Worker\nWorker <|-- Robot\nWorker <|-- Settler\nAsteroid -- Worker\nAsteroid -- Settler\nAsteroid *-- Material\nMaterial <|-- Ice\nMaterial <|-- Iron\nMaterial <|-- Carbon\nMaterial <|-- Radioactive\nMaterial <|-- None\n@enduml",
+      "options": {
+        "a": "Egyik felkínált opció sem sérti a heurisztikát",
+        "b": "SolarSystem",
+        "c": "Settler",
+        "d": "Carbon",
+        "e": "Ice",
+        "f": "Game",
+        "g": "Iron",
+        "h": "Radioactive",
+        "i": "Robot",
+        "j": "Worker",
+        "k": "Asteroid",
+        "l": "None"
+      },
+      "answer": [
+        "d",
+        "e",
+        "g",
+        "h",
+        "l"
+      ],
+      "ID": 31,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A string literálokat tartalmazó erőforrásfájlok a DRY elv betartását segítik.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 32,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? A REST által támogatott HTTP igék a következők: GET, CREATE, UPDATE, DELETE.",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 33,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely asszociációk sértik a heterogén kollekció alapú tervezést?",
+      "puml_code": "@startuml\nclass Settler\nclass Thing\nclass Asteroid\nclass Robot\nclass Game\nclass Space\nclass Stepable\nclass Timer\n\nThing <|-- Settler\nThing <|-- Robot\nThing <|-- Asteroid\nGame -- Space\nSpace *-- Asteroid\nSpace -- Settler\nSpace -- Robot\nTimer -- Stepable\nStepable <|.. Asteroid\nStepable <|.. Robot\n@enduml",
+      "options": {
+        "a": "Game-Space",
+        "b": "Space-Robot",
+        "c": "Space-Settler",
+        "d": "Asteroid-Thing",
+        "e": "Mindegyik felkínált opció rendben van, egyiknél sem sérül a heterogén kollekció alapú tervezés"
+      },
+      "answer": [
+        "b",
+        "c"
+      ],
+      "ID": 34,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? Az ImmutableArray<T> hatékonyabb, mint az ImmutableList<T>, ha a gyűjteményt ritkán módosítjuk, de sokszor kell rajta végigiterálnunk.",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 35,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? \"A szekvencia diagram alapján sérül a TDA elv.\"",
+      "puml_code": "@startuml\nactor Player\nparticipant \"h: Homesteader\" as h\nparticipant \"a: Asteroid\" as a\nparticipant \"m: Material\" as m\n\nPlayer -> h: Drill()\nactivate h\nh -> a: GetDepth()\nactivate a\na --> h: d\ndeactivate a\nh -> a: GetCore()\nactivate a\na --> h: m\ndeactivate a\nh -> m: GetMaterial()\nactivate m\nm --> h: material\ndeactivate m\nh -> a: GetNearSun()\nactivate a\na --> h: ns\ndeactivate a\nh -> a: Destroy()\nactivate a\ndeactivate a\nh -> a: LoseOneLayer()\nactivate a\ndeactivate a\ndeactivate h\n@enduml",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 36,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az LoD szerint a függvényparaméterként kapott objektumok \"idegennek\" számítanak.",
+      "options": {
+        "a": "Igaz",
+        "b": "Hamis"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 37,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tekintsük az alábbi osztálydiagramot (követelmények mutatása/elrejtése): [diagram]. Mely osztályok sértik meg a következő OO tervezési heurisztikát? \"Ne keverjük össze a statikus és a dinamikus kényszereket!\"",
+      "puml_code": "@startuml\nclass Space\nclass Asteroid\nclass Empty\nclass Radioactive\nclass NormalAsteroid\nclass Settler\nclass GamePlayer\nclass GameController\nclass Robot\nclass Moveable\n\nSpace -- Asteroid\nAsteroid *-- Asteroid\nAsteroid <|-- Empty\nAsteroid <|-- Radioactive\nAsteroid <|-- NormalAsteroid\nAsteroid *-- Settler\nGamePlayer -- Settler\nGameController -- Robot\nGameController -- Moveable\nSettler <|-- Moveable\nRobot <|-- Moveable\n@enduml",
+      "options": {
+        "a": "Space",
+        "b": "Egyik felkínált opció sem sérti a heurisztikát",
+        "c": "GameController",
+        "d": "Moveable",
+        "e": "Empty",
+        "f": "GamePlayer",
+        "g": "Settler",
+        "h": "Robot"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 38,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? Elosztott objektumorientáltság esetén a távoli hívás paraméterei shallow-copy módon adódnak át.",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 39,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? A Guarded suspension minta Monitor object használatának segítségével implementálható.",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 40,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A böngésző letölti a szervertől a HTML oldalt, majd külön szálakon a háttérben elkezdi letölteni a képeket is. Időközben a felhasználó bezárja az oldalt. Melyik mintát kell ilyenkor a böngészőnek bevetnie, hogy ne töltse tovább feleslegesen a képeket?",
+      "options": {
+        "a": "AutoResetEvent",
+        "b": "Asynchronous completion token",
+        "c": "Cancellation token",
+        "d": "Proactor",
+        "e": "ManualResetEvent",
+        "f": "Reactor"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 41,
+      "supervised": "no"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Igaz vagy hamis a következő állítás? \"A szekvencia diagram alapján sérül a TDA elv.\"",
+      "puml_code": "@startuml\nactor Player\nparticipant \"s: Settler\" as s\nparticipant \"a: Asteroid\" as a\nparticipant \"m: Material\" as m\n\nPlayer -> s: Drill()\nactivate s\ns -> s: Deepens()\nactivate s\ns -> a: Explode(a)\nactivate a\na --> s\ndeactivate a\ns -> a: Explode()\nactivate a\na -> m: Explode()\nactivate m\nm --> a\ndeactivate m\na --> s\ndeactivate a\ndeactivate s\ndeactivate s\n@enduml",
+      "options": {
+        "a": "True",
+        "b": "False"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 42,
+      "supervised": "no"
+    }
+  ]
+}
