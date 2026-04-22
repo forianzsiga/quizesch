@@ -2,6 +2,9 @@
 
 A simple, web-based quiz application designed to load and present quizzes dynamically from JSON data files. This project is currently under active development.
 
+
+
+
 ## Purpose
 
 The main goal of Quizesch is to provide a flexible platform for taking quizzes derived from various source materials (like PDF lecture notes or documents). It supports multiple question types and allows for easy addition of new quiz content.
@@ -118,3 +121,9 @@ Each quiz file in the `data/` directory must be a JSON array `[]` containing que
   },
   "answer": ["c"]
 }
+```
+## Disclaimer
+
+Developed by forianzsiga 
+
+Copyright (c) 2025 forianzsiga

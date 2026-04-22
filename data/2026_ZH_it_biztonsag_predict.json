@@ -1,0 +1,659 @@
+{
+  "tags": {
+    "subject": "IT Biztonság",
+    "type": "ZH",
+    "year": "2026"
+  },
+  "questions": [
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az azonosítás és a hitelesítés közti különbség helyesen:",
+      "options": {
+        "a": "Az azonosítás során az entitás megad egy állítólagos identitást, a hitelesítés pedig ennek ellenőrzése.",
+        "b": "Az azonosítás a jogosultságok kiosztását jelenti, a hitelesítés pedig a naplózást."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 1,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit jelent a bevezető előadásban említett A4I rövidítés?",
+      "options": {
+        "a": "Authentication, Authorization, Auditing, Availability.",
+        "b": "Authentication, Authorization/Access Control, Accounting, Availability, Integrity."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 2,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A CAPEC adatbázis elsősorban...",
+      "options": {
+        "a": "ismert támadási minták (attack patternök) rendszerezett gyűjteménye.",
+        "b": "nyilvánosan azonosított sérülékenységek katalógusa CVE-azonosítókkal."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 3,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A MITRE ATT&CK leginkább...",
+      "options": {
+        "a": "szoftver- és hardvergyengeségek katalogizálására szolgál.",
+        "b": "támadói taktikák és technikák tudásbázisa."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 4,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A CWE rövidítés az alábbiak közül melyiket jelenti helyesen?",
+      "options": {
+        "a": "Common Weakness Enumeration, azaz ismert gyengeségek gyűjteménye.",
+        "b": "Certified Web Exploits, azaz validált webes exploitok tárháza."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 5,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az egyéni támadók motivációjára melyik állítás jellemzőbb a diasor szerint?",
+      "options": {
+        "a": "Gyakran személyes motivációk vezérlik őket, például hírnév vagy bosszú.",
+        "b": "Tipikusan csak jogszabályi megfelelési kényszerből támadnak."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 6,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A hacktivista csoportokra a támadóprofilok között leginkább az jellemző, hogy...",
+      "options": {
+        "a": "általában társadalmi vagy politikai motivációjuk van, miközben erőforrásaik többnyire nem kiemelkedők.",
+        "b": "mindig a legmagasabb műszaki tudással és korlátlan állami erőforrással rendelkeznek."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 7,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az „elégedetlen munkatárs” mint támadóprofil egyik fontos sajátossága, hogy...",
+      "options": {
+        "a": "külső támadóként erősen korlátozott rálátása van a rendszerre.",
+        "b": "belső helyzete miatt fejlett információszerző képessége lehet, még ha erőforrásai limitáltak is."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 8,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit hangsúlyoz a „leggyengébb láncszem” probléma?",
+      "options": {
+        "a": "A támadónak elég egyetlen gyenge komponenst találnia, ezért az emberek is gyakran kritikus láncszemek.",
+        "b": "Ha a rendszer legerősebb komponense megfelelően védett, a többi komponens védelme másodlagos."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 9,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A biztonság és a feature-ök kapcsolatáról melyik állítás helyes?",
+      "options": {
+        "a": "A több funkció és opció jellemzően növeli a komplexitást, a komplexitás pedig a biztonság ellen dolgozhat.",
+        "b": "A feature-ök számának növekedése általában egyszerűsíti a rendszert, ezért a biztonságot is javítja."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 10,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alkalmazott etika fogalma alatt itt azt értjük, hogy...",
+      "options": {
+        "a": "egy adott tevékenységi területen felmerülő valós helyzetekben alkalmazzuk az etikai elméleteket.",
+        "b": "csak elméleti, társadalmi hatásoktól független erkölcsfilozófiai kérdéseket vizsgálunk."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 11,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az ACM Code of Ethics fő célja a diasor szerint:",
+      "options": {
+        "a": "az informatikai szakemberek etikus magatartásának ösztönzése, tekintettel munkájuk szélesebb társadalmi hatására.",
+        "b": "a kriptográfiai algoritmusok exportkorlátozásának egységesítése."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 12,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A rosszindulatú szoftverek modern kategorizálásáról melyik állítás helyes?",
+      "options": {
+        "a": "A kategorizálás nehezebbé vált, mert az újabb malware-ek gyakran több alapvető típus jellemzőit ötvözik.",
+        "b": "A mai rosszindulatú szoftverek szinte mindig egyetlen, tisztán elkülöníthető kategóriába sorolhatók."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 13,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a watering hole támadás lényege?",
+      "options": {
+        "a": "A támadó a potenciális áldozatok által valószínűleg látogatott webhelyen helyez el rosszindulatú tartalmat.",
+        "b": "A támadó egy véletlenül kiválasztott webszerver összes tartalmát titkosítja váltságdíj reményében."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 14,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A WannaCry kapcsán melyik állítás helyes?",
+      "options": {
+        "a": "Zsarolóvírus volt, de hálózaton keresztül önállóan is képes volt terjedni, ezért crypto-wormként is hivatkoznak rá.",
+        "b": "Klasszikus trójai volt, amely kizárólag manuális e-mail melléklet megnyitásával tudott fertőzni."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 15,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A szkütaléval kapcsolatban melyik állítás igaz?",
+      "options": {
+        "a": "Helyettesítéses rejtjelezést valósít meg.",
+        "b": "Transzpozíciós rejtjelezést valósít meg."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 16,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A Caesar-rejtjelezővel kapcsolatban melyik állítás igaz?",
+      "options": {
+        "a": "A nyílt szöveg betűit rögzített eltolással más betűkre cseréli, tehát helyettesítéses rejtjelező.",
+        "b": "A nyílt szöveg karaktereit csak átrendezi, de a betűket nem cseréli ki."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 17,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi következik a mono-alfabetikus helyettesítés példájából?",
+      "options": {
+        "a": "A nagy kulcstér önmagában elegendő a gyakorlati biztonsághoz.",
+        "b": "A nagy kulcstér szükséges lehet, de önmagában nem elég, ha a módszer más gyengeséget is mutat."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 18,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az Enigma működésére melyik állítás helyes?",
+      "options": {
+        "a": "Poly-alfabetikus helyettesítést valósít meg, több kódábécé használatával.",
+        "b": "Egyszerű Caesar-eltolást valósít meg naponta változó eltolással."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 19,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az Enigma feltörését segítő egyik tényező az volt, hogy...",
+      "options": {
+        "a": "a német kezelők időnként gyenge, nem véletlenszerű üzenetkulcsokat használtak.",
+        "b": "a németek minden üzenethez egy valóban véletlen, egyszer használatos kulcsot használtak."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 20,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A diák szerint Alan Turing Enigma elleni módszere lényegében egy...",
+      "options": {
+        "a": "csak brute force támadás volt, minden további feltételezés nélkül.",
+        "b": "ismert nyíltszövegű támadáshoz hasonló megközelítés volt."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 21,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a tankönyvi RSA-ra?",
+      "options": {
+        "a": "A gyakorlatban önmagában nem tekinthető biztonságosnak, megfelelő üzenetformázás/padding szükséges hozzá.",
+        "b": "A gyakorlatban biztonságos, ezért a PKCS#1 szerinti formázás csak kompatibilitási okból kell."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 22,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "CTR módban melyik állítás helyes?",
+      "options": {
+        "a": "Titkosításkor és visszafejtéskor is a blokkrejtjelező kódoló függvényét használjuk a nonce|counter értékeken.",
+        "b": "A visszafejtéshez szükségképpen a blokkrejtjelező dekódoló függvénye kell."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 23,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Miért előnyös a CTR mód a változó hosszúságú üzeneteknél?",
+      "options": {
+        "a": "Mert a CBC-vel ellentétben a ciphertext hossza mindig rövidebb lesz a plaintextnél.",
+        "b": "Mert nincs szükség paddingre, a kulcsfolyamot a tényleges üzenethosszhoz igazíthatjuk."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 24,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Miért kell minden üzenethez új nonce/seed a kulcsfolyam-rejtjelezőknél?",
+      "options": {
+        "a": "Mert ugyanazon kulcsfolyam újrafelhasználása információszivárgáshoz vezethet a nyílt szövegekről.",
+        "b": "Mert különben a fogadó nem tudja ellenőrizni, hogy a kulcs titkos maradt-e."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 25,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyik hitelesített rejtjelezési mód?",
+      "options": {
+        "a": "CFB",
+        "b": "GCM"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 26,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Ha a közös titok erős, nagy entrópiájú titok, akkor a kulcsszármaztatásnál a diasor szerint tipikusan...",
+      "options": {
+        "a": "extract-and-expand megközelítést használunk, például HKDF-et.",
+        "b": "közvetlenül levágjuk a titok első néhány bájtját, mert ez már biztosan elég jó kulcs lesz."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 27,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A salting szerepe jelszóalapú kulcsszármaztatásnál az, hogy...",
+      "options": {
+        "a": "szándékosan lassítsa a derivációt, növelve az egyetlen próbálkozás költségét.",
+        "b": "ellehetetlenítse az előzetes számításokra épülő támadásokat, például a rainbow table használatát."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 28,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A stretching szerepe jelszóalapú kulcsszármaztatásnál az, hogy...",
+      "options": {
+        "a": "szándékosan lelassítsa a kulcsszármaztatást, így drágábbá tegye az offline szótáras támadásokat.",
+        "b": "egyedivé tegye minden felhasználó jelszavát akkor is, ha ugyanazt választják."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 29,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Miért nem alkalmasak a programnyelvek alapértelmezett véletlenszám-generátorai (pl. rand()) kriptográfiai célokra?",
+      "options": {
+        "a": "Mert túl lassúak és nem adnak elegendő mennyiségű kimenetet.",
+        "b": "Mert kimenetük előre megjósolható lehet."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 30,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A jól tervezett PRNG működéséről melyik állítás helyes?",
+      "options": {
+        "a": "Belső állapotból generál kimenetet, az állapotot frissíti, és időnként újra is seedeli entrópiaforrásokból.",
+        "b": "Minden egyes új bithez kötelező teljesen új, valódi véletlen hardverforrást használnia."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 31,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A kriptográfiai entrópiaforrásokról melyik állítás helyes?",
+      "options": {
+        "a": "A bemenetnek nem kell teljesen véletlennek lennie, elég, ha marad a támadó számára megjósolhatatlan komponense.",
+        "b": "Csak akkor használható forrás, ha a támadó a bemenet egyetlen részét sem ismerheti vagy befolyásolhatja."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 32,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A Certification Authority (CA) feladatai közé a diák alapján melyik tartozik?",
+      "options": {
+        "a": "Tanúsítványok és CRL-ek elérhetővé tétele és archiválása.",
+        "b": "A felhasználók összes privát kulcsának központi tárolása a későbbi helyreállítás érdekében."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 33,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Miért használnak HSM-et a CA-k?",
+      "options": {
+        "a": "A CA privát kulcsának fokozott védelmére.",
+        "b": "Azért, hogy a kiadott tanúsítványok publikus kulcsait titkosan tudják tárolni."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 34,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik eset indokolhat tanúsítvány-visszavonást a lejárat előtt?",
+      "options": {
+        "a": "Ha megváltoztak a tanúsítványban szereplő adatok, például a név vagy az e-mail-cím.",
+        "b": "Ha a tanúsítvány túl gyakran kerül ellenőrzésre a kliensoldalon."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 35,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit biztosít az OCSP a PKI-ban?",
+      "options": {
+        "a": "Nyilvános kulcsok hosszú távú archiválását egy külön CA nélkül.",
+        "b": "Online szolgáltatáson keresztüli ellenőrzést arra, hogy egy tanúsítvány vissza van-e vonva."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 36,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A TLS handshake során a kliens tanúsítványa...",
+      "options": {
+        "a": "mindig kötelező, különben a szerver nem küldhet saját tanúsítványt.",
+        "b": "opcionális, a szerver kérheti, de nem minden TLS-kapcsolatnál szükséges."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 37,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A TLS handshake első fázisában a felek tipikusan...",
+      "options": {
+        "a": "egyeztetik például a Session ID-t, a kulcscsere módját, a MAC- és rejtjelező algoritmusokat, valamint véletlen számokat cserélnek.",
+        "b": "már a kész alkalmazási adatokat kezdik titkosítva továbbítani a Record Protocol fölött."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 38,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A TLS finished üzeneteiről melyik állítás helyes?",
+      "options": {
+        "a": "A közös titokból és a handshake korábbi üzeneteinek hash-éből származnak; sikertelen ellenőrzés esetén a session megszakad.",
+        "b": "Kizárólag az IP-címek és portok helyességét ellenőrzik, ezért csak hálózati hibák felismerésére szolgálnak."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 39,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Hash-alapú commitment esetén mit kell felfedni a commitment „kinyitásához”?",
+      "options": {
+        "a": "Csak a commitment hash-értékét még egyszer, hogy látszódjon, nem változott.",
+        "b": "Az eredeti értéket és a random komponenst is, hogy újraszámolható legyen a hash."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 40,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A web spider alapú tartalomfelderítés egyik korlátja tipikusan az, hogy...",
+      "options": {
+        "a": "általában nem hajt végre JavaScriptet, ezért bizonyos erőforrásokat nem feltétlenül talál meg.",
+        "b": "csak POST kérésekkel képes oldalak bejárására."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 41,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Miért célszerű kikapcsolni a könyvtárlistázást webkiszolgálón?",
+      "options": {
+        "a": "Mert a támadó számára felfedhet olyan fájlokat és erőforrásokat, amelyeket egyébként nehezebb lenne megtalálni.",
+        "b": "Mert a böngészők nem tudnak biztonságos kapcsolatot létesíteni olyan szerverrel, ahol engedélyezett a listázás."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 42,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A Same Origin Policy hozzáféréstípusairól melyik állítás helyes?",
+      "options": {
+        "a": "A cross-origin olvasás tipikusan korlátozott, míg az embedding és az írás bizonyos formái általában megengedettek.",
+        "b": "A SOP elsődlegesen minden cross-origin beágyazást tilt, de az olvasást megengedi."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 43,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mikor küld a böngésző tipikusan CORS preflight kérést?",
+      "options": {
+        "a": "Egyszerű GET vagy HEAD kérés előtt minden esetben.",
+        "b": "Komplexebb cross-origin kérés előtt, jellemzően OPTIONS metódussal."
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 44,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az XSS elleni védekezésben a HTTP-only süti szerepe az, hogy...",
+      "options": {
+        "a": "JavaScriptből ne lehessen hozzáférni, így nehezítse a session-azonosító ellopását.",
+        "b": "megakadályozza, hogy a böngésző bármilyen cross-origin kérést küldjön."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 45,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit jelent a Defense in Depth elv a tervezés során?",
+      "options": {
+        "a": "Több egymásra épülő védelmi réteg alkalmazását, hogy egyetlen védelem hibája ne legyen végzetes.",
+        "b": "Azt, hogy minden biztonsági funkciót egy központi mechanizmusba koncentrálunk."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 46,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit jelent a Design for Updating elv?",
+      "options": {
+        "a": "A szoftvert úgy kell megtervezni, hogy a biztonsági javítások és módosítások később könnyen bevezethetők legyenek.",
+        "b": "A futó rendszert úgy kell lezárni, hogy a kiadás után már ne lehessen változtatni rajta."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 47,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit jelent a Shift Left on Security szemlélet?",
+      "options": {
+        "a": "A biztonsági auditokat, tesztelést és fenyegetésmodellezést minél korábbra kell hozni a fejlesztési életciklusban.",
+        "b": "A sérülékenységek kezelését elsősorban a kiadás utáni incident response feladattá kell tenni."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 48,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a threat modeling célja a tervezési fázisban?",
+      "options": {
+        "a": "Annak szisztematikus feltárása, hogy mi mehet rosszul még az implementáció előtt.",
+        "b": "A már bekövetkezett incidensek jogi dokumentálása a release után."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 49,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik felsorolás ír le helyesen strukturált kimenet-generálási sérülékenységeket?",
+      "options": {
+        "a": "SQL injection, command injection, XSS.",
+        "b": "Buffer overflow, use-after-free, setuid."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 50,
+      "supervised": "yes"
+    }
+  ]
+}

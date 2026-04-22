@@ -1,0 +1,1711 @@
+{
+  "tags": {
+    "subject": "Információs Rendszerek Üzemeltetése",
+    "type": "ZH",
+    "year": "2024"
+  },
+  "questions": [
+    {
+      "question_type": "multi_choice",
+      "question_title": "A NAS tulajdonképpen",
+      "options": {
+        "a": "speciális adatátviteli hálózat, amelyen keresztül elérhető egy nagykapacitású X tároló",
+        "b": "hálózaton elérhető nagykapacitású tároló terület",
+        "c": "terület",
+        "d": "diszkek egy összefogott csoportja",
+        "e": "maga az adattároló hálózat"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 1,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Egy szerverparkban 1000TB adatmennyiséget kell menteni. Differenciális mentést használunk. A változás mértéke kb. 1096/nap, de az adatmennyiség nem növekszik, csak a tartalom módosul. Határozza meg, hogy hetes mentési ciklus, és napi mentések (- vasárnap full, a többi napon differenciális) esetén hány TB adat kerül a mentőrendszerbe egy átlagos szerdai napon? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "300"
+      },
+      "ID": 2,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy szerverparkban differenciális mentést használunk. A változás mértéke kb. 2096/nap, de az adatmennyiség nem növekszik, csak a tartalom módosul. Hetes mentési ciklus és napi mentések (- vasárnap full, a többi napon differenciális) esetén mikor kell több adatot menteni, egy átlagos szerdán vagy csütörtökön?",
+      "options": {
+        "a": "szerdán",
+        "b": "a mentendő fájlok típusától függ",
+        "c": "egyforma a két nap pud",
+        "d": "csütörtökön"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 3,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Remote-Access VPN használatakor (Több is jó lehet)",
+      "options": {
+        "a": "telephelyeket kapcsol össze",
+        "b": "szükség van speciális program telepítésére a kliens gépen",
+        "c": "használókat csatlakoztat a hálózathoz",
+        "d": "nincs szükség speciális program telepítésére a kliens gépen"
+      },
+      "answer": [
+        "b",
+        "c"
+      ],
+      "ID": 4,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A SAN tulajdonképpen",
+      "options": {
+        "a": "hálózaton elérhető nagykapacitású tároló terület",
+        "b": "nagykapacitású tároló területről elérhető hálózat",
+        "c": "adatforgalomra dedikált hálózat",
+        "d": "hálózatra dedikált adatforgalom"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 5,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az SSD memóriák (#6)",
+      "options": {
+        "a": "kapacitását nem tudjuk adatkompresszióval növelni, mert az illesztőkábeleke bitsebessége ehhez túl alacsony",
+        "b": "kapacitását adatkompresszióval növelik",
+        "c": "megbízhatósága olyan nagy, hogy nincs szükség RAID védelemre",
+        "d": "megbízhatóságát RAID segítségével növelik"
+      },
+      "answer": [
+        "b",
+        "d"
+      ],
+      "ID": 6,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az inkrementális vagy a differenciális mentés igényel több tárhelyet?",
+      "options": {
+        "a": "mentett fájlok méretétől függ",
+        "b": "differenciális",
+        "c": "egyforma az igényük",
+        "d": "azinkrementális"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 7,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Létrehozunk egy 6 blokkból álló fájlt. Egy nap múlva ennek a fájlnak a 3. és 4. blokkjában végzünk módosításokat, majd a következő nap a 3. blokkot újra megváltoztatjuk. Flash Copy használatával e fájl e három változatának tárolása hány blokkot igényel?",
+      "options": {
+        "a": "10",
+        "b": "0 18",
+        "c": "3",
+        "d": "9"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 8,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Egy aggregációs switch 32 db 10 Gb/s porttal rendelkezik. 8 portját használjuk a core réteg felé redundáns összeköttetésekre. Mekkora a túlméretezés (oversubscription) ezen a switch-en, ha a portjait maximálisan kihasználjuk? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "3"
+      },
+      "ID": 9,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Abban a hálózatban, amelyik a 168.32.12.29/26 IP című gépét tartalmazza, mi a broadcast cím utolsó bájtja(decimálisan)? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "63"
+      },
+      "ID": 10,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az archiválás célja",
+      "options": {
+        "a": "Jogszabályban rögzített ok miatt dokumentumok megváltoztathatatlanságának biztosítása",
+        "b": "Biztonsági mentés, amelyről véletlen fájltörlés esetén helyreállítást tudunk pad végezni",
+        "c": "Biztonsági mentés, amelyről adatvesztés esetén helyreállítást tudunk végezni",
+        "d": "Jogszabályban rögzített ok miatt dokumentumok hosszú távú megőrzése"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 11,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az adatbázist bővítenie kell. Jelenleg viszonylag kevés beruházási keret áll rendelkezésre, de tudja, hogy az üzemeltetésre is kb. ugyanennyi lesz majd az elkövetk években. A fentiek figyelembe vételével milyen technológiát választana?",
+      "options": {
+        "a": "Szalag",
+        "b": "AllFlash Array",
+        "c": "Disk Array",
+        "d": "Fat Tree",
+        "e": "Spine and Leaf",
+        "f": "Hybrid Array"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 12,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mikor előnyösebb egy hub, mint egy bridge?",
+      "options": {
+        "a": "Hanem IP protokollt használunk az üzenetek továbbításához",
+        "b": "Ha dedikált sávszélességet akarunk",
+        "c": "Ha protokoll analizátort kell illesztenünk",
+        "d": "Ha MAC círnek alapján irányítunk"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 13,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A DHCP segítségével a kliens IP címe mellett a szerver megadhatja",
+      "options": {
+        "a": "a használandó NAT eszköz címét",
+        "b": "a központi ICMP eszköz címét p.€",
+        "c": "a MAC címet",
+        "d": "a használandó Name Server/az alapértelmezett átjáró címét"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 14,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik RAID technológia véd a logikai hibák ellen?",
+      "options": {
+        "a": "RAID 0 kivételével mindegyik",
+        "b": "egyik sem",
+        "c": "mindegyik pt",
+        "d": "RAIDO"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 15,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy szerveren a frissítési idő 20 perc. A régi rendszer visszaállítása 10 percet vesz igénybe. A rendszer akármilyen állapotban történő tesztelésére 15 perc kell. Ha a frissítés sikertelen, mikor kell legkésőbb elkezdeni a visszakozt?",
+      "options": {
+        "a": "A mentési időablak vége előtt 10 perccel",
+        "b": "A mentési időablak vége előtt 15 perccel",
+        "c": "A mentési időablak vége előtt 20 perccel",
+        "d": "A mentési időablak vége előtt 25 perccel"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 16,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi nem igaz a blade szerverekre? (Több is jó lehet) (#17)",
+      "options": {
+        "a": "Azért, hogy tehermentesítsék az adatközpontok hűtőrendszerét, nagyteljesítményű",
+        "b": "saját hűtéssel rendelkeznek",
+        "c": "Kábelspórolás miatt viszonylag nagy diszkterülettel rendelkeznek",
+        "d": "Tipikusan egy keretbe több típusú server blade illeszthető"
+      },
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "ID": 17,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Fattree topológiában egy access switc-hez 24 szerver kapcsolódik. Hány podunk lehet maximális kiépítésben? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "48"
+      },
+      "ID": 18,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy szerverparkban inkrementális mentést használunk. A változás mértéke kb. 209e/nap, de az adatmennyiség nem növekszik, csak a tartalom módosul. Hetes mentési ciklus és napi mentések (- vasárnap full, a többi napon differenciális) esetén mikor kell több adatot menteni, egy átlagos szerdán vagy csütörtökön?",
+      "options": {
+        "a": "a mentendő fájlok típusától függ",
+        "b": "csütörtökön",
+        "c": "szerdán",
+        "d": "egyforma a két nap"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 19,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Hosszútávú adatmegőrzési igény esetén az archív szalagokon felül mit érdemes még eltárolni?",
+      "options": {
+        "a": "semmi mást",
+        "b": "az archív másolat készítésekor érvényes könyvtárszerkezetet",
+        "c": "olvasó egységet",
+        "d": "tartalék szalagokat, amire bizonyos idő elteltével átírhatjuk az adatokat"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 20,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Abban a hálózatban, amelyik a 168.32.12.79/25 IP című gépét tartalmazza, mi a broadcast cím utolsó bájtjaldecimálisan)? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "127"
+      },
+      "ID": 21,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az SSD memóriák (#22)",
+      "options": {
+        "a": "megbízhatósága olyan nagy, hogy nincs szükség RAID védelemre",
+        "b": "jobb ár/kapacitás aránnyal rendelkeznek, mint a diszkek pud",
+        "c": "kapacitását adatkompresszióval növelik",
+        "d": "működtetési költsége nagyobb, mint a diszkeké"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 22,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A szalagokon egy fájl megtalálási ideje tipikusan",
+      "options": {
+        "a": "közel ugyanaz, mint a diszken",
+        "b": "sokkal nagyobb, mint a diszken",
+        "c": "sokkal kisebb, mint a diszken ha a fájlokat ugyanolyan sorrendben írtuk ki a szalagra, mint ahogy az a diszken",
+        "d": "voltak, akkor egyforma a megtalálási idő a szalagon és a diszken, ellenkező esetben a szalagé nagyobb"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 23,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi az out-of-band virtualizáció legnagyobb hátránya?",
+      "options": {
+        "a": "nehéz a helyreállítás meghibásodás után",
+        "b": "speciális vezérlést igényel",
+        "c": "komplikált a virtualizációs motor",
+        "d": "lassú"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 24,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy szerveren a frissítési idő 30 perc. A régi rendszer visszaállítása 15 percet vesz igénybe. A rendszer akármilyen állapotban történő tesztelésére 10 perc kell. Ha a frissítés sikertelen, mikor kell legkésőbb elkezdeni a visszakozzt?",
+      "options": {
+        "a": "A mentési időablak vége előtt 30 perccel",
+        "b": "A mentési időablak vége előtt 10 perccel",
+        "c": "A mentési időablak vége előtt 15 perccel",
+        "d": "A mentési időablak vége előtt 25 perccel"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 25,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mitjelent a konszolidált tár?",
+      "options": {
+        "a": "Egy helyre összegyűjtött, nem géphez kötött tár",
+        "b": "Felesleges adatoktól megtisztított tár",
+        "c": "Hiba után helyreállított tár",
+        "d": "Töredezettségmentesített tár"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 26,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi az out-of-band virtualizáció legnagyobb előnye? (#27)",
+      "options": {
+        "a": "fájlszintű hozzáférést biztosít",
+        "b": "gyors",
+        "c": "egyszerű helyreállítás meghibásodás után",
+        "d": "blokkszintű hozzáférést biztosít"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 27,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A zero-down-time mentést általában melyik technikával valósítják meg?",
+      "options": {
+        "a": "split mirror kV d",
+        "b": "progresszív",
+        "c": "RAID 5",
+        "d": "inkrementális"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 28,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen adatátviteli technológiát használhatunk, ha egy szerverhez dedikált külső tárat akarunk választani?(Több is jó lehet) SAS v (1 LUN (]) Fibre Chanel",
+      "options": {
+        "a": "SATA",
+        "b": "SAS",
+        "c": "Fibre Chanel"
+      },
+      "answer": [
+        "b",
+        "c"
+      ],
+      "ID": 29,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy szerverparkban 10TB adatmennyiséget kell menteni. Differenciális mentést használunk. A változás mértéke kb. 1096/nap, de az adatmennyiség nem növekszik, csak a tartalom módosul. Határozza meg, hogy hetes mentési ciklus, és napi mentések (- vasárnap full, a többi napon differenciális) esetén hány TB adat kerül a mentőrendszerbe egy átlagos csütörtöki napon?",
+      "options": {
+        "a": "1",
+        "b": "10",
+        "c": "40",
+        "d": "4"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 30,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "MitNEM tartalmaz egy protokoll specifikáció statikus része?",
+      "options": {
+        "a": "üzenetformátumok",
+        "b": "üzenetek kódolása",
+        "c": "üzenetek paraméterei",
+        "d": "egy üzenetre való lehetséges válaszüzenetek"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 31,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Videómegosztó szolgáltatást nyújtana. Milyen adatközponti konfigurációt választana?",
+      "options": {
+        "a": "Spine and leaf",
+        "b": "Nagyteljesítményű switch-ekből kialakított háromszintű hálózat",
+        "c": "Full mesh",
+        "d": "Fat tree",
+        "e": "Fattree"
+      },
+      "answer": [
+        "e"
+      ],
+      "ID": 32,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Egy spine and leaf architektúrában 48 portos switcheket használunk. Egy leaf switch-hez 38 szerver kapcsolódik. Maximális kiépítésben hány spine switch-ünk lehet? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "10"
+      },
+      "ID": 33,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "ANetwork Acces Server (VPN) közé NEM tartozik",
+      "options": {
+        "a": "használói terminálok vállalati hálózatba való illesztése",
+        "b": "titkosítás",
+        "c": "tűzfal",
+        "d": "AAA funkciók (authentication, authorization, accounting) biztosítása"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 34,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy szerverparkban 10TB adatmennyiséget kell menteni. Inkrementális mentést használunk. A változás mértéke kb. 1096/nap, de az adatmennyiség nem növekszik, csak a tartalom módosul. Határozza meg, hogy hetes mentési ciklus, és napi mentések (- vasárnap full, a többi napon inkrementális) esetén hány TB adat kerül a mentőrendszerbe egy átlagos csütörtöki napon?",
+      "options": {
+        "a": "10",
+        "b": "1",
+        "c": "40",
+        "d": "4"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 35,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az xx.zzz.com feloldása során melyik szerver tudja biztosan az ehhez tartozó IP címet?",
+      "options": {
+        "a": "a.comDNS szervere",
+        "b": "az xxzzz.com DNS szervere",
+        "c": "a zzz.com DNS szervere",
+        "d": "a felhasználó oldali DNS szerver",
+        "e": "a root DNS szerver"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 36,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi nem igaz a blade szerverekre? (Több is jó lehet) (#37)",
+      "options": {
+        "a": "Mivel sokkal kisebbek, mint a hagyományos szerverek, ezért azok a hűtőrendszere",
+        "b": "megfelelő számukra",
+        "c": "Kábelspórolás miatt viszonylag nagy diszkterülettel rendelkeznek",
+        "d": "Könnyen bővíthetőek"
+      },
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "ID": 37,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyik NEM használható redundáns rendszerek kialakítására?",
+      "options": {
+        "a": "ezek közül egyik sem hasnzálható erre",
+        "b": "RAID 01",
+        "c": "RAIDO",
+        "d": "RAID1"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 38,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy szerveren a frissítési idő 40 perc. A régi rendszer visszaállítása 20 percet vesz igénybe. A rendszer akármilyen állapotban történő tesztelésére 10 perc kell. Ha a frissítés sikertelen, mikor kell legkésőbbelkezdeni a visszakozzt?",
+      "options": {
+        "a": "A mentési időablak vége elött 20 perccel.",
+        "b": "A mentési időablak vége elött 10 perccel.",
+        "c": "A mentési időablak vége elött 40 perccel.",
+        "d": "A mentési időablak vége elött 30 perccel."
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 39,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik termékcsaládra jellemző leginkább: magasabb induló ár, de lassabban avuló megoldások?",
+      "options": {
+        "a": "mindhárom",
+        "b": "szerver",
+        "c": "otthoni",
+        "d": "üzleti"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 40,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Létrehozunk egy 10 blokkból álló fájlt. Egy nap múlva ennek a fájlnak a 3.,",
+      "options": {
+        "a": ". és 9. blokkjában végzünk módosításokat, majd a következő nap az utolsó blokkját töröljük, viszont az első elé beszúrunk egy blokkot, majd a harmadik nap az 5. blokkot újra megváltoztatjuk. Flash Copy használatával",
+        "b": "fájl négy változatának tárolása hány blokkat igényel?",
+        "c": "3",
+        "d": "15"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 41,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi az in-band virtualizáció legnagyobb előnye?",
+      "options": {
+        "a": "egyszerű a helyreállítás meghibásodás után",
+        "b": "gyors",
+        "c": "fájlszintű hozzáférést biztosít",
+        "d": "biokkszintű hozzáférést biztosít"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 42,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A következő módon megadott hálózat maximum hány gépet tartalmaz?  152.130.246.0/27",
+      "options": {
+        "a": "z",
+        "b": "30",
+        "c": "32",
+        "d": "5"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 43,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A SAN adattároló hálózatokban",
+      "options": {
+        "a": "atároló eszközök az egyes szerverektől fizikailag elválnak",
+        "b": "csak tárolóegységek találhatók",
+        "c": "a tárolóeszközök az adatbázisokkal integráltak",
+        "d": "olyan szerverek találhatóak, amelyek saját tárterülettel rendelkeznek",
+        "e": "a tároló eszközök az egyes szerverektől fizikailag elválnak"
+      },
+      "answer": [
+        "e"
+      ],
+      "ID": 44,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az SSD memóriák (#45)",
+      "options": {
+        "a": "egységnyi tárolási kapacitásra eső ára kisebb, mint a diszkeké",
+        "b": "a működtetési költsége magas",
+        "c": "egységnyi input-output műveletre eső ára kisebb, mint a diszkeké",
+        "d": "működtetési költsége alacsony"
+      },
+      "answer": [
+        "c",
+        "d"
+      ],
+      "ID": 45,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Létrehozunk egy 9 blokkból álló fájlt. Egy nap múlva ennek a fájlnak a 1., 5. és 8. blokkjában végzünk módosításokat, majd a következő nap az utolsó blokkját töröljük, és az 5. blokkot újra megváltoztatjuk. A harmadik nap az első elé beszúrunk egy blokkot. Flash Copy használatával, hány soros lesz a negyedik napi Flash Copy tábla? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "3"
+      },
+      "ID": 46,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Virtualizált környezetben nagy felbontású filmek stream elérését akarja szolgáltatni. Milyen virtualizációs technológiát választana és miért?",
+      "options": {
+        "a": "Out-of-band, mert megbízhatóbb adatátvitelt biztosít",
+        "b": "In-band, mert megbízhatóbb adatátvitelt biztosít",
+        "c": "In-band, mert gyorsabb",
+        "d": "Out-of-band, mert gyorsabb"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 47,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mire jók az 1. típusú (szorosan csatolt) nagyteljesítményű clusterek?",
+      "options": {
+        "a": "képfeldolgozás",
+        "b": "Fájlfeldolgozás",
+        "c": "Keresőmotor",
+        "d": "Időjárás előrejelzés kV d"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 48,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Adatbázisunkat feltörték. A támadás után célszerű-e az adatbázis szerver MAC címét is megváltoztatni?",
+      "options": {
+        "a": "Nem, mert a MAC címet az IP cím elrejti",
+        "b": "Igen, mert a támadók azt is megszerezhették",
+        "c": "Igen, mert ha az IP címet megszerezték, egy ARP paranccsal a MAC cím is lekérdezhető",
+        "d": "Aztnemlehet",
+        "e": "Azt nem lehet"
+      },
+      "answer": [
+        "e"
+      ],
+      "ID": 49,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "AXKkonszolidált adattároló hálózatokban",
+      "options": {
+        "a": "a tárolóeszközök a szerverektől fizikailag elválnak",
+        "b": "olyan szerverek találhatóak amelyek saját területtel rendelkeznek p.d 0 csak diszkek találhatóak",
+        "c": "a tárolóeszközök az adatbázisokkal integráltak"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 50,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A következő módon megadott hálózat maximum hány IP címet tartalmaz?",
+      "options": {
+        "a": "152.130.246.0 /27",
+        "b": "27",
+        "c": "64",
+        "d": "5",
+        "e": "32"
+      },
+      "answer": [
+        "e"
+      ],
+      "ID": 51,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Létrehozunk egy 7 blokkból álló fájlt. Egy nap múlva ennek a fájlnak a 4. és 6. blokkjában végzünk módosításokat, majd a következő nap a 6. blokkot újra megváltoztatjuk. Flash Copy használatával e fájl e három változatának tárolása hány blokkat igényel?",
+      "options": {
+        "a": "10",
+        "b": "23",
+        "c": "2",
+        "d": "07"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 52,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen adatok tartoznak a referencia adatok közé?",
+      "options": {
+        "a": "mentések",
+        "b": "riportok, tranzakciós jelentések",
+        "c": "alkalmazás adatbázis, fejlesztés alatt álló szoftverek",
+        "d": "biztonsági videó állományok"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 53,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Egy szerverparkban 200TB adatmennyiséget kell menteni. Inkrementális  mentést használunk. A változás mértéke kb. 15\"6/nap, de az adatmennyiség nem növekszik, csak a tartalom módosul. Határozza meg, hogy hetes mentési ciklus, és napi mentések (- vasárnap full, a többi napon inkrementális) esetén hány szalagot kell használnunk egy átlagos pénteki napon, ha egy szalag mérete 12 TB? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "3"
+      },
+      "ID": 54,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az inet.company.com feloldása során melyik szerver tudja biztosan az ehhez tartozó címet?",
+      "options": {
+        "a": "company.com DNS szervere",
+        "b": "a felhasználó oldali DNS szerver",
+        "c": "root DNS szervere",
+        "d": "az inet.company.com DNS szervere"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 55,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Egy szerverparkban 2000TB adatmennyiséget kell menteni. Inkrementális mentést használunk. A változás mértéke kb. 59/nap, de az adatmennyiség nem növekszik, csak a tartalom módosul. Határozza meg, hogy hetes mentési ciklus, és napi mentések (- vasárnap full, a többi napon inkrementális) esetén hány TB adat kerül a mentőrendszerbe a hónap második vasárnapán? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "2000"
+      },
+      "ID": 56,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mire jók a 2. típusú (elosztott I/0) nagyteljesítményű clusterek?",
+      "options": {
+        "a": "Fájlfeldolgozás",
+        "b": "Keresőmotor",
+        "c": "képfeldolgozás",
+        "d": "Meteorológiai szimuláció"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 57,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Egy spine and leaf architektúrában 64 portos switcheket használunk. Egy. leaf switch-hez 48 szerver kapcsolódik. Maximális kiépítésben hány spine switch-ünk lehet? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "16"
+      },
+      "ID": 58,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a legnagyobb előnye a spine/leaf architektúrának a szövevényessel (full mesh) szemben?",
+      "options": {
+        "a": "Kevesebb switchet tartalmaz",
+        "b": "Redundáns útvonalak vannak",
+        "c": "Gyorsabb",
+        "d": "Hatékonyabban támogatja a szerverek közötti kommunikációt"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 59,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egytipikus hibrid tömb esetén",
+      "options": {
+        "a": "Az SSD rész a HDD-k gyors vezérlésére szolgál",
+        "b": "Az SSD rész elsősorban a biztonság növelésére szolgál",
+        "c": "kb.5096 SSD, 5096 HDD",
+        "d": "kb. 59 SSD, 959 HDD",
+        "e": "kb. 59 SSD, 9596 HDD"
+      },
+      "answer": [
+        "e"
+      ],
+      "ID": 60,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A progresszív mentési stratégia legnagyobb előnye, hogy",
+      "options": {
+        "a": "helyreállításnál a törölt fájlok nem jelennek meg",
+        "b": "(e) felxibilis",
+        "c": "kevés szalag szükséges a helyreállításhoz",
+        "d": "elsősorban sok kis fájl mentése esetén ez a leghelytakarékosabb megoldás"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 61,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Legalább hány lemez szükséges egy RAID-6 rendszer üzemeltetéséhez? (#62)",
+      "options": {
+        "a": "3",
+        "b": "5",
+        "c": "6",
+        "d": "4"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 62,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A blade server-ekre tipikusan NEM jellemző, hogy",
+      "options": {
+        "a": "jól skálázhatóak",
+        "b": "gyakran virtuális gépek futtatására használják",
+        "c": "teljesítmény-sűrűségük a hagyományos szerverének többszöröse",
+        "d": "adatközpontokban speciális hűtést igényelnek"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 63,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy szerverparkban 10TB adatmennyiséget kell menteni. differenciális mentést használunk. A változás mértéke kb 1096/nap, de az adatmennyiség nem növekszik, csak a tartalom módosul. Határozza meg, hogy hetes mentési ciklus, és napi mentések (-vasárnap full, a többi napon differenciális) esetén hány TB adat kerül a mentőrendszerbe egy átlagos pénteki napon?",
+      "options": {
+        "a": "1",
+        "b": "0 5",
+        "c": "50",
+        "d": "10",
+        "e": "5"
+      },
+      "answer": [
+        "e"
+      ],
+      "ID": 64,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az SSD memóriák (#65)",
+      "options": {
+        "a": "megbízhatóságát RAID segítségével növeik",
+        "b": "nagy áramfelvétellel járnak",
+        "c": "olvasási ideje nem egyenletes",
+        "d": "speciális hűtést igényelnek"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 65,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "AFlashCopy tábla",
+      "options": {
+        "a": "egy fájl egy változatának blokkjaira mutató táblázat",
+        "b": "az animációkról készült másolatok táblázata",
+        "c": "foglalt blokkok tartalmát tárolja",
+        "d": "nagysebességű tárolón tárolt adatmásolat"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 66,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mitjelent a \"dedikált tároló eszköz\" fogalom?",
+      "options": {
+        "a": "adott szerverhez rendelt tároló",
+        "b": "egy lokális hálózatban személyhez kötött jogosultsággal rendelkező tároló",
+        "c": "adott típusú adat tárolására szolgál (pl.: videó, adatbázis, stb.) p.d",
+        "d": "egy alhálózatból elérhető tároló"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 67,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen adatok tartoznak a passzív adatok közé?",
+      "options": {
+        "a": "alkalmazás adatbázis, fejlesztés alatt álló szoftverek",
+        "b": "publikált dokumentumok p.€",
+        "c": "riportok, tranzakciós jelentések",
+        "d": "biztonsági videó állományok"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 68,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik OSI rétegben dolgoznak a hidak?",
+      "options": {
+        "a": "1",
+        "b": "Ve",
+        "c": "3",
+        "d": "2"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 69,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy server blade tipikusan NEM tartalmaz",
+      "options": {
+        "a": "CPU-t",
+        "b": "hálózati kártyát",
+        "c": "memóriát",
+        "d": "diszket"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 70,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi az in-band virtualizáció legnagyobb hátránya?",
+      "options": {
+        "a": "lassú",
+        "b": "nehéz a helyreállítás meghíbásodás után",
+        "c": "komplikált a virtualizációs motor",
+        "d": "speciális vezérlést igényel"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 71,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Cége több, egymástól többszáz kilométerre levő telephellyel rendelkezik,  ezért a biztonság növelésére az egyes telephelyeken készült blokkos adatmásolatokat egy másik telephelyen tárolják. Milyen technológiát használna az adatok továbbítására?",
+      "options": {
+        "a": "Nas",
+        "b": "Das",
+        "c": "IPSAN",
+        "d": "SAN"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 72,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mitjelent a \"kollokáció\" az adatmentés során?",
+      "options": {
+        "a": "az egyidőben végzett mentéseket egy szalagra másoljuk",
+        "b": "a biztonsági másolatokat ugyanazon a telephelyen tároljuk pud",
+        "c": "az egy klienshez tartozó adatokat egy szalagra másoljuk",
+        "d": "az egymás utáni mentéseket folytonosan tároljuk egy szalagon"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 73,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Vállalata sok beruházási pénzt nyert EU-s pályázaton adatbázis bővítésre, de tudja, hogy az üzemeltetés csak saját forrásból történhet meg a következő években, abból meg nincs sok. A fentiek figyelembevételével milyen technológiát választana?",
+      "options": {
+        "a": "FatTree",
+        "b": "All Flash Array",
+        "c": "Szalag",
+        "d": "Disk Array",
+        "e": "Spine and Leaf",
+        "f": "Hybrid Array"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 74,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "ADNSHhasználatával",
+      "options": {
+        "a": "Szimbolikus nevekhez rendelhetünk fizikai címet",
+        "b": "Szimbolikus nevekhez rendelhetünk IP címet",
+        "c": "Fizikai címekhez rendelhetünk IP címet",
+        "d": "IP cíímekhez rendelhetünk fizikai címet"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 75,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Legalább hány lemez szükséges egy RAID-5 rendszer üzemeltetéséhez?",
+      "options": {
+        "a": "2",
+        "b": "0 3",
+        "c": "5",
+        "d": "3"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 76,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik termékcsaládra jellemző leginkább: alacsony induló ár, drága bővítés?",
+      "options": {
+        "a": "szerver",
+        "b": "otthoni",
+        "c": "mindhárom",
+        "d": "üzleti"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 77,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Diszkről készítünk szalagra archív másolatot. A művelet akkor gyors, ha",
+      "options": {
+        "a": "a diszk olvasási sebessége megegyezik a szalag írási sebességével",
+        "b": "a diszk olvasási sebessége nagyobb, mint a szalag írási sebessége pud",
+        "c": "a diszk írási sebessége megegyezik a szalag olvasási sebességével",
+        "d": "a diszk olvasási sebessége kisebb, mint a szalag írási sebessége"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 78,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi annak a hálózatnak a broadcast címe, amelyben a következő címmel  megadott gép található? 168.32.14.129/29",
+      "options": {
+        "a": "168.32.14.128",
+        "b": "168.32.14.135",
+        "c": "168.32.14.129",
+        "d": "168.32.14.255"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 79,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "High Performance Cluster-eken alapuló szolgáltatást nyújtana. Milyen adatközponti konfigurációt választana?",
+      "options": {
+        "a": "Full mesh",
+        "b": "Fat tree",
+        "c": "Nagyteljesítményű switch-ekből kialakított háromszintű hálózat ped",
+        "d": "Spine and leaf"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 80,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "A következő módon megadott hálózat maximum hány gépet tartalmaz?  152.130.244.0/27 [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "30"
+      },
+      "ID": 81,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik termékcsoportra jellemző leginkább: teljesítményhez viszonyított  minimális költség, robosztus kivitel",
+      "options": {
+        "a": "szerver",
+        "b": "otthoni",
+        "c": "üzleti",
+        "d": "mindhárom"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 82,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Site-to-site VPN használatakor (Több is jó lehet) használókat csatlakoztat különböző telephelyekhez v",
+      "options": {
+        "a": "nincs szükség speciális program telepítésére a kliens gépen telephelyeket kapcsol össze pad",
+        "b": "szükség van speciális program telepítésére a kliens gépen",
+        "c": "nincs szükség speciális program telepítésére a kliens gépen",
+        "d": "használókat csatlakoztat különböző telephelyekhez"
+      },
+      "answer": [
+        "c",
+        "d"
+      ],
+      "ID": 83,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Remote-acces VPN használatakor",
+      "options": {
+        "a": "nincs szükség speciális program telepítésére a kliens gépen",
+        "b": "VPN koncetrátorok vezérlik",
+        "c": "VPN koncetrátor telepítésére van szükség a kliens gépen",
+        "d": "szükség van speciális program telepítésére a kliens gépen"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 84,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Miért kell más mentési tervet készíteni a nagyméretű adatbázis mentésére, mint egy fájlrendszerben tárolt állományok mentésére?",
+      "options": {
+        "a": "a fájlrendszerek mentése több szalagot igényel",
+        "b": "az adatbázis több felhasználót szolgál ki",
+        "c": "az adatbázisokról sokkal gyakrabban kell másolatot készíteni ped",
+        "d": "az adatkonzisztenciát a teljes adatbázisra biztosítani kell mentés során"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 85,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Mi annak a hálózatnak, amelyik a 168.32.12.169/25 IP című gépet tartalmazza, a hálózati címének utolsó bájtja (decimálisan)? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "128"
+      },
+      "ID": 86,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A 152.130.246.0/27 jelölés azt jelenti, hogy az alhálózati maszk (netmaszk)",
+      "options": {
+        "a": "az első 5 bitje 1-es",
+        "b": "az utolsó 27 bitje 1-es",
+        "c": "első 27 bitje 1-es",
+        "d": "az utolsó 5 bitje 1-es"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 87,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Ha egy szerverterem építése során pénzügyi okokból az alábbiakközül  három megvalósítására lenne keret, melyiket hagyná el?",
+      "options": {
+        "a": "szünetmentes tápegység",
+        "b": "melegtartalék (hot-swap) CPU-k",
+        "c": "tüzérzékelő",
+        "d": "klímaberendezés"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 88,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi az out-of-band virtualizáció legnagyobb előnye? (#89)",
+      "options": {
+        "a": "egyszerü a helyreállítás meghibásodás után.",
+        "b": "gyors fé",
+        "c": "fájlszintű hozzáférést biztosít.",
+        "d": "blokkszintű hozzáférést biztosít"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 89,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A Flash Copy technika elsősorban mire használatos?",
+      "options": {
+        "a": "verziókezelés",
+        "b": "inkrementális mentésre",
+        "c": "progresszív mentési stratégia esetén a fájlleírók mentésére",
+        "d": "adatbázisok mentésére"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 90,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Remote-Access VPN használatakor",
+      "options": {
+        "a": "szükség van speciális program telepítésére a kliens gépen",
+        "b": "VPN koncentrátorok vezérlik",
+        "c": "VPN koncentrátor telepítésére van szükség a kliens gépen",
+        "d": "nincs szükség speciális program telepítésére a kliens gépen p.d"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 91,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A következő módon megadott hálózat maximum hány gépet tartalmaz?  152.130.246.0/26",
+      "options": {
+        "a": "26",
+        "b": "6a",
+        "c": "52",
+        "d": "6"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 92,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az archív fájlokat tipikusan hol tároljuk?",
+      "options": {
+        "a": "hibrid tömbökben",
+        "b": "régebben optikai tárolókon, ma inkább flash memóriában",
+        "c": "diszkeken",
+        "d": "mágnesszalagokon"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 93,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Site-to-site VPN",
+      "options": {
+        "a": "esetén VPN koncentrátor telepítésére van szükség a kliens gépen",
+        "b": "esetén nincs szükség speciális program telepítésére a kliens gépen kV d",
+        "c": "esetén szükség van speciális program telepítésére a kliens gépen",
+        "d": "használókat csatlakoztat a különböző telephelyekhez"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 94,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik OSI rétegben dolgoznak a routerek?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 95,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy adatközpont egyik rétegében a túlméretezés (oversubsceription) 9, míg a másikban 2. Mennyi a teljestúlméretezés?",
+      "options": {
+        "a": "4.50",
+        "b": "n",
+        "c": "0 18",
+        "d": "18"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 96,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A visszaállítás ideje az inkrementális vagy differenciális mentésnél hosszabb?",
+      "options": {
+        "a": "a mentett adatok típusától függ",
+        "b": "egyforma az időigényük",
+        "c": "inkrementális",
+        "d": "differenciális"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 97,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Archiválási célokra elsősorban azért használunk tipikus szalagot, mert",
+      "options": {
+        "a": "A szalag kapacitása nagyobb, mint a diszk kapacitása",
+        "b": "A szalagon az adatok tárolása nem igényel energiát",
+        "c": "A szalagos egység olcsóbb, mint a diszk",
+        "d": "A szalag megbízhatóbb a diszknél"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 98,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "A következő módon megadott hálózat maximum hány gépet tartalmaz? 152.130.100.0/23 [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "510"
+      },
+      "ID": 99,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen adatok tartoznak az aktív adatok közé?",
+      "options": {
+        "a": "alkalmazás adatbázis, fejlesztés alatt álló szoftverek",
+        "b": "biztonsági videó állományok",
+        "c": "riportok, tranzakciós jelentések",
+        "d": "publikált dokumentumok"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 100,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Legalább hány lemez szükséges egy RAID-6 rendszer üzemeltetéséhez? (#101)",
+      "options": {
+        "a": "6",
+        "b": "3",
+        "c": "5",
+        "d": "4"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 101,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Archiválás során (több is jó lehet)",
+      "options": {
+        "a": "tipikusan inkrementális mentési stratégiát használunk, hogy csökkentsük a másolási időt 0 azt szeretnénk biztosítani, hogy ha egy diszk meghibásodik, akkor annak tartalmát helyre tudjuk állítani",
+        "b": "tipikusan azért készítjük a másolatot, hogy valamilyen jogszabályi előírásnak 7 megfeleljünk",
+        "c": "tipikusan passzív adatokat mentünk"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 102,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "NAT Hhasználata ésetén mikor van szükség a portok módosítására Is?",
+      "options": {
+        "a": "Ha a router több külső címmel rendelkezik",
+        "b": "Ha a router nem képes az IP cím módosítására pé",
+        "c": "Ha a router több porton kommunikál",
+        "d": "Ha a router nem rendelkezik elegendő nyilvános címme"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 103,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Egy aggregációs switch 48 db 10 Gb/s porttal rendelkezik. 16 portját használjuk a core réteg felé redundáns összeköttetésekre. Mekkora a túlméretezés (oversubscription) ezen a switch-en, ha a portjait maximálisan kihasználjuk? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "2"
+      },
+      "ID": 104,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az SSD memóriák (#105)",
+      "options": {
+        "a": "egységnyi input-output műveletre eső ára kisebb, mint a diszkeké",
+        "b": "egységnyi tárolási kapacitásra eső ára kisebb, mint a diszkeké",
+        "c": "adat írási ideje jelentősen nagyobb, mint az adat olvasási ideje",
+        "d": "speciális hűtést igényelnek"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 105,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az inkrementális vagy a differenciális mentés tart tovább?",
+      "options": {
+        "a": "Inkrementális",
+        "b": "egyforma ideig tart a mentés a két módszer esetén",
+        "c": "a mentett adatok típusától függ",
+        "d": "differenciális"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 106,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "fill_the_blanks",
+      "text": "Fattree topológiában 32 pod-unk van maximális kiépítésben. Egy access switch-hez maximum hány szerver kapcsolódhat? [field1]",
+      "blank": {
+        "identifier": "field1",
+        "answer": "16"
+      },
+      "ID": 107,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Egy tipikus mentőrendszer esetén",
+      "options": {
+        "a": "a mentési és a visszaállítási idő azonos",
+        "b": "a mentési idő nagyobb, mint a visszaállítási",
+        "c": "inkrementális mentés esetén a mentési, differenciális mentés esetén a helyreállítási idő a nagyobb",
+        "d": "a visszaállítási idő nagyobb, mint a mentési. kV d"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 108,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Nagyméretű adatbázis mentésére milyen technológiát választana?",
+      "options": {
+        "a": "Progresszív",
+        "b": "Split mirror",
+        "c": "Inkrementális",
+        "d": "Differenciális",
+        "e": "Volume copy"
+      },
+      "answer": [
+        "b"
+      ],
+      "ID": 109,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Archiválás során (több is jó lehet)",
+      "options": {
+        "a": "valódi másolat készül",
+        "b": "tipikusan progresszív mentési stratégiát használunk",
+        "c": "tipikusan passzív adatokat mentünk",
+        "d": "nem készül valódi másolat"
+      },
+      "answer": [
+        "a",
+        "c"
+      ],
+      "ID": 110,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik RAID verzió NEM alkalmas párhuzamos I/O kérések kiszolgálására?",
+      "options": {
+        "a": "(Több is jó lehet) £] RAID 5",
+        "b": "RAID 1 v (] RAD3",
+        "c": "RAID 4",
+        "d": "RAID 1",
+        "e": "RAID 3"
+      },
+      "answer": [
+        "d",
+        "e"
+      ],
+      "ID": 111,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az archív másolatokat milyen módszerrel készítjük?",
+      "options": {
+        "a": "progresszív",
+        "b": "inkrementális",
+        "c": "differenciális",
+        "d": "teljes másolat"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 112,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A Volume Copy eljárás",
+      "options": {
+        "a": "back-up, analitikai és adatbényászati alkalmazáshoz is jó, mivel teljes tvd másolatot készít",
+        "b": "során az adat konzisztencia automatikusan létrejön",
+        "c": "foglaltsági blokk tábla másoláson alapszik",
+        "d": "nem alkalmas back-up célra, mivel csak virtuális másolat keletkezik, amit split mirror segítségével meg kell osztani"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 113,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Kétszintű adatközponti struktúrát alakítunk ki Top of Rack (ToR) switchekből. Mi a megoldás legnagyobb hátránya?",
+      "options": {
+        "a": "Hosszú kábelek alkalmazására van szükség",
+        "b": "Speciális, nagyteljesítményű switchekre van szükség",
+        "c": "Speciális hűtést igényel, mert a rackekben a szerverek mellett a switcheket is el kell helyezni",
+        "d": "Tipikus eszközökkel csak relative kis méretű adatközpont alakítható ki így"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 114,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik OSI rétegben dolgoznak a hub-ok?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 115,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbi topológiák közül melyikben NINCS beépítve alapértelmezésbne semmi védettség?",
+      "options": {
+        "a": "szövevényes",
+        "b": "hurkolt",
+        "c": "lánc",
+        "d": "gyűrű"
+      },
+      "answer": [
+        "c"
+      ],
+      "ID": 116,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Blade server esetén a keret tipikusan tartalmaz",
+      "options": {
+        "a": "diszket",
+        "b": "használói (user) interfész csatlakozót",
+        "c": "memóriát",
+        "d": "hűtést"
+      },
+      "answer": [
+        "d"
+      ],
+      "ID": 117,
+      "supervised": "yes"
+    }
+  ]
+}

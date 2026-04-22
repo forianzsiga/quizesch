@@ -1,0 +1,984 @@
+{
+  "tags": {
+    "subject": "IT Biztonság",
+    "type": "ZH",
+    "year": "combined"
+  },
+  "questions": [
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz az evasion támadásokra gépi modellek ellen?",
+      "options": {
+        "a": "A támadó egy testing minta olyan módosítását keresi, amit a betanított modell félreklasszifikál",
+        "b": "A támadó a tanítóadat olyan módosítását keresi, amely során egy kiválasztott minta félreklasszifikálódik a tanítás után"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 1,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a posztkvantum kriptográfiára?",
+      "options": {
+        "a": "Kvantumszámítógép mellett a szimmetrikus kulcsú módszerek kevésbé veszélyeztetettek, mert a kulcsméret növelésével részben védekezhetünk",
+        "b": "Posztkvantum kriptográfiának csak a kvantumszámítógépen futó algoritmusokat nevezzük"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 2,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a publikus sérülékenységekre?",
+      "options": {
+        "a": "Egyedi azonosítóval (CVE ID) rendelkezhetnek",
+        "b": "Nem kereshetők nyilvános adatbázisokban"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 3,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi követelmény egy modern kriptográfiai hash függvénnyel szemben?",
+      "options": {
+        "a": "Nehéz legyen egy adott `y` hash értékhez olyan `x` bemenetet találni, amelyre `H(x)=y`",
+        "b": "Könnyű legyen két különböző bemenetet találni ugyanazzal a hash értékkel"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 4,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a DEP működésére?",
+      "options": {
+        "a": "Célja a végrehajtható és írható memóriaterületek elszeparálása",
+        "b": "Célja a memória-túlírás automatikus visszajavítása"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 5,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mely szolgáltatást biztosítja a MAC és a digitális aláírás is?",
+      "options": {
+        "a": "Üzenet integritásának védelmét",
+        "b": "Üzenet titkosságát"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 6,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik NIST-irányelv helyes a jelszavakra?",
+      "options": {
+        "a": "A jelszavak ne járjanak le automatikusan, csak megalapozott ok esetén kelljen cserélni őket",
+        "b": "Kötelező a nagyon gyakori periódikus jelszócsere még incidens nélkül is"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 7,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi lehet hasznos bemenet egy hibafelismerő ML-modellhez forráskódban?",
+      "options": {
+        "a": "A forráskód szöveges reprezentációja vagy tokenjei",
+        "b": "A felhasználók nyers jelszavai"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 8,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik fogalom kötődik az OAuth-hoz?",
+      "options": {
+        "a": "Authorization Server",
+        "b": "Relying Party csak OAuth-környezetben használatos kötelező szerepkör"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 9,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a membership attackra?",
+      "options": {
+        "a": "Azt próbálja eldönteni, hogy egy minta szerepelt-e a tanítóadatban",
+        "b": "Egy tanítóminta teljes rekonstrukcióját végzi el minden esetben"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 10,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a jelszavak biztonságos tárolására?",
+      "options": {
+        "a": "KDF algoritmusok használata javasolt",
+        "b": "A jelszavakat visszafejthető formában érdemes tárolni adminisztrációs célból"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 11,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi kihívás a security testingben?",
+      "options": {
+        "a": "Nehéz jól mérni a biztonságot, ezért a tesztelés hatékonyságát is nehéz mérni",
+        "b": "A biztonsági tesztelésnél nincs szükség támadói gondolkodásmódra"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 12,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi jellemző egy belső támadóra?",
+      "options": {
+        "a": "Változó technikai képességek, fejlett információszerző képesség, limitált erőforrások",
+        "b": "Limitált technikai képességek, limitált információszerző képesség, jelentős erőforrások minden esetben"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 13,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik NEM igaz a kétfaktoros autentikációra?",
+      "options": {
+        "a": "Leggyakoribb megvalósítása egy tudásalapú és egy tulajdonságalapú módszerből áll",
+        "b": "Használata általában megnehezíti a fiókátvételt"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 14,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen szerepet játszanak emberek a gépi tanulási rendszerek életciklusában?",
+      "options": {
+        "a": "Címkézik az adatokat és validálhatják a döntéseket",
+        "b": "Teljes mértékben kiválthatók minden életciklus-fázisban"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 15,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik malware analízis technika?",
+      "options": {
+        "a": "Statikus analízis",
+        "b": "Spektrumanalízis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 16,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi fontos IDS-be szánt ML-modellek értékelésénél?",
+      "options": {
+        "a": "Többféle metrikát is érdemes használni, például false positive és false negative arányokat",
+        "b": "Imbalanced dataset esetén az accuracy önmagában elég"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 17,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik XSS típus létezik?",
+      "options": {
+        "a": "DOM-based XSS",
+        "b": "Event-based XSS mint klasszikus alapkategória"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 18,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Hogyan definiáljuk a biztonsági kockázatot?",
+      "options": {
+        "a": "A sikeres támadásból származó várható veszteségként",
+        "b": "Kizárólag a támadási felület méreteként"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 19,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi történik CSRF támadás során?",
+      "options": {
+        "a": "Az áldozat böngészője kártékony kérést küld, és a szerver a felhasználó nevében hajt végre műveletet",
+        "b": "A támadó közvetlenül kiolvassa a szerver titkos memóriáját"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 20,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a manuális biztonsági tesztelésre?",
+      "options": {
+        "a": "Már az SDL korai fázisaiban is alkalmazható",
+        "b": "Elsősorban azért előnyös, mert nagyon kevés humán erőforrást igényel"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 21,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a fine-pruningra?",
+      "options": {
+        "a": "A védekező eltávolítja az alacsony átlagos aktivációjú neuronokat, majd finomhangolja a hálót nem mérgezett adaton",
+        "b": "A támadó távolít el magas aktivitású neuronokat, hogy könnyebben elrejtse a backdoort"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 22,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik tulajdonság igaz minden számítógépes trójaira?",
+      "options": {
+        "a": "Nem azt csinálja, mint aminek próbálja magát beállítani",
+        "b": "Gyorsan, automatikusan terjed a hálózaton"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 23,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik modern rejtjelező algoritmus?",
+      "options": {
+        "a": "AES",
+        "b": "Enigma"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 24,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen biztonsági funkciót valósít meg a TLS?",
+      "options": {
+        "a": "Közös titok létrehozása és abból kulcsok származtatása",
+        "b": "Az alkalmazásszintű jogosultsági szabályok teljes körű kezelése"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 25,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi jellemző a code review folyamatra?",
+      "options": {
+        "a": "Hatékony lehet a hibák megtalálására, de sok humán erőforrást igényel",
+        "b": "Különösen akkor érdemes, ha már a teljes kódbázis elkészült, korábban nem hasznos"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 26,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Miért fontos az MI-alapú biztonsági rendszerek folyamatos monitorozása?",
+      "options": {
+        "a": "Segít meghatározni, mikor kell újratanítani a modellt",
+        "b": "Azért szükséges, mert a modellek inference közben automatikusan újratanulnak"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 27,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik módszer NEM javasolt SQL injection ellen?",
+      "options": {
+        "a": "Tiltólista (blocklist) alapú bemenetellenőrzés",
+        "b": "Prepared statementek alkalmazása"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 28,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a clickjacking elleni védekezésre?",
+      "options": {
+        "a": "A támadás megállítható, ha a weboldal nem tölthető be iFrame-be",
+        "b": "A Javascript letiltása önmagában általános és teljes megoldást ad"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 29,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a CBC mód helyes képlete?",
+      "options": {
+        "a": "`Y_i = E_K(X_i ⊕ Y_{i-1})`",
+        "b": "`Y_i = E_K(X_i) ⊕ Y_{i-1}`"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 30,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit mond a psychological acceptability elv?",
+      "options": {
+        "a": "A szoftver tervezésének figyelembe kell vennie az emberi tényezőt",
+        "b": "A felhasználói élmény biztonsági szempontból irreleváns"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 31,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi tartozik a threat modellinghez?",
+      "options": {
+        "a": "A STRIDE alapján össze kell gyűjteni a potenciális támadásokat",
+        "b": "Kizárólag a védekezési mechanizmusok listázásából áll"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 32,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik tulajdonság igaz minden számítógépes vírusra?",
+      "options": {
+        "a": "Replikációra, önmaga továbbmásolására képes",
+        "b": "Mindig teljesen önálló program és sosem kódrészlet"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 33,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz a tankönyvi Diffie–Hellman protokollra?",
+      "options": {
+        "a": "Biztonsága részben a diszkrét logaritmus probléma nehézségére vezethető vissza",
+        "b": "Beépítetten hitelesíti a feleket"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 34,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mely kérdés tartozik a fenyegetések azonosításához?",
+      "options": {
+        "a": "Kik a valószínűsíthető támadók?",
+        "b": "Mekkora legyen a kulcshossz egy adott blokkrejtjelezőben?"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 35,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit jelent a lavina hatás blokkrejtjelezőknél?",
+      "options": {
+        "a": "Egy bit megváltoztatása a bemeneten közel a bitek felének változását eredményezi a kimeneten",
+        "b": "A blokkméret növelésével automatikusan lineárisan nő a biztonság"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 36,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A Javascript mely tulajdonsága miatt lehet veszélyes XSS-ben?",
+      "options": {
+        "a": "Felhasználó által okozott esemény és egy Javascript esemény egyenértékű lehet",
+        "b": "Minden változó szükségszerűen globális scope-pal rendelkezik"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 37,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Miért hash-eljük az üzenetet digitális aláírás előtt?",
+      "options": {
+        "a": "Így gyorsabb az aláírás kiszámítása",
+        "b": "Így az aláírás automatikusan titkosítja is az üzenetet"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 38,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a Security Response Planre?",
+      "options": {
+        "a": "Incidens esetén kell végrehajtani a további károk minimalizálása érdekében",
+        "b": "Csak felelősségteljes sérülékenység-bejelentés esetén releváns"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 39,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit jelent a CIA triad?",
+      "options": {
+        "a": "Confidentiality, Integrity, Availability",
+        "b": "Confidentiality, Integrity, Authenticity"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 40,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik hajtódik végre az iOS bootolása során első lépésként?",
+      "options": {
+        "a": "Low level bootloader / read-only boot ROM indul",
+        "b": "Először a kernel inicializálódik"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 41,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik lehet hatásos védelem ROP ellen?",
+      "options": {
+        "a": "ASLR",
+        "b": "A cache méretének növelése"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 42,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a CVE?",
+      "options": {
+        "a": "Nyilvánosan ismert sérülékenységeket azonosító adatbázis/azonosítórendszer",
+        "b": "Egy operációsrendszer-paraméter a virtualizáció ellenőrzésére"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 43,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik NEM igaz általánosan az Android biztonságára?",
+      "options": {
+        "a": "Az alkalmazásaláírások alapján közvetlenül ellenőrizhetővé teszi a fejlesztőket",
+        "b": "Törekszik arra, hogy kevés kód fusson root jogosultsággal"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 44,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit jelent a stretching jelszó-hashelésnél?",
+      "options": {
+        "a": "A hash számolásának idejét mesterségesen megnöveljük többszörös iterációval",
+        "b": "A jelszót visszafejthető formában eltároljuk későbbi ellenőrzéshez"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 45,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Ujjlenyomat-illesztésnél mi a legjobb teljesítmény?",
+      "options": {
+        "a": "Alacsony FA és alacsony FR ráta",
+        "b": "Magas FA és magas FR ráta"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 46,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Miért hasznosak az automatizált sérülékenység-ellenőrző programok?",
+      "options": {
+        "a": "Sok hibát gyorsan át tudnak nézni, jó kiegészítői a manuális tesztelésnek",
+        "b": "Teljesen kiváltják a manuális biztonsági tesztelést"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 47,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit mond az open design elv?",
+      "options": {
+        "a": "A rendszer biztonsága ne a tervek titkosságától függjön",
+        "b": "A tervet csak akkor szabad megvédeni, ha teljesen zárt marad"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 48,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi az ujjlenyomat-minutia?",
+      "options": {
+        "a": "A típus, pozíció és irány hármasa (pl. vonalvégződés vagy elágazás)",
+        "b": "Az ujjlenyomat egészének globális típusa, például örvény vagy boltív"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 49,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a Return-to-LibC támadás lényege?",
+      "options": {
+        "a": "A visszatérési címhez egy libc-beli függvényt állít be a támadó megfelelő paraméterezéssel",
+        "b": "A támadó fizikailag felülírja a libc fájlt a lemezen"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 50,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit nem szabad soha naplózni?",
+      "options": {
+        "a": "Jelszót",
+        "b": "Sikertelen rendszerhívást"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 51,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a black-box tesztelés?",
+      "options": {
+        "a": "Olyan ellenőrzés, ahol csak minimális előzetes tudásunk van, és az inputokat-outputokat figyeljük",
+        "b": "Olyan tesztelés, ahol a teljes forráskódot és a belső működést ismerjük"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 52,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mivel nem foglalkozik az IT-biztonság?",
+      "options": {
+        "a": "Véletlen hardverhibák előfordulásával",
+        "b": "Adatokhoz történő illetéktelen hozzáféréssel"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 53,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen hibát használ ki a puffer túlcsordulás?",
+      "options": {
+        "a": "A program nem ellenőrzi, mennyi adatot ír egy adott méretű pufferbe",
+        "b": "A program túl sok processzort használ terhelés alatt"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 54,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi NEM célja az OWASP projektnek?",
+      "options": {
+        "a": "A piacon elérhető legjobb biztonsági szoftverek terjesztése",
+        "b": "Biztonságtudatos fejlesztési tudás és ajánlások terjesztése"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 55,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a tanúsítvány-visszavonási lista (CRL)?",
+      "options": {
+        "a": "Az érvényesség lejárta előtt visszavont tanúsítványok listája",
+        "b": "Az összes érvényes tanúsítvány teljes listája"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 56,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a hosszabb távú iOS adattárolás védelmére?",
+      "options": {
+        "a": "Az adatok kriptográfiailag kötve lehetnek az adott eszközhöz",
+        "b": "Az iOS hosszú távú tárolásnál nem használ kriptográfiai védelmet"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 57,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a reference monitor?",
+      "options": {
+        "a": "Az az entitás, amely a hozzáférésvédelmi politikát betartatja",
+        "b": "Az a naplózó komponens, amely kizárólag auditfájlokat tömörít"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 58,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Hány lépésből áll egy teljes rendszer feltörése?",
+      "options": {
+        "a": "Általában több egymásra épülő támadás és több sérülékenység együttese",
+        "b": "Mindig egyetlen hibából áll"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 59,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit tegyen a szoftver sérült bemeneti adat esetén?",
+      "options": {
+        "a": "Utasítsa vissza a bemenetet, és naplózza az eseményt",
+        "b": "Próbálja meg mindenáron automatikusan kijavítani és feldolgozni"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 60,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mekkora egy k bites kulcs elleni kimerítő kulcskeresés átlagos komplexitása?",
+      "options": {
+        "a": "`2^(k-1)`",
+        "b": "`2^(k/2)`"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 61,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a stack frame?",
+      "options": {
+        "a": "Egy függvényhívás során a függvény által kezelt terület a stacken",
+        "b": "A stack alját és tetejét jelölő két fix memóriacím neve"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 62,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit jelent a MAC függvény kifejezés?",
+      "options": {
+        "a": "Message Authentication Code számítást",
+        "b": "Mandatory Access Control alapú tűzfalat"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 63,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi nincs egy DMZ elrendezésben?",
+      "options": {
+        "a": "Direkt összeköttetés a belső hálózat és a DMZ között",
+        "b": "Elkülönített zóna a publikus szolgáltatások számára"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 64,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi alapján nem tud szűrni egy egyszerű csomagszűrő?",
+      "options": {
+        "a": "HTTP fejléc értéke alapján",
+        "b": "Forrás- és cél IP-cím, illetve portszám alapján"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 65,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik protokollt használjuk weboldalak biztonságos elérésére?",
+      "options": {
+        "a": "HTTPS / TLS",
+        "b": "FTP"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 66,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi köti össze a publikus kulcsot a jogosult tulajdonosával?",
+      "options": {
+        "a": "Digitálisan aláírt tanúsítvány",
+        "b": "A publikus kulcs fájlneve"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 67,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a kriptográfiai hash-függvény egyik fő célja?",
+      "options": {
+        "a": "Üzenetlenyomat számítása integritásvédelemhez",
+        "b": "Visszafejthető titkosítás biztosítása"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 68,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi az ECB mód fő problémája?",
+      "options": {
+        "a": "Nem rejti jól az üzenet mintázatait",
+        "b": "Minden blokkhoz új kulcsot generál, ezért túl lassú"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 69,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a Caesar-titkosító kulcsa?",
+      "options": {
+        "a": "Az eltolódás értéke",
+        "b": "A szöveg első karaktere"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 70,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit jelent a birthday paradoxon a hash függvényeknél?",
+      "options": {
+        "a": "Körülbelül `sqrt(N)` véletlen választás után már nagy valószínűséggel találunk ütközést egy `N` méretű tartományban",
+        "b": "Csak dátumokkal kapcsolatos valószínűségi játék, nincs köze a hash-ekhez"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 71,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a lateral movement?",
+      "options": {
+        "a": "Egy megfertőzött gépről való továbblépés a hálózat más gépei felé",
+        "b": "A titkosított csatorna vízszintes irányú sávszélesség-növelése"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 72,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a browser fingerprinting célja?",
+      "options": {
+        "a": "A böngésző/perzisztens jellemzők alapján való azonosítás",
+        "b": "A felhasználó azonosítása kizárólag sütik nélkül lehetetlen, ezért erre nem használható"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 73,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik jellemző egy worm támadásra?",
+      "options": {
+        "a": "Sérülékenységet kihasználva automatizáltan tud terjedni",
+        "b": "Minden esetben szükséges hozzá folyamatos felhasználói interakció"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 74,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi a különbség a security és a safety között?",
+      "options": {
+        "a": "A security a szándékos, intelligens támadók elleni védelemre koncentrál, a safety inkább véletlenszerű hibákra és balesetekre",
+        "b": "A két fogalom teljesen azonos, csak más szakterületek másképp nevezik"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 75,
+      "supervised": "yes"
+    }
+  ]
+}

@@ -134,28 +134,73 @@
         "subject": "Kommunikációs Hálózatok",
         "type": "Synthetic Questionnaire"
       }
+    },
+    {
+    "fileName": "2018_2025_ZH_it_biztonsag_combined_.json",
+      "tags": {
+        "subject": "IT Biztonság",
+        "type": "ZH",
+        "year": "combined"
+        }
+      },
+    {
+    "fileName": "2025_ZH_it_biztonsag.json",
+      "tags": {
+        "subject": "IT Biztonság",
+        "type": "ZH",
+        "year": "2025"
+      }
+    },
+    {
+    "fileName": "2026_it_biztonsag_ellenorzo_kerdesek.json",
+      "tags": {
+        "subject": "IT Biztonság",
+        "type": "Synthetic Questionnaire",
+        "year": "2026"
+      }
+    },
+    {
+    "fileName": "2026_ZH_it_biztonsag_predict.json",
+      "tags": {
+        "subject": "IT Biztonság",
+        "type": "Synthetic Questionnaire",
+        "year": "2026"
+      }
+    },
+    {
+    "fileName": "2024_zh_iru.json",
+      "tags": {
+        "subject": "Információs Rendszerek Üzemeltetése",
+        "type": "ZH",
+        "year": "2025"
+      }
     }
   ],
   "availableTags": {
     "subject": [
       "Kommunikációs Hálózatok",
-      "Szoftvertechnikák"
+      "Szoftvertechnikák",
+      "IT Biztonság",
+      "Információs Rendszerek Üzemeltetése"
     ],
     "type": [
       "PPZH",
       "PZH",
       "Synthetic Questionnaire",
       "Vizsga",
-      "ZH"
+      "ZH",
+      "Questionnaire"
     ],
     "year": [
+      "2026",
       "2025",
       "2024",
       "2023",
       "2022",
       "2021",
       "2020",
-      "undefined"
+      "undefined",
+      "combined"
     ]
   }
 }

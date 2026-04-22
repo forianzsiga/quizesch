@@ -1,0 +1,2268 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quizesch — Quiz</title>
+<link rel="shortcut icon" type="image/png" href="quizesch-icon-fancy-256.png?v=20260420h">
+<link rel="icon" type="image/png" sizes="256x256" href="quizesch-icon-fancy-256.png?v=20260420h">
+<link rel="icon" type="image/png" sizes="32x32" href="quizesch-icon-fancy-256.png?v=20260420h">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"></script>
+<style>
+  /* ── TOKENS ── */
+  :root {
+    --ui-scale: 1.25;
+    /* MLU Explain inspired warm palette */
+    --cream:       #faf8f2;
+    --cream2:      #f3f0e6;
+    --cream3:      #e8e4d8;
+    --ink:         #1a1a18;
+    --ink2:        #4a4a44;
+    --ink3:        #8a8a82;
+    --ink4:        #b8b8b0;
+
+    --coral:       #ff6b4a;
+    --coral-light: #fff0ec;
+    --coral-mid:   #ffd4c8;
+    --yellow:      #ffd166;
+    --yellow-light:#fff9e6;
+    --pink:        #f46eb5;
+    --pink-light:  #fdedf7;
+    --teal:        #2ec4b6;
+    --teal-light:  #e6faf8;
+    --navy:        #1b2a4a;
+
+    --select:       #2aad9e;
+    --select-light: #edf9f7;
+    --select-mid:   #ade5de;
+    --select-dark:  #145f55;
+
+    --green:       #52b788;
+    --green-light: #ecf7f1;
+    --green-dark:  #1e5c3a;
+    --red:         #e63946;
+    --red-light:   #fdeaeb;
+    --red-dark:    #7d1520;
+
+    --bg:      var(--cream);
+    --bg2:     var(--cream2);
+    --bg3:     var(--cream3);
+    --text:    var(--ink);
+    --text2:   var(--ink2);
+    --text3:   var(--ink3);
+    --text4:   var(--ink4);
+    --border:  rgba(26,26,24,0.10);
+    --border2: rgba(26,26,24,0.18);
+    --border3: rgba(26,26,24,0.28);
+    --accent:       var(--coral);
+    --accent-light: var(--coral-light);
+    --accent-fg:    #ffffff;
+
+    --radius:    13px;
+    --radius-sm: 9px;
+    --radius-xs: 5px;
+    --font:      'DM Sans', sans-serif;
+    --serif:     'DM Serif Display', serif;
+    --mono:      'DM Mono', monospace;
+    --shadow:    0 1px 3px rgba(26,26,24,0.08), 0 0 0 0.5px rgba(26,26,24,0.06);
+  }
+
+  [data-theme="dark"] {
+    --cream:       #181714;
+    --cream2:      #211f1b;
+    --cream3:      #2a2825;
+    --ink:         #f0ede4;
+    --ink2:        #ccc9bc;
+    --ink3:        #9a978c;
+    --ink4:        #767368;
+
+    --coral-light: #2e1a14;
+    --coral-mid:   #5a2a1e;
+    --yellow-light:#2a2210;
+    --yellow-text: #f0c850;
+    --pink-light:  #2a1420;
+    --teal-light:  #102220;
+    --green-light: #0e2218;
+    --green-dark:  #7ccf9e;
+    --red-light:   #220a0c;
+    --red-dark:    #f09595;
+
+    --select-light: #0e2220;
+    --select-mid:   #1a4540;
+    --select:       #5cd4c6;
+    --select-dark:  #a0ebe4;
+
+    --bg:      var(--cream);
+    --bg2:     var(--cream2);
+    --bg3:     var(--cream3);
+    --text:    var(--ink);
+    --text2:   var(--ink2);
+    --text3:   var(--ink3);
+    --text4:   var(--ink4);
+    --border:  rgba(240,237,228,0.10);
+    --border2: rgba(240,237,228,0.16);
+    --border3: rgba(240,237,228,0.26);
+    --shadow:  0 1px 3px rgba(0,0,0,0.25), 0 0 0 0.5px rgba(255,255,255,0.04);
+  }
+
+  /* ── RESET ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    transition: background 220ms ease, color 220ms ease;
+  }
+  button { cursor: pointer; font-family: var(--font); }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── LAYOUT ── */
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    transform: scale(var(--ui-scale));
+    transform-origin: top center;
+    width: calc(100% / var(--ui-scale));
+  }
+
+  @media (max-width: 1100px) {
+    :root { --ui-scale: 1.12; }
+  }
+
+  @media (max-width: 820px) {
+    :root { --ui-scale: 1; }
+  }
+
+  /* ── NAVBAR ── */
+  .nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .nav-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--text3);
+    padding: 6px 12px 6px 10px;
+    border: 0.5px solid var(--border2);
+    border-radius: 999px;
+    background: transparent;
+    transition: background 120ms, color 120ms;
+  }
+  .nav-back:hover { background: var(--bg2); color: var(--text); }
+  .nav-back svg { width: 13px; height: 13px; }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    justify-self: center;
+    grid-column: 2;
+  }
+  .nav-brand-icon {
+    width: 30px; height: 30px;
+    background: var(--coral);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    font-family: var(--serif);
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  .nav-right {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .nav-meta {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .nav-quiz-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .nav-quiz-sub {
+    font-size: 11px;
+    color: var(--text3);
+    font-family: var(--mono);
+    margin-top: 1px;
+    width: 100%;
+    text-align: right;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-family: var(--mono);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .badge-green { border: 0.5px solid var(--green); color: var(--green); background: var(--green-light); }
+  .badge-unsup { border: 0.5px solid var(--border2); color: var(--text3); background: transparent; }
+  .badge-partial { border: 0.5px solid var(--yellow); color: var(--yellow-text, #a07000); background: var(--yellow-light); }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  /* ── ICON BUTTON ── */
+  .icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px; height: 38px;
+    border: 0.5px solid var(--border2);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text3);
+    transition: background 120ms, color 120ms, transform 80ms;
+  }
+  .icon-btn:hover { background: var(--bg2); color: var(--text); }
+  .icon-btn:active { transform: scale(0.94); }
+  .icon-btn svg { width: 15px; height: 15px; }
+
+  /* ── PROGRESS ACCORDION ── */
+  .progress-section {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 22px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .progress-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background 120ms;
+    user-select: none;
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-radius: calc(var(--radius) - 1px);
+    appearance: none;
+  }
+  .progress-trigger:hover { background: var(--bg3); }
+  .progress-trigger:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 1px var(--border3);
+  }
+  .progress-trigger.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: inset 0 -0.5px 0 var(--border);
+  }
+
+  .progress-bar-wrap {
+    flex: 1;
+    height: 4px;
+    background: var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--coral);
+    border-radius: 999px;
+    transition: width 380ms cubic-bezier(.4,0,.2,1);
+  }
+
+  .progress-label {
+    font-size: 11px;
+    font-family: var(--mono);
+    color: var(--text3);
+    white-space: nowrap;
+  }
+
+  .progress-scores {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pscore {
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--text3);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .pscore-dot {
+    width: 7px; height: 7px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .pscore-dot.c { background: var(--green); }
+  .pscore-dot.w { background: var(--red); }
+
+  .progress-chevron {
+    color: var(--text4);
+    transition: transform 220ms ease;
+    flex-shrink: 0;
+  }
+  .progress-chevron svg { width: 14px; height: 14px; }
+  .progress-chevron.open { transform: rotate(180deg); }
+
+  .progress-panel {
+    border-top: 0.5px solid var(--border);
+    padding: 16px 16px 18px;
+    display: none;
+    margin-top: -0.5px;
+    border-bottom-left-radius: calc(var(--radius) - 1px);
+    border-bottom-right-radius: calc(var(--radius) - 1px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+  }
+  .progress-panel.open { display: block; }
+
+  .pp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .pp-title {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text3);
+    font-family: var(--mono);
+  }
+  .pp-legend {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    color: var(--text3);
+    font-family: var(--mono);
+  }
+  .legend-dot {
+    width: 9px; height: 9px;
+    border-radius: 2px;
+  }
+  .ld-cur   { background: var(--coral); }
+  .ld-ok    { background: var(--green); }
+  .ld-ng    { background: var(--red); }
+  .ld-ans   { background: var(--border3); }
+
+  .dots-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 14px;
+  }
+  .dot {
+    width: 28px; height: 28px;
+    border-radius: 6px;
+    border: 0.5px solid var(--border2);
+    background: var(--bg);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px;
+    font-family: var(--mono);
+    color: var(--text3);
+    transition: background 100ms, border-color 100ms, transform 80ms, color 100ms;
+  }
+  .dot:hover { border-color: var(--border3); background: var(--bg3); transform: scale(1.10); }
+  .dot:active { transform: scale(0.95); }
+  .dot.d-cur  { border-color: var(--coral); background: var(--coral); color: #fff; }
+  .dot.d-ans  { background: var(--bg3); border-color: var(--border2); color: var(--text2); }
+  .dot.d-ok   { border-color: var(--green); background: var(--green-light); color: var(--green-dark); }
+  .dot.d-ng   { border-color: var(--red); background: var(--red-light); color: var(--red-dark); }
+
+  .score-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .sc-card {
+    background: var(--bg);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+  }
+  .sc-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text3);
+    font-family: var(--mono);
+    margin-bottom: 4px;
+  }
+  .sc-val {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: var(--mono);
+    color: var(--text);
+    line-height: 1;
+  }
+  .sc-val.ok { color: var(--green); }
+  .sc-val.ng { color: var(--red); }
+  .sc-val.pct { font-size: 16px; color: var(--coral); }
+
+  /* ── QUESTION CARD ── */
+  .q-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--border2);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .q-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px 20px 0;
+  }
+
+  .q-num-pill {
+    flex-shrink: 0;
+    background: var(--coral);
+    color: #fff;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 9px;
+    border-radius: 999px;
+    margin-top: 3px;
+    letter-spacing: 0.04em;
+  }
+
+  .q-text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.68;
+    color: var(--text);
+    padding-bottom: 0;
+    animation: qSlideIn 180ms ease-out both;
+  }
+
+  .q-body { padding: 16px 20px 20px; }
+
+  .options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 13px 15px;
+    border: 0.5px solid var(--border2);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    background: var(--bg);
+    user-select: none;
+    transition: border-color 130ms, background 130ms;
+    position: relative;
+    overflow: hidden;
+    animation: optIn 220ms ease-out both;
+  }
+  .option::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 0;
+    background: var(--select);
+    transition: width 0ms;
+    border-radius: 0;
+  }
+  .option:hover { border-color: var(--select-mid); background: var(--cream); }
+  .option:hover::before { width: 3px; }
+
+  .option.sel {
+    border-color: var(--select);
+    background: var(--select-light);
+  }
+  .option.sel::before { width: 3px; }
+
+  .option.eval-ok {
+    border-color: var(--green);
+    background: var(--green-light);
+  }
+  .option.eval-ok::before { width: 3px; background: var(--green); }
+
+  .option.eval-ng {
+    border-color: var(--red);
+    background: var(--red-light);
+  }
+  .option.eval-ng::before { width: 3px; background: var(--red); }
+
+  .opt-radio {
+    width: 17px; height: 17px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border3);
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 130ms, background 130ms;
+  }
+  .option.sel .opt-radio { border-color: var(--select); background: var(--select); }
+  .option.sel .opt-radio::after { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #fff; }
+  .option.eval-ok .opt-radio { border-color: var(--green); background: var(--green); }
+  .option.eval-ok .opt-radio::after { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--green-light); }
+  .option.eval-ng .opt-radio { border-color: var(--red); background: var(--red); }
+  .option.eval-ng .opt-radio::after { content: ''; width: 8px; height: 1.5px; background: var(--red-light); }
+
+  .opt-key {
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--text3);
+    flex-shrink: 0;
+    margin-top: 3px;
+    width: 13px;
+    transition: color 130ms;
+  }
+  .option.sel .opt-key { color: var(--select); }
+  .option.eval-ok .opt-key { color: var(--green-dark); }
+  .option.eval-ng .opt-key { color: var(--red-dark); }
+  [data-theme="dark"] .option.eval-ok .opt-key { color: var(--text3); }
+  [data-theme="dark"] .option.eval-ng .opt-key { color: var(--text3); }
+
+  .opt-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text);
+    transition: color 130ms;
+  }
+  .option.eval-ok .opt-text { color: var(--green-dark); }
+  .option.eval-ng .opt-text { color: var(--red-dark); }
+
+  .q-rich-text {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--text2);
+    margin-bottom: 12px;
+  }
+
+  .fill-blank-input {
+    min-width: 120px;
+    padding: 4px 8px;
+    border: 0.5px solid var(--border2);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 12px;
+  }
+
+  .fill-blank-input:focus {
+    outline: none;
+    border-color: var(--select);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--select) 20%, transparent);
+  }
+
+  .fill-blank-input.eval-ok { border-color: var(--green); background: var(--green-light); color: var(--green-dark); }
+  .fill-blank-input.eval-ng { border-color: var(--red); background: var(--red-light); color: var(--red-dark); }
+
+  .drag-bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 0.5px dashed var(--border2);
+  }
+
+  .drag-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 0.5px solid var(--border2);
+    background: var(--bg);
+    font-size: 11px;
+    color: var(--text2);
+    cursor: grab;
+    user-select: none;
+  }
+
+  .drag-chip:active { cursor: grabbing; }
+
+  .drop-slot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    min-height: 28px;
+    padding: 2px 8px;
+    border-radius: 7px;
+    border: 0.5px dashed var(--border3);
+    background: var(--bg);
+    color: var(--text3);
+    vertical-align: middle;
+    margin: 0 3px;
+  }
+
+  .drop-slot.has-value {
+    border-style: solid;
+    border-color: var(--select-mid);
+    color: var(--select-dark);
+    background: var(--select-light);
+  }
+
+  .drop-slot.drag-over {
+    border-color: var(--select);
+    background: var(--select-light);
+  }
+
+  .drop-slot.eval-ok {
+    border-color: var(--green);
+    background: var(--green-light);
+    color: var(--green-dark);
+  }
+
+  .drop-slot.eval-ng {
+    border-color: var(--red);
+    background: var(--red-light);
+    color: var(--red-dark);
+  }
+
+  /* ── FEEDBACK ── */
+  .feedback {
+    display: none;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 11px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 12.5px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    border: 0.5px solid;
+  }
+  .feedback.show { display: flex; animation: fbIn 180ms ease-out both; }
+  .feedback svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 1px; }
+  .feedback.fb-ok { border-color: var(--green); background: var(--green-light); color: var(--green-dark); }
+  .feedback.fb-ng { border-color: var(--red); background: var(--red-light); color: var(--red-dark); }
+
+  /* ── TRUST ── */
+  .trust-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    padding-top: 2px;
+  }
+  .trust-label {
+    font-size: 11px;
+    color: var(--text3);
+  }
+  .trust-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    padding: 5px 11px;
+    border: 0.5px solid var(--border2);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text2);
+    transition: background 120ms, border-color 120ms, color 120ms;
+  }
+  .trust-btn:hover { background: var(--bg3); border-color: var(--border3); color: var(--text); }
+  .trust-btn.on { background: var(--select-light); border-color: var(--select-mid); color: var(--select); }
+  .trust-btn svg { width: 12px; height: 12px; }
+
+  /* ── DIVIDER ── */
+  .divider { border: none; border-top: 0.5px solid var(--border); }
+
+  /* ── ACTION BAR ── */
+  .action-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+  }
+  .spacer { flex: 1; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 15px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 0.5px solid var(--border2);
+    background: transparent;
+    color: var(--text);
+    transition: background 110ms, transform 80ms, border-color 110ms;
+    white-space: nowrap;
+  }
+  .btn:hover { background: var(--bg3); border-color: var(--border3); }
+  .btn:active { transform: scale(0.97); }
+  .btn svg { width: 13px; height: 13px; }
+  .btn kbd {
+    font-size: 9px;
+    font-family: var(--mono);
+    opacity: 0.45;
+    padding: 1px 4px;
+    border: 0.5px solid currentColor;
+    border-radius: 3px;
+    line-height: 1.4;
+  }
+
+  .btn-primary {
+    background: var(--coral);
+    color: #fff;
+    border-color: var(--coral);
+    font-weight: 500;
+  }
+  .btn-primary:hover { opacity: 0.88; background: var(--coral); }
+
+  .btn-danger {
+    color: var(--red);
+    border-color: rgba(230, 57, 70, 0.25);
+  }
+  .btn-danger:hover { background: var(--red-light); border-color: var(--red); }
+
+  /* ── ACCENT STRIPE at top of card ── */
+  .card-stripe {
+    height: 3px;
+    background: linear-gradient(90deg, var(--coral) 0%, var(--pink) 50%, var(--yellow) 100%);
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  /* ── WARNING NOTICE ── */
+  .notice {
+    margin-top: 20px;
+    padding: 12px 16px;
+    border: 0.5px solid var(--yellow);
+    border-radius: var(--radius-sm);
+    background: var(--yellow-light);
+    font-size: 12px;
+    color: var(--ink2);
+    line-height: 1.65;
+    display: flex;
+    gap: 10px;
+  }
+  .notice svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 1px; color: var(--yellow-text, #a07000); }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text4);
+    font-family: var(--mono);
+  }
+  .footer a { color: var(--coral); }
+  .footer a:hover { text-decoration: underline; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes optIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .option:nth-child(1) { animation-delay:   0ms; }
+  .option:nth-child(2) { animation-delay:  40ms; }
+  .option:nth-child(3) { animation-delay:  80ms; }
+  .option:nth-child(4) { animation-delay: 120ms; }
+  .option:nth-child(5) { animation-delay: 160ms; }
+
+  @keyframes qSlideIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fbIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── REVIEW PROMPT MODAL ── */
+  .review-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(26,24,20,0.42);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .review-modal-backdrop.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .review-modal {
+    background: var(--bg);
+    border: 0.5px solid var(--border2);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(26,24,20,0.06), 0 20px 48px rgba(26,24,20,0.16);
+    width: min(360px, 90vw);
+    overflow: hidden;
+    transform: scale(0.95) translateY(10px);
+    opacity: 0;
+    transition: transform 280ms cubic-bezier(0.23, 1, 0.32, 1), opacity 220ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .review-modal-backdrop.visible .review-modal {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  .review-modal-stripe {
+    height: 3px;
+    background: linear-gradient(90deg, var(--coral) 0%, var(--pink) 50%, var(--yellow) 100%);
+  }
+  .review-modal-body {
+    padding: 20px 22px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .review-modal-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: var(--coral-light);
+    border: 0.5px solid var(--coral-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .review-modal-icon svg { width: 17px; height: 17px; color: var(--coral); }
+  .review-modal-title {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--text);
+    line-height: 1.25;
+    margin: 0;
+  }
+  .review-modal-sub {
+    font-size: 12.5px;
+    color: var(--text3);
+    line-height: 1.55;
+    margin: 0;
+  }
+  .review-modal-btns {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    padding-top: 4px;
+    border-top: 0.5px solid var(--border);
+  }
+
+  /* ── REVIEW OVERLAY ── */
+  .review-overlay {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .review-overlay.visible { display: flex; }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0 8px;
+  }
+  .review-header h2 {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .review-item {
+    background: var(--bg2);
+    border: 0.5px solid var(--border2);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border-left: 3px solid var(--border3);
+  }
+  .review-item.rv-ok { border-left-color: var(--green); }
+  .review-item.rv-ng { border-left-color: var(--red); }
+
+  .review-item-header {
+    padding: 12px 16px 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .review-q-num {
+    font-size: 9px;
+    font-family: var(--mono);
+    font-weight: 500;
+    background: var(--bg3);
+    color: var(--text3);
+    padding: 3px 7px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .review-item.rv-ok .review-q-num { background: var(--green-light); color: var(--green-dark); }
+  .review-item.rv-ng .review-q-num { background: var(--red-light); color: var(--red-dark); }
+
+  .review-q-text {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .review-options {
+    padding: 0 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .rv-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 7px 10px;
+    border-radius: var(--radius-sm);
+    border: 0.5px solid transparent;
+    font-size: 12.5px;
+    color: var(--text2);
+    line-height: 1.5;
+  }
+  .rv-option.rv-correct {
+    background: var(--green-light);
+    border-color: var(--green);
+    color: var(--green-dark);
+  }
+  .rv-option.rv-user-wrong {
+    background: var(--red-light);
+    border-color: var(--red);
+    color: var(--red-dark);
+  }
+  .rv-option.rv-missed {
+    border: 0.5px dashed var(--green);
+    color: var(--green-dark);
+    opacity: 0.8;
+  }
+  .rv-opt-key {
+    font-size: 10px;
+    font-family: var(--mono);
+    flex-shrink: 0;
+    opacity: 0.65;
+    margin-top: 2px;
+    width: 13px;
+  }
+
+  .review-text-answer {
+    padding: 0 16px 12px;
+    font-size: 12.5px;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+  .review-text-answer .rv-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  .rv-label {
+    font-size: 10px;
+    font-family: var(--mono);
+    background: var(--bg3);
+    color: var(--text3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .rv-label.ok { background: var(--green-light); color: var(--green-dark); }
+  .rv-label.ng { background: var(--red-light); color: var(--red-dark); }
+
+  .rv-skip-note {
+    padding: 8px 16px 12px;
+    font-size: 12px;
+    color: var(--text3);
+    font-style: italic;
+  }
+
+  /* ═══════════════════════════════════════
+     MOBILE  (≤ 600 px)
+  ═══════════════════════════════════════ */
+  @media (max-width: 600px) {
+    body { overflow-x: hidden; }
+
+    /* Tighter horizontal padding */
+    .page { padding: 0 12px 48px; }
+
+    /* Nav */
+    .nav { gap: 6px; margin-bottom: 14px; }
+    .nav-right { gap: 6px; }
+
+    /* Progress accordion header: allow legend to wrap */
+    .pp-header { flex-wrap: wrap; gap: 6px; }
+    .pp-legend { gap: 6px; }
+
+    /* Score strip: 2 × 2 instead of 4 × 1 */
+    .score-strip { grid-template-columns: repeat(2, 1fr); }
+
+    /* Trust row: allow wrap so "Ellenőrzendő" doesn't overflow */
+    .trust-row { flex-wrap: wrap; }
+
+    /* Action bar ─────────────────────────
+       Order: [Prev][Next]  /  [Kiértékelés]  /  [Törlés][Keverés][Összes]
+    ──────────────────────────────────────── */
+    .action-bar { padding: 10px 12px; gap: 6px; }
+    .btn kbd { display: none; }          /* keyboard hints useless on touch */
+    .btn { min-height: 40px; touch-action: manipulation; }
+
+    #prev-btn         { flex: 1; justify-content: center; }
+    #next-btn         { flex: 1; justify-content: center; }
+    #evaluate-btn     { order: 3; flex: 1 1 100%; justify-content: center; }
+    #clear-answer-btn { order: 4; flex: 1; justify-content: center; }
+    #shuffle-btn      { order: 4; flex: 1; justify-content: center; }
+    #clear-all-btn    { order: 4; flex: 1; justify-content: center; }
+
+    /* Fill-in-blank inputs & drag-drop slots */
+    .fill-blank-input { min-width: 80px; font-size: 14px; }
+    .drop-slot        { min-width: 80px; }
+
+    /* Drag chips: bigger tap target, no grab cursor */
+    .drag-chip { padding: 9px 13px; cursor: default; }
+
+    /* Review overlay: tighter header */
+    .review-header h2 { font-size: 16px; }
+    .review-item-header { gap: 6px; }
+  }
+
+  /* ═══════════════════════════════════════
+     VERY SMALL PHONES  (≤ 400 px)
+  ═══════════════════════════════════════ */
+  @media (max-width: 400px) {
+    .page { padding: 0 10px 48px; }
+
+    /* Hide brand name text – keep only the "Q" icon */
+    .nav-brand { font-size: 0; gap: 0; }
+    .nav-brand-icon { font-size: 15px; width: 28px; height: 28px; }
+
+    /* Slightly smaller option text */
+    .opt-text { font-size: 12.5px; }
+    .q-text   { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <button class="nav-back" id="back-home-btn">
+      <i data-lucide="chevron-left"></i>
+      Vissza
+    </button>
+    <div class="nav-brand">
+      <div class="nav-brand-icon">Q</div>
+      Quizesch
+    </div>
+    <div class="nav-right">
+      <div class="nav-meta">
+        <div class="nav-quiz-title">
+          <span id="qz-title">(2025) ZH IT Biztonság</span>
+          <span class="badge badge-green" id="qz-badge">✓ Supervised</span>
+        </div>
+        <div class="nav-quiz-sub" id="qz-sub">1 / 40 kérdés</div>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-btn" title="Téma váltás (T)">
+          <i data-lucide="sun"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PROGRESS ACCORDION -->
+  <div class="progress-section">
+    <button type="button" class="progress-trigger" id="progress-trigger-btn">
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="prog-fill" style="width:2.5%"></div>
+      </div>
+      <div class="progress-scores">
+        <div class="pscore">
+          <div class="pscore-dot c"></div>
+          <span id="ps-ok">0</span>
+        </div>
+        <div class="pscore">
+          <div class="pscore-dot w"></div>
+          <span id="ps-ng">0</span>
+        </div>
+      </div>
+      <div class="progress-label" id="prog-label">1 / 40</div>
+      <div class="progress-chevron" id="prog-chevron">
+        <i data-lucide="chevron-down"></i>
+      </div>
+    </button>
+
+    <div class="progress-panel" id="prog-panel">
+      <div class="pp-header">
+        <span class="pp-title" id="pp-title">Haladás — 40 kérdés</span>
+        <div class="pp-legend">
+          <div class="legend-item"><div class="legend-dot ld-cur"></div> Jelenlegi</div>
+          <div class="legend-item"><div class="legend-dot ld-ok"></div> Helyes</div>
+          <div class="legend-item"><div class="legend-dot ld-ng"></div> Hibás</div>
+          <div class="legend-item"><div class="legend-dot ld-ans"></div> Megválaszolt</div>
+        </div>
+      </div>
+      <div class="dots-grid" id="qz-dots"></div>
+      <div class="score-strip">
+        <div class="sc-card">
+          <div class="sc-label">Helyes</div>
+          <div class="sc-val ok" id="sc-ok">0</div>
+        </div>
+        <div class="sc-card">
+          <div class="sc-label">Hibás</div>
+          <div class="sc-val ng" id="sc-ng">0</div>
+        </div>
+        <div class="sc-card">
+          <div class="sc-label">Megválaszolt</div>
+          <div class="sc-val" id="sc-ans">0</div>
+        </div>
+        <div class="sc-card">
+          <div class="sc-label">Pontszám</div>
+          <div class="sc-val pct" id="sc-pct">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUESTION CARD -->
+  <div class="q-card">
+    <div class="card-stripe"></div>
+    <div class="q-card-header">
+      <div class="q-num-pill" id="q-num">Q 01</div>
+      <div class="q-text" id="q-text">Mely állítások igazak az evasion támadásokra gépi modellek ellen?</div>
+    </div>
+
+    <div class="q-body">
+      <div class="options-list" id="q-options"></div>
+
+      <div class="feedback" id="q-feedback"></div>
+
+      <div class="trust-row">
+        <span class="trust-label">Megbízhatóság:</span>
+        <button class="trust-btn" id="btn-trust">
+          <i data-lucide="thumbs-up"></i>
+          Megbízható
+        </button>
+        <button class="trust-btn" id="btn-review">
+          <i data-lucide="flag"></i>
+          Ellenőrzendő
+        </button>
+      </div>
+
+      <hr class="divider">
+    </div>
+
+    <div class="action-bar">
+      <button class="btn btn-danger" id="clear-all-btn">
+        <i data-lucide="trash-2"></i>
+        Összes törlése
+      </button>
+      <button class="btn" id="clear-answer-btn">
+        <i data-lucide="x"></i>
+        Törlés <kbd>C</kbd>
+      </button>
+      <button class="btn" id="shuffle-btn">
+        <i data-lucide="shuffle"></i>
+        Keverés
+      </button>
+      <button class="btn" id="prev-btn">
+        <i data-lucide="chevron-left"></i>
+        Előző <kbd>←</kbd>
+      </button>
+      <button class="btn" id="next-btn">
+        Következő <kbd>→</kbd>
+        <i data-lucide="chevron-right"></i>
+      </button>
+      <button class="btn btn-primary" id="evaluate-btn">
+        <i data-lucide="check"></i>
+        Kiértékelés <kbd>E</kbd>
+      </button>
+    </div>
+  </div>
+
+  <!-- REVIEW PROMPT MODAL -->
+  <div id="review-modal-backdrop" class="review-modal-backdrop">
+    <div class="review-modal">
+      <div class="review-modal-stripe"></div>
+      <div class="review-modal-body">
+        <div class="review-modal-icon">
+          <i data-lucide="list-checks"></i>
+        </div>
+        <div>
+          <p class="review-modal-title">Minden kérdés kész!</p>
+          <p class="review-modal-sub">Szeretnéd átnézni a válaszaidat és a helyes megoldásokat?</p>
+        </div>
+        <div class="review-modal-btns">
+          <button class="btn" id="review-modal-no">Nem most</button>
+          <button class="btn btn-primary" id="review-modal-yes">
+            <i data-lucide="list-checks"></i>
+            Igen, mutasd!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEW OVERLAY -->
+  <div id="review-overlay" class="review-overlay">
+    <div class="review-header">
+      <h2>Áttekintés</h2>
+      <button class="btn" id="review-close-btn">
+        <i data-lucide="chevron-left"></i>
+        Vissza a quizhez
+      </button>
+    </div>
+    <div id="review-list" class="review-list"></div>
+  </div>
+
+  <!-- NOTICE -->
+  <div class="notice">
+    <i data-lucide="alert-triangle"></i>
+    <div>
+      <strong>Megjegyzés:</strong> Ez a quiz még fejlesztés alatt áll. Az adatok manuálisan kerülnek kinyerésre PDF-ekből multimodális LLM promptolással — előfordulhatnak hibák.
+      Hozzájárulhatsz a projekthez: <a href="https://github.com/forianzsiga/quizesch" target="_blank">github.com/forianzsiga/quizesch</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>Made with ♥ by Zsigmond Forian-Szabo · MIT License</span>
+    <a href="https://github.com/forianzsiga/quizesch" target="_blank">GitHub</a>
+  </div>
+
+</div><!-- /page -->
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script type="module">
+const DATA_DIRECTORY = globalThis.location.hostname.includes('github.io') ? '/quizesch' : '';
+const QUIZ_PROGRESS_KEY = 'quizesch_all_progress';
+const THEME_STORAGE_KEY = 'quizesch_theme';
+
+const STATUS_MAP = {
+  supervised: { cls: 'badge-green', label: '✓ Supervised' },
+  partial: { cls: 'badge-partial', label: '⚠ Partial' },
+  unsupervised: { cls: 'badge-unsup', label: '✗ Unsupervised' },
+};
+
+const state = {
+  quizFile: '',
+  quizTitle: '',
+  questions: [],
+  tags: {},
+  current: 0,
+  answers: [],
+  evaluated: [],
+  order: [],
+  optionOrders: {},
+  trustVotes: {},
+  voteData: {},
+  darkMode: false,
+  progOpen: false,
+};
+
+const firebaseState = {
+  api: null,
+  pending: null,
+};
+
+function getQuizFileFromUrl() {
+  const params = new URLSearchParams(globalThis.location.search);
+  return params.get('file');
+}
+
+function prettifyFileName(fileName) {
+  return fileName
+    .replaceAll('.json', '')
+    .replaceAll('_', ' ')
+    .replaceAll(/\b(zh|pzh|ppzh)\b/gi, function(match) { return match.toUpperCase(); })
+    .replaceAll(/\b(\d{4})\b/g, '($1)')
+    .replaceAll(/\s+/g, ' ')
+    .trim();
+}
+
+function escapeRegExp(str) {
+  return str.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\\$&`);
+}
+
+// ── MATH RENDERING ──
+// renderMath: plain text input – HTML-escapes non-math parts, renders $...$ and $$...$$
+// renderMathHtml: HTML string input – only processes math delimiters, leaves surrounding HTML intact
+function _mathProcess(text, escHtml) {
+  if (!text) return '';
+  const esc = escHtml ? function(s) { return s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;'); } : function(s) { return s; };
+  const re = /[$][$]([\s\S]+?)[$][$]|[$]([^$\n]+?)[$]/g;
+  const out = [];
+  let last = 0, m;
+  while ((m = re.exec(text)) !== null) {
+    out.push(esc(text.slice(last, m.index)));
+    const display = m[1] !== undefined;
+    const math = display ? m[1] : m[2];
+    try { out.push(katex.renderToString(math.trim(), { displayMode: display, throwOnError: false })); }
+    catch(e) { out.push(esc(m[0])); console.warn('KaTeX render error:', e); }
+    last = m.index + m[0].length;
+  }
+  out.push(esc(text.slice(last)));
+  return out.join('');
+}
+function renderMath(text) { return _mathProcess(String(text || ''), true); }
+function renderMathHtml(html) { return _mathProcess(String(html || ''), false); }
+
+async function ensureFirebaseApi() {
+  if (firebaseState.api) return firebaseState.api;
+  if (!firebaseState.pending) {
+    firebaseState.pending = import('./js/firebaseService.js')
+      .then(function(mod) {
+        firebaseState.api = {
+          recordVote: mod.recordVote,
+          getQuestionVoteData: mod.getQuestionVoteData,
+        };
+        return firebaseState.api;
+      })
+      .catch(function(error) {
+        console.error('Firebase module import failed:', error);
+        return null;
+      });
+  }
+  return firebaseState.pending;
+}
+
+function normalizedSet(values) {
+  return new Set((Array.isArray(values) ? values : []).map(v => String(v).toLowerCase()));
+}
+
+function fetchJson(url) {
+  return fetch(url).then(function(response) {
+    if (!response.ok) throw new Error('HTTP ' + response.status + ' @ ' + url);
+    return response.json();
+  });
+}
+
+function applyStoredTheme() {
+  const stored = localStorage.getItem(THEME_STORAGE_KEY);
+  state.darkMode = stored === 'dark';
+  document.documentElement.dataset.theme = state.darkMode ? 'dark' : '';
+  const btn = document.getElementById('theme-btn');
+  btn.innerHTML = '<i data-lucide="' + (state.darkMode ? 'moon-star' : 'sun') + '"></i>';
+}
+
+function toggleTheme() {
+  state.darkMode = !state.darkMode;
+  document.documentElement.dataset.theme = state.darkMode ? 'dark' : '';
+  localStorage.setItem(THEME_STORAGE_KEY, state.darkMode ? 'dark' : 'light');
+  const btn = document.getElementById('theme-btn');
+  btn.innerHTML = '<i data-lucide="' + (state.darkMode ? 'moon-star' : 'sun') + '"></i>';
+  lucide.createIcons();
+}
+
+function getQuestionAtPosition(position) {
+  const qIndex = state.order[position];
+  return { qIndex: qIndex, question: state.questions[qIndex] };
+}
+
+function hasAnswer(answer) {
+  if (Array.isArray(answer)) return answer.length > 0;
+  if (answer && typeof answer === 'object') return Object.keys(answer).length > 0;
+  return false;
+}
+
+function getFillBlanks(question) {
+  if (Array.isArray(question.blank)) return question.blank;
+  if (question.blank && typeof question.blank === 'object') return [question.blank];
+  return [];
+}
+
+function getDragTargetIds(question) {
+  const targetIds = [];
+  const pattern = /\[([^\]]+)\]/g;
+  const text = question.text || '';
+  let match;
+  while ((match = pattern.exec(text)) !== null) {
+    const identifier = match[1];
+    if (/^field\d+$/i.test(identifier)) {
+      targetIds.push(identifier);
+    }
+  }
+  return targetIds;
+}
+
+function isMultiChoiceCorrect(question, answer) {
+  const selected = normalizedSet(answer);
+  const correct = normalizedSet(question.answer);
+  if (selected.size !== correct.size) return false;
+  for (const val of selected) {
+    if (!correct.has(val)) return false;
+  }
+  return true;
+}
+
+function isFillBlanksCorrect(question, answer) {
+  const answers = answer && typeof answer === 'object' ? answer : {};
+  const blanks = getFillBlanks(question);
+  return blanks.every(function(blank) {
+    const userValue = String(answers[blank.identifier] || '').trim().toLowerCase();
+    const correctValue = String(blank.answer || '').trim().toLowerCase();
+    return userValue === correctValue;
+  });
+}
+
+function isDragDropCorrect(question, answer) {
+  const answers = answer && typeof answer === 'object' ? answer : {};
+  const targetIds = getDragTargetIds(question);
+  return targetIds.every(function(targetId) {
+    return String(answers[targetId] || '') === targetId;
+  });
+}
+
+function isAnswerCorrect(question, answer) {
+  if (!question) return false;
+  if (question.question_type === 'multi_choice') return isMultiChoiceCorrect(question, answer);
+  if (question.question_type === 'fill_the_blanks') return isFillBlanksCorrect(question, answer);
+  if (question.question_type === 'drag_n_drop') return isDragDropCorrect(question, answer);
+  return false;
+}
+
+function computeSupervisionStatus(questions) {
+  if (!questions.length) return 'unsupervised';
+  const supervisedCount = questions.filter(function(q) {
+    return typeof q.supervised === 'string' && q.supervised.trim().toLowerCase() === 'yes';
+  }).length;
+  if (supervisedCount === questions.length) return 'supervised';
+  if (supervisedCount > 0) return 'partial';
+  return 'unsupervised';
+}
+
+function saveProgress() {
+  if (!state.quizFile) return;
+  const allProgress = JSON.parse(localStorage.getItem(QUIZ_PROGRESS_KEY) || '{}');
+  allProgress[state.quizFile] = {
+    quizFile: state.quizFile,
+    questionsLength: state.questions.length,
+    currentQuestionIndex: state.current,
+    userAnswers: state.answers,
+    evaluatedQuestions: state.evaluated,
+    order: state.order,
+    optionOrders: state.optionOrders,
+    timestamp: Date.now(),
+  };
+  localStorage.setItem(QUIZ_PROGRESS_KEY, JSON.stringify(allProgress));
+}
+
+function loadProgress() {
+  if (!state.quizFile) return;
+  const allProgress = JSON.parse(localStorage.getItem(QUIZ_PROGRESS_KEY) || '{}');
+  const saved = allProgress[state.quizFile];
+  if (!saved) return;
+  if (saved.questionsLength !== state.questions.length) return;
+
+  if (Array.isArray(saved.userAnswers) && saved.userAnswers.length === state.questions.length) {
+    state.answers = saved.userAnswers;
+  }
+  if (Array.isArray(saved.evaluatedQuestions) && saved.evaluatedQuestions.length === state.questions.length) {
+    state.evaluated = saved.evaluatedQuestions;
+  }
+  if (Array.isArray(saved.order) && saved.order.length === state.questions.length) {
+    state.order = saved.order;
+  }
+  if (saved.optionOrders && typeof saved.optionOrders === 'object') {
+    state.optionOrders = saved.optionOrders;
+  }
+  if (typeof saved.currentQuestionIndex === 'number' && saved.currentQuestionIndex >= 0 && saved.currentQuestionIndex < state.questions.length) {
+    state.current = saved.currentQuestionIndex;
+  }
+}
+
+function resetProgress() {
+  state.current = 0;
+  state.answers = new Array(state.questions.length).fill(null);
+  state.evaluated = new Array(state.questions.length).fill(false);
+  state.order = state.questions.map(function(_, idx) { return idx; });
+  state.optionOrders = {};
+}
+
+function updateHeaderMeta() {
+  document.getElementById('qz-title').textContent = state.quizTitle;
+  const badge = document.getElementById('qz-badge');
+  const status = computeSupervisionStatus(state.questions);
+  const info = STATUS_MAP[status];
+  badge.className = 'badge ' + info.cls;
+  badge.textContent = info.label;
+}
+
+function toggleProgress() {
+  state.progOpen = !state.progOpen;
+  document.getElementById('prog-panel').classList.toggle('open', state.progOpen);
+  document.getElementById('prog-chevron').classList.toggle('open', state.progOpen);
+  document.getElementById('progress-trigger-btn').classList.toggle('open', state.progOpen);
+  if (state.progOpen) renderDots();
+}
+
+function renderDots() {
+  const wrap = document.getElementById('qz-dots');
+  wrap.innerHTML = '';
+
+  for (let i = 0; i < state.questions.length; i++) {
+    const qi = state.order[i];
+    const dot = document.createElement('div');
+    dot.className = 'dot';
+    dot.textContent = i + 1;
+    dot.title = 'Ugrás a(z) ' + (i + 1) + '. kérdésre';
+
+    if (i === state.current) {
+      dot.classList.add('d-cur');
+    } else if (state.evaluated[qi]) {
+      dot.classList.add(isAnswerCorrect(state.questions[qi], state.answers[qi]) ? 'd-ok' : 'd-ng');
+    } else if (hasAnswer(state.answers[qi])) {
+      dot.classList.add('d-ans');
+    }
+
+    dot.onclick = function() {
+      state.current = i;
+      saveProgress();
+      render();
+    };
+    wrap.appendChild(dot);
+  }
+}
+
+function renderScore() {
+  let ok = 0;
+  let ng = 0;
+  let answered = 0;
+  state.questions.forEach(function(question, idx) {
+    if (hasAnswer(state.answers[idx])) answered += 1;
+    if (state.evaluated[idx]) {
+      if (isAnswerCorrect(question, state.answers[idx])) ok += 1;
+      else ng += 1;
+    }
+  });
+
+  const totalEvaluated = ok + ng;
+  const pct = totalEvaluated ? Math.round((ok / totalEvaluated) * 100) : null;
+
+  document.getElementById('sc-ok').textContent = ok;
+  document.getElementById('sc-ng').textContent = ng;
+  document.getElementById('sc-ans').textContent = answered;
+  document.getElementById('sc-pct').textContent = pct === null ? '—' : pct + '%';
+  document.getElementById('ps-ok').textContent = ok;
+  document.getElementById('ps-ng').textContent = ng;
+}
+
+function getOptionOrder(qIndex, question) {
+  if (!state.optionOrders[qIndex]) {
+    const keys = Object.keys(question.options || {});
+    for (let i = keys.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = keys[i]; keys[i] = keys[j]; keys[j] = tmp;
+    }
+    state.optionOrders[qIndex] = keys;
+    saveProgress();
+  }
+  return state.optionOrders[qIndex];
+}
+
+function renderMultiChoice(question, qIndex) {
+  const container = document.getElementById('q-options');
+  const options = question.options || {};
+  const isMulti = Array.isArray(question.answer) && question.answer.length > 1;
+  const selected = Array.isArray(state.answers[qIndex]) ? state.answers[qIndex] : [];
+  const selectedSet = normalizedSet(selected);
+  const correctSet = normalizedSet(question.answer);
+
+  const orderedKeys = getOptionOrder(qIndex, question);
+  orderedKeys.forEach(function(key, positionIndex) {
+    const option = document.createElement('div');
+    option.className = 'option';
+    const normalized = String(key).toLowerCase();
+    const selectedNow = selectedSet.has(normalized);
+    const displayLabel = String.fromCodePoint(65 + positionIndex);
+
+    if (state.evaluated[qIndex]) {
+      if (correctSet.has(normalized)) option.classList.add('eval-ok');
+      else if (selectedNow) option.classList.add('eval-ng');
+    } else if (selectedNow) {
+      option.classList.add('sel');
+    }
+
+    option.innerHTML =
+      '<div class="opt-radio"></div>' +
+      '<span class="opt-key">' + displayLabel + '</span>' +
+      '<span class="opt-text">' + renderMath(options[key]) + '</span>';
+
+    option.onclick = function() {
+      if (state.evaluated[qIndex]) return;
+
+      let nextAnswer = Array.isArray(state.answers[qIndex]) ? state.answers[qIndex].slice() : [];
+      const currentIdx = nextAnswer.findIndex(function(item) {
+        return String(item).toLowerCase() === normalized;
+      });
+
+      if (isMulti) {
+        if (currentIdx >= 0) nextAnswer.splice(currentIdx, 1);
+        else nextAnswer.push(key);
+      } else {
+        nextAnswer = currentIdx >= 0 ? [] : [key];
+      }
+
+      state.answers[qIndex] = nextAnswer;
+      state.evaluated[qIndex] = false;
+      saveProgress();
+      render();
+    };
+
+    container.appendChild(option);
+  });
+}
+
+function renderFillTheBlanks(question, qIndex) {
+  const container = document.getElementById('q-options');
+  const answers = state.answers[qIndex] && typeof state.answers[qIndex] === 'object' ? state.answers[qIndex] : {};
+  const blanks = getFillBlanks(question);
+  let richText = question.text || '';
+
+  blanks.forEach(function(blank) {
+    const identifier = blank.identifier;
+    const value = String(answers[identifier] || '').replaceAll('"', '&quot;');
+    const inputHtml = '<input class="fill-blank-input" data-identifier="' + identifier + '" value="' + value + '" ' + (state.evaluated[qIndex] ? 'disabled' : '') + '>';
+    richText = richText.replaceAll(new RegExp(String.raw`\[${escapeRegExp(identifier)}\]`, 'g'), inputHtml);
+  });
+
+  const rich = document.createElement('div');
+  rich.className = 'q-rich-text';
+  rich.innerHTML = renderMathHtml(richText).replaceAll('\n', '<br>');
+  container.appendChild(rich);
+
+  const inputs = container.querySelectorAll('.fill-blank-input[data-identifier]');
+  inputs.forEach(function(input) {
+    const identifier = input.dataset.identifier;
+    if (state.evaluated[qIndex]) {
+      const blank = blanks.find(function(item) { return item.identifier === identifier; });
+      const correct = String(blank ? blank.answer : '').trim().toLowerCase();
+      const userValue = String(answers[identifier] || '').trim().toLowerCase();
+      input.classList.toggle('eval-ok', userValue === correct);
+      input.classList.toggle('eval-ng', userValue !== correct);
+      return;
+    }
+
+    input.addEventListener('input', function() {
+      const next = state.answers[qIndex] ? { ...state.answers[qIndex] } : {};
+      next[identifier] = input.value;
+      state.answers[qIndex] = next;
+      state.evaluated[qIndex] = false;
+      saveProgress();
+    });
+  });
+}
+
+function renderDragAndDrop(question, qIndex) {
+  const container = document.getElementById('q-options');
+  const answers = state.answers[qIndex] && typeof state.answers[qIndex] === 'object' ? state.answers[qIndex] : {};
+  const choices = Array.isArray(question.choices) ? question.choices : [];
+  let richText = question.text || '';
+
+  choices.forEach(function(choice) {
+    if (!choice.identifier) return;
+    const slot = '<span class="drop-slot" data-identifier="' + choice.identifier + '">[ide húzd]</span>';
+    richText = richText.replaceAll(new RegExp(String.raw`\[${escapeRegExp(choice.identifier)}\]`, 'g'), slot);
+  });
+
+  const rich = document.createElement('div');
+  rich.className = 'q-rich-text';
+  rich.innerHTML = renderMathHtml(richText).replaceAll('\n', '<br>');
+  container.appendChild(rich);
+
+  const bank = document.createElement('div');
+  bank.className = 'drag-bank';
+  choices.forEach(function(choice) {
+    const chip = document.createElement('span');
+    chip.className = 'drag-chip';
+    chip.innerHTML = renderMath(choice.label);
+    chip.draggable = !state.evaluated[qIndex];
+    chip.dataset.identifier = choice.identifier;
+    chip.dataset.label = choice.label;
+    chip.addEventListener('dragstart', function(ev) {
+      ev.dataTransfer.setData('text/plain', JSON.stringify({
+        identifier: choice.identifier,
+        label: choice.label,
+      }));
+    });
+    bank.appendChild(chip);
+  });
+  container.appendChild(bank);
+
+  const slots = container.querySelectorAll('.drop-slot[data-identifier]');
+  slots.forEach(function(slot) {
+    const targetId = slot.dataset.identifier;
+    const selectedIdentifier = answers[targetId];
+    if (selectedIdentifier) {
+      const selectedChoice = choices.find(function(choice) { return choice.identifier === selectedIdentifier; });
+      if (selectedChoice) {
+        slot.innerHTML = renderMath(selectedChoice.label);
+        slot.classList.add('has-value');
+      }
+    }
+
+    if (!state.evaluated[qIndex]) {
+      slot.addEventListener('dragover', function(ev) {
+        ev.preventDefault();
+        slot.classList.add('drag-over');
+      });
+      slot.addEventListener('dragleave', function() {
+        slot.classList.remove('drag-over');
+      });
+      slot.addEventListener('drop', function(ev) {
+        ev.preventDefault();
+        slot.classList.remove('drag-over');
+        const payload = JSON.parse(ev.dataTransfer.getData('text/plain') || '{}');
+        if (!payload.identifier) return;
+        const next = state.answers[qIndex] ? { ...state.answers[qIndex] } : {};
+        next[targetId] = payload.identifier;
+        state.answers[qIndex] = next;
+        state.evaluated[qIndex] = false;
+        saveProgress();
+        render();
+      });
+      slot.addEventListener('click', function() {
+        const next = state.answers[qIndex] ? { ...state.answers[qIndex] } : {};
+        if (next[targetId]) {
+          delete next[targetId];
+          state.answers[qIndex] = next;
+          state.evaluated[qIndex] = false;
+          saveProgress();
+          render();
+        }
+      });
+    }
+
+    if (state.evaluated[qIndex]) {
+      const value = String(answers[targetId] || '');
+      if (!/^field\d+$/i.test(targetId)) return;
+      slot.classList.add(value === targetId ? 'eval-ok' : 'eval-ng');
+    }
+  });
+}
+
+function renderQuestionContent(question, qIndex) {
+  const container = document.getElementById('q-options');
+  container.innerHTML = '';
+
+  if (question.question_type === 'multi_choice') {
+    renderMultiChoice(question, qIndex);
+    return;
+  }
+  if (question.question_type === 'fill_the_blanks') {
+    renderFillTheBlanks(question, qIndex);
+    return;
+  }
+  if (question.question_type === 'drag_n_drop') {
+    renderDragAndDrop(question, qIndex);
+    return;
+  }
+
+  container.innerHTML = '<div class="q-rich-text">Nem támogatott kérdéstípus: ' + question.question_type + '</div>';
+}
+
+function getQuestionHeading(question) {
+  if (question.question_title) return question.question_title;
+  if (!question.text) return 'Kérdés';
+  return question.text.replaceAll(/\[[^\]]+\]/g, '_____').slice(0, 200);
+}
+
+function renderFeedback(question, qIndex) {
+  const feedback = document.getElementById('q-feedback');
+  if (!state.evaluated[qIndex]) {
+    feedback.className = 'feedback';
+    feedback.innerHTML = '';
+    return;
+  }
+
+  const ok = isAnswerCorrect(question, state.answers[qIndex]);
+  feedback.className = 'feedback show ' + (ok ? 'fb-ok' : 'fb-ng');
+
+  let text = 'Helyes! Jól gondoltad.';
+  if (!ok) {
+    if (question.question_type === 'multi_choice') {
+      const orderedKeys = getOptionOrder(qIndex, question);
+      const correctKeys = Array.isArray(question.answer) ? question.answer : [question.answer];
+      const correctLabels = correctKeys.map(function(ans) {
+        const pos = orderedKeys.findIndex(function(k) {
+          return String(k).toLowerCase() === String(ans).toLowerCase();
+        });
+        return pos >= 0 ? String.fromCodePoint(65 + pos) : String(ans).toUpperCase();
+      });
+      text = 'Nem helyes. A helyes válasz: ' + correctLabels.join(', ');
+    } else {
+      text = 'Nem helyes. A helyes megoldásokat jelöltük a kérdésben.';
+    }
+  }
+
+  feedback.innerHTML = '<i data-lucide="' + (ok ? 'check-circle' : 'x-circle') + '"></i><span>' + text + '</span>';
+}
+
+function renderTrust(qIndex) {
+  const vote = state.trustVotes[qIndex];
+  document.getElementById('btn-trust').className = 'trust-btn' + (vote === 'trustworthy' ? ' on' : '');
+  document.getElementById('btn-review').className = 'trust-btn' + (vote === 'review' ? ' on' : '');
+  const voteData = state.voteData[qIndex];
+  const label = document.querySelector('.trust-label');
+  if (!label) return;
+  if (voteData && voteData.totalVotes > 0) {
+    label.textContent = 'Megbízhatóság: ' + voteData.score + '% (' + voteData.positiveVotes + '/' + voteData.totalVotes + ')';
+  } else {
+    label.textContent = 'Megbízhatóság: még nincs szavazat';
+  }
+}
+
+async function refreshVoteData(qIndex) {
+  const api = await ensureFirebaseApi();
+  if (!api || !state.quizFile) return;
+  const voteData = await api.getQuestionVoteData(state.quizFile, qIndex);
+  if (!voteData) return;
+
+  state.voteData[qIndex] = voteData;
+  if (voteData.userVote === 'trust') state.trustVotes[qIndex] = 'trustworthy';
+  else if (voteData.userVote === 'distrust') state.trustVotes[qIndex] = 'review';
+  else delete state.trustVotes[qIndex];
+
+  if (qIndex === state.order[state.current]) {
+    renderTrust(qIndex);
+    lucide.createIcons();
+  }
+}
+
+function renderButtons(qIndex) {
+  const prev = document.getElementById('prev-btn');
+  const clear = document.getElementById('clear-answer-btn');
+  const next = document.getElementById('next-btn');
+  const evalBtn = document.getElementById('evaluate-btn');
+
+  prev.disabled = state.current === 0;
+  next.disabled = state.current === state.questions.length - 1;
+  clear.disabled = !hasAnswer(state.answers[qIndex]);
+  evalBtn.disabled = !hasAnswer(state.answers[qIndex]);
+}
+
+function render() {
+  if (!state.questions.length) return;
+
+  const currentInfo = getQuestionAtPosition(state.current);
+  const qIndex = currentInfo.qIndex;
+  const question = currentInfo.question;
+  const total = state.questions.length;
+
+  document.getElementById('q-num').textContent = 'Q ' + String(state.current + 1).padStart(2, '0');
+  document.getElementById('q-text').innerHTML = renderMath(getQuestionHeading(question));
+  document.getElementById('qz-sub').textContent = (state.current + 1) + ' / ' + total + ' kérdés';
+  document.getElementById('prog-label').textContent = (state.current + 1) + ' / ' + total;
+  document.getElementById('pp-title').textContent = 'Haladás — ' + total + ' kérdés';
+  document.getElementById('prog-fill').style.width = (((state.current + 1) / total) * 100).toFixed(1) + '%';
+
+  renderQuestionContent(question, qIndex);
+  renderFeedback(question, qIndex);
+  renderTrust(qIndex);
+  renderButtons(qIndex);
+  void refreshVoteData(qIndex);
+
+  if (state.progOpen) renderDots();
+  renderScore();
+  lucide.createIcons();
+}
+
+function prevQ() {
+  if (state.current <= 0) return;
+  state.current -= 1;
+  saveProgress();
+  render();
+}
+
+function nextQ() {
+  if (state.current >= state.questions.length - 1) return;
+  state.current += 1;
+  saveProgress();
+  render();
+}
+
+function clearAnswer() {
+  const qIndex = state.order[state.current];
+  const question = state.questions[qIndex];
+  state.evaluated[qIndex] = false;
+
+  if (question.question_type === 'multi_choice') state.answers[qIndex] = [];
+  else state.answers[qIndex] = {};
+
+  saveProgress();
+  render();
+}
+
+function clearAll() {
+  if (!confirm('Törlöd az összes haladást? Ez a művelet nem vonható vissza.')) return;
+  resetProgress();
+  saveProgress();
+  render();
+}
+
+function showReviewPrompt() {
+  document.getElementById('review-modal-backdrop').classList.add('visible');
+  lucide.createIcons();
+}
+
+function hideReviewPrompt() {
+  document.getElementById('review-modal-backdrop').classList.remove('visible');
+}
+
+function evaluate() {
+  const qIndex = state.order[state.current];
+  if (state.evaluated[qIndex]) {
+    nextQ();
+    return;
+  }
+  if (!hasAnswer(state.answers[qIndex])) return;
+  state.evaluated[qIndex] = true;
+  saveProgress();
+  render();
+  if (state.current === state.questions.length - 1) {
+    showReviewPrompt();
+  }
+}
+
+function shuffleQ() {
+  for (let i = state.order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const tmp = state.order[i];
+    state.order[i] = state.order[j];
+    state.order[j] = tmp;
+  }
+  state.current = 0;
+  saveProgress();
+  render();
+}
+
+async function vote(type) {
+  const qIndex = state.order[state.current];
+  const api = await ensureFirebaseApi();
+  if (!api || !state.quizFile) return;
+
+  const voteType = type === 'trustworthy' ? 'trust' : 'distrust';
+  const result = await api.recordVote(state.quizFile, qIndex, voteType);
+  if (!result) return;
+
+  state.voteData[qIndex] = {
+    positiveVotes: result.positiveVotes,
+    totalVotes: result.totalVotes,
+    score: result.score,
+    userVote: result.userVoted,
+  };
+  state.trustVotes[qIndex] = result.userVoted === 'trust' ? 'trustworthy' : 'review';
+  renderTrust(qIndex);
+  lucide.createIcons();
+}
+
+function showFatalError(message) {
+  document.getElementById('q-text').textContent = message;
+  document.getElementById('q-options').innerHTML = '';
+  const feedback = document.getElementById('q-feedback');
+  feedback.className = 'feedback show fb-ng';
+  feedback.innerHTML = '<i data-lucide="triangle-alert"></i><span>' + message + '</span>';
+  lucide.createIcons();
+}
+
+function reviewItemClass(isEval, correct) {
+  if (!isEval) return 'review-item';
+  return correct ? 'review-item rv-ok' : 'review-item rv-ng';
+}
+
+function buildReviewHeader(position, question) {
+  const header = document.createElement('div');
+  header.className = 'review-item-header';
+  const numPill = document.createElement('span');
+  numPill.className = 'review-q-num';
+  numPill.textContent = 'Q ' + String(position).padStart(2, '0');
+  const qText = document.createElement('span');
+  qText.className = 'review-q-text';
+  qText.innerHTML = renderMath(getQuestionHeading(question));
+  header.appendChild(numPill);
+  header.appendChild(qText);
+  return header;
+}
+
+function buildReviewMultiChoice(question, qIndex, userAnswer) {
+  const options = question.options || {};
+  const orderedKeys = state.optionOrders[qIndex] || Object.keys(options);
+  const selectedSet = normalizedSet(Array.isArray(userAnswer) ? userAnswer : []);
+  const correctSet = normalizedSet(question.answer);
+  const wrap = document.createElement('div');
+  wrap.className = 'review-options';
+
+  orderedKeys.forEach(function(key, posIdx) {
+    const normalized = String(key).toLowerCase();
+    const isSelected = selectedSet.has(normalized);
+    const isCorrectOpt = correctSet.has(normalized);
+    const row = document.createElement('div');
+    row.className = 'rv-option';
+    if (isSelected && isCorrectOpt) row.classList.add('rv-correct');
+    else if (isSelected) row.classList.add('rv-user-wrong');
+    else if (isCorrectOpt) row.classList.add('rv-missed');
+    const keySpan = document.createElement('span');
+    keySpan.className = 'rv-opt-key';
+    keySpan.textContent = String.fromCodePoint(65 + posIdx);
+    const textSpan = document.createElement('span');
+    textSpan.innerHTML = renderMath(options[key]);
+    row.appendChild(keySpan);
+    row.appendChild(textSpan);
+    wrap.appendChild(row);
+  });
+  return wrap;
+}
+
+function buildReviewFillBlanks(question, userAnswer) {
+  const blanks = getFillBlanks(question);
+  const answers = userAnswer && typeof userAnswer === 'object' ? userAnswer : {};
+  const wrap = document.createElement('div');
+  wrap.className = 'review-text-answer';
+
+  blanks.forEach(function(blank) {
+    const userVal = String(answers[blank.identifier] || '').trim();
+    const correctVal = String(blank.answer || '').trim();
+    const ok = userVal.toLowerCase() === correctVal.toLowerCase();
+    const row = document.createElement('div');
+    row.className = 'rv-row';
+    const label = document.createElement('span');
+    label.className = 'rv-label ' + (ok ? 'ok' : 'ng');
+    label.textContent = blank.identifier;
+    const text = document.createElement('span');
+    text.textContent = ok ? userVal : (userVal || '—') + ' → helyes: ' + correctVal;
+    row.appendChild(label);
+    row.appendChild(text);
+    wrap.appendChild(row);
+  });
+  return wrap;
+}
+
+function buildReviewDragDrop(question, userAnswer) {
+  const choices = Array.isArray(question.choices) ? question.choices : [];
+  const answers = userAnswer && typeof userAnswer === 'object' ? userAnswer : {};
+  const wrap = document.createElement('div');
+  wrap.className = 'review-text-answer';
+
+  Object.keys(answers).forEach(function(slot) {
+    const slotChoice = choices.find(function(c) { return c.identifier === slot; });
+    const pickedChoice = choices.find(function(c) { return c.identifier === answers[slot]; });
+    if (!slotChoice) return;
+    const row = document.createElement('div');
+    row.className = 'rv-row';
+    const label = document.createElement('span');
+    label.className = 'rv-label';
+    label.innerHTML = renderMath(slotChoice.label || slot);
+    const text = document.createElement('span');
+    text.innerHTML = renderMath(pickedChoice ? pickedChoice.label : answers[slot]);
+    row.appendChild(label);
+    row.appendChild(text);
+    wrap.appendChild(row);
+  });
+  return wrap;
+}
+
+function buildReviewItem(question, qIndex, position) {
+  const isEval = state.evaluated[qIndex];
+  const userAnswer = state.answers[qIndex];
+  const correct = isEval ? isAnswerCorrect(question, userAnswer) : null;
+
+  const item = document.createElement('div');
+  item.className = reviewItemClass(isEval, correct);
+  item.appendChild(buildReviewHeader(position, question));
+
+  if (!isEval) {
+    const skip = document.createElement('div');
+    skip.className = 'rv-skip-note';
+    skip.textContent = hasAnswer(userAnswer) ? 'Megválaszolt, de nem értékelve.' : 'Nem megválaszolt.';
+    item.appendChild(skip);
+    return item;
+  }
+
+  if (question.question_type === 'multi_choice') {
+    item.appendChild(buildReviewMultiChoice(question, qIndex, userAnswer));
+  } else if (question.question_type === 'fill_the_blanks') {
+    item.appendChild(buildReviewFillBlanks(question, userAnswer));
+  } else if (question.question_type === 'drag_n_drop') {
+    const wrap = buildReviewDragDrop(question, userAnswer);
+    if (wrap.children.length === 0) {
+      const skip = document.createElement('div');
+      skip.className = 'rv-skip-note';
+      skip.textContent = 'Nem megválaszolt.';
+      item.appendChild(skip);
+    } else {
+      item.appendChild(wrap);
+    }
+  }
+
+  return item;
+}
+
+function showReview() {
+  const list = document.getElementById('review-list');
+  list.innerHTML = '';
+
+  state.order.forEach(function(qIndex, position) {
+    const question = state.questions[qIndex];
+    if (!question) return;
+    list.appendChild(buildReviewItem(question, qIndex, position + 1));
+  });
+
+  document.querySelector('.q-card').style.display = 'none';
+  document.getElementById('review-overlay').classList.add('visible');
+  lucide.createIcons();
+}
+
+function hideReview() {
+  document.querySelector('.q-card').style.display = '';
+  document.getElementById('review-overlay').classList.remove('visible');
+}
+
+function setupQuizInteractions() {
+  document.getElementById('back-home-btn').addEventListener('click', function() {
+    globalThis.location.href = 'quizesch-home.html';
+  });
+  document.getElementById('theme-btn').addEventListener('click', toggleTheme);
+  document.getElementById('progress-trigger-btn').addEventListener('click', toggleProgress);
+  document.getElementById('btn-trust').addEventListener('click', function() { void vote('trustworthy'); });
+  document.getElementById('btn-review').addEventListener('click', function() { void vote('review'); });
+  document.getElementById('prev-btn').addEventListener('click', prevQ);
+  document.getElementById('clear-answer-btn').addEventListener('click', clearAnswer);
+  document.getElementById('next-btn').addEventListener('click', nextQ);
+  document.getElementById('shuffle-btn').addEventListener('click', shuffleQ);
+  document.getElementById('clear-all-btn').addEventListener('click', clearAll);
+  document.getElementById('evaluate-btn').addEventListener('click', evaluate);
+  document.getElementById('review-close-btn').addEventListener('click', hideReview);
+  document.getElementById('review-modal-no').addEventListener('click', hideReviewPrompt);
+  document.getElementById('review-modal-yes').addEventListener('click', function() {
+    hideReviewPrompt();
+    showReview();
+  });
+  document.getElementById('review-modal-backdrop').addEventListener('click', function(e) {
+    if (e.target === this) hideReviewPrompt();
+  });
+}
+
+async function init() {
+  setupQuizInteractions();
+  applyStoredTheme();
+  const quizFile = getQuizFileFromUrl();
+  if (!quizFile) {
+    showFatalError('Hiányzó kvíz fájl paraméter. Nyisd meg a kvízt a főoldalról.');
+    return;
+  }
+
+  try {
+    const payload = await fetchJson(DATA_DIRECTORY + '/data/' + quizFile);
+    const isLegacy = Array.isArray(payload);
+    let questions = [];
+    if (isLegacy) {
+      questions = payload;
+    } else if (Array.isArray(payload.questions)) {
+      questions = payload.questions;
+    }
+
+    state.quizFile = quizFile;
+    state.quizTitle = prettifyFileName(quizFile);
+    state.questions = questions;
+    state.tags = isLegacy ? {} : (payload.tags || {});
+
+    resetProgress();
+    loadProgress();
+    updateHeaderMeta();
+    render();
+  } catch (error) {
+    console.error(error);
+    showFatalError('Nem sikerült betölteni a kiválasztott kvízt.');
+  }
+}
+
+document.addEventListener('keydown', function(e) {
+  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
+  const k = e.key.toLowerCase();
+  if (k === 'arrowleft') prevQ();
+  if (k === 'arrowright') nextQ();
+  if (k === 'c') clearAnswer();
+  if (k === 'e') evaluate();
+  if (k === 't') toggleTheme();
+});
+
+globalThis.toggleTheme = toggleTheme;
+globalThis.toggleProgress = toggleProgress;
+globalThis.vote = vote;
+globalThis.prevQ = prevQ;
+globalThis.clearAnswer = clearAnswer;
+globalThis.nextQ = nextQ;
+globalThis.shuffleQ = shuffleQ;
+globalThis.clearAll = clearAll;
+globalThis.evaluate = evaluate;
+
+await init();
+</script>
+</body>
+</html>

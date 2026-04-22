@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quizesch</title>
+<link rel="shortcut icon" type="image/png" href="quizesch-icon-fancy-256.png?v=20260420h">
+<link rel="icon" type="image/png" sizes="256x256" href="quizesch-icon-fancy-256.png?v=20260420h">
+<link rel="icon" type="image/png" sizes="32x32" href="quizesch-icon-fancy-256.png?v=20260420h">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+:root {
+  --ui-scale:1.25;
+  --cream:#faf8f2; --cream2:#f3f0e6; --cream3:#e8e4d8;
+  --ink:#1a1a18; --ink2:#4a4a44; --ink3:#8a8a82; --ink4:#b8b8b0;
+  --coral:#ff6b4a; --coral-light:#fff0ec; --coral-mid:#ffd4c8;
+  --yellow:#ffd166; --yellow-light:#fff9e6;
+  --pink:#f46eb5; --teal:#2ec4b6; --teal-light:#e6faf8;
+  --green:#52b788; --green-light:#ecf7f1; --green-dark:#1e5c3a;
+  --red:#e63946; --red-light:#fdeaeb; --red-dark:#7d1520;
+  --select:#2aad9e; --select-light:#edf9f7; --select-mid:#ade5de;
+  --bg:var(--cream); --bg2:var(--cream2); --bg3:var(--cream3);
+  --text:var(--ink); --text2:var(--ink2); --text3:var(--ink3); --text4:var(--ink4);
+  --border:rgba(26,26,24,0.10); --border2:rgba(26,26,24,0.16); --border3:rgba(26,26,24,0.26);
+  --shadow:0 1px 3px rgba(26,26,24,0.07),0 0 0 0.5px rgba(26,26,24,0.05);
+  --radius:13px; --radius-sm:9px;
+  --font:'DM Sans',sans-serif; --serif:'DM Serif Display',serif; --mono:'DM Mono',monospace;
+}
+[data-theme="dark"] {
+  --cream:#161514; --cream2:#1e1d1a; --cream3:#282724;
+  --ink:#f0ede4; --ink2:#ccc9bc; --ink3:#9a978c; --ink4:#767368;
+  --coral-light:#2e1a14; --coral-mid:#5a2a1e;
+  --yellow-light:#2a2210; --teal-light:#102220;
+  --green-light:#0e2218; --green-dark:#7ccf9e; --red-light:#220a0c; --red-dark:#f09595;
+  --select-light:#0e2220; --select-mid:#1a4540; --select:#5cd4c6;
+  --bg:var(--cream); --bg2:var(--cream2); --bg3:var(--cream3);
+  --text:var(--ink); --text2:var(--ink2); --text3:var(--ink3); --text4:var(--ink4);
+  --border:rgba(240,237,228,0.10); --border2:rgba(240,237,228,0.16); --border3:rgba(240,237,228,0.26);
+  --shadow:0 1px 4px rgba(0,0,0,0.30),0 0 0 0.5px rgba(255,255,255,0.04);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;transition:background .22s,color .22s}
+button{cursor:pointer;font-family:var(--font)}
+
+.page{max-width:960px;margin:0 auto;padding:0 20px 60px;transform:scale(var(--ui-scale));transform-origin:top center;width:calc(100% / var(--ui-scale));}
+
+/* ── HERO ── */
+.hero{text-align:center;padding:50px 0 42px}
+.hero-logo{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:10px}
+.hero-icon{width:48px;height:48px;background:var(--coral);border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--serif);font-size:24px;font-style:italic}
+.hero h1{font-family:var(--serif);font-size:38px;font-weight:400;letter-spacing:-0.02em;color:var(--text)}
+.hero-sub{font-size:14px;color:var(--text3);margin-top:4px}
+.hero-stripe{width:80px;height:3px;background:linear-gradient(90deg,var(--coral),var(--pink),var(--yellow));border-radius:99px;margin:16px auto 0}
+.hero-actions{position:relative;margin-top:18px;min-height:38px}
+.hero-search-wrap{display:flex;justify-content:center}
+.hero-quick-actions{position:absolute;top:0;right:0;display:flex;gap:10px}
+@media(max-width:820px){
+  .hero-actions{display:flex;flex-direction:column;gap:10px;min-height:0}
+  .hero-quick-actions{position:static;justify-content:center}
+}
+
+/* ── ICON BTN ── */
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:0.5px solid var(--border2);border-radius:var(--radius-sm);background:transparent;color:var(--text3);transition:background .12s,color .12s,transform .08s}
+.icon-btn:hover{background:var(--bg2);color:var(--text)}
+.icon-btn:active{transform:scale(.94)}
+.icon-btn svg{width:16px;height:16px}
+.icon-btn .icon-img{width:16px;height:16px;opacity:.78;display:block}
+.icon-btn:hover .icon-img{opacity:1}
+
+/* ── SEARCH ── */
+.search-bar{display:flex;align-items:center;gap:8px;background:var(--bg2);border:0.5px solid var(--border2);border-radius:999px;padding:8px 16px;max-width:440px;margin:0 auto 0;transition:border-color .15s}
+.search-bar:focus-within{border-color:var(--coral)}
+.search-bar svg{width:15px;height:15px;color:var(--text4);flex-shrink:0}
+.search-bar input{flex:1;border:none;background:transparent;font-size:13px;font-family:var(--font);color:var(--text);outline:none}
+.search-bar input::placeholder{color:var(--text4)}
+
+/* ── LAYOUT ── */
+.content{display:grid;grid-template-columns:1fr 220px;gap:26px;align-items:start}
+@media(max-width:720px){.content{grid-template-columns:1fr}.sidebar{order:-1}}
+@media(max-width:1100px){:root{--ui-scale:1.12}}
+@media(max-width:820px){:root{--ui-scale:1}}
+
+/* ── SIDEBAR ── */
+.sidebar{position:sticky;top:24px}
+.sidebar-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--radius);padding:18px 16px;box-shadow:var(--shadow)}
+.sidebar-title{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--text3);font-family:var(--mono);margin-bottom:12px;padding-bottom:8px;border-bottom:0.5px solid var(--border)}
+.filter-group{margin-bottom:18px}
+.filter-group:last-child{margin-bottom:0}
+.filter-label{font-size:11px;font-weight:500;color:var(--text2);margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.filter-label svg{width:12px;height:12px;color:var(--text4)}
+.filter-pills{display:flex;flex-wrap:wrap;gap:5px}
+.pill{font-size:11px;padding:5px 10px;border-radius:999px;border:0.5px solid var(--border2);background:var(--bg);color:var(--text2);transition:all .12s;cursor:pointer;white-space:nowrap;font-family:var(--font)}
+.pill:hover{border-color:var(--coral-mid);color:var(--text)}
+.pill.on{background:var(--coral);border-color:var(--coral);color:#fff}
+
+.stats-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:16px;padding-top:14px;border-top:0.5px solid var(--border)}
+.stat{text-align:center;padding:8px 0}
+.stat-val{font-size:18px;font-weight:500;font-family:var(--mono);color:var(--text)}
+.stat-label{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--text3);font-family:var(--mono);margin-top:2px}
+
+/* ── QUIZ GRID ── */
+.grid-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.grid-title{font-size:13px;font-weight:500;color:var(--text2)}
+.grid-count{font-size:11px;color:var(--text4);font-family:var(--mono)}
+.quiz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+
+/* ── QUIZ CARD ── */
+.q-card{background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--radius);padding:16px 14px 14px;cursor:pointer;transition:border-color .15s,transform .1s,box-shadow .15s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;animation:cardIn .24s ease-out both}
+.q-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:var(--coral);opacity:0;transition:opacity .15s}
+.q-card:hover{border-color:var(--coral-mid);transform:translateY(-2px);box-shadow:0 4px 16px rgba(26,26,24,0.08)}
+.q-card:hover::before{opacity:1}
+.q-card:active{transform:translateY(0)}
+
+.q-card-icon{width:34px;height:34px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.q-card-icon svg{width:16px;height:16px}
+.q-card-icon.it{background:var(--coral-light);color:var(--coral)}
+.q-card-icon.komm{background:var(--teal-light);color:var(--teal)}
+.q-card-icon.szoft{background:var(--yellow-light);color:#a07000}
+.q-card-icon.other{background:var(--bg3);color:var(--text3)}
+
+.q-card-body{flex:1;min-width:0}
+.q-card-title{font-size:13px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:3px}
+.q-card-file{font-size:10px;color:var(--text4);font-family:var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.q-card-footer{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:3px;font-size:9px;padding:3px 8px;border-radius:999px;font-family:var(--mono);white-space:nowrap;border:0.5px solid}
+.badge-green{border-color:var(--green);color:var(--green-dark);background:var(--green-light)}
+.badge-yellow{border-color:var(--yellow);color:var(--yellow-text, #6d5000);background:var(--yellow-light)}
+.badge-red{border-color:var(--red);color:var(--red-dark);background:var(--red-light)}
+.badge-type{border-color:var(--border2);color:var(--text3);background:var(--bg)}
+[data-theme="dark"] .badge-yellow{--yellow-text:#f0c850}
+[data-theme="dark"] .q-card-icon.it{background:#3a1e14;color:#ff8c6e}
+[data-theme="dark"] .q-card-icon.komm{background:#102a26;color:#5cd4c6}
+[data-theme="dark"] .q-card-icon.szoft{background:#2a2210;color:#f0c850}
+[data-theme="dark"] .q-card-icon.other{background:var(--bg3);color:var(--text3)}
+.q-card-meta{font-size:9px;color:var(--text4);font-family:var(--mono)}
+
+/* ── EMPTY ── */
+.empty-state{text-align:center;padding:48px 20px;color:var(--text3)}
+.empty-state svg{width:40px;height:40px;color:var(--text4);margin-bottom:12px}
+.empty-state p{font-size:13px}
+
+/* ── FOOTER ── */
+.footer{margin-top:44px;padding-top:18px;border-top:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--text4);font-family:var(--mono)}
+.footer a{color:var(--coral)}
+.footer a:hover{text-decoration:underline}
+
+/* ── ANIMATIONS ── */
+@keyframes cardIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ── LEGACY SECTION ── */
+.legacy-section{margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border)}
+.legacy-title{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--text4);font-family:var(--mono);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.legacy-title svg{width:13px;height:13px}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-logo">
+    <div class="hero-icon">Q</div>
+    <h1>Quizesch</h1>
+  </div>
+  <p class="hero-sub">Interaktív kvíz platform vizsgafelkészüléshez</p>
+  <div class="hero-stripe"></div>
+  <div class="hero-actions">
+    <div class="hero-search-wrap">
+      <div class="search-bar">
+        <i data-lucide="search"></i>
+        <input type="text" placeholder="Keresés kvízekben..." id="search-input">
+      </div>
+    </div>
+    <div class="hero-quick-actions">
+      <button class="icon-btn" id="theme-btn" title="Téma váltás (T)">
+        <i data-lucide="sun"></i>
+      </button>
+      <a class="icon-btn" href="https://github.com/forianzsiga/quizesch" target="_blank" title="GitHub">
+        <img class="icon-img" src="github.svg?v=20260420" alt="GitHub">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+  <div class="main-col">
+    <div class="grid-header">
+      <span class="grid-title">Elérhető kvízek</span>
+      <span class="grid-count" id="grid-count">18 kvíz</span>
+    </div>
+    <div class="quiz-grid" id="quiz-grid"></div>
+
+    <div class="legacy-section" id="legacy-section" style="display:none">
+      <div class="legacy-title"><i data-lucide="archive"></i> Legacy kvízek</div>
+      <div class="quiz-grid" id="legacy-grid"></div>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Szűrők</div>
+      <div id="filter-container"></div>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-val" id="stat-total">0</div><div class="stat-label">Kvíz</div></div>
+        <div class="stat"><div class="stat-val" id="stat-questions">0</div><div class="stat-label">Kérdés</div></div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>© 2024 Quizesch. Minden jog fenntartva.</div>
+  <div>Készítette: Zsiga Flórián </div>
+  <div>Designed by: Danzsu </div>
+
+
+</div>
+
+<script type="module">
+/* ── DATA ── */
+let QUIZZES = [];
+const DATA_DIRECTORY = globalThis.location.hostname.includes('github.io') ? '/quizesch' : '';
+const MANIFEST_ENDPOINT = DATA_DIRECTORY + '/quiz-manifest.json';
+const THEME_STORAGE_KEY = 'quizesch_theme';
+
+const ICON_MAP = {
+  "IT Biztonság": {cls:"it", icon:"shield-check"},
+  "Kommunikációs Hálózatok": {cls:"komm", icon:"radio-tower"},
+  "Szoftvertechnikák": {cls:"szoft", icon:"braces"},
+};
+const STATUS_MAP = {
+  supervised:  {cls:"badge-green",  label:"✓ Supervised"},
+  partial:     {cls:"badge-yellow", label:"⚠ Partial"},
+  unsupervised:{cls:"badge-red",    label:"✗ Unsupervised"},
+};
+
+/* ── STATE ── */
+const state = {
+  darkMode: false,
+  filters: {},
+  search: "",
+};
+
+function prettifyFileName(fileName) {
+  return fileName
+    .replaceAll('.json', '')
+    .replaceAll('_', ' ')
+    .replaceAll(/\b(zh|pzh|ppzh)\b/gi, function(match) { return match.toUpperCase(); })
+    .replaceAll(/\b(\d{4})\b/g, '($1)')
+    .replaceAll(/\s+/g, ' ')
+    .trim();
+}
+
+function computeSupervisionStatus(questions) {
+  if (!questions.length) return 'unsupervised';
+  var supervised = 0;
+  questions.forEach(function(q) {
+    if (typeof q.supervised === 'string' && q.supervised.trim().toLowerCase() === 'yes') {
+      supervised += 1;
+    }
+  });
+  if (supervised === questions.length) return 'supervised';
+  if (supervised > 0) return 'partial';
+  return 'unsupervised';
+}
+
+function extractQuizPayload(payload) {
+  if (Array.isArray(payload)) return { tags: {}, questions: payload };
+  return { tags: payload.tags || {}, questions: Array.isArray(payload.questions) ? payload.questions : [] };
+}
+
+async function fetchJson(url) {
+  var response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('HTTP ' + response.status + ' @ ' + url);
+  }
+  return response.json();
+}
+
+async function loadQuizzes() {
+  var manifest = await fetchJson(MANIFEST_ENDPOINT);
+  var entries = Array.isArray(manifest.quizzes) ? manifest.quizzes : [];
+  var detailed = await Promise.all(entries.map(async function(entry) {
+    var fileName = entry.fileName;
+    var tags = entry.tags || {};
+    try {
+      var payload = await fetchJson(DATA_DIRECTORY + '/data/' + fileName);
+      var quizPayload = extractQuizPayload(payload);
+      var mergedTags = {
+        subject: tags.subject || quizPayload.tags.subject || 'Untagged',
+        type: tags.type || quizPayload.tags.type || 'Unknown',
+        year: String(tags.year || quizPayload.tags.year || 'Unknown')
+      };
+      return {
+        file: fileName,
+        title: prettifyFileName(fileName),
+        subject: mergedTags.subject,
+        type: mergedTags.type,
+        year: mergedTags.year,
+        status: computeSupervisionStatus(quizPayload.questions),
+        questions: quizPayload.questions.length,
+        legacy: mergedTags.subject === 'Untagged'
+      };
+    } catch (error) {
+      console.warn('Failed to load quiz metadata for', fileName, error);
+      return {
+        file: fileName,
+        title: prettifyFileName(fileName),
+        subject: tags.subject || 'Untagged',
+        type: tags.type || 'Unknown',
+        year: String(tags.year || 'Unknown'),
+        status: 'unsupervised',
+        questions: 0,
+        legacy: (tags.subject || 'Untagged') === 'Untagged'
+      };
+    }
+  }));
+  QUIZZES = detailed.sort(function(a, b) { return a.file.localeCompare(b.file); });
+}
+
+/* ── THEME ── */
+function toggleTheme() {
+  state.darkMode = !state.darkMode;
+  document.documentElement.dataset.theme = state.darkMode ? 'dark' : '';
+  localStorage.setItem(THEME_STORAGE_KEY, state.darkMode ? 'dark' : 'light');
+  var btn = document.getElementById('theme-btn');
+  btn.innerHTML = '<i data-lucide="' + (state.darkMode ? 'moon-star' : 'sun') + '"></i>';
+  lucide.createIcons();
+}
+
+function applyStoredTheme() {
+  var stored = localStorage.getItem(THEME_STORAGE_KEY);
+  state.darkMode = stored === 'dark';
+  document.documentElement.dataset.theme = state.darkMode ? 'dark' : '';
+  var btn = document.getElementById('theme-btn');
+  btn.innerHTML = '<i data-lucide="' + (state.darkMode ? 'moon-star' : 'sun') + '"></i>';
+}
+
+/* ── FILTERS ── */
+function buildFilters() {
+  const groups = {
+    "Tantárgy":  {icon:"book-open", values: new Set()},
+    "Típus":     {icon:"layers",    values: new Set()},
+    "Év":        {icon:"calendar",  values: new Set()},
+  };
+  QUIZZES.filter(q => !q.legacy).forEach(q => {
+    if (q.subject) groups["Tantárgy"].values.add(q.subject);
+    if (q.type)    groups["Típus"].values.add(q.type);
+    if (q.year)    groups["Év"].values.add(q.year);
+  });
+
+  const container = document.getElementById('filter-container');
+  container.innerHTML = '';
+  Object.entries(groups).forEach(([label, g]) => {
+    state.filters[label] = state.filters[label] || new Set();
+    const div = document.createElement('div');
+    div.className = 'filter-group';
+    let html = '<div class="filter-label"><i data-lucide="'+g.icon+'"></i> '+label+'</div><div class="filter-pills">';
+    const sorted = [...g.values].sort((a,b) => {
+      if(label === "Év") return a.localeCompare(b);
+      return a.localeCompare(b);
+    });
+    sorted.forEach(val => {
+      const isOn = state.filters[label].has(val);
+      html += '<button class="pill'+(isOn?' on':'')+'" data-group="'+label+'" data-value="'+val+'">'+val+'</button>';
+    });
+    html += '</div>';
+    div.innerHTML = html;
+    container.appendChild(div);
+  });
+}
+
+function toggleFilter(group, val) {
+  if (state.filters[group].has(val)) state.filters[group].delete(val);
+  else state.filters[group].add(val);
+  filterAll();
+}
+
+function filterAll() {
+  state.search = document.getElementById('search-input').value.toLowerCase();
+  renderGrid();
+  buildFilters();
+  lucide.createIcons();
+}
+
+function setupHomeInteractions() {
+  document.getElementById('theme-btn').addEventListener('click', toggleTheme);
+  document.getElementById('search-input').addEventListener('input', filterAll);
+  document.getElementById('filter-container').addEventListener('click', function(event) {
+    var pill = event.target.closest('.pill[data-group][data-value]');
+    if (!pill) return;
+    toggleFilter(pill.dataset.group, pill.dataset.value);
+  });
+}
+
+function matchesSearchOnly(q) {
+  if (!state.search) return true;
+  const hay = (q.title + ' ' + q.file + ' ' + q.subject + ' ' + q.type).toLowerCase();
+  return hay.includes(state.search);
+}
+
+function matchesFilters(q) {
+  const sf = state.filters["Tantárgy"] || new Set();
+  const tf = state.filters["Típus"]    || new Set();
+  const yf = state.filters["Év"]       || new Set();
+  if (sf.size && !sf.has(q.subject)) return false;
+  if (tf.size && !tf.has(q.type))    return false;
+  if (yf.size && !yf.has(q.year))    return false;
+  if (state.search) {
+    const s = state.search;
+    const hay = (q.title + ' ' + q.file + ' ' + q.subject + ' ' + q.type).toLowerCase();
+    if (!hay.includes(s)) return false;
+  }
+  return true;
+}
+
+/* ── RENDER ── */
+function renderGrid() {
+  const grid = document.getElementById('quiz-grid');
+  const legacyGrid = document.getElementById('legacy-grid');
+  const legacySection = document.getElementById('legacy-section');
+  grid.innerHTML = '';
+  legacyGrid.innerHTML = '';
+  const visible = QUIZZES.filter(q => !q.legacy).filter(matchesFilters);
+  const visibleLegacy = QUIZZES.filter(q => q.legacy).filter(matchesSearchOnly);
+
+  if (visible.length === 0) {
+    grid.innerHTML = '<div class="empty-state"><i data-lucide="search-x"></i><p>Nincs találat a szűrési feltételekre.</p></div>';
+  }
+
+  visible.forEach((q, i) => {
+    const ic = ICON_MAP[q.subject] || {cls:"other",icon:"file-question"};
+    const st = STATUS_MAP[q.status] || STATUS_MAP.unsupervised;
+    const card = document.createElement('div');
+    card.className = 'q-card';
+    card.style.animationDelay = Math.min(i * 30, 300) + 'ms';
+    card.onclick = () => { globalThis.location.href = 'quizesch-quiz.html?file=' + encodeURIComponent(q.file); };
+    card.innerHTML =
+      '<div style="display:flex;align-items:center;gap:10px">' +
+        '<div class="q-card-icon '+ic.cls+'"><i data-lucide="'+ic.icon+'"></i></div>' +
+        '<div class="q-card-body">' +
+          '<div class="q-card-title">'+q.title+'</div>' +
+          '<div class="q-card-file">'+q.file+'</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="q-card-footer">' +
+        '<span class="badge '+st.cls+'">'+st.label+'</span>' +
+        '<span class="q-card-meta">'+q.questions+' kérdés</span>' +
+      '</div>';
+    grid.appendChild(card);
+  });
+
+  visibleLegacy.forEach((q, i) => {
+    const st = STATUS_MAP[q.status] || STATUS_MAP.unsupervised;
+    const card = document.createElement('div');
+    card.className = 'q-card';
+    card.style.animationDelay = Math.min(i * 30, 300) + 'ms';
+    card.onclick = () => { globalThis.location.href = 'quizesch-quiz.html?file=' + encodeURIComponent(q.file); };
+    card.innerHTML =
+      '<div style="display:flex;align-items:center;gap:10px">' +
+        '<div class="q-card-icon other"><i data-lucide="archive"></i></div>' +
+        '<div class="q-card-body">' +
+          '<div class="q-card-title">' + q.title + '</div>' +
+          '<div class="q-card-file">' + q.file + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="q-card-footer">' +
+        '<span class="badge ' + st.cls + '">' + st.label + '</span>' +
+        '<span class="q-card-meta">' + q.questions + ' kérdés</span>' +
+      '</div>';
+    legacyGrid.appendChild(card);
+  });
+
+  legacySection.style.display = visibleLegacy.length ? 'block' : 'none';
+
+  document.getElementById('grid-count').textContent = visible.length + ' kvíz';
+  document.getElementById('stat-total').textContent = visible.length;
+  document.getElementById('stat-questions').textContent = visible.reduce((a,q) => a + q.questions, 0);
+}
+
+/* ── INIT ── */
+async function init() {
+  setupHomeInteractions();
+  applyStoredTheme();
+  const grid = document.getElementById('quiz-grid');
+  grid.innerHTML = '<div class="empty-state"><i data-lucide="loader-circle"></i><p>Kvízek betöltése...</p></div>';
+  lucide.createIcons();
+  try {
+    await loadQuizzes();
+    buildFilters();
+    renderGrid();
+  } catch (error) {
+    grid.innerHTML = '<div class="empty-state"><i data-lucide="cloud-off"></i><p>Nem sikerült betölteni a kvízeket.</p></div>';
+    console.error('Home init error:', error);
+  }
+  lucide.createIcons();
+}
+
+globalThis.toggleTheme = toggleTheme;
+globalThis.filterAll = filterAll;
+globalThis.toggleFilter = toggleFilter;
+
+await init();
+
+document.addEventListener('keydown', e => {
+  if (['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)) return;
+  if (e.key.toLowerCase() === 't') toggleTheme();
+  if (e.key === '/') { e.preventDefault(); document.getElementById('search-input').focus(); }
+});
+</script>
+</body>
+</html>

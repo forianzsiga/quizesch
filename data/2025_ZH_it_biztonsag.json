@@ -1,0 +1,529 @@
+{
+  "tags": {
+    "subject": "IT Biztonság",
+    "type": "ZH",
+    "year": "2025"
+  },
+  "questions": [
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mely állítások igazak az evasion támadásokra gépi modellek ellen?",
+      "options": {
+        "a": "A támadó keresi egy testing bemeneti minta olyan módosítását, amit a betanított modell félreklasszifikál",
+        "b": "A támadó keresi a tanítóadat olyan módosítását, amely során a támadó által választott testing mintát a betanított modell félreklasszifikálja"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 1,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz?",
+      "options": {
+        "a": "Kvantumszámítógép segítségével négyzetes gyorsítás érhető el a kimerítő kulcskeresésben, ám ez ellen a kulcsok méretének megduplázásával védekezhetünk, így a szimmetrikus kulcsú kriptográfiai módszerek nincsenek akkora veszélyben, mint a publikus kulcsúak.",
+        "b": "A kvantumszámítógépekkel rendelkező támadó ellen csak kvantumszámítógépen futtatható kriptográfiai algoritmusokkal lehet védekezni, ezt nevezzük posztkvantum kriptográfiának."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 2,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz? A publikus sérülékenységek (vulnerabilities)…",
+      "options": {
+        "a": "egyedi azonosítóval (CVE ID) rendelkeznek.",
+        "b": "nyilvánosságra hozatala hátráltatja a védekezést, mert a támadók számára is elérhetővé teszi a kihasználható hibákkal kapcsolatos információkat."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 3,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyik követelményt kell egy modern kriptográfiai hash függvénynek kielégítenie?",
+      "options": {
+        "a": "Őskép ellenállóság (preimage resistance): egy adott y hash értékhez legyen nehéz olyan x bemenetet találni, melyre H(x)=y.",
+        "b": "Második őskép ellenállóság (second preimage resistance): egy y hash értékhez legyen nehéz olyan x bemenetet találni, melyre H(H(x))=y"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 4,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a Data Execution Prevention (DEP) működési elvére?",
+      "options": {
+        "a": "Célja a végrehajtható és az írható memóriaterületek elszeparálása.",
+        "b": "Alkalmazása esetén a számítógép operációs rendszere a hardver elemekkel együttműködve képes a memória túlírást detektálni."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 5,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül mely szolgáltatásokat biztosítják mind a MAC függvények (MAC functions), mind pedig a digitális aláírás sémák?",
+      "options": {
+        "a": "Üzenet integritásának védelme (message integrity protection)",
+        "b": "Üzenet eredetének letagadhatatlansága (non-repudiation of origin)"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 6,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A NIST aktuális iránymutatása szerint, mely kijelentések igazak?",
+      "options": {
+        "a": "A jelszavak NE járjanak le automatikusan. Akkor szükséges jelszót cserélni, ha erre egy megalapozott indok áll fenn.",
+        "b": "A jelszó emlékeztetők (hintek) használata javasolt, mivel a közösségi média korában túl sok információ érhető el nyilvánosan mindenkiről."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 7,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Modellt szeretnénk tanítani, hogy egy közösségi platformot megvalósító alkalmazásban hibákat ismerjen fel. Mi lehet a modell (hasznos) bemenete?",
+      "options": {
+        "a": "A forráskód szöveges reprezentációja vagy tokenjei",
+        "b": "A felhasználói jelszavak, amelyeket a rendszer tárol"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 8,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyik egy OAuth-hoz kötődő fogalom?",
+      "options": {
+        "a": "Authorization Server",
+        "b": "Relying Party"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 9,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a tagsági támadásra (membership attack)?",
+      "options": {
+        "a": "Egy minta létezését teszteli a tanítóadatban.",
+        "b": "Egy tanító minta rekonstrukcióját végzi el."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 10,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mely szabályok érvényesek a jelszavak biztonságos tárolására?",
+      "options": {
+        "a": "KDF algoritmusok alkalmazása javasolt a tároláshoz.",
+        "b": "A választott titkosítási eljárást csak ismert kriptográfiai könyvtárból szabad használni."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 11,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi(k) a kihívása(i) a biztonsági tesztelésnek (security testing)?",
+      "options": {
+        "a": "Kihívást jelent megfelelően mérni a biztonságot, ami a tesztelés hatékonyságának a mérését is nehézzé teszi.",
+        "b": "A külvilág pontos modellezése megkönnyíti a hatékony tesztelés megvalósítását."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 12,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyek a belső támadó (pl. elégedetlen munkatárs) jellemzői?",
+      "options": {
+        "a": "Változó technikai képességek, fejlett információszerző képesség, limitált erőforrások",
+        "b": "Limitált technikai képességek, limitált információszerző képesség, jelentős erőforrások"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 13,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbi állítások közül melyik NEM igaz a kétfaktoros authentikációra vonatkozóan?",
+      "options": {
+        "a": "Leggyakoribb megvalósítása egy tudásalapú (knowledge-based) és egy tulajdonság alapú (inherence-based) módszerből áll.",
+        "b": "Használata kényelmetlen lehet a felhasználók szemszögéből."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 14,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen szerepet játszanak emberek a gépi tanulási rendszerek életciklusában?",
+      "options": {
+        "a": "Címkézik az adatokat",
+        "b": "Teljes mértékben kiválthatók az AI által"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 15,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyek malware analízis technikák a listából?",
+      "options": {
+        "a": "Dinamikus analízis (Dynamic analysis)",
+        "b": "Spektrumanalízis"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 16,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Gépi tanulási modelleket szeretnénk alkalmazni például egy IDS (Intrusion Detection System) részeként. Melyek a modell értékelésének fontos szempontjai?",
+      "options": {
+        "a": "Többféle metrikát is érdemes használni, mint például a false positive és false negative arányok",
+        "b": "A hatékonyság növelése miatt a tanító adatokon érdemes kiértékelni a modellt"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 17,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyik egy XSS típus?",
+      "options": {
+        "a": "DOM-based XSS",
+        "b": "Event-based XSS"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 18,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Hogyan definiáljuk a biztonsági kockázatot?",
+      "options": {
+        "a": "A kockázat a sikeres támadásból származó várható veszteség",
+        "b": "A kockázat a támadás sikerének valószínűsége"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 19,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi történik egy CSRF támadás során?",
+      "options": {
+        "a": "Az áldozat egy átverés során kártékony kérést küld egy szervernek, aminek a hatására a szerver egy műveletet indít a felhasználó nevében.",
+        "b": "A SOP védelem hiányosságait kihasználva, a támadó eléri egy hamisított kérés elküldését, aminek a válaszát kiolvasva érzékeny adatokhoz tud hozzáférni."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 20,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a manuális biztonsági tesztelésre?",
+      "options": {
+        "a": "Előnye, hogy kevés előkészítést igényel.",
+        "b": "Előnye, hogy hatékonyan alkalmazható nagy mennyiségű hiba azonosítására."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 21,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz? A fine-pruning során",
+      "options": {
+        "a": "a védekező finomhangolja a pruning során kapott neurális hálót nem mérgezett adaton",
+        "b": "a támadó finomhangolja a pruning során kapott neurális hálót nem mérgezett adaton"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 22,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen tulajdonságok igazak minden számítógépes trójaira (trojan horse)?",
+      "options": {
+        "a": "Nem azt csinálja, mint aminek próbálja magát beállítani (pl. leírásában)",
+        "b": "Gyors terjedés a hálózaton át"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 23,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyik modern rejtjelező algoritmus?",
+      "options": {
+        "a": "AES",
+        "b": "SHA256"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 24,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül melyik biztonsági funkciókat valósítja meg a TLS protokoll?",
+      "options": {
+        "a": "üzenetek titkosítása szimmetrikus kulcsú rejtjelezővel",
+        "b": "visszajátszás elleni védelem az üzenetek sorszámozásával"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 25,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi jellemző a code review folyamatra?",
+      "options": {
+        "a": "Hatékony módszer a hibák megtalálására, de sok humán erőforrást igényel.",
+        "b": "Bár technikailag bármikor alkalmazható, a teljes kódbázis elkészülte után érdemes leginkább végrehajtani."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 26,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Miért fontos az MI-alapú biztonsági rendszerek teljesítményének folyamatos monitorozása?",
+      "options": {
+        "a": "Segít meghatározni, mikor kell újratanítani a modellt",
+        "b": "A modellek a kiértékelés (inference) során is automatikusan újratanulják a korábbi adatokat, így a változásra figyelni kell"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 27,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik módszer NEM javasolt SQL injection elleni védekezésként?",
+      "options": {
+        "a": "Tiltólista (blocklist) alapú ellenőrzése a bemeneteknek",
+        "b": "Prepared statementek alkalmazása."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 28,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a Clickjacking elleni védekezésről?",
+      "options": {
+        "a": "A Clickjacking támadás megállítható azzal, ha a weboldal nem tölthető be egy iFrame-be.",
+        "b": "A Javascript letiltása a böngészőben, vagy például a NoScript segítségével, megoldja a problémát."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 29,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Tegyük fel, hogy blokkrejtjelezőt használunk CBC módban. Az alábbiak közül melyik írja le helyesen a kódolást (Xi a nyílt blokk, Yi az i. rejtjeles blokk, K a kulcs)?",
+      "options": {
+        "a": "Yi = E_K(Xi ⊕ Y{i-1})",
+        "b": "Yi = E_K(Xi) ⊕ Y{i-1}"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 30,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit mond a “psychological acceptability” tervezési elv?",
+      "options": {
+        "a": "A szoftver tervezésének figyelembe kell venni az emberi tényezőt.",
+        "b": "A felhasználói folyamatokat pszichológiai elemzés segítségével lehet javítani, ami hozzájárul összességében a biztonsághoz."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 31,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen lépéseket kell elvégezni a threat modelling során?",
+      "options": {
+        "a": "A STRIDE alapján össze kell gyűjteni a potenciális támadásokat.",
+        "b": "A CIA+AAA-ból kiindulva azonosítani kell a védekezési mechanizmusokat."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 32,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen tulajdonságok igazak minden számítógépes vírusra?",
+      "options": {
+        "a": "Replikáció, önmaga továbbmásolása, terjedés",
+        "b": "Kárt okoz"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 33,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Melyik állítás igaz a (tankönyvi) Diffie-Hellman (DH) kulcsmegegyezés (key agreement) protokollra?",
+      "options": {
+        "a": "Biztonsága (részben) a diszkrét logaritmus probléma nehézségére vezethető vissza",
+        "b": "Biztosítja a létrehozott kulcs hitelesítését"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 34,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Az alábbiak közül mely kérdések foglalkoznak a fenyegetések azonosításával (threat identification)?",
+      "options": {
+        "a": "Milyen potenciális támadások érhetik az értéket képviselő elemeket (assets)?",
+        "b": "Milyen valószínűséggel valósítják meg a plauzibilis támadók a potenciális támadásokat?"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 35,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mit jelent a lavina hatás (avalanche effect) blokkrejtjelezők esetén?",
+      "options": {
+        "a": "Azt jelenti, hogy egy bit megváltoztatása a blokkrejtjelező bemenetén közel a bitek felének változását eredményezi a kimeneten.",
+        "b": "Azt jelenti, hogy minél nagyobb méretű kulcsot használunk, annál biztonságosabb lesz a titkosítás."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 36,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "A Javascript mely nyelvi tulajdonsága miatt lehet veszélyes egy XSS támadás?",
+      "options": {
+        "a": "Felhasználó által okozott esemény és egy Javascript esemény egyenértékű.",
+        "b": "Minden változó globális scope-pal rendelkezik."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 37,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Miért hash-eljük az üzenetet digitális aláírás előtt?",
+      "options": {
+        "a": "Így gyorsabb az aláírás kiszámítása",
+        "b": "Így az aláírás mellett egyben rejtjelezzük is az üzenetet"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 38,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Mi igaz a Security Response Planre?",
+      "options": {
+        "a": "Egy incidens esetén kell végrehajtani, a további károk minimalizálása érdekében.",
+        "b": "Egy felelősséggel nyilvánosságra (responsible disclosure) hozott probléma esetén kell végrehajtani."
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 39,
+      "supervised": "yes"
+    },
+    {
+      "question_type": "multi_choice",
+      "question_title": "Milyen információbiztonsági célokra utal a CIA betűhármas (CIA triad)?",
+      "options": {
+        "a": "Confidentiality, Integrity, Availability",
+        "b": "Confidentiality, Integrity, Authenticity"
+      },
+      "answer": [
+        "a"
+      ],
+      "ID": 40,
+      "supervised": "yes"
+    }
+  ]
+}
